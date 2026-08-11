@@ -1,0 +1,109 @@
+{
+  "id": "l5-03",
+  "title": "How Sleep Consolidates Memory",
+  "titleZh": "睡眠如何鞏固記憶",
+  "level": 5,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "睡眠不是關機，而是大腦重播並剪輯白天的經驗，留下要點、丟掉細節。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "For most of my life I assumed sleep was simply the absence of activity, a kind of nightly power saving mode for a tired brain.",
+      "zh": "我大半輩子都以為睡眠只是活動的停止，像是疲累大腦每晚的省電模式。"
+    },
+    {
+      "id": "s2",
+      "text": "The research of the last thirty years suggests something considerably stranger, which is that a good deal of learning happens only after you stop trying.",
+      "zh": "過去三十年的研究指出一件古怪得多的事：相當一部分的學習，是在你停止努力之後才發生的。",
+      "note": "a good deal of 的 of 弱讀到幾乎只剩 /ə/；happens only 的 s 直接連到母音。"
+    },
+    {
+      "id": "s3",
+      "text": "During the day, an experience is held in the hippocampus, a structure that is fast, flexible, and not built for permanent storage.",
+      "zh": "白天的時候，經驗被保存在海馬迴裡，那是一個快速、有彈性，卻不是為長期儲存而設計的結構。"
+    },
+    {
+      "id": "s4",
+      "text": "At night, particularly in deep slow wave sleep, those patterns are replayed to the cortex at something like ten times the original speed.",
+      "zh": "到了夜裡，尤其是在深層的慢波睡眠中，這些模式會以大約十倍的速度重播給大腦皮質。"
+    },
+    {
+      "id": "s5",
+      "text": "Researchers can actually see this in rats, where the sequence of cells that fired along a maze fires again, compressed, in the same order.",
+      "zh": "研究者在老鼠身上真的看得到：牠跑迷宮時依序放電的細胞，會以壓縮的形式、依同樣順序再放一次。"
+    },
+    {
+      "id": "s6",
+      "text": "What makes the finding interesting is not the replay itself, but what appears to get left out of it.",
+      "zh": "這個發現真正有意思的地方，不在於重播本身，而在於重播時似乎被略過的東西。",
+      "note": "not 和 but 之間是典型的對比句型，not 要重讀，but 之後語調重新拉高。"
+    },
+    {
+      "id": "s7",
+      "text": "The brain does not archive the day faithfully, and anyone who has tried to recall a Tuesday from last March already knows this.",
+      "zh": "大腦並不會忠實地把一天存檔，任何試著回想去年三月某個星期二的人都已經知道這件事。"
+    },
+    {
+      "id": "s8",
+      "text": "It seems to keep the gist and discard the surface, which is why you remember the argument and not the exact words that started it.",
+      "zh": "它似乎保留大意、丟掉表層，所以你記得那場爭執，卻記不得引爆爭執的確切字句。",
+      "note": "keep the 的 p 在 th 前不爆破；the exact 的 the 唸成 /ði/，連成 /ði.ɪɡ.ˈzækt/。"
+    },
+    {
+      "id": "s9",
+      "text": "There is a cost to that, of course, since a memory rebuilt from gist is a memory that can quietly go wrong.",
+      "zh": "當然這是有代價的，因為從大意重建出來的記憶，是一種可能悄悄出錯的記憶。"
+    },
+    {
+      "id": "s10",
+      "text": "I find it useful to think of the whole process as editing rather than recording, though I'd hold that metaphor loosely.",
+      "zh": "我覺得把整個過程想成剪輯而不是錄影很有幫助，不過這個比喻我不會抓得太死。",
+      "note": "find it 連成 /ˈfaɪn.dɪt/；editing 和 recording 是一組對比重音，必須拉出來。"
+    },
+    {
+      "id": "s11",
+      "text": "The practical implications are less dramatic than the headlines suggest, and I want to be careful not to oversell them here.",
+      "zh": "實際的意義沒有新聞標題講得那麼戲劇化，我也想小心不要在這裡誇大。"
+    },
+    {
+      "id": "s12",
+      "text": "Cutting sleep short does not simply make you tired the next day; it appears to remove the window in which the day was going to be filed.",
+      "zh": "睡眠不足不只是讓你隔天疲倦；它似乎直接拿走了那段用來把這一天歸檔的時間。",
+      "note": "分號前後是一組對比：not simply tired 對上 remove the window，兩邊重音都要拉出來。"
+    },
+    {
+      "id": "s13",
+      "text": "A student who studies until three in the morning has traded the very hours that would have turned the studying into knowledge.",
+      "zh": "熬夜念到凌晨三點的學生，交換掉的正是那幾個能把念過的內容變成知識的小時。"
+    },
+    {
+      "id": "s14",
+      "text": "That is a real finding, and it is also the kind of finding that gets repeated until it sounds like a slogan.",
+      "zh": "那是一個真實的研究結果，但它也是那種被重複到聽起來像口號的結果。"
+    },
+    {
+      "id": "s15",
+      "text": "What I take from it is narrower and, I think, harder to argue with: the work of learning is not finished when you stop working.",
+      "zh": "我從中得到的結論比較窄，但我想也比較難反駁：學習這件事，不會在你停止用功的那一刻結束。",
+      "note": "narrower 和 harder 是並列重音；冒號後語調重新起頭，像是把結論端出來。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "According to the writer, what happens during deep slow wave sleep?",
+      "options": ["The brain shuts down almost completely to save energy", "Daytime patterns are replayed to the cortex at high speed", "New experiences are recorded exactly as they happened"],
+      "answer": 1
+    },
+    {
+      "q": "Why does the writer prefer the word editing to the word recording?",
+      "options": ["Because sleep erases most memories entirely", "Because the brain keeps the gist and drops the surface detail", "Because memories stay in the hippocampus permanently"],
+      "answer": 1
+    },
+    {
+      "q": "What is the writer's attitude toward the practical advice drawn from this research?",
+      "options": ["He thinks popular coverage overstates it", "He believes it should be taught in every school", "He doubts the underlying research is sound"],
+      "answer": 0
+    }
+  ]
+}

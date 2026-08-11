@@ -1,0 +1,124 @@
+{
+  "id": "l2-02",
+  "title": "A Quick Team Standup",
+  "titleZh": "團隊每日站立會議",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "團隊早會上，成員回報昨天進度和今天計畫，並提出遇到的問題。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Morning everyone, let's keep this short. What did you finish yesterday?",
+      "zh": "大家早，我們長話短說。你昨天完成了什麼？",
+      "note": "did you → /dɪdʒə/，兩字合併成 /dʒ/ 音。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "I finished the login page and sent it to the design team.",
+      "zh": "我把登入頁面做完了，也傳給設計團隊了。",
+      "note": "sent it to → /sɛnɪɾə/，sent it 連讀且 t 弱化，to 弱讀成 /tə/。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Nice work. Did they give you any feedback on it yet?",
+      "zh": "做得好。他們已經給你任何回饋了嗎？"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "Not yet, but they promised to send notes by this afternoon.",
+      "zh": "還沒，不過他們答應今天下午前會給意見。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Good. And what are you planning to work on today?",
+      "zh": "很好。那你今天打算做什麼？",
+      "note": "what are you → /wʌɾɚjə/，t 變閃音，are 和 you 都弱讀。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "I'll start on the payment form and write a few tests.",
+      "zh": "我會開始做付款表單，再寫幾個測試。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "Sounds good to me. Is anything blocking you at the moment?",
+      "zh": "我覺得沒問題。你現在有被什麼卡住嗎？"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "One thing. The test server went down again last night.",
+      "zh": "有一件事。測試伺服器昨晚又掛掉了。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "I couldn't run anything after six, so I lost some time.",
+      "zh": "六點之後我什麼都跑不了，所以浪費了一些時間。",
+      "note": "couldn't 的 t 幾乎不發音，變成鼻腔停頓 /ˈkʊdn̩t/。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "Sorry about that. I'll ask Ray to look at it today.",
+      "zh": "真抱歉。我今天會請 Ray 去看一下。",
+      "note": "look at it → /lʊkəɾɪt/，三字連讀，at 的 t 變閃音。"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "Thanks. If it stays down, I'll work on the tests instead.",
+      "zh": "謝謝。如果還是掛著，我就先去寫測試。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "That works. Remember we're showing this build to the client on Friday.",
+      "zh": "可以。記得我們星期五要把這個版本展示給客戶。"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "I know. I should be done with everything by Thursday night.",
+      "zh": "我知道。我星期四晚上前應該就能全部完成。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Great, that gives us a full day to fix problems.",
+      "zh": "太好了，這樣我們還有一整天可以修問題。",
+      "note": "gives us → /ɡɪvzəs/，s 接母音連讀，us 弱讀成 /əs/。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "Okay, that's it from me. Let's get back to work.",
+      "zh": "好，我這邊就這樣。大家回去工作吧。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the team member finish yesterday?",
+      "options": ["The payment form", "The login page", "The test server"],
+      "answer": 1
+    },
+    {
+      "q": "What slowed his work down?",
+      "options": ["The design team sent late feedback", "He could not find his notes", "The test server went down at night"],
+      "answer": 2
+    },
+    {
+      "q": "What is happening on Friday?",
+      "options": ["They show the build to the client", "The server is replaced", "He starts writing tests"],
+      "answer": 0
+    }
+  ]
+}

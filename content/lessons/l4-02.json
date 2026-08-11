@@ -1,0 +1,109 @@
+{
+  "id": "l4-02",
+  "title": "The Case for Reading Slowly",
+  "titleZh": "為慢讀辯護",
+  "level": 4,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "作者反省把閱讀變成數量競賽的風氣，主張慢讀才可能真正改變一個人的想法。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Somewhere along the way, reading turned into a numbers game, and I think we lost something real.",
+      "zh": "不知道從什麼時候開始，閱讀變成了一場數字競賽，我覺得我們因此失去了某些真實的東西。",
+      "note": "turned into 的 d 連到 into 的母音；lost something 的 t 被後面的 s 吃掉。"
+    },
+    {
+      "id": "s2",
+      "text": "People post their yearly totals the way runners post mileage, as though books were distance covered.",
+      "zh": "大家貼出年度讀書總量，就像跑者貼里程數，好像書本只是跑過的距離。"
+    },
+    {
+      "id": "s3",
+      "text": "I did it too for about three years, and I can barely tell you what was in any of them.",
+      "zh": "我也這樣做了大概三年，而我幾乎說不出裡面任何一本寫了什麼。",
+      "note": "did it 的 d 在母音間變閃音，連成 /ˈdɪ.ɾɪt/；can 弱讀成 /kən/。"
+    },
+    {
+      "id": "s4",
+      "text": "What I remember instead are the four or five books I read badly, slowly, over and over.",
+      "zh": "我真正記得的，反而是那四五本我讀得笨拙、緩慢、一遍又一遍的書。"
+    },
+    {
+      "id": "s5",
+      "text": "I underlined things, argued in the margins, and put the book down for a week when I got stuck.",
+      "zh": "我畫線、在頁邊跟作者爭辯，卡住的時候就把書放下一個禮拜。",
+      "note": "put the book down 的 t 變喉塞音；got stuck 的 t 完全不釋放。"
+    },
+    {
+      "id": "s6",
+      "text": "That's not efficient by any measure, and it would look pretty terrible on one of those reading challenges.",
+      "zh": "不管用什麼標準看那都不算有效率，放到那種閱讀挑戰上還挺難看的。"
+    },
+    {
+      "id": "s7",
+      "text": "But those are the only books that have actually changed the way I think about anything at all.",
+      "zh": "但那些書，才是真正改變了我對任何事情看法的書。"
+    },
+    {
+      "id": "s8",
+      "text": "The argument for speed is that there is simply too much worth reading to linger anywhere.",
+      "zh": "支持速讀的說法是：值得讀的東西太多了，根本沒有停留的餘裕。"
+    },
+    {
+      "id": "s9",
+      "text": "I get that anxiety completely, though I'd argue that it gets the whole problem exactly backwards.",
+      "zh": "那種焦慮我完全懂，但我認為它把整個問題想反了。",
+      "note": "though 在句中是轉折信號，語調先下降再略微提起，提示後面要推翻前半句。"
+    },
+    {
+      "id": "s10",
+      "text": "If almost nothing sticks, then reading fifty books a year is closer to fifty near misses.",
+      "zh": "如果幾乎什麼都留不下來，那一年讀五十本比較像是五十次擦身而過。"
+    },
+    {
+      "id": "s11",
+      "text": "Slowness is not a virtue on its own, and I'm not romanticizing the dusty armchair here.",
+      "zh": "慢本身不是美德，我也不是在美化那種佈滿灰塵的扶手椅畫面。"
+    },
+    {
+      "id": "s12",
+      "text": "It just happens to be the speed at which an argument can push back against what you believe.",
+      "zh": "慢只是剛好是一個論點能夠反過來衝撞你既有信念的速度。",
+      "note": "happens to be 的 to 弱讀成 /tə/；at which 連讀，at 的 t 變閃音。"
+    },
+    {
+      "id": "s13",
+      "text": "You can't really be persuaded by a book you're skimming, because skimming mostly confirms what you already brought to it.",
+      "zh": "你不可能被一本你只是快速掃過的書說服，因為掃讀多半只會印證你原本帶進去的東西。"
+    },
+    {
+      "id": "s14",
+      "text": "So I've stopped counting, and the strange result is that I now finish fewer books and keep more.",
+      "zh": "所以我不再計數了，奇怪的結果是我現在讀完的書更少，留下來的卻更多。",
+      "note": "fewer 和 more 是一組對比重音，兩個字都要明顯加重，句意全靠這組對比成立。"
+    },
+    {
+      "id": "s15",
+      "text": "Whatever reading is for, I'm fairly sure it isn't for the number at the end of December.",
+      "zh": "不管閱讀是為了什麼，我相當確定它不是為了十二月底的那個數字。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does the writer say about the years he spent counting books?",
+      "options": ["He remembers almost nothing from them", "He read mostly fiction during that time", "He enjoyed reading more then than he does now"],
+      "answer": 0
+    },
+    {
+      "q": "What is the writer's attitude toward slow reading?",
+      "options": ["He treats slowness as a virtue in its own right", "He values it because it gives an argument time to change your mind", "He thinks it only suits difficult academic books"],
+      "answer": 1
+    },
+    {
+      "q": "Why does he say skimming cannot persuade you?",
+      "options": ["It is too tiring to keep up", "You mostly pick up what you already believed", "Most books are not worth arguing with"],
+      "answer": 1
+    }
+  ]
+}

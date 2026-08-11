@@ -1,0 +1,104 @@
+{
+  "id": "l3-03",
+  "title": "Missing a Connecting Flight",
+  "titleZh": "錯過轉機班機",
+  "level": 3,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "作者因班機延誤錯過轉機，從此不再訂時間太短的轉機行程。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "I used to think a two hour layover was plenty of time to catch a connecting flight.",
+      "zh": "我以前總覺得兩小時的轉機時間，趕下一班飛機綽綽有餘。",
+      "note": "used to 連讀成 /ˈjus.tə/，d 消失；plenty 的 nt 只留 /n/，連 of 成 /ˈplɛ.ni.əv/。"
+    },
+    {
+      "id": "s2",
+      "text": "Then I got stuck on a runway in Chicago for ninety minutes with the engines shut off.",
+      "zh": "結果我在芝加哥的跑道上卡了九十分鐘，引擎還關著。",
+      "note": "got stuck 的 t 完全不釋放，只留一個停頓；shut off 連讀成 /ʃʌ.ˈɾɔf/。"
+    },
+    {
+      "id": "s3",
+      "text": "By the time we pulled up to the gate, my connection to Lisbon was already boarding.",
+      "zh": "等我們滑到登機門的時候，我飛里斯本的那班已經在登機了。"
+    },
+    {
+      "id": "s4",
+      "text": "I ran through the terminal with my bag banging against my leg the whole way.",
+      "zh": "我一路衝過航廈，包包整路打在我腿上。"
+    },
+    {
+      "id": "s5",
+      "text": "I made it to the gate about four minutes after they closed the door.",
+      "zh": "我趕到登機門的時候，他們關艙門大概已經四分鐘了。",
+      "note": "made it 連成 /ˈmeɪ.ɾɪt/，d 在母音間變閃音；to 弱讀成 /tə/。"
+    },
+    {
+      "id": "s6",
+      "text": "The agent looked at me, shook her head, and told me the plane was pushing back.",
+      "zh": "地勤看了我一眼，搖搖頭，說飛機已經在後推了。"
+    },
+    {
+      "id": "s7",
+      "text": "I stood there for a second, not sure whether to argue or just sit down and give up.",
+      "zh": "我在那裡站了幾秒，不知道該爭取一下，還是乾脆坐下放棄。",
+      "note": "sit down 的 t 變成喉塞音 /sɪʔ.daʊn/；whether to 的 to 弱讀成 /tə/。"
+    },
+    {
+      "id": "s8",
+      "text": "What surprised me was how calmly she started fixing it before I even asked her to.",
+      "zh": "讓我意外的是，我都還沒開口，她就很冷靜地開始幫我處理。"
+    },
+    {
+      "id": "s9",
+      "text": "She put me on a flight through Madrid that got in six hours later than planned.",
+      "zh": "她幫我改到經馬德里的班機，比原訂時間晚六小時抵達。",
+      "note": "put me 的 t 不爆破；got in 連成 /ˈɡɑ.ɾɪn/，t 變閃音。"
+    },
+    {
+      "id": "s10",
+      "text": "Then she handed me a voucher for dinner and pointed me toward the right terminal.",
+      "zh": "然後她給了我一張晚餐券，指了指我該去的那個航廈。"
+    },
+    {
+      "id": "s11",
+      "text": "I ended up eating a bad sandwich and sleeping on a bench next to a family of five.",
+      "zh": "我最後吃了個難吃的三明治，睡在一家五口旁邊的長椅上。"
+    },
+    {
+      "id": "s12",
+      "text": "But I got where I was going, and my bag turned up the next morning on its own.",
+      "zh": "但我還是到了目的地，而且我的行李隔天早上自己出現了。"
+    },
+    {
+      "id": "s13",
+      "text": "Now I never book a layover under three hours, no matter how much cheaper it looks.",
+      "zh": "現在不管看起來便宜多少，我都不訂三小時以內的轉機。",
+      "note": "matter 的 t 在兩個母音之間變閃音 /ˈmæ.ɾɚ/；book a 連成 /ˈbʊ.kə/。"
+    },
+    {
+      "id": "s14",
+      "text": "The extra hour costs almost nothing compared to a night on an airport bench.",
+      "zh": "跟在機場長椅上睡一晚比起來，多留一小時幾乎沒什麼成本。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the writer miss the flight?",
+      "options": ["The airline canceled it", "The first plane was stuck on the runway", "He went to the wrong terminal"],
+      "answer": 1
+    },
+    {
+      "q": "What did the gate agent do?",
+      "options": ["Rebooked him on a flight through Madrid", "Let him board anyway", "Told him to buy a new ticket"],
+      "answer": 0
+    },
+    {
+      "q": "What does the writer do differently now?",
+      "options": ["He only flies direct", "He books layovers of at least three hours", "He never checks a bag"],
+      "answer": 1
+    }
+  ]
+}

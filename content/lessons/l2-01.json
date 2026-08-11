@@ -1,0 +1,124 @@
+{
+  "id": "l2-01",
+  "title": "Making Weekend Plans",
+  "titleZh": "討論週末計畫",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "兩個朋友聊上週末的活動，並約好這個週末一起去爬山、吃晚餐。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hey Sam, what did you end up doing last weekend?",
+      "zh": "嘿 Sam，你上週末最後做了什麼？",
+      "note": "did you → /dɪdʒə/，d 和 y 合併成 /dʒ/ 音。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "I stayed home mostly, but I finally cleaned out my closet.",
+      "zh": "我大部分時間都待在家，不過總算把衣櫃整理乾淨了。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "That sounds boring, but it must feel really good now.",
+      "zh": "聽起來很無聊，不過現在應該很有成就感吧。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "It does. What about you? Did you go anywhere fun?",
+      "zh": "確實。那你呢？你有去什麼好玩的地方嗎？",
+      "note": "What about you → /wʌɾəbaʊtʃu/，What 的 t 變閃音，about you 連成 /baʊtʃu/。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "I drove up to the coast with my sister on Saturday.",
+      "zh": "我星期六跟我姊姊開車去了海邊。"
+    },
+    {
+      "id": "s6",
+      "speaker": "A",
+      "text": "We walked along the beach and ate way too much seafood.",
+      "zh": "我們沿著海灘散步，還吃了太多海鮮。",
+      "note": "walked along → /wɔːktəlɔŋ/，walked 的字尾 /t/ 接母音要連讀。"
+    },
+    {
+      "id": "s7",
+      "speaker": "B",
+      "text": "Now I'm jealous. I haven't seen the ocean in months.",
+      "zh": "我現在有點羨慕。我已經好幾個月沒看到海了。"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "Then come with us this weekend. We're hiking on Sunday morning.",
+      "zh": "那這個週末跟我們一起去吧。我們星期天早上要去爬山。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "Really? How long is the hike? I'm not in great shape.",
+      "zh": "真的嗎？要爬多久？我體力沒有很好。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "It's about two hours up, and the view is worth it.",
+      "zh": "上去大概兩個小時，但那個風景絕對值得。",
+      "note": "worth it → /wɝːθɪt/，兩字連讀，it 弱讀成 /ɪt/ 甚至 /ət/。"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "Okay, I'm in. What time will you pick me up?",
+      "zh": "好，我加入。你幾點來接我？",
+      "note": "will you → /wɪljə/，you 弱讀成 /jə/；pick me up 連成一串。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "I'll grab you at seven, before the parking lot fills up.",
+      "zh": "我七點去接你，趁停車場還沒停滿。"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "Seven is early, but I'll set two alarms just in case.",
+      "zh": "七點好早，不過我會設兩個鬧鐘以防萬一。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Perfect. We'll get dinner after, and I'm buying this time.",
+      "zh": "太好了。爬完我們去吃晚餐，這次我請客。"
+    },
+    {
+      "id": "s15",
+      "speaker": "B",
+      "text": "You said that last time, but I'll let you try again.",
+      "zh": "你上次也是這樣說，不過我就再給你一次機會。",
+      "note": "let you → /lɛtʃu/，t 和 y 合併成 /tʃ/ 音。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Sam do last weekend?",
+      "options": ["Drove to the coast", "Cleaned out his closet at home", "Went hiking with his sister"],
+      "answer": 1
+    },
+    {
+      "q": "What are they planning to do on Sunday?",
+      "options": ["An early morning hike", "A drive to the beach", "A long dinner in the city"],
+      "answer": 0
+    },
+    {
+      "q": "Why does A want to leave at seven?",
+      "options": ["They have to be back early", "The hike takes over two hours", "The parking lot fills up later"],
+      "answer": 2
+    }
+  ]
+}

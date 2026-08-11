@@ -1,0 +1,124 @@
+{
+  "id": "l4-01",
+  "title": "Disagreeing in a Meeting",
+  "titleZh": "在會議上表達不同意見",
+  "level": 4,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "會議上有人反對功能一次全面上線，最後協議先開放百分之五的帳號試行。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "I want to push back on this, and I'd rather do it here than in a hallway afterwards.",
+      "zh": "我想對這件事提出反對，而且我寧願當場講，也不要事後在走廊上講。",
+      "note": "I'd rather 的 d 幾乎消失，連成 /aɪ ˈɹæ.ðɚ/；than in 連讀成 /ðə.nɪn/。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Go ahead, though I'll admit I thought we'd more or less landed on this two weeks ago.",
+      "zh": "你說吧，不過老實講我以為兩週前我們大致上已經定案了。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "We landed on the goal, but I never signed off on shipping to everyone on day one.",
+      "zh": "我們是對目標達成共識，但我從來沒同意第一天就全面開放。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "The whole point of a staged rollout is that it slows us down for no real reason.",
+      "zh": "分階段上線的重點，就是它會毫無理由地拖慢我們的速度。",
+      "note": "point of 的 t 在 n 後面常整個脫落，連成 /ˈpɔɪ.nəv/。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "That's only true if you assume nothing breaks, which has not been our track record lately.",
+      "zh": "那要建立在什麼都不會出錯的前提上，而這陣子我們並沒有這種紀錄。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "You're bringing up the March outage again, and honestly, that feels like it's beside the point here.",
+      "zh": "你又提三月那次當機了，老實說我覺得那跟這件事沒什麼關係。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "It's the whole point, because we spent a week apologizing to customers who had no warning.",
+      "zh": "那正是重點，因為我們花了一整週向毫無預警的客戶道歉。",
+      "note": "spent a 的 t 在 n 後常整個脫落，聽起來像 /ˈspɛ.nə/。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "So what would actually satisfy you here, given that we can't just sit on this feature forever?",
+      "zh": "那到底要怎樣你才會滿意？我們總不能把這個功能永遠壓著吧。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Give it to five percent of accounts for a week, and let the numbers make the argument.",
+      "zh": "先給百分之五的帳號用一週，讓數字自己來說話。",
+      "note": "Give it to 連成 /ˈɡɪ.vɪ.ɾə/，it 的 t 變閃音，to 弱讀。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "And if the numbers look fine after a week, you'll drop the objection and we go wide?",
+      "zh": "那如果一週後數字沒問題，你就撤回反對，我們全面開放？"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "I will, and I'll say so in writing, because I'm not trying to win anything here.",
+      "zh": "我會，而且我會白紙黑字寫下來，因為我不是要爭輸贏。",
+      "note": "not 在這裡是對比重音，重讀 not 才聽得出他強調自己不是在爭輸贏。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Fine, I can live with five percent, as long as nobody treats that week as an excuse to stall.",
+      "zh": "好，百分之五我可以接受，只要沒人拿那一週當拖延的藉口。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Nobody's stalling, and if it holds up I'd honestly love to be wrong about the risk.",
+      "zh": "沒有人要拖，如果撐得住，我真心樂意在風險這件事上被證明是錯的。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "Let's write it down before we leave, because I don't want to relitigate this on Thursday.",
+      "zh": "散會前先寫下來，我不想星期四又把這件事重吵一遍。",
+      "note": "don't want to 口語連成 /ˈdoʊn.wɑ.nə/；write it down 的 t 變閃音。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "Agreed, and I'll own the write-up so it doesn't sit in somebody's drafts all week.",
+      "zh": "同意，紀錄我來寫，免得它在誰的草稿匣裡躺一整週。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is speaker A actually objecting to?",
+      "options": ["The feature itself", "Releasing it to all users at once", "The two week timeline"],
+      "answer": 1
+    },
+    {
+      "q": "How would you describe A's tone during the disagreement?",
+      "options": ["Firm but not personal", "Sarcastic and dismissive", "Apologetic and unsure"],
+      "answer": 0
+    },
+    {
+      "q": "What do the two of them finally agree to do?",
+      "options": ["Cancel the launch", "Release to five percent of accounts first", "Postpone the decision to Thursday"],
+      "answer": 1
+    }
+  ]
+}

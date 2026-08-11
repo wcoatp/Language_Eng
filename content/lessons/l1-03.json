@@ -1,0 +1,109 @@
+{
+  "id": "l1-03",
+  "title": "My Morning Routine",
+  "titleZh": "我的早晨作息",
+  "level": 1,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "作者描述平日早上的固定作息，從起床、吃早餐到搭公車上班。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "I wake up at six thirty every single morning.",
+      "zh": "我每天早上六點半起床。",
+      "note": "wake up 連讀成 /weɪkʌp/；at 弱讀成 /ət/。"
+    },
+    {
+      "id": "s2",
+      "text": "My alarm is loud, so I get up fast.",
+      "zh": "我的鬧鐘很大聲，所以我很快就起來了。",
+      "note": "get up → /ɡɛɾʌp/，t 夾在母音之間變成閃音。"
+    },
+    {
+      "id": "s3",
+      "text": "First, I drink a big glass of cold water.",
+      "zh": "首先，我會喝一大杯冰水。",
+      "note": "glass of 的 of 弱讀成 /əv/；water 的 t 是閃音 /ˈwɔɾɚ/。"
+    },
+    {
+      "id": "s4",
+      "text": "Then I open the window and look outside.",
+      "zh": "接著我會打開窗戶往外看。"
+    },
+    {
+      "id": "s5",
+      "text": "The street is quiet, and the sky is bright.",
+      "zh": "街道很安靜，天空很明亮。"
+    },
+    {
+      "id": "s6",
+      "text": "I take a hot shower for about ten minutes.",
+      "zh": "我會洗大概十分鐘的熱水澡。",
+      "note": "for about → /fɚəbaʊt/，for 弱讀，兩字要連讀。"
+    },
+    {
+      "id": "s7",
+      "text": "After that, I make coffee and two eggs.",
+      "zh": "洗完後，我會煮咖啡、煎兩顆蛋。"
+    },
+    {
+      "id": "s8",
+      "text": "I eat breakfast while I read the morning news.",
+      "zh": "我會一邊吃早餐一邊看早間新聞。"
+    },
+    {
+      "id": "s9",
+      "text": "My cat sits on the table and watches me.",
+      "zh": "我的貓會坐在桌上看著我。"
+    },
+    {
+      "id": "s10",
+      "text": "Then I brush my teeth and get my bag.",
+      "zh": "然後我會刷牙，拿起我的包包。"
+    },
+    {
+      "id": "s11",
+      "text": "I leave my house at exactly seven forty five.",
+      "zh": "我七點四十五分準時出門。",
+      "note": "forty 的 t 是閃音 /ˈfɔɹɾi/，重音在第一音節，跟 fourteen 不同。"
+    },
+    {
+      "id": "s12",
+      "text": "The bus stop is only two minutes from here.",
+      "zh": "公車站離這裡只要兩分鐘。"
+    },
+    {
+      "id": "s13",
+      "text": "I always take the same bus into the city.",
+      "zh": "我總是搭同一班公車進城。",
+      "note": "into the → /ˈɪnɾə ðə/，into 的 t 弱化成閃音。"
+    },
+    {
+      "id": "s14",
+      "text": "I get to my office before nine every day.",
+      "zh": "我每天都在九點前到辦公室。"
+    },
+    {
+      "id": "s15",
+      "text": "This simple routine keeps my whole day calm.",
+      "zh": "這個簡單的作息讓我一整天都很平靜。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the first thing the writer does after getting up?",
+      "options": ["Takes a hot shower", "Drinks a big glass of water", "Makes coffee and eggs"],
+      "answer": 1
+    },
+    {
+      "q": "What does the writer do during breakfast?",
+      "options": ["Reads the news", "Feeds the cat", "Calls a friend"],
+      "answer": 0
+    },
+    {
+      "q": "How does the writer get to the office?",
+      "options": ["Walks the whole way", "Drives a car", "Takes the bus"],
+      "answer": 2
+    }
+  ]
+}

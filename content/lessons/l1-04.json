@@ -1,0 +1,124 @@
+{
+  "id": "l1-04",
+  "title": "Checking Into a Hotel",
+  "titleZh": "飯店入住登記",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "travel",
+  "summaryZh": "旅客到飯店辦理入住，確認房間位置、早餐時間和無線網路密碼。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hi, I have a room here for two nights.",
+      "zh": "嗨，我在這裡訂了兩晚的房間。",
+      "note": "for two 的 for 弱讀成 /fɚ/，不要唸成重音。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Welcome to our hotel! Can I have your name?",
+      "zh": "歡迎光臨本飯店！可以給我您的名字嗎？",
+      "note": "Can I → /kənaɪ/，兩字連讀成一組音節。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Sure, my name is Anna Lin, from Taipei.",
+      "zh": "好的，我叫 Anna Lin，從台北來的。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "Thank you. I see your room here, Miss Lin.",
+      "zh": "謝謝您。林小姐，我看到您的房間了。"
+    },
+    {
+      "id": "s5",
+      "speaker": "B",
+      "text": "You have room four ten on the fourth floor.",
+      "zh": "您的房間是四樓的四一零號房。"
+    },
+    {
+      "id": "s6",
+      "speaker": "A",
+      "text": "Great, thanks. Is my room quiet at night?",
+      "zh": "太好了，謝謝。我的房間晚上安靜嗎？"
+    },
+    {
+      "id": "s7",
+      "speaker": "B",
+      "text": "Yes, it faces the garden, so it's very quiet.",
+      "zh": "很安靜，房間面向花園，所以非常安靜。"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "That sounds perfect. What time do you serve breakfast?",
+      "zh": "聽起來太棒了。你們早餐幾點供應？",
+      "note": "What time do you → /wʌtaɪm dʒə/，do you 縮成 /dʒə/。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "Breakfast is from seven to ten every morning.",
+      "zh": "早餐每天早上七點到十點供應。",
+      "note": "from seven to ten 的 to 弱讀成 /tə/，不要唸成 /tuː/。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "Good to know. Is there wifi in the room?",
+      "zh": "知道了。房間裡有無線網路嗎？"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "Of course. The password is on your room key.",
+      "zh": "當然有。密碼就印在您的房卡上。",
+      "note": "Of course → /əvˈkɔɹs/，of 弱讀，聽起來像 'v course。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "Perfect. Can I leave my bags here for now?",
+      "zh": "太好了。我可以先把行李放在這裡嗎？"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "Sure, we keep them behind the desk for you.",
+      "zh": "當然，我們會幫您放在櫃台後面。",
+      "note": "keep them 的 them 弱讀成 /ðəm/ 甚至 /əm/，聽起來像 keep'em。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Thank you so much. Have a nice day!",
+      "zh": "非常謝謝你。祝你有美好的一天！"
+    },
+    {
+      "id": "s15",
+      "speaker": "B",
+      "text": "You too. Enjoy your stay here with us, Miss Lin!",
+      "zh": "您也是。林小姐，祝您住得愉快！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How many nights will she stay?",
+      "options": ["One night", "Two nights", "Four nights"],
+      "answer": 1
+    },
+    {
+      "q": "Why is her room quiet?",
+      "options": ["It faces the garden", "It is on the top floor", "The hotel is almost empty"],
+      "answer": 0
+    },
+    {
+      "q": "Where can she find the wifi password?",
+      "options": ["At the front desk", "In the hotel app", "On her room key"],
+      "answer": 2
+    }
+  ]
+}

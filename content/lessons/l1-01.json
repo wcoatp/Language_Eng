@@ -1,0 +1,111 @@
+{
+  "id": "l1-01",
+  "title": "Meeting Someone New",
+  "titleZh": "初次見面",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "兩位同事在辦公室第一次見面，互相自我介紹，並約好一起喝咖啡。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hi there, I'm Ben. Are you new here?",
+      "zh": "嗨，我是 Ben。你是新來的嗎？",
+      "note": "Are you → /ɑɹjə/，are 弱讀成 /ɚ/，兩字連成一個音。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Yes, I am. My name is Mia, nice to meet you.",
+      "zh": "對，我是新來的。我叫 Mia，很高興認識你。",
+      "note": "nice to meet you 的 to 弱讀成 /tə/；meet you 連音成 /miːtʃu/。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Nice to meet you too. Where do you sit?",
+      "zh": "我也很高興認識你。你坐在哪裡？"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "I sit by the window, right next to the door.",
+      "zh": "我坐在窗邊，就在門旁邊。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "That's a good spot. It gets a lot of light.",
+      "zh": "那個位置很好，採光很不錯。",
+      "note": "a lot of → /əlɑɾəv/，lot 的 t 變閃音，of 弱讀成 /əv/。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "It does. So what do you do here, Ben?",
+      "zh": "真的很亮。那你在這裡做什麼工作，Ben？"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "I work on the design team. We make websites.",
+      "zh": "我在設計團隊，我們負責做網站。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "That sounds fun. I'm on the sales team.",
+      "zh": "聽起來很有趣。我是業務團隊的。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Cool. Do you want to get coffee sometime?",
+      "zh": "很棒。你哪天要不要一起去喝杯咖啡？",
+      "note": "want to 口語常唸成 /wɑnə/（wanna）。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "Sure, I'd love that. How about tomorrow morning?",
+      "zh": "好啊，我很願意。明天早上如何？"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "Tomorrow works for me. Let's meet at nine.",
+      "zh": "明天我可以。我們九點碰面吧。",
+      "note": "for me 的 for 弱讀成 /fɚ/；meet at 連讀且 t 變閃音 /miːɾæt/。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Great, I'll see you then. Have a good day!",
+      "zh": "太好了，那到時候見。祝你有美好的一天！"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "You too, Mia. And welcome to the team!",
+      "zh": "你也是，Mia。歡迎加入我們團隊！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Where does Mia sit?",
+      "options": ["Near the kitchen", "By the window", "In a corner office"],
+      "answer": 1
+    },
+    {
+      "q": "What team does Ben work on?",
+      "options": ["The design team", "The sales team", "The support team"],
+      "answer": 0
+    },
+    {
+      "q": "What do they plan to do tomorrow?",
+      "options": ["Have lunch together", "Meet the boss", "Get coffee at nine"],
+      "answer": 2
+    }
+  ]
+}

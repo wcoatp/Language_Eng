@@ -1,0 +1,124 @@
+{
+  "id": "l4-03",
+  "title": "A Difficult Conversation With a Friend",
+  "titleZh": "和朋友的一場難談",
+  "level": 4,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "一個人終於向老是放鴿子的朋友攤牌，才發現對方正瞞著失業的難處。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "I've been putting this off for weeks, and I think if I don't say it now I never will.",
+      "zh": "這件事我拖了好幾個禮拜，我覺得再不說，大概就永遠說不出口了。",
+      "note": "putting 的 tt 在母音間變閃音 /ˈpʊ.ɾɪŋ/；this off 連讀，s 直接連到母音。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "That's an alarming way to start a conversation, so you might as well just come out with it.",
+      "zh": "這種開場滿嚇人的，那你乾脆直接講吧。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "You've canceled on me four times since March, usually the same afternoon we were supposed to meet.",
+      "zh": "從三月到現在你放我鴿子四次，而且多半是約好見面的當天下午。",
+      "note": "canceled on 的 d 連到 on 的母音；supposed to 縮成 /sə.ˈpoʊs.tə/。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "I know how that sounds, and I'm not going to sit here and pretend it isn't a pattern.",
+      "zh": "我知道這聽起來是什麼樣子，我也不會坐在這裡假裝那不是一種習慣。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "I'm not keeping score for the sake of it, but at some point I stopped making plans at all.",
+      "zh": "我不是刻意在記帳，但到了某個時候，我根本就不再約你了。",
+      "note": "at some point 的 t 都不爆破；stopped making 的 t 在 m 前完全脫落。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "That's fair, and honestly I noticed you'd gone quiet, which I told myself was just a busy stretch.",
+      "zh": "這說得沒錯，老實說我有注意到你變安靜了，只是我告訴自己你只是比較忙。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "It wasn't, and I think you knew that, which is part of why this has been sitting on me.",
+      "zh": "並不是，而且我覺得你心裡有數，這也是為什麼這件事一直壓著我。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "There's stuff going on that I haven't told anybody, and it's easier to cancel than to explain it.",
+      "zh": "有些事我沒跟任何人講過，取消比解釋容易多了。",
+      "note": "There's stuff 兩個 s 疊在一起只發一個較長的 /s/；haven't told 的 t 被後面的 t 吸收。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Then explain it to me now, because I'd much rather hear something difficult than sit here guessing.",
+      "zh": "那你現在就跟我說，因為我寧願聽到難聽的事，也不想坐在這裡亂猜。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "I lost the contract in January, and I've been burning through savings while pretending everything's fine.",
+      "zh": "我一月就丟了那個案子，一直在燒存款，還裝作一切都好。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "That's a lot to carry on your own, and I wish you'd let me in months ago.",
+      "zh": "一個人扛這些太重了，我真希望你幾個月前就讓我知道。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "I didn't want the friendship to turn into me showing up and unloading on you every week.",
+      "zh": "我不想讓這段友情變成我每週跑來找你倒垃圾。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "That's not how this works, and frankly you don't get to decide what I can handle.",
+      "zh": "友情不是這樣運作的，而且說真的，我能承受多少不是你來決定。",
+      "note": "don't get to 的 don't 要重讀，是對比重音，強調對方無權替我決定。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "Point taken, so here's what I can promise: I'll tell you when I'm not up for it instead of vanishing.",
+      "zh": "我聽進去了，我能答應的是：我狀態不好的時候會直接跟你說，而不是人間蒸發。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "That's all I wanted, and for what it's worth, I'd have taken a bad night over four months of silence.",
+      "zh": "我要的就只是這樣，而且說真的，我寧願陪你度過一個糟糕的夜晚，也不要四個月的沉默。",
+      "note": "I'd have 口語縮成 /ˈaɪ.ɾəv/；a bad night 和 four months 是一組對比重音。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What has been damaging the friendship?",
+      "options": ["B repeatedly canceling plans at the last minute", "An argument about money B borrowed", "Something B said about A's job"],
+      "answer": 0
+    },
+    {
+      "q": "Why did B keep canceling?",
+      "options": ["B was avoiding having to explain losing a contract", "B had quietly moved to another city", "B was still angry about an old argument"],
+      "answer": 0
+    },
+    {
+      "q": "How does A react when B says he didn't want to be a burden?",
+      "options": ["A agrees that it was considerate", "A rejects B's right to decide that for him", "A asks for some space to think"],
+      "answer": 1
+    }
+  ]
+}

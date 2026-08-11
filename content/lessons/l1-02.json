@@ -1,0 +1,118 @@
+{
+  "id": "l1-02",
+  "title": "Ordering Coffee",
+  "titleZh": "點咖啡",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "顧客到咖啡店點一杯熱咖啡，跟店員確認牛奶、外帶和付款方式。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hi, can I get a small coffee, please?",
+      "zh": "嗨，可以給我一杯小杯咖啡嗎？",
+      "note": "can 在句中弱讀成 /kən/，不唸成重音的 /kæn/。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Sure thing. Do you want hot or iced coffee?",
+      "zh": "沒問題。你要熱的還是冰的？",
+      "note": "hot or → /hɑɾɚ/，t 夾在母音之間變閃音，or 弱讀。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Hot, please. It's a little cold outside today.",
+      "zh": "熱的，謝謝。今天外面有點冷。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "It really is. Do you want milk in that?",
+      "zh": "真的很冷。你要加牛奶嗎？"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Yes, just a little milk and no sugar.",
+      "zh": "要，加一點點牛奶就好，不要糖。",
+      "note": "and 弱讀成 /ən/，milk and no 聽起來像 /mɪlkən noʊ/。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "Got it. Is that for here or to go?",
+      "zh": "了解。內用還是外帶？",
+      "note": "Got it → /ˈɡɑɾɪt/，兩字連讀且 t 變閃音。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "To go, please. I'm walking to work now.",
+      "zh": "外帶，謝謝。我現在正要走路去上班。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "No problem. Do you want anything to eat?",
+      "zh": "沒問題。要不要來點吃的？"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "No thanks, just the coffee is fine today.",
+      "zh": "不用了，謝謝，今天只要咖啡就好。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "Okay, that's three dollars and fifty cents, please.",
+      "zh": "好的，總共是三塊五毛，謝謝。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "Here you go. Can I pay with this card?",
+      "zh": "在這裡。我可以用這張卡付嗎？",
+      "note": "Here you go → /hɪɚjəɡoʊ/，you 弱化成 /jə/，三個字連成一串。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Of course. Your coffee is ready right there.",
+      "zh": "當然可以。你的咖啡就在那邊，好了。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Thank you so much. Have a good morning!",
+      "zh": "非常謝謝你。祝你早上愉快！"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "You too, sir. Come back and see us soon!",
+      "zh": "你也是，先生。歡迎再來！",
+      "note": "Come back and 的 and 弱讀成 /ən/，聽起來像 back'n see。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does the customer order?",
+      "options": ["A large iced coffee", "A small hot coffee", "A small hot tea"],
+      "answer": 1
+    },
+    {
+      "q": "How does he want his coffee?",
+      "options": ["Black, with nothing added", "With milk and sugar", "With a little milk and no sugar"],
+      "answer": 2
+    },
+    {
+      "q": "Why does he want his coffee to go?",
+      "options": ["He is walking to work", "The shop is full", "He is late for a meeting"],
+      "answer": 0
+    }
+  ]
+}

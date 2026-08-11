@@ -1,0 +1,14 @@
+{
+  "name": "echo-english",
+  "version": "1.0.0",
+  "description": "英語聽說訓練 PWA — 變速精聽、跟讀比對、間隔複習、AI 對話",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8817",
+    "index": "node tools/build-index.mjs",
+    "audio": "node tools/generate-audio.mjs",
+    "icons": "node tools/make-icons.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,109 @@
+{
+  "id": "l2-03",
+  "title": "A Day in Kyoto",
+  "titleZh": "京都的一天",
+  "level": 2,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "作者回憶在京都的一整天，從清晨的寺廟一路騎車到夜晚的河邊。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "I woke up before sunrise on my second morning in Kyoto.",
+      "zh": "在京都的第二天早上，我在日出前就醒了。",
+      "note": "woke up 連讀成 /woʊkʌp/；before 的第一個音節弱讀成 /bɪ/。"
+    },
+    {
+      "id": "s2",
+      "text": "The streets were empty, and the air felt cool and clean.",
+      "zh": "街道空無一人，空氣又涼又乾淨。"
+    },
+    {
+      "id": "s3",
+      "text": "I walked twenty minutes to a small temple near the hills.",
+      "zh": "我走了二十分鐘，到山邊的一間小寺廟。",
+      "note": "twenty 口語常唸成 /ˈtwɛni/，中間的 t 幾乎消失。"
+    },
+    {
+      "id": "s4",
+      "text": "Only a few people were there, so it stayed very quiet.",
+      "zh": "那裡只有幾個人，所以一直都很安靜。"
+    },
+    {
+      "id": "s5",
+      "text": "I sat on the wooden steps and watched the light change.",
+      "zh": "我坐在木頭階梯上，看著光線慢慢改變。"
+    },
+    {
+      "id": "s6",
+      "text": "Later, I bought a rice ball and green tea from a shop.",
+      "zh": "後來我在一家小店買了飯糰和綠茶。",
+      "note": "Later 的 t 是閃音 /ˈleɪɾɚ/；bought a 連讀成 /bɔɾə/。"
+    },
+    {
+      "id": "s7",
+      "text": "The woman behind the counter smiled and taught me two words.",
+      "zh": "櫃台後的女士對我微笑，還教了我兩個單字。"
+    },
+    {
+      "id": "s8",
+      "text": "In the afternoon, I rented a bike and rode along the river.",
+      "zh": "下午我租了一台腳踏車，沿著河邊騎。",
+      "note": "rented a → /ˈrɛnɪɾə/，第一個 t 常省略，第二個變閃音。"
+    },
+    {
+      "id": "s9",
+      "text": "The path was flat, so I rode for almost two hours.",
+      "zh": "那條路很平，所以我騎了將近兩個小時。"
+    },
+    {
+      "id": "s10",
+      "text": "I passed old wooden houses with tiny gardens by the water.",
+      "zh": "我經過一棟棟老木屋，河邊還有小小的庭院。"
+    },
+    {
+      "id": "s11",
+      "text": "By evening, my legs were tired, but I didn't care at all.",
+      "zh": "到了傍晚，我的腿很酸，但我一點也不在意。",
+      "note": "didn't 的 t 在句中常不爆破，聽起來像 /ˈdɪdn̩/。"
+    },
+    {
+      "id": "s12",
+      "text": "I found a small place that served noodles and cold beer.",
+      "zh": "我找到一家小店，賣麵和冰啤酒。"
+    },
+    {
+      "id": "s13",
+      "text": "After dinner, I walked back along the river in the dark.",
+      "zh": "吃完晚餐，我在黑夜裡沿著河邊走回去。"
+    },
+    {
+      "id": "s14",
+      "text": "People sat on the bank, talking and laughing in small groups.",
+      "zh": "有人三三兩兩坐在河岸上聊天、大笑。"
+    },
+    {
+      "id": "s15",
+      "text": "It was a simple day, and I'll remember it for years.",
+      "zh": "那是很簡單的一天，但我會記得好多年。",
+      "note": "I'll 在快速口語中幾乎只剩 /aɪl/，別漏聽這個未來式。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why were the streets quiet when the writer went out?",
+      "options": ["It was raining hard", "It was before sunrise", "It was a public holiday"],
+      "answer": 1
+    },
+    {
+      "q": "How did the writer travel in the afternoon?",
+      "options": ["On a rented bike", "By train", "In a taxi"],
+      "answer": 0
+    },
+    {
+      "q": "How did the writer feel at the end of the day?",
+      "options": ["Tired and disappointed", "Bored by the quiet", "Tired but very happy"],
+      "answer": 2
+    }
+  ]
+}

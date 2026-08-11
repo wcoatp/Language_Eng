@@ -1,0 +1,124 @@
+{
+  "id": "l2-04",
+  "title": "At the Doctor's Office",
+  "titleZh": "看醫生",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "病人向醫生描述喉嚨痛和發燒的情況，醫生檢查後給了休息建議。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Good morning, Mr. Chen. So what brings you in today?",
+      "zh": "陳先生早安。今天是哪裡不舒服呢？"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "My throat has hurt since Monday, and I had a fever.",
+      "zh": "我從星期一開始喉嚨就很痛，而且有發燒。",
+      "note": "had a → /hæɾə/，d 夾在母音之間變成閃音。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "How high did the fever get? Did you check it?",
+      "zh": "燒到幾度？你有量過嗎？",
+      "note": "Did you → /dɪdʒə/，兩字合併成 /dʒ/ 音。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "It was thirty eight last night, but it dropped this morning.",
+      "zh": "昨天晚上三十八度，不過今天早上退了。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Okay. Have you had any trouble breathing or swallowing food?",
+      "zh": "好。那你呼吸或吞東西有困難嗎？"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "Swallowing hurts a lot, but breathing has been totally fine.",
+      "zh": "吞東西很痛，但呼吸完全沒問題。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "Let me take a look. Open wide and say ah.",
+      "zh": "我看一下。嘴巴張大，說「啊」。",
+      "note": "take a look → /teɪkəlʊk/，三字連成一串，a 弱讀成 /ə/。"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "Your throat is quite red, but I don't see any spots.",
+      "zh": "你的喉嚨滿紅的，不過我沒看到白點。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "Is it serious? I have to fly to Japan on Saturday.",
+      "zh": "嚴重嗎？我星期六要飛日本。",
+      "note": "have to → /hæftə/，v 變成 /f/ 音，to 弱讀成 /tə/。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "It looks like a normal virus, so you should be fine.",
+      "zh": "看起來是一般的病毒感染，你應該沒問題。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "Drink lots of water and rest as much as you can.",
+      "zh": "多喝水，盡量多休息。",
+      "note": "lots of → /lɑtsəv/，of 弱讀；water 的 t 是閃音 /ˈwɔɾɚ/。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Should I take medicine, or will it just go away?",
+      "zh": "我需要吃藥嗎？還是它自己會好？"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Take something for the pain, and it should clear up soon.",
+      "zh": "可以吃點止痛的，應該很快就會好。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "If the fever comes back on Friday, please call me first.",
+      "zh": "如果星期五又發燒，請先打電話給我。"
+    },
+    {
+      "id": "s15",
+      "speaker": "B",
+      "text": "I will, thank you doctor. I already feel a little better.",
+      "zh": "我會的，謝謝醫生。我已經覺得好一點了。",
+      "note": "better 的 tt 是閃音 /ˈbɛɾɚ/，聽起來像 bedder。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "When did his sore throat start?",
+      "options": ["On Monday", "On Friday", "This morning"],
+      "answer": 0
+    },
+    {
+      "q": "What does the doctor think the problem is?",
+      "options": ["A serious infection", "A normal virus", "A breathing problem"],
+      "answer": 1
+    },
+    {
+      "q": "What should he do if the fever comes back on Friday?",
+      "options": ["Go to the hospital right away", "Take stronger medicine", "Call the doctor first"],
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "l3-01",
+  "title": "Negotiating a Deadline",
+  "titleZh": "商量截止期限",
+  "level": 3,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "工程師向主管說明時程不可行，兩人協商把交付拆成兩次發布。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "I've been going over the schedule all morning, and I don't think we can ship by Friday.",
+      "zh": "我整個早上都在看時程，我不覺得我們星期五前交得出來。",
+      "note": "going over 的 /ŋ/ 直接連到 over 的母音，聽起來像 /ˈɡoʊɪ.ŋoʊ.vɚ/；don't think 的 t 幾乎消失。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "That's not really what I wanted to hear, but go ahead and walk me through it.",
+      "zh": "這不是我想聽到的話，不過你還是說說看吧。",
+      "note": "wanted 的 nt 只發 /n/，再加上 to 弱讀，整串聽起來像 /ˈwɑnɪ.tə/。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "The testing team only got the build on Tuesday, so they're already three days behind.",
+      "zh": "測試團隊星期二才拿到版本，所以他們已經落後三天了。"
+    },
+    {
+      "id": "s4",
+      "speaker": "A",
+      "text": "If we push it out now, they can actually catch the bugs before customers do.",
+      "zh": "如果我們現在硬推出去，他們就沒辦法在客戶之前把問題抓出來。"
+    },
+    {
+      "id": "s5",
+      "speaker": "B",
+      "text": "I hear you, but I already told the client we'd have something in their hands Friday.",
+      "zh": "我懂你的意思，可是我已經跟客戶說星期五會給他們東西了。"
+    },
+    {
+      "id": "s6",
+      "speaker": "A",
+      "text": "What if we hand over the core features on Friday and hold back the reporting tools?",
+      "zh": "如果我們星期五先交核心功能，報表工具晚點再給呢？",
+      "note": "What if 連音成 /wʌ.ɾɪf/，t 夾在兩個母音中間變閃音。"
+    },
+    {
+      "id": "s7",
+      "speaker": "B",
+      "text": "So you're saying we'd split it into two releases instead of one big one?",
+      "zh": "所以你是說要拆成兩次發布，而不是一次大改版？"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "Exactly, so they get to start using it and we buy ourselves another week for testing.",
+      "zh": "沒錯，他們可以先開始用，我們也替自己多爭取一週測試時間。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "That could work, so how much time would you need to finish off the second half?",
+      "zh": "這或許行得通，那你需要多久才能把後半段做完？"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "Give me until Wednesday, because I'd rather promise that and deliver than promise Friday and slip.",
+      "zh": "給我到星期三，我寧願答應星期三然後做到，也不要答應星期五卻跳票。",
+      "note": "Give me 的 v 常被吃掉，聽起來像 /ˈɡɪmi/；I'd rather 的 d 很輕。"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "Okay, I'll get on a call with them this afternoon and set up the new plan.",
+      "zh": "好，我下午跟他們通個電話，把新的計畫敲定。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "Thanks, I'll write up a short summary so you've got all the details in front of you.",
+      "zh": "謝了，我會寫個簡短的說明，讓你手邊有完整的細節。"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "Send it over by two, and next time please flag this kind of thing a week earlier.",
+      "zh": "兩點前寄給我，還有下次這種事請提早一週提出來。",
+      "note": "Send it over 三字連成一串，it 的 t 變閃音，聽起來像 /sɛn.dɪ.ˈɾoʊ.vɚ/。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Fair enough, I should have brought it up the moment the build slipped last week.",
+      "zh": "說得也對，上週版本一延我就該講的。",
+      "note": "should have 口語縮成 /ˈʃʊɾəv/，d 變閃音；brought it up 三字連讀。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does the speaker think the deadline should move?",
+      "options": ["The client changed the requirements", "Testing started three days late", "Two engineers are out sick"],
+      "answer": 1
+    },
+    {
+      "q": "What compromise do they agree on?",
+      "options": ["Ship the core features Friday and the rest by Wednesday", "Delay the whole release until Wednesday", "Ship everything Friday and fix the bugs later"],
+      "answer": 0
+    },
+    {
+      "q": "What does the manager ask for at the end?",
+      "options": ["A meeting with the testing team", "Earlier warning next time", "A written apology to the client"],
+      "answer": 1
+    }
+  ]
+}

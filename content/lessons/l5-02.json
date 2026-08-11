@@ -1,0 +1,124 @@
+{
+  "id": "l5-02",
+  "title": "A Performance Review That Goes Sideways",
+  "titleZh": "一場失控的績效面談",
+  "level": 5,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "績效面談中員工質疑評等的來源，主管坦承回饋延遲，兩人約定定期溝通。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "B",
+      "text": "Before we get into the ratings, I want to say that the overall picture here is genuinely positive, so please hear that first.",
+      "zh": "在談評等之前，我想先說整體來看真的是正面的，請你先把這句聽進去。",
+      "note": "get into 連讀成 /ˈɡɛ.ɾɪn.tə/，t 變閃音；want to 縮成 /ˈwɑ.nə/。"
+    },
+    {
+      "id": "s2",
+      "speaker": "A",
+      "text": "I appreciate you saying that, though in my experience a sentence that starts with overall is usually doing a lot of quiet work.",
+      "zh": "謝謝你這麼說，不過依我的經驗，以整體來看開頭的句子，通常都在偷偷做很多事。"
+    },
+    {
+      "id": "s3",
+      "speaker": "B",
+      "text": "Fair enough, so let's go straight there: you're rated as developing on collaboration, which is the only area below expectations.",
+      "zh": "說得也對，那我們就直接切入：你在協作這一項被評為發展中，是唯一低於期待的項目。"
+    },
+    {
+      "id": "s4",
+      "speaker": "A",
+      "text": "That's surprising, and I'd like to understand it, because nobody has raised anything with me directly in the last twelve months.",
+      "zh": "這讓我很意外，我想弄清楚原因，因為過去十二個月沒有任何人直接跟我提過。"
+    },
+    {
+      "id": "s5",
+      "speaker": "B",
+      "text": "Some of it came through the calibration session, where a couple of your peers described you as difficult to move once you've formed a view.",
+      "zh": "一部分來自校準會議，有幾位同儕形容你一旦形成看法就很難被說動。"
+    },
+    {
+      "id": "s6",
+      "speaker": "A",
+      "text": "So the rating rests on an impression formed in a room I wasn't in, by people whose names I'm not going to be told.",
+      "zh": "所以這個評等建立在一個我不在場的房間裡形成的印象上，而且那些人的名字我還不會被告知。",
+      "note": "wasn't in 連成 /ˈwʌ.zə.nɪn/；I'm not going to 口語成 I'm not gonna，not 的 t 不釋放。"
+    },
+    {
+      "id": "s7",
+      "speaker": "B",
+      "text": "I understand why that lands badly, and I'm not going to pretend the process is elegant, but it isn't quite as arbitrary as you're making it sound.",
+      "zh": "我理解這聽起來很刺耳，我也不會假裝這個流程有多漂亮，但它沒有你講得那麼武斷。",
+      "note": "but 開頭是語調轉折的信號，音高先降再重新起頭；quite as 的 t 在母音間變閃音。"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "Then help me out here, because I can only fix something if I know which conversations we're actually talking about.",
+      "zh": "那就幫我一下，因為我得知道我們到底在講哪幾次對話，才有辦法修正。"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "The database migration is the clearest example, where you were technically right and everybody in that thread still ended up dreading the next email.",
+      "zh": "資料庫遷移那次是最清楚的例子：你在技術上是對的，但那串信裡的每個人還是很怕收到下一封。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "I'll take that one, honestly, because I was right and I made absolutely sure that everyone knew it, which was not necessary.",
+      "zh": "老實說那一次我認了，因為我是對的，而且我還特別確保每個人都知道我是對的，那其實沒必要。",
+      "note": "right 的 t 完全不釋放，只留一個喉塞音；made absolutely 的 d 連到母音。"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "That's more self-awareness than I expected in this meeting, and frankly it makes the rating harder to defend rather than easier.",
+      "zh": "這比我預期的自覺多得多，老實說這反而讓這個評等更難辯護，而不是更容易。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "I'm not asking you to change it today, but I would like it written down that the feedback reached me nine months late.",
+      "zh": "我不是要你今天就改掉，但我希望白紙黑字寫下來：這個回饋晚了九個月才到我這裡。"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "That's a reasonable thing to ask, and I'll say plainly in the notes that the delay was mine and not yours.",
+      "zh": "這個要求很合理，我會在紀錄裡明白寫出延遲是我的責任，不是你的。",
+      "note": "mine 和 yours 是一組對比重音，兩個字都要拉出來，句子的重點全在這個對比。"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Then we're fine, and for what it's worth, I'd rather have this conversation badly than not have it at all.",
+      "zh": "那我們沒問題了，而且說真的，我寧願這場對話談得很糟，也不要根本沒談。",
+      "note": "I'd rather 的 d 幾乎消失；badly 和 at all 形成對比重音，句意全靠這組對比。"
+    },
+    {
+      "id": "s15",
+      "speaker": "B",
+      "text": "So would I, and I'd like us to do a version of it every six weeks so neither of us is surprised again.",
+      "zh": "我也是，我希望我們每六週做一次類似的對談，免得下次又有人被嚇到。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does A object to the collaboration rating?",
+      "options": ["The feedback came anonymously from a meeting he was not part of", "He believes collaboration should not be rated at all", "He was never shown his rating before the meeting"],
+      "answer": 0
+    },
+    {
+      "q": "What does A concede about the database migration?",
+      "options": ["That he was wrong on the technical question", "That being right did not excuse how he handled it", "That he missed the deadline for the work"],
+      "answer": 1
+    },
+    {
+      "q": "How does the manager react to A's admission?",
+      "options": ["He says it makes the rating harder to justify", "He raises the rating on the spot", "He becomes defensive and ends the meeting early"],
+      "answer": 0
+    }
+  ]
+}

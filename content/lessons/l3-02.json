@@ -1,0 +1,124 @@
+{
+  "id": "l3-02",
+  "title": "Something Wrong With the Apartment",
+  "titleZh": "公寓出了點問題",
+  "level": 3,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "房客向房東反映熱水故障和牆面滲水，兩人協調水電工上門的時間。",
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hi, it's Ellen up in 4B, and I'm calling about the hot water going out again.",
+      "zh": "你好，我是四樓 B 室的 Ellen，我打來是因為熱水又停了。",
+      "note": "it's Ellen 的 /s/ 直接連到 Ellen 的母音，聽起來像 /ɪ.ˈtsɛ.lən/。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "I thought that plumber sorted the whole thing out when he came by a couple of weeks ago.",
+      "zh": "我以為那個水電工兩個禮拜前來的時候就把問題解決了。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "So did I, but it started acting up on Sunday and now it's completely cold.",
+      "zh": "我也這麼以為，可是它星期天開始出狀況，現在完全是冷的。",
+      "note": "started acting 兩字的 t 和 d 都在母音間變閃音，連成 /ˈstɑɹ.ɾɪ.ˈɾæk.tɪŋ/。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "Alright, is the kitchen sink running cold as well, or is it just the shower?",
+      "zh": "好，那廚房水槽也是冷的嗎，還是只有淋浴間？"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Everything is cold, and there's a damp patch on the wall behind the water heater.",
+      "zh": "全部都是冷的，而且熱水器後面的牆上有一塊濕掉的地方。",
+      "note": "there's a 連讀成 /ðɛɹ.zə/；behind the 的 d 碰到 th 幾乎消失。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "A damp patch behind the heater doesn't sound good, so I'd better get someone out there.",
+      "zh": "熱水器後面會濕聽起來就不太妙，我最好找人過去看看。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "I was hoping you'd say that, because I've been boiling water on the stove for three days.",
+      "zh": "我就等你這句話，因為我已經在瓦斯爐上燒了三天的熱水。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "I can't get a plumber in until Thursday, unless you're around during the day tomorrow.",
+      "zh": "我最快也要星期四才找得到水電工，除非你明天白天在家。",
+      "note": "can't 的 t 通常不爆破，要靠母音變短和鼻音來判斷是否定句。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "I can move some things around and work from home, as long as he shows up before noon.",
+      "zh": "我可以調整一下行程在家工作，只要他中午前到就好。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "I'll ask him to come first thing, and I'll text you once he confirms the time.",
+      "zh": "我會請他一早就過去，他確認時間之後我再傳訊息給你。",
+      "note": "first thing 的 t 被後面的 th 吃掉；ask him 的 h 脫落，連成 /ˈæs.kɪm/。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "While I've got you, would you knock something off this month's rent for the trouble?",
+      "zh": "既然講到了，這個月的房租能不能因為這些麻煩少算一點？"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Let's see what the plumber says first, and then we can work something out on the rent.",
+      "zh": "先聽聽水電工怎麼說，房租的部分我們再想辦法。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "That's fair, but please don't leave me hanging like last time when nobody called back.",
+      "zh": "這樣算合理，但拜託別像上次那樣把我晾著，都沒人回電。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "You've got my word on it, and I'll follow up myself if he doesn't turn up.",
+      "zh": "我跟你保證，如果他沒出現我會自己去追。",
+      "note": "got my 的 t 不發出來，變成喉塞音 /ɡɑʔ.maɪ/。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "Thanks, I'll be here from eight tomorrow, so just send him up whenever he gets in.",
+      "zh": "謝謝，我明天八點就會在，他到了就直接讓他上來。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the tenant calling about?",
+      "options": ["A broken window", "No hot water and a damp wall", "A noisy neighbor upstairs"],
+      "answer": 1
+    },
+    {
+      "q": "Why does the tenant agree to stay home tomorrow?",
+      "options": ["So she doesn't have to wait until Thursday", "To meet the new landlord", "To pack for a trip"],
+      "answer": 0
+    },
+    {
+      "q": "What does the landlord say about the rent?",
+      "options": ["He refuses to reduce it", "He will decide after the plumber has been", "He already reduced it last month"],
+      "answer": 1
+    }
+  ]
+}

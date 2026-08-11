@@ -1,0 +1,203 @@
+{
+  "generatedAt": "2026-08-11T11:59:38.615Z",
+  "lessons": [
+    {
+      "id": "l1-01",
+      "title": "Meeting Someone New",
+      "titleZh": "初次見面",
+      "summaryZh": "兩位同事在辦公室第一次見面，互相自我介紹，並約好一起喝咖啡。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 13,
+      "questions": 3
+    },
+    {
+      "id": "l1-02",
+      "title": "Ordering Coffee",
+      "titleZh": "點咖啡",
+      "summaryZh": "顧客到咖啡店點一杯熱咖啡，跟店員確認牛奶、外帶和付款方式。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 14,
+      "questions": 3
+    },
+    {
+      "id": "l1-03",
+      "title": "My Morning Routine",
+      "titleZh": "我的早晨作息",
+      "summaryZh": "作者描述平日早上的固定作息，從起床、吃早餐到搭公車上班。",
+      "level": 1,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l1-04",
+      "title": "Checking Into a Hotel",
+      "titleZh": "飯店入住登記",
+      "summaryZh": "旅客到飯店辦理入住，確認房間位置、早餐時間和無線網路密碼。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l2-01",
+      "title": "Making Weekend Plans",
+      "titleZh": "討論週末計畫",
+      "summaryZh": "兩個朋友聊上週末的活動，並約好這個週末一起去爬山、吃晚餐。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l2-02",
+      "title": "A Quick Team Standup",
+      "titleZh": "團隊每日站立會議",
+      "summaryZh": "團隊早會上，成員回報昨天進度和今天計畫，並提出遇到的問題。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l2-03",
+      "title": "A Day in Kyoto",
+      "titleZh": "京都的一天",
+      "summaryZh": "作者回憶在京都的一整天，從清晨的寺廟一路騎車到夜晚的河邊。",
+      "level": 2,
+      "type": "article",
+      "topic": "travel",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l2-04",
+      "title": "At the Doctor's Office",
+      "titleZh": "看醫生",
+      "summaryZh": "病人向醫生描述喉嚨痛和發燒的情況，醫生檢查後給了休息建議。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l3-01",
+      "title": "Negotiating a Deadline",
+      "titleZh": "商量截止期限",
+      "summaryZh": "工程師向主管說明時程不可行，兩人協商把交付拆成兩次發布。",
+      "level": 3,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 14,
+      "questions": 3
+    },
+    {
+      "id": "l3-02",
+      "title": "Something Wrong With the Apartment",
+      "titleZh": "公寓出了點問題",
+      "summaryZh": "房客向房東反映熱水故障和牆面滲水，兩人協調水電工上門的時間。",
+      "level": 3,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l3-03",
+      "title": "Missing a Connecting Flight",
+      "titleZh": "錯過轉機班機",
+      "summaryZh": "作者因班機延誤錯過轉機，從此不再訂時間太短的轉機行程。",
+      "level": 3,
+      "type": "article",
+      "topic": "travel",
+      "count": 14,
+      "questions": 3
+    },
+    {
+      "id": "l3-04",
+      "title": "Why I Changed Careers",
+      "titleZh": "我為什麼轉行",
+      "summaryZh": "一位會計師因為義務輔導鄰居的小孩數學，發現自己真正想做的是教書。",
+      "level": 3,
+      "type": "article",
+      "topic": "work",
+      "count": 14,
+      "questions": 3
+    },
+    {
+      "id": "l4-01",
+      "title": "Disagreeing in a Meeting",
+      "titleZh": "在會議上表達不同意見",
+      "summaryZh": "會議上有人反對功能一次全面上線，最後協議先開放百分之五的帳號試行。",
+      "level": 4,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l4-02",
+      "title": "The Case for Reading Slowly",
+      "titleZh": "為慢讀辯護",
+      "summaryZh": "作者反省把閱讀變成數量競賽的風氣，主張慢讀才可能真正改變一個人的想法。",
+      "level": 4,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l4-03",
+      "title": "A Difficult Conversation With a Friend",
+      "titleZh": "和朋友的一場難談",
+      "summaryZh": "一個人終於向老是放鴿子的朋友攤牌，才發現對方正瞞著失業的難處。",
+      "level": 4,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l5-01",
+      "title": "What Algorithms Do to Attention",
+      "titleZh": "演算法對注意力做了什麼",
+      "summaryZh": "作者認為演算法不只是投其所好，而是把注意力訓練成可以被測量的形狀。",
+      "level": 5,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l5-02",
+      "title": "A Performance Review That Goes Sideways",
+      "titleZh": "一場失控的績效面談",
+      "summaryZh": "績效面談中員工質疑評等的來源，主管坦承回饋延遲，兩人約定定期溝通。",
+      "level": 5,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 15,
+      "questions": 3
+    },
+    {
+      "id": "l5-03",
+      "title": "How Sleep Consolidates Memory",
+      "titleZh": "睡眠如何鞏固記憶",
+      "summaryZh": "睡眠不是關機，而是大腦重播並剪輯白天的經驗，留下要點、丟掉細節。",
+      "level": 5,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 3
+    }
+  ]
+}

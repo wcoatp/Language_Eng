@@ -1,0 +1,302 @@
+/* 設定 — voice/accent, training preferences, conversation API, data. */
+
+import { el, toast, confirmBox, mount } from "../ui.js";
+import { settings, setSetting, DEFAULTS } from '../store.js';
+import { loadVoices, voicesFor, ACCENTS, say, cancel as cancelSpeech, unlock, ttsSupported } from '../tts.js';
+import { asrSupported } from '../asr.js';
+import { recorderSupported } from '../recorder.js';
+import { PROVIDERS, modelsFor, defaultModelFor, testKey, LlmError } from '../llm.js';
+import { wipeAll } from '../db.js';
+
+export function destroy() { cancelSpeech(); }
+
+const SAMPLE = 'The quick brown fox jumps over the lazy dog.';
+
+export async function render(root) {
+  const cfg = await settings();
+  await loadVoices();
+
+  mount(root, 
+    el('h1', { text: '設定' }),
+
+    el('h2', { text: '語音' }),
+    accentSection(cfg),
+
+    el('h2', { text: '訓練' }),
+    trainingSection(cfg),
+
+    el('h2', { text: '自由對話' }),
+    apiSection(cfg),
+
+    el('h2', { text: '裝置支援' }),
+    supportSection(),
+
+    el('h2', { text: '資料' }),
+    dataSection(),
+
+    el('p', { class: 'muted center', style: 'margin-top:28px' },
+      ['Echo · 所有紀錄與 API key 只存在這台裝置']),
+  );
+}
+
+/* ---------- voice ---------- */
+
+function accentSection(cfg) {
+  const box = el('div', { class: 'card' });
+
+  const accentRow = el('div', { class: 'chips' },
+    ACCENTS.map(a => {
+      const available = voicesFor(a.code).length > 0;
+      return el('button', {
+        class: `chip ${cfg.accentLang === a.code ? 'is-on' : ''}`,
+        disabled: !available,
+        style: available ? '' : 'opacity:.35',
+        title: available ? '' : '這台裝置沒有這個口音的語音',
+        onclick: async () => {
+          await setSetting({ accentLang: a.code, accent: '' });
+          toast(`已切換到${a.label}`);
+          render(document.getElementById('view'));
+        },
+      }, [a.label]);
+    }));
+
+  const voices = voicesFor(cfg.accentLang);
+  const picker = el('select', {
+    onchange: async e => { await setSetting({ accent: e.target.value }); preview(); },
+  }, [
+    el('option', { value: '', selected: !cfg.accent }, ['自動挑選最佳語音']),
+    ...voices.map(v => el('option', {
+      value: v.voiceURI, selected: cfg.accent === v.voiceURI,
+    }, [`${v.name}${v.localService ? '' : ' (線上)'}`])),
+  ]);
+
+  const preview = async () => {
+    const c = await settings();
+    unlock(); cancelSpeech();
+    try {
+      await say(SAMPLE, { langCode: c.accentLang, voiceURI: c.accent, rate: c.normalRate });
+    } catch { toast('這個語音無法播放'); }
+  };
+
+  box.append(
+    el('div', { class: 'field' }, [
+      el('label', { text: '口音' }),
+      accentRow,
+      voices.length === 0
+        ? el('div', { class: 'hint', style: 'color:var(--warn)' },
+            ['這台裝置沒有可用的英語語音。Mac/iOS 可到「系統設定 → 輔助使用 → 朗讀內容」下載。'])
+        : null,
+    ]),
+    voices.length ? el('div', { class: 'field' }, [
+      el('label', { text: '語音' }),
+      picker,
+      el('div', { class: 'hint' },
+        ['名稱含 Natural / Enhanced / Premium 的通常最自然,可能需要先在系統設定裡下載。']),
+    ]) : null,
+    el('button', { class: 'btn btn-block', onclick: preview }, ['🔊 試聽']),
+  );
+  return box;
+}
+
+/* ---------- training ---------- */
+
+function trainingSection(cfg) {
+  const box = el('div', { class: 'card' });
+
+  const slider = (label, key, min, max, step, fmt) => {
+    const out = el('span', { class: 'muted', text: fmt(cfg[key]) });
+    return el('div', { class: 'field' }, [
+      el('label', {}, [label, ' ', out]),
+      el('input', {
+        type: 'range', min, max, step, value: cfg[key],
+        oninput: e => { out.textContent = fmt(+e.target.value); },
+        onchange: async e => { await setSetting({ [key]: +e.target.value }); },
+      }),
+    ]);
+  };
+
+  box.append(
+    slider('正常語速', 'normalRate', 0.7, 1.3, 0.05, v => `${Math.round(v * 100)}%`),
+    slider('慢速', 'slowRate', 0.4, 0.9, 0.05, v => `${Math.round(v * 100)}%`),
+    slider('每日目標', 'dailyGoalMin', 5, 120, 5, v => `${v} 分鐘`),
+    toggle('顯示中文翻譯', '對答案時一起顯示中文', cfg.showZh, v => setSetting({ showZh: v })),
+  );
+  return box;
+}
+
+function toggle(label, sub, value, onChange) {
+  const input = el('input', {
+    type: 'checkbox', checked: value,
+    onchange: async e => { await onChange(e.target.checked); },
+  });
+  return el('div', { class: 'switch-row' }, [
+    el('div', { class: 'lbl' }, [label, sub ? el('small', { text: sub }) : null]),
+    el('label', { class: 'switch' }, [input, el('span')]),
+  ]);
+}
+
+/* ---------- conversation API ---------- */
+
+function apiSection(cfg) {
+  const box = el('div', { class: 'card' });
+
+  const modelField = el('div', { class: 'field' });
+  const keyInput = el('input', {
+    type: 'password', value: cfg.apiKey, placeholder: '貼上你的 API key',
+    autocomplete: 'off', spellcheck: 'false',
+    onchange: async e => { await setSetting({ apiKey: e.target.value.trim() }); },
+  });
+
+  const baseField = el('div', { class: 'field', style: cfg.provider === 'custom' ? '' : 'display:none' }, [
+    el('label', { text: 'API 網址' }),
+    el('input', {
+      type: 'url', value: cfg.baseUrl, placeholder: 'https://example.com',
+      onchange: async e => { await setSetting({ baseUrl: e.target.value.trim() }); },
+    }),
+    el('div', { class: 'hint' }, ['需為 OpenAI 相容的 /v1/chat/completions 端點。']),
+  ]);
+
+  function paintModels(provider, current) {
+    const list = modelsFor(provider);
+    mount(modelField, 
+      el('label', { text: '模型' }),
+      list.length
+        ? el('select', {
+            onchange: async e => { await setSetting({ model: e.target.value }); },
+          }, list.map(m => el('option', {
+            value: m.id, selected: (current || defaultModelFor(provider)) === m.id,
+          }, [`${m.label}${m.price !== '—' ? `  ${m.price}` : ''}`])))
+        : el('input', {
+            value: current, placeholder: '模型名稱',
+            onchange: async e => { await setSetting({ model: e.target.value.trim() }); },
+          }),
+      el('div', { class: 'hint' }, ['價格為每百萬 token 的輸入 / 輸出費用。對話練習每次約幾分美金以下。']),
+    );
+  }
+  paintModels(cfg.provider, cfg.model);
+
+  const status = el('p', { class: 'hint', style: 'margin-top:10px' });
+
+  box.append(
+    el('p', { style: 'margin-bottom:14px' },
+      ['自由對話需要你自己的 API key。金鑰只存在這台裝置,直接送到你選的服務商,不經過任何中間伺服器。']),
+
+    el('div', { class: 'field' }, [
+      el('label', { text: '服務商' }),
+      el('select', {
+        onchange: async e => {
+          const p = e.target.value;
+          const model = defaultModelFor(p);
+          await setSetting({ provider: p, model, baseUrl: p === 'custom' ? cfg.baseUrl : '' });
+          baseField.style.display = p === 'custom' ? '' : 'none';
+          paintModels(p, model);
+        },
+      }, Object.entries(PROVIDERS).map(([k, v]) =>
+        el('option', { value: k, selected: cfg.provider === k }, [v.label]))),
+      PROVIDERS[cfg.provider]?.keyUrl
+        ? el('div', { class: 'hint' }, [
+            '申請金鑰:',
+            el('a', { href: PROVIDERS[cfg.provider].keyUrl, target: '_blank', rel: 'noopener',
+              style: 'color:var(--accent)' }, [PROVIDERS[cfg.provider].keyUrl]),
+          ])
+        : null,
+    ]),
+
+    baseField,
+    el('div', { class: 'field' }, [el('label', { text: 'API key' }), keyInput]),
+    modelField,
+
+    el('div', { class: 'field' }, [
+      el('label', { text: '對話程度' }),
+      el('select', {
+        onchange: async e => { await setSetting({ talkLevel: +e.target.value }); },
+      }, [1, 2, 3, 4, 5].map(n => el('option', {
+        value: n, selected: cfg.talkLevel === n,
+      }, [`L${n} — ${['最簡單', '簡單', '自然', '流利', '母語速度'][n - 1]}`]))),
+    ]),
+
+    toggle('即時糾正', '講錯時附上一句中文提示', cfg.corrections, v => setSetting({ corrections: v })),
+
+    el('button', {
+      class: 'btn btn-block', style: 'margin-top:14px',
+      onclick: async e => {
+        const btn = e.currentTarget;
+        btn.disabled = true;
+        btn.textContent = '測試中…';
+        status.textContent = '';
+        try {
+          await testKey(await settings());
+          status.style.color = 'var(--good)';
+          status.textContent = '✓ 連線成功,可以開始對話了。';
+        } catch (err) {
+          status.style.color = 'var(--bad)';
+          status.textContent = '✕ ' + (err instanceof LlmError ? err.message : err.message || '失敗');
+        }
+        btn.disabled = false;
+        btn.textContent = '測試連線';
+      },
+    }, ['測試連線']),
+    status,
+  );
+  return box;
+}
+
+/* ---------- capability report ---------- */
+
+function supportSection() {
+  const rows = [
+    ['語音朗讀 (TTS)', ttsSupported(), '聽力訓練的核心'],
+    ['語音辨識 (ASR)', asrSupported(), '跟讀評分與口說對話'],
+    ['麥克風錄音',     recorderSupported(), '跟讀 A/B 比對'],
+  ];
+  return el('div', { class: 'card' }, rows.map(([name, ok, why]) =>
+    el('div', { class: 'switch-row' }, [
+      el('div', { class: 'lbl' }, [name, el('small', { text: why })]),
+      el('span', {
+        style: `color:${ok ? 'var(--good)' : 'var(--bad)'};font-size:19px`,
+        text: ok ? '✓' : '✕',
+      }),
+    ])));
+}
+
+/* ---------- data ---------- */
+
+function dataSection() {
+  return el('div', { class: 'card' }, [
+    el('button', {
+      class: 'btn btn-block',
+      onclick: async () => {
+        const { db } = await import('../db.js');
+        const dump = {
+          exportedAt: new Date().toISOString(),
+          settings: await settings(),
+          cards: await db.all('cards'),
+          sessions: await db.all('sessions'),
+          lessons: await db.all('lessons'),
+        };
+        delete dump.settings.apiKey;   // never write the key into a shareable file
+        const blob = new Blob([JSON.stringify(dump, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `echo-backup-${new Date().toISOString().slice(0, 10)}.json`;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+        toast('已匯出(不含 API key)');
+      },
+    }, ['匯出學習紀錄']),
+
+    el('button', {
+      class: 'btn btn-danger btn-block', style: 'margin-top:10px',
+      onclick: async () => {
+        if (!await confirmBox('清除所有學習紀錄、匯入的文章與設定?這個動作無法復原。', '全部清除')) return;
+        await wipeAll();
+        toast('已清除');
+        location.hash = '#/';
+        location.reload();
+      },
+    }, ['清除所有資料']),
+
+    el('p', { class: 'hint', style: 'margin-top:12px' },
+      [`預設每日目標 ${DEFAULTS.dailyGoalMin} 分鐘。學習紀錄存在瀏覽器的 IndexedDB;清除瀏覽器資料會一併刪除,建議偶爾匯出備份。`]),
+  ]);
+}

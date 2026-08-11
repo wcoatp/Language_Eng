@@ -1,0 +1,104 @@
+{
+  "id": "l3-04",
+  "title": "Why I Changed Careers",
+  "titleZh": "我為什麼轉行",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "一位會計師因為義務輔導鄰居的小孩數學，發現自己真正想做的是教書。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "For eight years I worked in accounting, and on paper it was a perfectly good job.",
+      "zh": "我在會計這一行做了八年，紙面上看來這是份相當不錯的工作。",
+      "note": "worked in 的 t 連到 in 的母音，重新分音節成 /wɝk.ˈtɪn/。"
+    },
+    {
+      "id": "s2",
+      "text": "The pay was fine, the hours were steady, and nobody ever gave me a hard time.",
+      "zh": "薪水還可以，工時穩定，也沒有人找我麻煩。"
+    },
+    {
+      "id": "s3",
+      "text": "But every Sunday evening I would start dreading Monday about an hour after dinner.",
+      "zh": "但每個星期天晚上，大概晚餐後一小時我就開始害怕星期一。",
+      "note": "would 弱化成 /wəd/；about an hour 三字連成一串，hour 的 h 不發音。"
+    },
+    {
+      "id": "s4",
+      "text": "I kept telling myself that was normal, and that everybody feels that way sometimes.",
+      "zh": "我一直告訴自己這很正常，每個人偶爾都會這樣。"
+    },
+    {
+      "id": "s5",
+      "text": "What changed things was a favor I did for my neighbor's daughter one weekend.",
+      "zh": "改變一切的，是某個週末我幫鄰居女兒的一個小忙。"
+    },
+    {
+      "id": "s6",
+      "text": "She was failing math, and her mother asked me to sit down with her for an hour.",
+      "zh": "她數學不及格，她媽媽拜託我陪她坐下來教一個小時。",
+      "note": "sit down 的 t 變喉塞音；with her 的 h 常常脫落，連成 /ˈwɪ.ðɚ/。"
+    },
+    {
+      "id": "s7",
+      "text": "That hour turned into every Saturday morning for the rest of the school year.",
+      "zh": "那一小時後來變成整個學年每個星期六早上。"
+    },
+    {
+      "id": "s8",
+      "text": "I noticed I was looking forward to it more than anything else in my week.",
+      "zh": "我發現我期待那段時間，勝過那一週的任何事。",
+      "note": "looking forward to 的 to 弱讀成 /tə/，forward 的 d 幾乎聽不到。"
+    },
+    {
+      "id": "s9",
+      "text": "When she finally passed her exam, I felt something I hadn't felt at work in years.",
+      "zh": "當她終於通過考試，我感受到一種在職場上多年沒有過的感覺。"
+    },
+    {
+      "id": "s10",
+      "text": "So I went back and got a teaching certificate while I was still working full time.",
+      "zh": "所以我一邊做全職工作，一邊回去考了教師證。",
+      "note": "went back 的 t 不爆破；got a 連成 /ˈɡɑ.ɾə/，t 變閃音。"
+    },
+    {
+      "id": "s11",
+      "text": "It took two years, and I was tired in a way I'd never really been tired before.",
+      "zh": "那花了兩年，我累的方式是我以前從沒體會過的。"
+    },
+    {
+      "id": "s12",
+      "text": "I now make about a third less than I used to, and I feel that every single month.",
+      "zh": "我現在的收入比以前少了大約三分之一，而且每個月都感覺得到。"
+    },
+    {
+      "id": "s13",
+      "text": "I'm not going to pretend that the money doesn't matter, because of course it absolutely does.",
+      "zh": "我不會假裝錢不重要，因為它當然非常重要。",
+      "note": "going to 口語變成 /ˈɡʌ.nə/；doesn't 的 t 在 matter 前面不釋放。"
+    },
+    {
+      "id": "s14",
+      "text": "But I haven't dreaded a Monday since the day I stood in front of my first class.",
+      "zh": "但自從我第一次站在班級前面的那天起，我就沒再害怕過星期一。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How did the writer first discover an interest in teaching?",
+      "options": ["A career test at his company", "Tutoring a neighbor's daughter", "A course his employer paid for"],
+      "answer": 1
+    },
+    {
+      "q": "How did he prepare for the change?",
+      "options": ["He quit and studied full time", "He studied while keeping his old job", "He was hired without any training"],
+      "answer": 1
+    },
+    {
+      "q": "What does he say about his lower salary?",
+      "options": ["It doesn't bother him at all", "He notices it but doesn't regret the change", "He plans to go back to accounting"],
+      "answer": 1
+    }
+  ]
+}

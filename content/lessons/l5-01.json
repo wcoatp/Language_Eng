@@ -1,0 +1,109 @@
+{
+  "id": "l5-01",
+  "title": "What Algorithms Do to Attention",
+  "titleZh": "演算法對注意力做了什麼",
+  "level": 5,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "作者認為演算法不只是投其所好，而是把注意力訓練成可以被測量的形狀。",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The standard complaint about recommendation algorithms is that they show us what we want, and that this is somehow a form of imprisonment.",
+      "zh": "對推薦演算法最常見的抱怨是：它們只給我們想要的東西，而這不知怎麼地就成了一種囚禁。"
+    },
+    {
+      "id": "s2",
+      "text": "I've never found that framing convincing, partly because it assumes we arrived with stable preferences that the machine then narrowed.",
+      "zh": "我一直不覺得這個說法有說服力，部分原因是它假設我們一開始就帶著穩定的偏好，而機器只是把它收窄。",
+      "note": "found that 的 d 碰到 th 幾乎消失；never 在這裡拉長重讀，表達作者的立場。"
+    },
+    {
+      "id": "s3",
+      "text": "What seems closer to the truth is that the system doesn't discover what you want so much as it teaches you to want something legible to it.",
+      "zh": "比較接近真相的說法是：系統與其說是發現你想要什麼，不如說是在教你去想要一種它讀得懂的東西。",
+      "note": "so much as it 連成一串，as it 是 /ˈæ.zɪt/；doesn't discover 的 t 被後面的 d 吸收。"
+    },
+    {
+      "id": "s4",
+      "text": "That's a slippery claim to make, so let me try to be reasonably concrete about what I think is actually happening.",
+      "zh": "這個主張有點滑溜，所以讓我盡量具體說明我認為實際發生了什麼。"
+    },
+    {
+      "id": "s5",
+      "text": "Any ranking system has to convert something rich and private, like interest or curiosity, into a signal it can count.",
+      "zh": "任何排序系統都必須把興趣或好奇這類豐富而私密的東西，轉換成它數得出來的訊號。"
+    },
+    {
+      "id": "s6",
+      "text": "Watch time, completion, a pause of two seconds longer than usual: these are the things curiosity leaves behind, not curiosity itself.",
+      "zh": "觀看時間、完播率、比平常多停兩秒：這些是好奇心留下的痕跡，而不是好奇心本身。",
+      "note": "冒號前是三個並列名詞，每一項語調都往上，直到 these are 才下降收尾。"
+    },
+    {
+      "id": "s7",
+      "text": "Over enough iterations, the proxy starts to look like the goal, and not just to the engineers who built it.",
+      "zh": "經過足夠多次的迭代，代理指標開始看起來就像目標本身，而且不只是在工程師眼中如此。"
+    },
+    {
+      "id": "s8",
+      "text": "You begin to notice, if you're honest, that you scroll differently when you know the scrolling is being measured.",
+      "zh": "如果你夠誠實，你會開始注意到：當你知道滑動正被測量時，你滑的方式就不一樣了。"
+    },
+    {
+      "id": "s9",
+      "text": "I don't want to overstate this, because people have always adjusted themselves to whatever was watching, long before any of this was automated.",
+      "zh": "我不想把話說得太滿，因為早在這一切自動化之前，人就一直會配合正在看著自己的那雙眼睛調整自己。",
+      "note": "don't want to 口語成 /ˈdoʊn.wɑ.nə/；have always 的 h 常脫落，連成 /ə.ˈvɔl.weɪz/。"
+    },
+    {
+      "id": "s10",
+      "text": "Churches did it, schools did it, and the office has been doing it to us for well over a century.",
+      "zh": "教會這麼做過，學校這麼做過，辦公室對我們這麼做也已經超過一個世紀了。"
+    },
+    {
+      "id": "s11",
+      "text": "What's genuinely new, I'd argue, is the speed of the feedback and the fact that it never once stops running.",
+      "zh": "我認為真正新的東西，是回饋的速度，以及它一刻也沒有停下來過。",
+      "note": "never once stops 三個字連續重音，是全句情緒的落點；the fact that 的 t 都不爆破。"
+    },
+    {
+      "id": "s12",
+      "text": "A teacher who misreads you gives you a bad grade and then, mercifully, goes home for the evening.",
+      "zh": "誤解你的老師會給你一個爛分數，然後謝天謝地，他晚上就回家了。"
+    },
+    {
+      "id": "s13",
+      "text": "A feed that misreads you keeps adjusting every few seconds, for years, with no interval in which you are simply left alone.",
+      "zh": "誤解你的動態牆卻會每隔幾秒就調整一次，持續好幾年，中間沒有任何一段時間讓你單純地被放過。",
+      "note": "left alone 的 t 連到 alone 的母音，兩字連成 /lɛf.tə.ˈloʊn/。"
+    },
+    {
+      "id": "s14",
+      "text": "The honest conclusion is not that we should smash the machines, which I don't believe anyone seriously intends to do.",
+      "zh": "誠實的結論並不是我們應該砸掉這些機器，我也不相信有誰真的打算那麼做。"
+    },
+    {
+      "id": "s15",
+      "text": "It's that attention was never the private possession we assumed it was, and these systems have made that uncomfortably easy to see.",
+      "zh": "而是注意力從來就不是我們以為的那種私人財產，而這些系統讓這一點變得令人不安地顯而易見。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the writer's main disagreement with the usual complaint about algorithms?",
+      "options": ["He thinks algorithms are far weaker than people claim", "He thinks it wrongly assumes our preferences existed first and were then narrowed", "He thinks recommendation systems mostly show us things we dislike"],
+      "answer": 1
+    },
+    {
+      "q": "What does the writer mean when he says the proxy starts to look like the goal?",
+      "options": ["Engineers deliberately mislead their users", "The measurable signal replaces the thing it was meant to stand for", "Watch time turns out to be the best available measure of interest"],
+      "answer": 1
+    },
+    {
+      "q": "How would you describe the writer's overall stance?",
+      "options": ["Troubled, but resistant to easy conclusions", "Confident that the technology should be dismantled", "Largely indifferent to the effects of these systems"],
+      "answer": 0
+    }
+  ]
+}
