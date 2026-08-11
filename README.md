@@ -139,16 +139,28 @@ node tools/build-index.mjs
 
 ### 預生成高音質語音
 
-內建語音品質因裝置而異。要讓所有裝置一致,用 edge-tts 先做成音檔:
+內建語音品質因裝置而異,手機上尤其明顯。專案已經預先產好**美式、英式、澳洲**三種口音的音檔並一起版控,
+所以手機平板打開就是一致的高音質 — 不需要自己跑任何東西。
+
+要新增課程或其他口音時再跑產生器。第一次需要建一個 venv:
 
 ```bash
-pipx install edge-tts
-node tools/generate-audio.mjs                        # 美式 + 英式
-node tools/generate-audio.mjs --accent au,in         # 其他口音
+python3 -m venv .venv
+.venv/bin/pip install edge-tts
+```
+
+之後直接跑就好,腳本會自動找到 `.venv/bin/edge-tts`:
+
+```bash
+npm run audio                                        # 美式 + 英式
+node tools/generate-audio.mjs --accent au,in,ie,za   # 其他口音
 node tools/generate-audio.mjs --lesson l1-01 --force # 重做單一課
 ```
 
-對話課的 A/B 角色會自動用不同性別的聲音。沒有音檔的課程仍然可用,只是改用裝置內建語音。
+已存在的檔案會跳過,所以加新課時只會產生缺的部分。對話課的 A/B 角色會自動用不同性別的聲音,
+語速也依課程難度調整(L1 慢 18%,L5 快 6%)。
+
+沒有音檔的口音或課程仍然可用,自動改用裝置內建語音 —— 匯入的文章就是走這條路。
 
 ### 重畫圖示
 

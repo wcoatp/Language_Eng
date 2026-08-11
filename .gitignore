@@ -2,6 +2,9 @@
 node_modules/
 *.log
 
-# Generated audio is large and reproducible via tools/generate-audio.mjs.
-# Delete these two lines if you want the clips committed for offline install.
-content/audio/**/*.mp3
+# Local Python environment for tools/generate-audio.mjs.
+.venv/
+
+# Generated lesson audio IS committed on purpose: GitHub Pages serves it to
+# phones and tablets, which cannot run the generator themselves. Regenerate
+# with `npm run audio` after adding lessons.

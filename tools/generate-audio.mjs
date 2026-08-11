@@ -55,18 +55,33 @@ if (!accents.length) process.exit(1);
 
 /* ---- preflight ---- */
 
-let edge = 'edge-tts';
-try {
-  await run(edge, ['--version']);
-} catch {
+/* Prefer an explicit override, then the project venv, then whatever is on PATH. */
+const candidates = [
+  process.env.EDGE_TTS,
+  join(root, '.venv', 'bin', 'edge-tts'),
+  'edge-tts',
+].filter(Boolean);
+
+let edge = null;
+for (const c of candidates) {
+  try {
+    const { stdout } = await run(c, ['--version']);
+    edge = c;
+    console.log(`using ${c} (${stdout.trim()})`);
+    break;
+  } catch { /* try the next candidate */ }
+}
+
+if (!edge) {
   console.error(`
-edge-tts not found. Install it once with either:
+edge-tts not found. Install it into a project venv:
 
-  pipx install edge-tts
-  pip3 install --user edge-tts
+  python3 -m venv .venv
+  .venv/bin/pip install edge-tts
 
-Then re-run this script. Until then the app falls back to the browser's own
-speech engine, which works everywhere but sounds different per device.`);
+or globally with pipx, then re-run this script. Until then the app falls back
+to the browser's own speech engine, which works everywhere but sounds
+different from device to device.`);
   process.exit(1);
 }
 
@@ -79,44 +94,76 @@ const manifest = { generatedAt: new Date().toISOString(), lessons: {} };
 
 let made = 0, skipped = 0, failed = 0;
 
+/* Each clip is one network round trip to the voice service, so the run is
+   latency-bound rather than CPU-bound — a small pool cuts a 45-minute
+   sequential run to a few minutes. Kept modest to stay a polite client. */
+const CONCURRENCY = Number(flag('jobs', 6));
+
+const queue = [];
+
 for (const file of files) {
   const lesson = JSON.parse(await readFile(join(lessonDir, file), 'utf8'));
   if (onlyLesson && lesson.id !== onlyLesson) continue;
 
   for (const accent of accents) {
-    const voices = VOICES[accent];
     const outDir = join(audioDir, accent, lesson.id);
     await mkdir(outDir, { recursive: true });
 
     const done = [];
+    manifest.lessons[lesson.id] ||= {};
+    manifest.lessons[lesson.id][accent] = done;
+
     for (const s of lesson.sentences) {
       const out = join(outDir, `${s.id}.mp3`);
-
       if (!force && await exists(out)) { done.push(s.id); skipped++; continue; }
-
-      const voice = voices[s.speaker] || voices.narrator;
-      const rate = RATE_BY_LEVEL[lesson.level] || '+0%';
-      try {
-        await run(edge, [
-          '--voice', voice,
-          '--rate', rate,
-          '--text', s.text,
-          '--write-media', out,
-        ]);
-        done.push(s.id);
-        made++;
-        process.stdout.write(`\r${accent}/${lesson.id}/${s.id}  (${made} generated)   `);
-      } catch (e) {
-        failed++;
-        console.error(`\nfailed ${accent}/${lesson.id}/${s.id}: ${e.message.split('\n')[0]}`);
-      }
-    }
-
-    if (done.length) {
-      manifest.lessons[lesson.id] ||= {};
-      manifest.lessons[lesson.id][accent] = done;
+      queue.push({
+        out, done, id: s.id, label: `${accent}/${lesson.id}/${s.id}`,
+        voice: VOICES[accent][s.speaker] || VOICES[accent].narrator,
+        rate: RATE_BY_LEVEL[lesson.level] || '+0%',
+        text: s.text,
+      });
     }
   }
+}
+
+const total = queue.length;
+let cursor = 0;
+
+async function worker() {
+  for (;;) {
+    const job = queue[cursor++];
+    if (!job) return;
+    try {
+      await run(edge, [
+        '--voice', job.voice,
+        '--rate', job.rate,
+        '--text', job.text,
+        '--write-media', job.out,
+      ]);
+      job.done.push(job.id);
+      made++;
+      process.stdout.write(`\r${job.label}  (${made}/${total})          `);
+    } catch (e) {
+      failed++;
+      console.error(`\nfailed ${job.label}: ${e.message.split('\n')[0]}`);
+    }
+  }
+}
+
+if (total) {
+  console.log(`generating ${total} clips with ${CONCURRENCY} parallel jobs`);
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, total) }, worker));
+}
+
+/* Sentence order matters to the app, and the pool finishes out of order. */
+for (const byAccent of Object.values(manifest.lessons)) {
+  for (const [accent, ids] of Object.entries(byAccent)) {
+    if (!ids.length) delete byAccent[accent];
+    else ids.sort((a, b) => Number(a.slice(1)) - Number(b.slice(1)));
+  }
+}
+for (const [id, byAccent] of Object.entries(manifest.lessons)) {
+  if (!Object.keys(byAccent).length) delete manifest.lessons[id];
 }
 
 /* Preserve entries for lessons/accents this run did not touch. */
