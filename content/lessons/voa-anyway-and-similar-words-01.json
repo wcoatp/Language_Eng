@@ -1,0 +1,136 @@
+{
+  "id": "voa-anyway-and-similar-words-01",
+  "title": "Anyway and Similar Words (1/2)",
+  "titleZh": "Anyway 和意思相近的字 (1/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "老師解說副詞 anyway 的三種常見用法，並提到意思相近的 nevertheless。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/anyway-and-similar-words/6252385.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "This week's question on Ask a Teacher comes from Nitin in India.",
+      "zh": "本週 Ask a Teacher 單元的問題，來自印度的 Nitin。",
+      "start": 2.46,
+      "end": 7.6,
+      "wpm": 140
+    },
+    {
+      "id": "s2",
+      "text": "He asked us on YouTube, Could you tell me the use and meaning of these two words?",
+      "zh": "他在 YouTube 上問我們：可以告訴我這兩個字的用法和意思嗎？",
+      "start": 9.06,
+      "end": 15.72,
+      "wpm": 153
+    },
+    {
+      "id": "s3",
+      "text": "Nevertheless and anyway.",
+      "zh": "nevertheless 和 anyway。",
+      "start": 16.74,
+      "end": 18.8,
+      "wpm": 87
+    },
+    {
+      "id": "s4",
+      "text": "Dear Nitin, thank you for writing to us.",
+      "zh": "親愛的 Nitin，謝謝你寫信給我們。",
+      "start": 20.28,
+      "end": 22.74,
+      "wpm": 195
+    },
+    {
+      "id": "s5",
+      "text": "Anyway is an adverb.",
+      "zh": "anyway 是一個副詞。",
+      "start": 23.76,
+      "end": 25.64,
+      "wpm": 128
+    },
+    {
+      "id": "s6",
+      "text": "That means it describes or gives us more information about a verb or adjective.",
+      "zh": "也就是說，它用來修飾動詞或形容詞，提供更多訊息。",
+      "start": 26.4,
+      "end": 31.71,
+      "wpm": 158
+    },
+    {
+      "id": "s7",
+      "text": "The usual meaning is similar to in any case, or even though something else is true.",
+      "zh": "它通常的意思接近「無論如何」，或是「即使有別的情況也一樣」。",
+      "start": 33.56,
+      "end": 39.64,
+      "wpm": 158
+    },
+    {
+      "id": "s8",
+      "text": "Let us look at some examples of how we use it.",
+      "zh": "我們來看幾個實際使用的例子。",
+      "start": 41.02,
+      "end": 45,
+      "wpm": 166
+    },
+    {
+      "id": "s9",
+      "text": "I think Candace will not read my message, but I'm going to write to her anyway.",
+      "zh": "我想 Candace 大概不會看我的訊息，但我還是要寫給她。",
+      "start": 45,
+      "end": 50.19,
+      "wpm": 185
+    },
+    {
+      "id": "s10",
+      "text": "In this statement, the speaker is writing despite the fact that the message is not likely to be read.",
+      "zh": "在這句話裡，說話的人明知訊息大概不會被看到，還是照樣寫了。",
+      "start": 51.48,
+      "end": 58.63,
+      "wpm": 159
+    },
+    {
+      "id": "s11",
+      "text": "Another meaning of anyway is to give more force to a question, as in, You can't go to the front of the line.",
+      "zh": "anyway 的另一個用法是加強問句的語氣，例如：你不可以插隊到最前面。",
+      "start": 59.84,
+      "end": 68.1,
+      "wpm": 167
+    },
+    {
+      "id": "s12",
+      "text": "Who do you think you are, anyway?",
+      "zh": "你到底以為你是誰啊？",
+      "start": 68.82,
+      "end": 71.37,
+      "wpm": 165
+    },
+    {
+      "id": "s13",
+      "text": "And a third way to use anyway is to add or make a change to something that was said before.",
+      "zh": "anyway 的第三種用法，是補充或修正前面說過的話。",
+      "start": 72.38,
+      "end": 78.91,
+      "wpm": 184
+    },
+    {
+      "id": "s14",
+      "text": "An informal word that is used like anyway is anyhow.",
+      "zh": "有一個和 anyway 用法很像的非正式字，是 anyhow。",
+      "start": 81,
+      "end": 87.32,
+      "wpm": 95
+    },
+    {
+      "id": "s15",
+      "text": "You also asked about the word nevertheless.",
+      "zh": "你也問到 nevertheless 這個字。",
+      "start": 94.82,
+      "end": 98.9,
+      "wpm": 103
+    }
+  ],
+  "questions": []
+}

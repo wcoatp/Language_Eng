@@ -1,0 +1,136 @@
+{
+  "id": "voa-electric-spoons-chopsticks-may-hel-b4c510-01",
+  "title": "Electric Spoons, Chopsticks May Help Cut Salt (1/2)",
+  "titleZh": "電子湯匙和筷子有助減鹽 (1/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "日本團隊推出電子湯匙和筷子，用微弱電流讓食物吃起來更鹹，幫助減少用鹽。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7622238.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Researchers in Japan say they will begin selling new devices that will help people reduce how much sodium or salt they use to improve the taste of their food.",
+      "zh": "日本研究人員表示，他們即將開始販售新裝置，幫助大家減少為了提味而用的鈉或鹽。",
+      "start": 2.03,
+      "end": 13.82,
+      "wpm": 148
+    },
+    {
+      "id": "s2",
+      "text": "The developers are from Japan's Meiji University and drink company Kirin, based in Tokyo.",
+      "zh": "研發團隊來自日本明治大學，以及總部位於東京的飲料公司麒麟。",
+      "start": 15.36,
+      "end": 21.92,
+      "wpm": 128
+    },
+    {
+      "id": "s3",
+      "text": "One new device is an electric spoon.",
+      "zh": "其中一項新裝置是電子湯匙。",
+      "start": 23.28,
+      "end": 26.24,
+      "wpm": 142
+    },
+    {
+      "id": "s4",
+      "text": "It uses a small computer worn on a person's arm to send electrical signals to activate sodium atoms.",
+      "zh": "它靠戴在手臂上的小型電腦發出電訊號，來活化鈉原子。",
+      "start": 27.08,
+      "end": 35.03,
+      "wpm": 136
+    },
+    {
+      "id": "s5",
+      "text": "The developers say the signals increase the food's salty taste.",
+      "zh": "研發者說，這些訊號會讓食物嚐起來更鹹。",
+      "start": 36.74,
+      "end": 41.08,
+      "wpm": 138
+    },
+    {
+      "id": "s6",
+      "text": "The electric salt spoon will sell in Japan for around $120 beginning in June.",
+      "zh": "這款電子鹽味湯匙六月起在日本開賣，售價約一百二十美元。",
+      "start": 42.54,
+      "end": 49.1,
+      "wpm": 119
+    },
+    {
+      "id": "s7",
+      "text": "Meiji University professor Homei Miyashita developed the spoon and, a similar device, electric chopsticks.",
+      "zh": "明治大學教授宮下芳明研發了這款湯匙，還有原理類似的電子筷。",
+      "start": 49.78,
+      "end": 59.32,
+      "wpm": 88
+    },
+    {
+      "id": "s8",
+      "text": "The chopsticks will likely go on sale next year.",
+      "zh": "筷子則可能會在明年上市。",
+      "start": 60.46,
+      "end": 63.74,
+      "wpm": 165
+    },
+    {
+      "id": "s9",
+      "text": "The recent announcement marks the first time the technology has been used in a product for sale to the public.",
+      "zh": "這次發表是這項技術第一次用在對外販售的商品上。",
+      "start": 64.74,
+      "end": 71.33,
+      "wpm": 182
+    },
+    {
+      "id": "s10",
+      "text": "Last year, the effort gained a different sort of attention.",
+      "zh": "去年，這項研究得到了另一種關注。",
+      "start": 72.7,
+      "end": 76.19,
+      "wpm": 172
+    },
+    {
+      "id": "s11",
+      "text": "It won the 2023 Ig Nobel Prize in Nutrition.",
+      "zh": "它拿下了 2023 年搞笑諾貝爾獎的營養學獎。",
+      "start": 77.74,
+      "end": 82.02,
+      "wpm": 112
+    },
+    {
+      "id": "s12",
+      "text": "Organizers described the prize as recognizing research that makes people laugh than think.",
+      "zh": "主辦單位說，這個獎表揚的是先讓人發笑、再讓人思考的研究。",
+      "start": 83.54,
+      "end": 90.95,
+      "wpm": 105
+    },
+    {
+      "id": "s13",
+      "text": "The devices both use a weak electrical current to send the sodium ions from food, through the chopsticks or spoon, to the mouth, where they create a sense of saltiness, said Mieszda.",
+      "zh": "宮下說，這兩種裝置都用微弱電流，把食物裡的鈉離子經由筷子或湯匙送進嘴裡，在那裡產生鹹味。",
+      "start": 91.96,
+      "end": 106.34,
+      "wpm": 134
+    },
+    {
+      "id": "s14",
+      "text": "As a result, the salty taste enhances one and a half times, he said.",
+      "zh": "他說，結果鹹味會增強一點五倍。",
+      "start": 106.34,
+      "end": 112.93,
+      "wpm": 127
+    },
+    {
+      "id": "s15",
+      "text": "Mieszda and his laboratory have explored ways that technology can interact with and create human sensory experiences.",
+      "zh": "宮下和他的實驗室一直在研究，科技可以怎麼和人的感官互動，甚至創造出感官體驗。",
+      "start": 114.58,
+      "end": 123.18,
+      "wpm": 119
+    }
+  ],
+  "questions": []
+}

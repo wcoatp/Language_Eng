@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-do-americans-say-at-the-new-y-fd1849-01",
+  "title": "What Do Americans Say at the New Year? (1/2)",
+  "titleZh": "美國人過新年時都說些什麼？ (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "介紹美國人在新年賀卡上常寫的祝福語，像是健康、順利與平安。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/what-do-americans-say-at-the-new-year-/6348032.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "This week, we answer a question from Maria in Brazil.",
+      "zh": "這禮拜我們要回答巴西的 Maria 提出的問題。",
+      "start": 2.12,
+      "end": 7,
+      "wpm": 123
+    },
+    {
+      "id": "s2",
+      "text": "I am sending some cards to my American friends.",
+      "zh": "我要寄一些卡片給我的美國朋友。",
+      "start": 7,
+      "end": 12,
+      "wpm": 108
+    },
+    {
+      "id": "s3",
+      "text": "I'd like to know what to write on the cards for the new year.",
+      "zh": "我想知道新年的時候卡片上可以寫些什麼。",
+      "start": 12,
+      "end": 17,
+      "wpm": 168
+    },
+    {
+      "id": "s4",
+      "text": "Maria, Brazil Dear Maria, thank you for writing to us.",
+      "zh": "巴西的 Maria。親愛的 Maria，謝謝你寫信給我們。",
+      "start": 17,
+      "end": 24,
+      "wpm": 86
+    },
+    {
+      "id": "s5",
+      "text": "In many countries, people send messages at the end of the year or the beginning of the year with greetings and good wishes.",
+      "zh": "在很多國家，大家會在年底或年初傳訊息，送上問候和祝福。",
+      "start": 24,
+      "end": 35,
+      "wpm": 125
+    },
+    {
+      "id": "s6",
+      "text": "A popular wish that you will see on a New Year's greeting card is for good health.",
+      "zh": "新年賀卡上常見的一種祝福，就是祝人身體健康。",
+      "start": 35,
+      "end": 42,
+      "wpm": 146
+    },
+    {
+      "id": "s7",
+      "text": "Wishing you a healthy and happy New Year.",
+      "zh": "祝你新的一年健康又快樂。",
+      "start": 42,
+      "end": 46,
+      "wpm": 120
+    },
+    {
+      "id": "s8",
+      "text": "Another popular wish is for happiness and wealth or prosperity.",
+      "zh": "另一種常見的祝福是祝人幸福、富足或事業興旺。",
+      "start": 46,
+      "end": 52,
+      "wpm": 100
+    },
+    {
+      "id": "s9",
+      "text": "We wish you a prosperous and joyful New Year.",
+      "zh": "祝你新的一年順遂又開心。",
+      "start": 52,
+      "end": 58,
+      "wpm": 90
+    },
+    {
+      "id": "s10",
+      "text": "Another wish you can write on your cards is for peace and joy for your friends.",
+      "zh": "還有一種可以寫在卡片上的祝福，是祝朋友平安喜樂。",
+      "start": 58,
+      "end": 64,
+      "wpm": 160
+    },
+    {
+      "id": "s11",
+      "text": "Hoping that your New Year is filled with joy and peace.",
+      "zh": "希望你的新年充滿喜悅與平安。",
+      "start": 64,
+      "end": 70.63,
+      "wpm": 100
+    },
+    {
+      "id": "s12",
+      "text": "As the New Year starts, we may wish them success in new beginnings.",
+      "zh": "新的一年開始時，我們可以祝他們的新起點一切順利。",
+      "start": 71,
+      "end": 76,
+      "wpm": 156
+    },
+    {
+      "id": "s13",
+      "text": "Hoping the New Year and your new beginnings bring you much success.",
+      "zh": "希望新的一年和新的開始為你帶來許多成功。",
+      "start": 76,
+      "end": 84,
+      "wpm": 90
+    },
+    {
+      "id": "s14",
+      "text": "And finally, we can tell our friends how much they mean to us as we look forward to another year.",
+      "zh": "最後，在迎接新的一年時，我們可以告訴朋友他們對我們有多重要。",
+      "start": 84,
+      "end": 91,
+      "wpm": 171
+    },
+    {
+      "id": "s15",
+      "text": "Here is one way to do just that: Looking forward to another year of being friends with you.",
+      "zh": "以下就是一種寫法：期待再和你當一年的朋友。",
+      "start": 91,
+      "end": 100,
+      "wpm": 120
+    }
+  ],
+  "questions": []
+}

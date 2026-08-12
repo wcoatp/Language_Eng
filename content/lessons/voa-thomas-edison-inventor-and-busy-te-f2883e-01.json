@@ -1,0 +1,136 @@
+{
+  "id": "voa-thomas-edison-inventor-and-busy-te-f2883e-01",
+  "title": "Thomas Edison: Inventor and Busy Team Leader (1/2)",
+  "titleZh": "湯瑪斯・愛迪生：發明家與忙碌的團隊領導者 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "介紹愛迪生的成長與發明，以及他如何帶領團隊不斷創新。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — As It Is",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7974997.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The inventor Thomas Alva Edison had a major effect on the lives of people around the world.",
+      "zh": "發明家湯瑪斯・阿爾瓦・愛迪生對全世界人們的生活有很大的影響。",
+      "start": 0,
+      "end": 9.07,
+      "wpm": 112
+    },
+    {
+      "id": "s2",
+      "text": "Thomas Edison is remembered most for the electric light, his phonograph, and his work with motion pictures.",
+      "zh": "大家最記得愛迪生的，是電燈、留聲機，還有他在電影方面的貢獻。",
+      "start": 10.22,
+      "end": 19.14,
+      "wpm": 114
+    },
+    {
+      "id": "s3",
+      "text": "Edison was born on February 11, 1847, in Milan, Ohio.",
+      "zh": "愛迪生在1847年2月11日出生於俄亥俄州的米蘭鎮。",
+      "start": 19.74,
+      "end": 27.4,
+      "wpm": 63
+    },
+    {
+      "id": "s4",
+      "text": "He was mostly self-taught.",
+      "zh": "他的知識大多是自學來的。",
+      "start": 28.7,
+      "end": 30.76,
+      "wpm": 146
+    },
+    {
+      "id": "s5",
+      "text": "His mother taught him reading, writing, and mathematics.",
+      "zh": "他的母親教他讀書、寫字和算數。",
+      "start": 31.84,
+      "end": 35.6,
+      "wpm": 128
+    },
+    {
+      "id": "s6",
+      "text": "He learned from books, and he experimented.",
+      "zh": "他從書本上學習，也自己動手做實驗。",
+      "start": 36.66,
+      "end": 39.99,
+      "wpm": 126
+    },
+    {
+      "id": "s7",
+      "text": "At the age of ten, he experimented with chemicals and electricity.",
+      "zh": "十歲的時候，他就開始做化學和電的實驗。",
+      "start": 41.06,
+      "end": 46.19,
+      "wpm": 129
+    },
+    {
+      "id": "s8",
+      "text": "He built a telegraph machine, and, at the age of sixteen, he went to work as a telegraph operator.",
+      "zh": "他自己做了一台電報機，十六歲就去當電報員了。",
+      "start": 46.72,
+      "end": 55.76,
+      "wpm": 126
+    },
+    {
+      "id": "s9",
+      "text": "He continued his work with electricity, making improved telegraph machines, and he invented an electrical voting machine.",
+      "zh": "他持續研究電，改良電報機，還發明了一台電動投票機。",
+      "start": 56.76,
+      "end": 67.22,
+      "wpm": 98
+    },
+    {
+      "id": "s10",
+      "text": "Edison earned enough money from his early inventions to start his own company in 1871. Instead of working alone,",
+      "zh": "愛迪生靠早期的發明賺到足夠的錢，在1871年開了自己的公司。他沒有單打獨鬥，",
+      "start": 68.26,
+      "end": 79.67,
+      "wpm": 95
+    },
+    {
+      "id": "s11",
+      "text": "he worked with a group of employees on many different projects at one time.",
+      "zh": "而是和一群員工同時進行很多不同的專案。",
+      "start": 79.67,
+      "end": 87.07,
+      "wpm": 114
+    },
+    {
+      "id": "s12",
+      "text": "They asked the United States government for patents to protect more than one hundred devices or inventions each year.",
+      "zh": "他們每年都向美國政府申請專利，保護超過一百項裝置或發明。",
+      "start": 87.77,
+      "end": 98.77,
+      "wpm": 104
+    },
+    {
+      "id": "s13",
+      "text": "He was an extremely busy man.",
+      "zh": "他是個非常忙碌的人。",
+      "start": 99.04,
+      "end": 102.37,
+      "wpm": 108
+    },
+    {
+      "id": "s14",
+      "text": "In 1913, a popular magazine called Thomas Edison the most useful man in America.",
+      "zh": "1913年，一本很受歡迎的雜誌稱愛迪生是全美國最有用的人。",
+      "start": 102.48,
+      "end": 112.94,
+      "wpm": 75
+    },
+    {
+      "id": "s15",
+      "text": "He almost never slept more than four or five hours a night.",
+      "zh": "他每天晚上幾乎從來沒有睡超過四、五個小時。",
+      "start": 112.94,
+      "end": 119,
+      "wpm": 119
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,80 @@
+{
+  "id": "voa-thomas-edison-inventor-and-busy-te-f2883e-02",
+  "title": "Thomas Edison: Inventor and Busy Team Leader (2/2)",
+  "titleZh": "愛迪生：發明家與忙碌的團隊領導者 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "介紹愛迪生的工作習慣、他認為最難的發明電燈，以及他留下的影響。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — As It Is",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7974997.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "He usually worked eighteen hours each day because he enjoyed what he was doing.",
+      "zh": "他通常每天工作十八個小時，因為他很享受自己在做的事。",
+      "start": 119,
+      "end": 126.62,
+      "wpm": 110
+    },
+    {
+      "id": "s2",
+      "text": "A reporter asked Edison in 1917 which of his many inventions he enjoyed the most.",
+      "zh": "1917 年，一位記者問愛迪生，在他眾多發明中最喜歡哪一項。",
+      "start": 126.62,
+      "end": 135.82,
+      "wpm": 91
+    },
+    {
+      "id": "s3",
+      "text": "The hardest invention to develop, he said, was the electric light.",
+      "zh": "他說，最難研發出來的發明是電燈。",
+      "start": 136.58,
+      "end": 143.53,
+      "wpm": 95
+    },
+    {
+      "id": "s4",
+      "text": "He said that it was the most difficult and the most important.",
+      "zh": "他說那是最困難、也是最重要的一項。",
+      "start": 148.1,
+      "end": 153.01,
+      "wpm": 147
+    },
+    {
+      "id": "s5",
+      "text": "He also invented the modern motion picture film.",
+      "zh": "他也發明了現代的電影底片。",
+      "start": 153.88,
+      "end": 157.23,
+      "wpm": 143
+    },
+    {
+      "id": "s6",
+      "text": "In 1928, he received a special medal of honor from the Congress of the United States.",
+      "zh": "1928 年，他獲頒美國國會的特別榮譽獎章。",
+      "start": 157.6,
+      "end": 166.5,
+      "wpm": 101
+    },
+    {
+      "id": "s7",
+      "text": "Thomas Edison died on January 6, 1931. People worldwide have had easier and more enjoyable lives because of his inventions.",
+      "zh": "愛迪生於 1931 年 1 月 6 日過世。因為他的發明，全世界的人生活得更方便、也更享受。",
+      "start": 167.64,
+      "end": 180.32,
+      "wpm": 85
+    },
+    {
+      "id": "s8",
+      "text": "I'm John Russell.",
+      "zh": "我是 John Russell。",
+      "start": 181.6,
+      "end": 183.06,
+      "wpm": 123
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,96 @@
+{
+  "id": "voa-what-does-it-mean-to-mushroom-02",
+  "title": "What Does It Mean 'To Mushroom'? (2/2)",
+  "titleZh": "「to mushroom」是什麼意思？ (2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "介紹 mushroom 當動詞的用法，用來形容事情快速膨脹、甚至擴大到失控。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8008674.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "We can even say something has mushroomed out of control.",
+      "zh": "我們甚至可以說某件事已經暴增到失控的地步。",
+      "start": 123.44,
+      "end": 127.8,
+      "wpm": 138
+    },
+    {
+      "id": "s2",
+      "text": "For example, paying your bills on time and keeping track of your spending will prevent money problems from mushrooming out of control.",
+      "zh": "例如，準時繳帳單、掌握自己的開銷，就能避免金錢問題暴增到失控。",
+      "start": 128.58,
+      "end": 140.54,
+      "wpm": 110
+    },
+    {
+      "id": "s3",
+      "text": "We can also use mushroom as a phrasal verb.",
+      "zh": "mushroom 也可以當片語動詞使用。",
+      "start": 141.6,
+      "end": 145.42,
+      "wpm": 141
+    },
+    {
+      "id": "s4",
+      "text": "If something mushrooms into something else, it changes very quickly.",
+      "zh": "如果某件事 mushroom 成了另一件事，就表示它變化得非常快。",
+      "start": 146.88,
+      "end": 152.12,
+      "wpm": 115
+    },
+    {
+      "id": "s5",
+      "text": "For example, I had planned a simple picnic lunch with two friends.",
+      "zh": "例如，我本來只打算和兩個朋友吃個簡單的野餐午餐。",
+      "start": 153.12,
+      "end": 158.73,
+      "wpm": 128
+    },
+    {
+      "id": "s6",
+      "text": "But after they invited more people, it mushroomed into a much bigger party, with lots of great food.",
+      "zh": "但他們又找了更多人來，結果就變成一場大很多的派對，還有一堆好料。",
+      "start": 159.82,
+      "end": 167.43,
+      "wpm": 142
+    },
+    {
+      "id": "s7",
+      "text": "Here is another example.",
+      "zh": "再看另一個例子。",
+      "start": 168.68,
+      "end": 170.14,
+      "wpm": 164
+    },
+    {
+      "id": "s8",
+      "text": "What began as small edits to my story mushroomed into a complete rewrite.",
+      "zh": "本來只是想小改一下我的文章，最後卻變成整篇重寫。",
+      "start": 171.2,
+      "end": 177.12,
+      "wpm": 132
+    },
+    {
+      "id": "s9",
+      "text": "And that's the end of Words and Their Stories.",
+      "zh": "以上就是本集的 Words and Their Stories。",
+      "start": 179.44,
+      "end": 182.16,
+      "wpm": 199
+    },
+    {
+      "id": "s10",
+      "text": "Until next time, I'm Ana Mateo.",
+      "zh": "下次見，我是 Ana Mateo。",
+      "start": 182.78,
+      "end": 185.21,
+      "wpm": 148
+    }
+  ],
+  "questions": []
+}

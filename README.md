@@ -27,29 +27,39 @@
 
 | | 說明 | 需要 API? |
 |---|---|---|
-| **聽力訓練** | 上面的七步循環,18 課 264 句 | 否 |
+| **聽力訓練** | 上面的七步循環,78 課 1050 句 | 否 |
+| **真人錄音課程** | 60 課取自 VOA 公有領域錄音,附中文與逐句時間軸 | 否 |
 | **多口音朗讀** | 美/英/澳/印/愛爾蘭/南非,可變速 | 否 |
 | **跟讀評分** | 瀏覽器內建語音辨識,逐字標出漏掉的詞 | 否 |
 | **間隔複習** | 聽力優先:先播再顯示答案 | 否 |
 | **角色扮演對話** | app 唸一角,你唸另一角,辨識比對 | 否 |
 | **匯入文章** | 貼上任何英文,自動切句與判定難度 | 否 |
+| **課程包匯入** | 把自己的影片/podcast 在 Mac 切成課程,AirDrop 到手機 | 否 |
+| **YouTube 精聽** | 嵌入官方播放器做變速與單句循環,不下載任何內容 | 否 |
 | **AI 備課** | 匯入時順便產生翻譯、連讀提示、理解測驗 | 是(只跑一次) |
 | **自由對話** | 開口即興聊天,附中文即時糾正 | 是 |
 | **進度追蹤** | 一千小時計數、連續天數、12 週熱力圖 | 否 |
 
 ## 課程內容
 
-18 課,264 句,難度由 L1 到 L5 逐級遞增:
+78 課、1050 句,難度 L1 到 L5 遞增。分成兩類:
 
-| 級別 | 特徵 | 課數 |
-|---|---|---|
-| L1 | 短句、現在式、最常用字 | 4 |
-| L2 | 過去/未來式、日常情境 | 4 |
-| L3 | 自然語速、片語動詞 | 4 |
-| L4 | 慣用語、觀點表達 | 3 |
-| L5 | 原速、修辭與細膩語氣 | 3 |
+**合成語音課程(18 課)** — 我們自己寫的情境對話與短文,美/英/澳三種口音的預生成音檔,適合打基礎。
 
-每句都附中文翻譯與連讀/弱讀提示,每課結束有 3 題理解測驗。
+**真人錄音課程(60 課)** — 取自 [VOA Learning English](https://learningenglish.voanews.com)。
+VOA 是美國政府作品,**明確屬於公有領域**,可作教育與商業用途重製,註明來源即可 —— 這是唯一能合法內建在
+公開 repo 裡的真人素材。涵蓋 Ask a Teacher(聽眾問答)、Words and Their Stories(慣用語)、
+Everyday Grammar、Health & Lifestyle、Science & Technology、America's National Parks、
+As It Is、American Stories(愛倫坡小說朗讀)與 What It Takes(真人訪談,母語語速)。
+
+每句都有中文翻譯、精確到 0.01 秒的時間軸,以及實測語速(WPM)。
+
+### 難度怎麼判定
+
+合成課程用文字判定(句長 + 用字頻率)。真人錄音不能只看文字 —— VOA 刻意使用有限詞彙,
+但**用母語語速講出來**,所以純文字評分會把母語語速的訪談判成初級。真人課程改用
+`scoreListening()`:文字難度與實測語速各佔一半。結果是 L2 平均 118 WPM(教學語速)、
+L4 平均 178 WPM(真人訪談),階梯才符合耳朵實際的負擔。
 
 ---
 
@@ -104,6 +114,36 @@ open http://localhost:8000
 ```
 
 Service worker 需要 `http://localhost` 或 HTTPS,用 `file://` 開會少掉離線功能。
+
+### 從真人素材建立課程
+
+`tools/align-media.mjs` 是共用引擎:吃任何影音檔或網址,用 whisper.cpp 產生**逐字時間戳**,
+切成句子、用 ffmpeg 裁成單句音檔,輸出課程。
+
+一次性安裝:
+
+```bash
+brew install whisper-cpp ffmpeg
+mkdir -p models && curl -L -o models/ggml-large-v3-turbo.bin \
+  https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo.bin
+```
+
+兩種輸出模式,差別是法律上的:
+
+```bash
+# repo 模式 — 寫進 content/,會被公開發布。只能用在你有權重製的素材。
+node tools/fetch-voa.mjs --list          # 看有哪些 VOA 系列
+node tools/fetch-voa.mjs --plan          # 建立整套策展課程
+node tools/fetch-voa.mjs --series what-it-takes --count 2
+
+# pack 模式 — 產生 .echopack,只留在你的裝置上。你自己的電影、影集、podcast 用這個。
+node tools/align-media.mjs ~/Movies/episode.mkv --title "某某影集 S01E01" --mode pack
+```
+
+`.echopack` 用 AirDrop 傳到 iPhone,在 app 的「課程 → 匯入」選檔即可。
+音檔存進該裝置的 IndexedDB,**不上傳、不進版控**(`.gitignore` 已排除 `*.echopack`)。
+
+M4 Max 上 15 分鐘的音檔約一分鐘轉完。
 
 ### 加新課程
 
@@ -173,6 +213,16 @@ node tools/make-icons.mjs
 ## 部署
 
 推上 `main` 之後,GitHub Pages 選 `main` / `root` 即可。全部路徑都是相對路徑,子目錄部署不會壞。
+
+## YouTube 精聽
+
+「課程 → ▶ YouTube」可以把任何 YouTube 英語教學影片變成精聽教材。
+**不下載任何內容** —— 嵌入官方播放器,用 IFrame API 控制單句循環與變速,創作者照樣拿到觀看數。
+
+逐字稿:在電腦版 YouTube 影片下方點「⋯ 更多 → 顯示轉錄稿」,整份複製貼上即可(含時間碼最好)。
+
+> iOS 上 YouTube 播放器常常不接受變速(官方文件也說 `setPlaybackRate` 不保證生效)。
+> app 會實際偵測並直接告訴你,不會假裝有放慢。需要慢速練習就用真人錄音課。
 
 ## 隱私
 

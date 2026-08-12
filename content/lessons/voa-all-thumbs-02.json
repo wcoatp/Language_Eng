@@ -1,0 +1,136 @@
+{
+  "id": "voa-all-thumbs-02",
+  "title": "'All Thumbs' (2/3)",
+  "titleZh": "「笨手笨腳」(2/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "說明形容笨手笨腳的英文說法，並用籌備驚喜派對的對話示範用法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7158649.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "I am klutzy.",
+      "zh": "我很笨手笨腳。",
+      "start": 98.24,
+      "end": 99.64,
+      "wpm": 129
+    },
+    {
+      "id": "s2",
+      "text": "So people might call me a klutz.",
+      "zh": "所以別人可能會說我是個冒失鬼。",
+      "start": 100.24,
+      "end": 103.36,
+      "wpm": 135
+    },
+    {
+      "id": "s3",
+      "text": "They might also call me butterfingers.",
+      "zh": "他們也可能叫我「奶油手」。",
+      "start": 104.32,
+      "end": 107.7,
+      "wpm": 107
+    },
+    {
+      "id": "s4",
+      "text": "Imagine your fingers are coated in butter.",
+      "zh": "想像一下你的手指上沾滿了奶油。",
+      "start": 109.22,
+      "end": 111.92,
+      "wpm": 156
+    },
+    {
+      "id": "s5",
+      "text": "They would be very slippery.",
+      "zh": "那一定會很滑。",
+      "start": 113.04,
+      "end": 115.1,
+      "wpm": 146
+    },
+    {
+      "id": "s6",
+      "text": "And it would be hard to pick things up.",
+      "zh": "要拿東西也會變得很困難。",
+      "start": 115.64,
+      "end": 118.56,
+      "wpm": 185
+    },
+    {
+      "id": "s7",
+      "text": "Now let's hear the expression, to be all thumbs, in a conversation between two friends.",
+      "zh": "現在我們來聽聽 to be all thumbs 這個說法，出現在兩個朋友的對話裡。",
+      "start": 119.6,
+      "end": 127.08,
+      "wpm": 120
+    },
+    {
+      "id": "s8",
+      "text": "Hey, I'm planning a surprise party for Nicholas.",
+      "zh": "嘿，我正在幫 Nicholas 籌辦一個驚喜派對。",
+      "start": 127.42,
+      "end": 132.14,
+      "wpm": 102
+    },
+    {
+      "id": "s9",
+      "text": "I'm bringing the food and ice.",
+      "zh": "我負責帶食物和冰塊。",
+      "start": 133.08,
+      "end": 135.92,
+      "wpm": 127
+    },
+    {
+      "id": "s10",
+      "text": "And Cassidy is bringing the drinks.",
+      "zh": "Cassidy 負責帶飲料。",
+      "start": 136.26,
+      "end": 138.67,
+      "wpm": 149
+    },
+    {
+      "id": "s11",
+      "text": "About 50 bottles of wine and lemonade.",
+      "zh": "大概五十瓶葡萄酒和檸檬汁。",
+      "start": 139.14,
+      "end": 142.54,
+      "wpm": 106
+    },
+    {
+      "id": "s12",
+      "text": "Can you bring the cake?",
+      "zh": "你可以帶蛋糕來嗎？",
+      "start": 143.36,
+      "end": 145.09,
+      "wpm": 173
+    },
+    {
+      "id": "s13",
+      "text": "I have a better idea.",
+      "zh": "我有個更好的主意。",
+      "start": 145.74,
+      "end": 147.22,
+      "wpm": 203
+    },
+    {
+      "id": "s14",
+      "text": "I'll pick up the drinks.",
+      "zh": "我來買飲料。",
+      "start": 147.22,
+      "end": 149.04,
+      "wpm": 165
+    },
+    {
+      "id": "s15",
+      "text": "Why don't you ask Cassidy to bring the cake?",
+      "zh": "你何不請 Cassidy 帶蛋糕呢？",
+      "start": 149.42,
+      "end": 152.12,
+      "wpm": 200
+    }
+  ],
+  "questions": []
+}

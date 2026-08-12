@@ -1,0 +1,136 @@
+{
+  "id": "voa-sometimes-we-spread-ourself-too-th-649b2f-01",
+  "title": "Sometimes We 'Spread Ourself Too Thin' (1/2)",
+  "titleZh": "有時候我們會「分身乏術」(1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "本集談的是事情攬太多、把自己搞得分身乏術的英文說法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7941440.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And now, words and their stories, from VOA Learning English.",
+      "zh": "接下來是 VOA 學習英語的「詞語故事」節目。",
+      "start": 0.9,
+      "end": 7.22,
+      "wpm": 95
+    },
+    {
+      "id": "s2",
+      "text": "Today, we talk about our busy lives.",
+      "zh": "今天我們要聊聊忙碌的生活。",
+      "start": 19.64,
+      "end": 23.56,
+      "wpm": 107
+    },
+    {
+      "id": "s3",
+      "text": "Many people have family and work responsibilities.",
+      "zh": "很多人都有家庭和工作要顧。",
+      "start": 24.64,
+      "end": 28.48,
+      "wpm": 109
+    },
+    {
+      "id": "s4",
+      "text": "We might have religious or community activities.",
+      "zh": "我們可能還有宗教或社區活動要參加。",
+      "start": 30,
+      "end": 33.78,
+      "wpm": 111
+    },
+    {
+      "id": "s5",
+      "text": "Taking care of our health is also important.",
+      "zh": "照顧好自己的健康也很重要。",
+      "start": 34.96,
+      "end": 37.9,
+      "wpm": 163
+    },
+    {
+      "id": "s6",
+      "text": "And let's not forget about our personal projects, our interests, and our friendships.",
+      "zh": "還別忘了自己的計畫、興趣，還有朋友之間的往來。",
+      "start": 39.34,
+      "end": 45.98,
+      "wpm": 117
+    },
+    {
+      "id": "s7",
+      "text": "With everything on our plate, it is easy to feel overwhelmed, overextended, and overcommitted.",
+      "zh": "手上一堆事情，很容易覺得喘不過氣、負荷過重、答應了太多。",
+      "start": 45.98,
+      "end": 56.06,
+      "wpm": 83
+    },
+    {
+      "id": "s8",
+      "text": "However, if we try to do too much, we may spread ourselves too thin.",
+      "zh": "不過，如果什麼都想做，我們可能就會 spread ourselves too thin，也就是分身乏術。",
+      "start": 58.25,
+      "end": 63.3,
+      "wpm": 166
+    },
+    {
+      "id": "s9",
+      "text": "This expression means we have taken on too much.",
+      "zh": "這個說法的意思是，我們承擔了太多事情。",
+      "start": 64.54,
+      "end": 68.1,
+      "wpm": 152
+    },
+    {
+      "id": "s10",
+      "text": "We are pushed to the limit.",
+      "zh": "我們被逼到了極限。",
+      "start": 68.86,
+      "end": 70.72,
+      "wpm": 194
+    },
+    {
+      "id": "s11",
+      "text": "People who are spread too thin take on too many jobs, projects, or goals.",
+      "zh": "分身乏術的人，往往接了太多工作、專案或目標。",
+      "start": 71.72,
+      "end": 78.58,
+      "wpm": 122
+    },
+    {
+      "id": "s12",
+      "text": "The heavy load requires more energy or attention than they possess.",
+      "zh": "這麼重的負擔，需要的精力和專注力超過他們能負荷的程度。",
+      "start": 79.92,
+      "end": 85.52,
+      "wpm": 118
+    },
+    {
+      "id": "s13",
+      "text": "If we work on many projects simultaneously, or at the same time, it is possible that none will get done well, if they get done at all.",
+      "zh": "如果我們同時進行很多專案，結果可能沒有一件做得好，甚至根本做不完。",
+      "start": 86.64,
+      "end": 98.64,
+      "wpm": 135
+    },
+    {
+      "id": "s14",
+      "text": "Being spread too thin can also be described as biting off more than we can chew.",
+      "zh": "分身乏術也可以說成 biting off more than we can chew，也就是貪多嚼不爛。",
+      "start": 100.66,
+      "end": 112.94,
+      "wpm": 78
+    },
+    {
+      "id": "s15",
+      "text": "When we bite off more than we can chew, we attempt to do more than is possible.",
+      "zh": "當我們貪多嚼不爛時，就是想做的事超過自己能力所及。",
+      "start": 113.78,
+      "end": 119.34,
+      "wpm": 183
+    }
+  ],
+  "questions": []
+}

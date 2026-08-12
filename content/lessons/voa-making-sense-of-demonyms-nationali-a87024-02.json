@@ -1,0 +1,128 @@
+{
+  "id": "voa-making-sense-of-demonyms-nationali-a87024-02",
+  "title": "Making Sense of Demonyms - Nationality Nouns (2/2)",
+  "titleZh": "搞懂國民稱謂──表示國籍的名詞（2/2）",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "繼續介紹各種國民稱謂字尾的來源，並提供查證資料的網站。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/making-sense-of-demonyms---nationality-nouns/5921420.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Demonyms are usually found in their plural form, referring to a group of people.",
+      "zh": "國民稱謂通常以複數形式出現，用來指一群人。",
+      "start": 108.36,
+      "end": 113.44,
+      "wpm": 165
+    },
+    {
+      "id": "s2",
+      "text": "To make some demonyms singular, you can add the suffix man or woman, as in Frenchman, Scotswoman, Irishwoman, and Dutchman.",
+      "zh": "有些國民稱謂要變單數，可以加上 -man 或 -woman，像是 Frenchman、Scotswoman、Irishwoman 和 Dutchman。",
+      "start": 114.44,
+      "end": 124.96,
+      "wpm": 114
+    },
+    {
+      "id": "s3",
+      "text": "Contact with the German language also added the suffix er, as in Netherlanders and Luxemburgers.",
+      "zh": "和德文接觸之後，英文又多了 -er 這個字尾，例如 Netherlanders 和 Luxemburgers。",
+      "start": 126.08,
+      "end": 134.18,
+      "wpm": 111
+    },
+    {
+      "id": "s4",
+      "text": "And people from Kosovo are called Kosovars, with a little help from the language of Albania.",
+      "zh": "而科索沃人叫做 Kosovars，這要歸功於阿爾巴尼亞語的影響。",
+      "start": 135.3,
+      "end": 141.32,
+      "wpm": 159
+    },
+    {
+      "id": "s5",
+      "text": "We hear the influence of Arabic with the e- suffix in the demonyms for many countries in the Middle East, Central Asia, and Africa.",
+      "zh": "在中東、中亞和非洲許多國家的國民稱謂裡，我們從 e- 這個字尾聽得出阿拉伯文的影響。",
+      "start": 142.18,
+      "end": 151.74,
+      "wpm": 151
+    },
+    {
+      "id": "s6",
+      "text": "They include Pakistanis, Uzbekistanis, Tajikistanis, Yemenis, and Somalis.",
+      "zh": "這些包括 Pakistanis、Uzbekistanis、Tajikistanis、Yemenis 和 Somalis。",
+      "start": 152.78,
+      "end": 157.83,
+      "wpm": 95
+    },
+    {
+      "id": "s7",
+      "text": "The most common way to form a noun from a country name is to add ands, as in Germans, Americans, and Moroccans.",
+      "zh": "從國名造出名詞最常見的方式，就是加上 -ans，例如 Germans、Americans 和 Moroccans。",
+      "start": 161.28,
+      "end": 169.44,
+      "wpm": 162
+    },
+    {
+      "id": "s8",
+      "text": "This is a form English got from Latin and French.",
+      "zh": "這種形式是英文從拉丁文和法文借來的。",
+      "start": 170.8,
+      "end": 173.88,
+      "wpm": 195
+    },
+    {
+      "id": "s9",
+      "text": "We got the e- suffix from French by way of the Portuguese, who introduced the British to the Chinese and Japanese.",
+      "zh": "e- 這個字尾則是經由葡萄牙人從法文傳過來的，當年就是葡萄牙人把英國人介紹給中國人和日本人。",
+      "start": 175.1,
+      "end": 183.21,
+      "wpm": 155
+    },
+    {
+      "id": "s10",
+      "text": "They share the suffix with the Marshallese, Benanese, and Bhutanese.",
+      "zh": "Marshallese、Benanese 和 Bhutanese 也共用這個字尾。",
+      "start": 184.76,
+      "end": 189.78,
+      "wpm": 120
+    },
+    {
+      "id": "s11",
+      "text": "To find the official name of a country or its people, you can go to the World Factbook.",
+      "zh": "想查某個國家或其人民的正式名稱，可以上《世界概況》網站。",
+      "start": 190.98,
+      "end": 197.08,
+      "wpm": 177
+    },
+    {
+      "id": "s12",
+      "text": "The website also has useful maps and information on each country.",
+      "zh": "這個網站還有各國實用的地圖和資料。",
+      "start": 197.08,
+      "end": 201.38,
+      "wpm": 153
+    },
+    {
+      "id": "s13",
+      "text": "And that's Everyday Grammar.",
+      "zh": "以上就是本集的《日常文法》。",
+      "start": 202.78,
+      "end": 204.3,
+      "wpm": 158
+    },
+    {
+      "id": "s14",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 205.42,
+      "end": 206.88,
+      "wpm": 123
+    }
+  ],
+  "questions": []
+}

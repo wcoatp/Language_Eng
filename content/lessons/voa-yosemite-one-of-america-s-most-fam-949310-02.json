@@ -1,0 +1,128 @@
+{
+  "id": "voa-yosemite-one-of-america-s-most-fam-949310-02",
+  "title": "Yosemite: One of America’s Most Famous National Parks (2/2)",
+  "titleZh": "優勝美地：美國最著名的國家公園之一 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "介紹優勝美地酋長岩的攀岩紀錄，以及攝影家鏡頭下的公園之美。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — America's National Parks",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8002539.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The highest of these is El Capitan, at more than 900 meters.",
+      "zh": "其中最高的是酋長岩，也就是 El Capitan，超過 900 公尺。",
+      "start": 119.4,
+      "end": 125.59,
+      "wpm": 107
+    },
+    {
+      "id": "s2",
+      "text": "And the climb to the top is straight up.",
+      "zh": "而且要爬到頂端是一路垂直向上。",
+      "start": 126.54,
+      "end": 130.12,
+      "wpm": 151
+    },
+    {
+      "id": "s3",
+      "text": "A team first climbed the rock face of El Capitan in 1957. It took them 45 days over 18 months to do it.",
+      "zh": "1957 年，一支隊伍首次攀上酋長岩的岩壁，他們花了 18 個月、總共 45 天才完成。",
+      "start": 131.26,
+      "end": 143.26,
+      "wpm": 100
+    },
+    {
+      "id": "s4",
+      "text": "Today, experienced climbers can do it in about three days.",
+      "zh": "現在，有經驗的攀岩者大約三天就能爬完。",
+      "start": 144.1,
+      "end": 149.1,
+      "wpm": 120
+    },
+    {
+      "id": "s5",
+      "text": "In 2017, American Alex Honnold became the first person to free solo climb El Capitan.",
+      "zh": "2017 年，美國人 Alex Honnold 成為第一個徒手獨攀酋長岩的人。",
+      "start": 149.32,
+      "end": 159.58,
+      "wpm": 82
+    },
+    {
+      "id": "s6",
+      "text": "Free solo is climbing without any ropes or protective equipment.",
+      "zh": "徒手獨攀就是完全不用繩索或防護裝備去攀爬。",
+      "start": 160.62,
+      "end": 165.44,
+      "wpm": 124
+    },
+    {
+      "id": "s7",
+      "text": "Honnold reached the top in less than four hours.",
+      "zh": "Honnold 不到四個小時就登頂了。",
+      "start": 166.84,
+      "end": 170.82,
+      "wpm": 136
+    },
+    {
+      "id": "s8",
+      "text": "Photographers and painters also come to Yosemite to try to capture its beauty in their images.",
+      "zh": "攝影師和畫家也會來優勝美地，想把這裡的美留在作品裡。",
+      "start": 172.2,
+      "end": 179.5,
+      "wpm": 132
+    },
+    {
+      "id": "s9",
+      "text": "The most famous Yosemite photographer was American Ansel Adams.",
+      "zh": "拍攝優勝美地最有名的攝影師，是美國人 Ansel Adams。",
+      "start": 180.66,
+      "end": 186.68,
+      "wpm": 90
+    },
+    {
+      "id": "s10",
+      "text": "He took many black and white pictures of the park from the 1920s through the 1950s.",
+      "zh": "從 1920 年代到 1950 年代，他拍下許多這座公園的黑白照片。",
+      "start": 187.16,
+      "end": 195.64,
+      "wpm": 113
+    },
+    {
+      "id": "s11",
+      "text": "Most people who come to Yosemite take pictures.",
+      "zh": "大部分來優勝美地的人都會拍照。",
+      "start": 196.34,
+      "end": 199.8,
+      "wpm": 139
+    },
+    {
+      "id": "s12",
+      "text": "But you do not need them to remember your visit.",
+      "zh": "但你其實不需要靠照片來記住這趟旅程。",
+      "start": 200.82,
+      "end": 204.22,
+      "wpm": 176
+    },
+    {
+      "id": "s13",
+      "text": "Yosemite's extraordinary beauty will be marked in your memory forever.",
+      "zh": "優勝美地那種不凡的美，會永遠留在你的記憶裡。",
+      "start": 205.74,
+      "end": 211.26,
+      "wpm": 109
+    },
+    {
+      "id": "s14",
+      "text": "I'm Andrew Smith.",
+      "zh": "我是 Andrew Smith。",
+      "start": 212.32,
+      "end": 214.24,
+      "wpm": 94
+    }
+  ],
+  "questions": []
+}

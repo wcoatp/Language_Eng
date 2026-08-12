@@ -1,0 +1,136 @@
+{
+  "id": "voa-making-sense-of-demonyms-nationali-a87024-01",
+  "title": "Making Sense of Demonyms - Nationality Nouns (1/2)",
+  "titleZh": "搞懂國民稱謂──表示國籍的名詞（1/2）",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "介紹英文如何用字尾構成稱呼某國人民的名詞。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/making-sense-of-demonyms---nationality-nouns/5921420.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Last week in Everyday Grammar, we looked at how English forms adjectives for country names.",
+      "zh": "上週的《日常文法》單元，我們談了英文怎麼把國家名變成形容詞。",
+      "start": 0,
+      "end": 8.03,
+      "wpm": 112
+    },
+    {
+      "id": "s2",
+      "text": "We found that, as is often true, history can explain some of the irregularities in the English language.",
+      "zh": "我們發現，就像常見的情況一樣，英文裡有些不規則的地方可以從歷史找到答案。",
+      "start": 8.64,
+      "end": 17.1,
+      "wpm": 128
+    },
+    {
+      "id": "s3",
+      "text": "The endings we add to the country name, called suffixes, were borrowed many years ago from Greek, Latin, French, and even Arabic.",
+      "zh": "我們加在國名後面的字尾，很多年前是從希臘文、拉丁文、法文，甚至阿拉伯文借過來的。",
+      "start": 17.96,
+      "end": 28.85,
+      "wpm": 121
+    },
+    {
+      "id": "s4",
+      "text": "This week, we will look at how English forms nouns that refer to the people of a country.",
+      "zh": "這週我們要看的是，英文怎麼構成指稱某個國家人民的名詞。",
+      "start": 30,
+      "end": 35.62,
+      "wpm": 192
+    },
+    {
+      "id": "s5",
+      "text": "The name for this kind of noun is demonym.",
+      "zh": "這類名詞叫做 demonym，也就是國民稱謂。",
+      "start": 36.58,
+      "end": 39.72,
+      "wpm": 172
+    },
+    {
+      "id": "s6",
+      "text": "You can probably guess it is from the same Greek word form dem, meaning the people, as in the English word democracy.",
+      "zh": "你大概猜得到，它來自希臘文字根 dem，意思是「人民」，就像英文的 democracy（民主）一樣。",
+      "start": 40.92,
+      "end": 50.08,
+      "wpm": 144
+    },
+    {
+      "id": "s7",
+      "text": "Often the adjective and the demonym are the same, as in American, for something from the United States.",
+      "zh": "形容詞和國民稱謂常常是同一個字，例如 American 可以指來自美國的東西。",
+      "start": 51.44,
+      "end": 59.59,
+      "wpm": 133
+    },
+    {
+      "id": "s8",
+      "text": "And Americans, for people from the U.S.",
+      "zh": "Americans 則是指美國人。",
+      "start": 60,
+      "end": 63.16,
+      "wpm": 152
+    },
+    {
+      "id": "s9",
+      "text": "But in some cases, the adjective and the demonym are different.",
+      "zh": "不過在某些情況下，形容詞和國民稱謂並不一樣。",
+      "start": 64.04,
+      "end": 68.64,
+      "wpm": 143
+    },
+    {
+      "id": "s10",
+      "text": "The adjective for Iceland is Icelandic.",
+      "zh": "冰島的形容詞是 Icelandic。",
+      "start": 69.6,
+      "end": 72.92,
+      "wpm": 108
+    },
+    {
+      "id": "s11",
+      "text": "But the demonym, what we call a person from Iceland, is Icelander.",
+      "zh": "但是國民稱謂，也就是我們怎麼稱呼冰島人，是 Icelander。",
+      "start": 73.3,
+      "end": 78.34,
+      "wpm": 143
+    },
+    {
+      "id": "s12",
+      "text": "Let us begin with the suffix ish, which is from Old English isk, a Germanic form.",
+      "zh": "我們先從字尾 -ish 說起，它來自古英文的 -isk，是一種日耳曼語的形式。",
+      "start": 79.34,
+      "end": 86.13,
+      "wpm": 141
+    },
+    {
+      "id": "s13",
+      "text": "Early English speakers added ish to make Swedish, Spanish, Scottish, and Irish.",
+      "zh": "早期講英文的人加上 -ish，造出 Swedish、Spanish、Scottish 和 Irish。",
+      "start": 87.06,
+      "end": 93.94,
+      "wpm": 105
+    },
+    {
+      "id": "s14",
+      "text": "This was shortened to ch for some close neighbors, Dutch, Scotch, and French.",
+      "zh": "對某些鄰近的民族，這個字尾縮短成 -ch，例如 Dutch、Scotch 和 French。",
+      "start": 95.16,
+      "end": 101.52,
+      "wpm": 123
+    },
+    {
+      "id": "s15",
+      "text": "The English speakers called themselves British or Britons.",
+      "zh": "講英文的人則自稱 British 或 Britons。",
+      "start": 102.4,
+      "end": 106.88,
+      "wpm": 107
+    }
+  ],
+  "questions": []
+}

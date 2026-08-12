@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-johnny-cash-01",
+  "title": "What It Takes: Johnny Cash (1/4)",
+  "titleZh": "《What It Takes》：強尼‧凱許 (1/4)",
+  "level": 4,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "節目開場精選名人語錄，並介紹本集主角鄉村歌手強尼‧凱許。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3985187.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Adame, this child is gifted, and I heard that enough that I started to believe it.",
+      "zh": "Adame，這孩子有天分。這句話我聽多了，久了自己也開始相信。",
+      "start": 0.05,
+      "end": 8.58,
+      "wpm": 113
+    },
+    {
+      "id": "s2",
+      "text": "If you have the opportunity, not a perfect opportunity, and you don't take it, you may never have another chance.",
+      "zh": "如果機會來了，就算不是完美的機會，你卻沒有把握住，可能就再也沒有下一次了。",
+      "start": 8.65,
+      "end": 14.86,
+      "wpm": 193
+    },
+    {
+      "id": "s3",
+      "text": "It all was so clear.",
+      "zh": "一切都無比清晰。",
+      "start": 15,
+      "end": 16.13,
+      "wpm": 265
+    },
+    {
+      "id": "s4",
+      "text": "It was just like the picture started to form itself.",
+      "zh": "就好像那個畫面自己慢慢成形了一樣。",
+      "start": 16.13,
+      "end": 19.4,
+      "wpm": 183
+    },
+    {
+      "id": "s5",
+      "text": "There was no way in which a lie could prevail over the truth, darkness over light, death over life.",
+      "zh": "謊言不可能勝過真理，黑暗不可能勝過光明，死亡也不可能勝過生命。",
+      "start": 19.67,
+      "end": 27.2,
+      "wpm": 151
+    },
+    {
+      "id": "s6",
+      "text": "Every day I wake up and decide, today I'm going to love my life.",
+      "zh": "我每天醒來就決定，今天我要好好愛我的人生。",
+      "start": 27.25,
+      "end": 31.92,
+      "wpm": 180
+    },
+    {
+      "id": "s7",
+      "text": "My advice is, if they're going to break your leg once when you go in that place, stay out of there.",
+      "zh": "我的建議是，如果你一走進那個地方就會被打斷腿，那就別去。",
+      "start": 34.86,
+      "end": 39.84,
+      "wpm": 253
+    },
+    {
+      "id": "s8",
+      "text": "And then along come these differential experiences that you don't look for, you don't plan for, but boy, you better not miss them.",
+      "zh": "然後就會出現一些與眾不同的經歷，你沒去找、也沒計畫過，但天啊，你最好別錯過。",
+      "start": 39.84,
+      "end": 47.89,
+      "wpm": 171
+    },
+    {
+      "id": "s9",
+      "text": "This is What It Takes, a podcast about passion, vision, and perseverance.",
+      "zh": "這裡是《What It Takes》，一個談熱情、遠見和毅力的 podcast。",
+      "start": 52.99,
+      "end": 58.05,
+      "wpm": 142
+    },
+    {
+      "id": "s10",
+      "text": "I'm Alice Winkler.",
+      "zh": "我是 Alice Winkler。",
+      "start": 58.86,
+      "end": 59.8,
+      "wpm": 191
+    },
+    {
+      "id": "s11",
+      "text": "Every episode of What It Takes features a revealing conversation with someone who has literally changed the world.",
+      "zh": "《What It Takes》每一集都會和一位真正改變了世界的人深入對談。",
+      "start": 60.32,
+      "end": 67.34,
+      "wpm": 154
+    },
+    {
+      "id": "s12",
+      "text": "Whether it's Rosa Parks, Steve Jobs, Jonas Salk, Jane Goodall, or today's guest, Johnny Cash.",
+      "zh": "不管是羅莎‧帕克斯、賈伯斯、喬納斯‧沙克、珍‧古德，還是今天的來賓強尼‧凱許。",
+      "start": 67.81,
+      "end": 74.79,
+      "wpm": 129
+    },
+    {
+      "id": "s13",
+      "text": "Their stories are unique, but all of them are inspiring.",
+      "zh": "他們的故事各不相同，但每一個都很激勵人心。",
+      "start": 75.39,
+      "end": 78.64,
+      "wpm": 185
+    },
+    {
+      "id": "s14",
+      "text": "And after all, it's the Academy of Achievement's mission to show you don't need to be a superhero to make a difference.",
+      "zh": "畢竟，成就學會的使命就是要告訴大家，你不必是超級英雄，也能帶來改變。",
+      "start": 79.18,
+      "end": 85.78,
+      "wpm": 200
+    },
+    {
+      "id": "s15",
+      "text": "Listen to the wisdom in these interviews, and you'll learn what it takes.",
+      "zh": "聽聽這些訪談裡的智慧，你就會知道成功需要具備什麼。",
+      "start": 85.78,
+      "end": 89.78,
+      "wpm": 195
+    }
+  ],
+  "questions": []
+}

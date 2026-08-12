@@ -1,0 +1,56 @@
+{
+  "id": "voa-is-it-a-couch-or-a-sofa-02",
+  "title": "Is It a Couch or a Sofa? (2/2)",
+  "titleZh": "沙發到底叫 couch 還是 sofa？（2/2）",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "說明 sofa 一詞的正式語感，以及家具業偏好用它的原因。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/5861794.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And sofas might sound as though they are more costly and refined than couches.",
+      "zh": "而且 sofa 聽起來可能比 couch 更貴、更講究一些。",
+      "start": 108.26,
+      "end": 116.59,
+      "wpm": 101
+    },
+    {
+      "id": "s2",
+      "text": "It is worth noting that some industries only use the word sofa.",
+      "zh": "值得一提的是，有些行業只會用 sofa 這個字。",
+      "start": 117.62,
+      "end": 123.45,
+      "wpm": 123
+    },
+    {
+      "id": "s3",
+      "text": "That includes furniture, designers, makers, and sellers, as well as home decorators.",
+      "zh": "包括家具設計師、製造商、銷售人員，還有室內佈置的專業人士。",
+      "start": 124.52,
+      "end": 133.14,
+      "wpm": 84
+    },
+    {
+      "id": "s4",
+      "text": "And that's Ask a Teacher for this week.",
+      "zh": "本週的《問老師》就到這裡。",
+      "start": 133.94,
+      "end": 137.02,
+      "wpm": 156
+    },
+    {
+      "id": "s5",
+      "text": "I'm Alice Bryant.",
+      "zh": "我是 Alice Bryant。",
+      "start": 137.56,
+      "end": 138.8,
+      "wpm": 145
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "voa-when-to-use-some-and-not-a-or-an-02",
+  "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (2/3)",
+  "titleZh": "什麼時候該用 some 而不是 a 或 an (2/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "說明不可數名詞為什麼要搭配 some，並用實際例句示範用法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/when-to-use-some-and-not-a-or-an-/6016083.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Some businesses have closed on my street.",
+      "zh": "我這條街上有些店家已經收起來了。",
+      "start": 87.09,
+      "end": 90.61,
+      "wpm": 119
+    },
+    {
+      "id": "s2",
+      "text": "I gave her some apples to take to her mother.",
+      "zh": "我給了她一些蘋果，讓她帶回去給媽媽。",
+      "start": 90.76,
+      "end": 95.15,
+      "wpm": 137
+    },
+    {
+      "id": "s3",
+      "text": "Now, let us turn to the question of non-count nouns.",
+      "zh": "現在我們來談談不可數名詞的問題。",
+      "start": 95.15,
+      "end": 99.54,
+      "wpm": 150
+    },
+    {
+      "id": "s4",
+      "text": "Can we use a or an, or must we use some?",
+      "zh": "我們可以用 a 或 an 嗎？還是一定要用 some？",
+      "start": 99.54,
+      "end": 105.86,
+      "wpm": 104
+    },
+    {
+      "id": "s5",
+      "text": "Consider these examples.",
+      "zh": "來看看這幾個例子。",
+      "start": 106.67,
+      "end": 108.32,
+      "wpm": 109
+    },
+    {
+      "id": "s6",
+      "text": "You should come inside.",
+      "zh": "你應該進來屋裡。",
+      "start": 108.32,
+      "end": 110.66,
+      "wpm": 103
+    },
+    {
+      "id": "s7",
+      "text": "There is some bad weather coming.",
+      "zh": "有一波壞天氣要來了。",
+      "start": 110.66,
+      "end": 112.76,
+      "wpm": 171
+    },
+    {
+      "id": "s8",
+      "text": "The children asked for some money to buy books.",
+      "zh": "孩子們開口要一些錢去買書。",
+      "start": 114.34,
+      "end": 117.24,
+      "wpm": 186
+    },
+    {
+      "id": "s9",
+      "text": "We would not say a weather or a money.",
+      "zh": "我們不會說 a weather 或 a money。",
+      "start": 117.24,
+      "end": 121.18,
+      "wpm": 137
+    },
+    {
+      "id": "s10",
+      "text": "The word some is an adjective, meaning an unspecified amount, so it goes well with non-count nouns.",
+      "zh": "some 這個字是形容詞，意思是不特定的數量，所以很適合搭配不可數名詞。",
+      "start": 122.28,
+      "end": 130.38,
+      "wpm": 133
+    },
+    {
+      "id": "s11",
+      "text": "Of course, you need not use an adjective or an article with plural nouns.",
+      "zh": "當然，複數名詞前面不一定要加形容詞或冠詞。",
+      "start": 131.62,
+      "end": 136.65,
+      "wpm": 167
+    },
+    {
+      "id": "s12",
+      "text": "It is interesting to compare the count and non-count nouns for related ideas, like letter, a count noun, and mail, a non-count noun.",
+      "zh": "把意思相關的可數與不可數名詞拿來比較很有意思，例如 letter 是可數名詞，mail 則是不可數名詞。",
+      "start": 136.78,
+      "end": 148.65,
+      "wpm": 126
+    },
+    {
+      "id": "s13",
+      "text": "Sandy found a letter from her sister when she pulled some mail out of the box.",
+      "zh": "Sandy 從信箱裡拿出一些信件時，發現一封她姐姐寄來的信。",
+      "start": 150.64,
+      "end": 156.04,
+      "wpm": 178
+    },
+    {
+      "id": "s14",
+      "text": "Another pair of such related words is cloud, a count noun, and weather, a non-count noun.",
+      "zh": "另一組這樣相關的字是 cloud，可數名詞，還有 weather，不可數名詞。",
+      "start": 156.04,
+      "end": 162.76,
+      "wpm": 152
+    },
+    {
+      "id": "s15",
+      "text": "There is not a cloud in the sky, so we should have some dry weather for the party.",
+      "zh": "天上一朵雲都沒有，所以派對那天應該會是乾爽的好天氣。",
+      "start": 164.04,
+      "end": 170.26,
+      "wpm": 174
+    }
+  ],
+  "questions": []
+}

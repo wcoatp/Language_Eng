@@ -1,0 +1,128 @@
+{
+  "id": "voa-pill-drug-and-medicine-02",
+  "title": "Pill, Drug and Medicine (2/2)",
+  "titleZh": "Pill、Drug 和 Medicine 的用法 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "延續藥物用字的討論，說明藥丸和藥物的差別，以及什麼是處方藥。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/pill-drug-and-medicine/6275405.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "It is swallowed.",
+      "zh": "它是用吞的。",
+      "start": 79.66,
+      "end": 81.32,
+      "wpm": 108
+    },
+    {
+      "id": "s2",
+      "text": "Pill is a less general term than drug, medicine, or medication.",
+      "zh": "pill 這個字比 drug、medicine 或 medication 更具體，範圍也更小。",
+      "start": 81.74,
+      "end": 86.83,
+      "wpm": 130
+    },
+    {
+      "id": "s3",
+      "text": "We can use it this way to talk about both vitamins and medications.",
+      "zh": "我們可以這樣用它來指維他命，也可以用來指藥品。",
+      "start": 86.83,
+      "end": 91.64,
+      "wpm": 162
+    },
+    {
+      "id": "s4",
+      "text": "Finally, we look at the word drug.",
+      "zh": "最後，我們來看 drug 這個字。",
+      "start": 93.7,
+      "end": 98.12,
+      "wpm": 95
+    },
+    {
+      "id": "s5",
+      "text": "A drug can be a substance in medicine.",
+      "zh": "drug 可以是藥品裡的一種成分。",
+      "start": 101.22,
+      "end": 104.66,
+      "wpm": 140
+    },
+    {
+      "id": "s6",
+      "text": "But drugs are also made, sold, and bought for recreational use.",
+      "zh": "但 drug 也可能是為了娛樂用途而製造、販賣和購買的東西。",
+      "start": 104.66,
+      "end": 110.68,
+      "wpm": 110
+    },
+    {
+      "id": "s7",
+      "text": "Alcohol and marijuana are examples.",
+      "zh": "酒精和大麻就是例子。",
+      "start": 110.68,
+      "end": 114.17,
+      "wpm": 86
+    },
+    {
+      "id": "s8",
+      "text": "Some drugs and medicines require a doctor's approval for use.",
+      "zh": "有些藥物和藥品必須經過醫生同意才能使用。",
+      "start": 114.47,
+      "end": 121.38,
+      "wpm": 87
+    },
+    {
+      "id": "s9",
+      "text": "Those are called prescription drugs.",
+      "zh": "這些就叫做處方藥。",
+      "start": 121.55,
+      "end": 123.12,
+      "wpm": 191
+    },
+    {
+      "id": "s10",
+      "text": "I hope this helps you to understand how to use these words, Zafir.",
+      "zh": "Zafir，希望這能幫助你了解這些字怎麼用。",
+      "start": 124.68,
+      "end": 128.59,
+      "wpm": 199
+    },
+    {
+      "id": "s11",
+      "text": "What question do you have about American English?",
+      "zh": "你對美式英語有什麼問題嗎？",
+      "start": 129.62,
+      "end": 132.62,
+      "wpm": 160
+    },
+    {
+      "id": "s12",
+      "text": "Send us an email at learningenglish at voanews.",
+      "zh": "請寄電子郵件到 learningenglish@voanews 給我們。",
+      "start": 134.1,
+      "end": 138.01,
+      "wpm": 123
+    },
+    {
+      "id": "s13",
+      "text": "And that's Ask a Teacher.",
+      "zh": "以上就是本集的〈問老師〉單元。",
+      "start": 139.48,
+      "end": 141.14,
+      "wpm": 181
+    },
+    {
+      "id": "s14",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 142.34,
+      "end": 143.78,
+      "wpm": 125
+    }
+  ],
+  "questions": []
+}

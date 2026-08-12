@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-johnny-cash-02",
+  "title": "What It Takes: Johnny Cash (2/4)",
+  "titleZh": "成功的條件：強尼・凱許 (2/4)",
+  "level": 4,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "強尼・凱許回憶四歲時聽到火車歌曲，從此立志要在廣播上唱歌。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3985187.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Here we go.",
+      "zh": "我們開始吧。",
+      "start": 89.78,
+      "end": 90.33,
+      "wpm": 327
+    },
+    {
+      "id": "s2",
+      "text": "and men behind bars.",
+      "zh": "還有牢裡的囚犯。",
+      "start": 109.64,
+      "end": 112.17,
+      "wpm": 95
+    },
+    {
+      "id": "s3",
+      "text": "These are the people Johnny Cash wrote and sang about for 40-plus years.",
+      "zh": "這些就是強尼・凱許四十多年來寫歌、唱歌的對象。",
+      "start": 119.51,
+      "end": 123.7,
+      "wpm": 186
+    },
+    {
+      "id": "s4",
+      "text": "He lent his entirely original canyon of a voice to the lonesome and the lost, the dispossessed and the disillusioned.",
+      "zh": "他用那如峽谷般獨一無二的嗓音，為孤單的人、迷失的人、被剝奪的人和心灰意冷的人發聲。",
+      "start": 124.38,
+      "end": 133.42,
+      "wpm": 133
+    },
+    {
+      "id": "s5",
+      "text": "In 1993, Gail Eikenthal sat down to talk with Johnny Cash.",
+      "zh": "一九九三年，Gail Eikenthal 坐下來和強尼・凱許聊了聊。",
+      "start": 134.06,
+      "end": 138.14,
+      "wpm": 147
+    },
+    {
+      "id": "s6",
+      "text": "It was 10 years before his death.",
+      "zh": "那是他過世前十年。",
+      "start": 138.64,
+      "end": 140.74,
+      "wpm": 171
+    },
+    {
+      "id": "s7",
+      "text": "The first time I knew what I wanted to do with my life was when I was about four years old.",
+      "zh": "我第一次知道自己這輩子想做什麼，大概是四歲的時候。",
+      "start": 140.74,
+      "end": 145.39,
+      "wpm": 271
+    },
+    {
+      "id": "s8",
+      "text": "I was listening to an old Victrola playing a railroad song.",
+      "zh": "當時我正聽著一台老式留聲機播放一首鐵路歌曲。",
+      "start": 145.39,
+      "end": 150.04,
+      "wpm": 142
+    },
+    {
+      "id": "s9",
+      "text": "The song was called Hobo Bill's Last Ride.",
+      "zh": "那首歌叫〈Hobo Bill's Last Ride〉。",
+      "start": 150.58,
+      "end": 153.28,
+      "wpm": 178
+    },
+    {
+      "id": "s10",
+      "text": "Hobo Bill, a railroad bum, was fighting for his life.",
+      "zh": "歌裡的流浪漢比爾是個扒火車的遊民，正在為自己的性命掙扎。",
+      "start": 153.7,
+      "end": 159.3,
+      "wpm": 107
+    },
+    {
+      "id": "s11",
+      "text": "And I thought that was the most wonderful, amazing thing that I'd ever seen, that you could take this piece of wax and music would come out of that box.",
+      "zh": "我覺得那是我見過最美妙、最神奇的事：拿一片蠟盤放上去，音樂就會從那個盒子裡跑出來。",
+      "start": 160.95,
+      "end": 171,
+      "wpm": 179
+    },
+    {
+      "id": "s12",
+      "text": "From that day on, I wanted to sing on the radio.",
+      "zh": "從那天起，我就想在廣播上唱歌。",
+      "start": 172.14,
+      "end": 175.61,
+      "wpm": 190
+    },
+    {
+      "id": "s13",
+      "text": "Johnny Cash's musical dreams took root on a cotton farm in rural Arkansas during the darkest days of the Depression.",
+      "zh": "強尼・凱許的音樂夢，是在經濟大蕭條最黑暗的日子裡，在阿肯色鄉下的一座棉花田生根的。",
+      "start": 175.61,
+      "end": 189.06,
+      "wpm": 89
+    },
+    {
+      "id": "s14",
+      "text": "But it wasn't just Jimmy Rogers or the other singers coming out of the family's radio that inspired him.",
+      "zh": "不過啟發他的，不只是從家裡收音機傳出來的 Jimmy Rogers 和其他歌手。",
+      "start": 189.52,
+      "end": 195.05,
+      "wpm": 206
+    },
+    {
+      "id": "s15",
+      "text": "I grew up in the 40s, and I heard all these great speeches like Winston Churchill.",
+      "zh": "我在四〇年代長大，聽過很多精彩的演說，像是邱吉爾的演講。",
+      "start": 195.05,
+      "end": 200.56,
+      "wpm": 174
+    }
+  ],
+  "questions": []
+}

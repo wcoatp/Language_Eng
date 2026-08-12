@@ -1,0 +1,80 @@
+{
+  "id": "voa-all-thumbs-03",
+  "title": "'All Thumbs' (3/3)",
+  "titleZh": "「All Thumbs」笨手笨腳 (3/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "以凱西老是把東西弄掉為例，說明「笨手笨腳」這個說法的用法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7158649.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Cassidy is all thumbs.",
+      "zh": "凱西笨手笨腳的。",
+      "start": 153.64,
+      "end": 155.04,
+      "wpm": 171
+    },
+    {
+      "id": "s2",
+      "text": "She'll end up dropping everything, and then we won't have drinks at the party.",
+      "zh": "她最後一定會把東西全打翻，那派對上就沒飲料喝了。",
+      "start": 155.98,
+      "end": 160.38,
+      "wpm": 191
+    },
+    {
+      "id": "s3",
+      "text": "She is pretty clumsy.",
+      "zh": "她真的滿笨拙的。",
+      "start": 161.62,
+      "end": 163.52,
+      "wpm": 126
+    },
+    {
+      "id": "s4",
+      "text": "Actually, at the last party, she dropped the cake.",
+      "zh": "其實上次派對的時候，她就把蛋糕摔了。",
+      "start": 164.62,
+      "end": 168.32,
+      "wpm": 146
+    },
+    {
+      "id": "s5",
+      "text": "On second thought, I'll have her bring the ice.",
+      "zh": "我再想想，還是叫她負責帶冰塊好了。",
+      "start": 169.3,
+      "end": 172.34,
+      "wpm": 178
+    },
+    {
+      "id": "s6",
+      "text": "If she drops the bags of ice, it'll only help break it up.",
+      "zh": "就算她把整袋冰塊摔了，也只會幫忙把冰敲碎而已。",
+      "start": 172.84,
+      "end": 177.44,
+      "wpm": 170
+    },
+    {
+      "id": "s7",
+      "text": "And that's all the time we have for this Words and Their Stories.",
+      "zh": "本集《Words and Their Stories》的時間就到這裡了。",
+      "start": 180.12,
+      "end": 184.4,
+      "wpm": 182
+    },
+    {
+      "id": "s8",
+      "text": "Until next time, I'm Ana Mateo.",
+      "zh": "下次見，我是 Ana Mateo。",
+      "start": 185.4,
+      "end": 188.06,
+      "wpm": 135
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,64 @@
+{
+  "id": "voa-colombian-scientists-develop-subst-312309-02",
+  "title": "Colombian Scientists Develop Substance to Protect Bees from Chemicals (2/2)",
+  "titleZh": "哥倫比亞科學家研發新物質，保護蜜蜂免受化學藥劑傷害 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "哥倫比亞學者研究能改善蜜蜂健康、防止農藥造成神經損傷的分子。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7840043.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "In a bee colony at the university, said Juan Jose Ovalier.",
+      "zh": "就在大學裡的一個蜂群中，Juan Jose Ovalier 說。",
+      "start": 143.51,
+      "end": 149.24,
+      "wpm": 115
+    },
+    {
+      "id": "s2",
+      "text": "He is a natural science student at Rosario University.",
+      "zh": "他是羅薩里奧大學自然科學系的學生。",
+      "start": 149.74,
+      "end": 153.92,
+      "wpm": 129
+    },
+    {
+      "id": "s3",
+      "text": "We already know that there are molecules that improve the bees' health.",
+      "zh": "我們已經知道，有些分子可以改善蜜蜂的健康。",
+      "start": 155.16,
+      "end": 159.96,
+      "wpm": 150
+    },
+    {
+      "id": "s4",
+      "text": "We already know that there are molecules that prevent neuronal damage caused by pesticides, Ovalier said.",
+      "zh": "我們也已經知道，有些分子能防止農藥造成的神經損傷，Ovalier 說。",
+      "start": 160.88,
+      "end": 169.52,
+      "wpm": 111
+    },
+    {
+      "id": "s5",
+      "text": "He added, It was important to continue the work to increase the effectiveness of these methods to support bees.",
+      "zh": "他還說，繼續研究、提高這些方法的成效來幫助蜜蜂，是很重要的事。",
+      "start": 170.41,
+      "end": 179.38,
+      "wpm": 127
+    },
+    {
+      "id": "s6",
+      "text": "I'm Ana Mateo.",
+      "zh": "我是 Ana Mateo。",
+      "start": 179.98,
+      "end": 181.52,
+      "wpm": 117
+    }
+  ],
+  "questions": []
+}

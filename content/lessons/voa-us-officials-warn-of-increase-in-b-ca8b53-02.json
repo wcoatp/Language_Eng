@@ -1,0 +1,72 @@
+{
+  "id": "voa-us-officials-warn-of-increase-in-b-ca8b53-02",
+  "title": "US Officials Warn of Increase in Bacterial Illnesses That Could Be Deadly (2/2)",
+  "titleZh": "美國官方警告：可能致命的細菌感染增加（2/2）",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "說明這種細菌感染的死亡率與後遺症，以及疫苗接種建議。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7551865.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "An estimated 10 to 15 percent of infected people die.",
+      "zh": "估計每一百名感染者中，有十到十五人會死亡。",
+      "start": 129.14,
+      "end": 132.88,
+      "wpm": 128
+    },
+    {
+      "id": "s2",
+      "text": "And survivors sometimes lose the ability to hear, or body parts must be surgically removed.",
+      "zh": "存活下來的人有時候會失去聽力，或是必須以手術切除部分肢體。",
+      "start": 133.82,
+      "end": 140.94,
+      "wpm": 126
+    },
+    {
+      "id": "s3",
+      "text": "There also are vaccines against meningococcal disease.",
+      "zh": "目前也有預防腦膜炎雙球菌疾病的疫苗。",
+      "start": 142.28,
+      "end": 145.96,
+      "wpm": 114
+    },
+    {
+      "id": "s4",
+      "text": "Officials suggest that all children should get a meningococcal conjugate vaccine around the age of 11. Since vaccine protection weakens over time,",
+      "zh": "官員建議所有兒童在十一歲左右接種一劑腦膜炎雙球菌結合型疫苗。由於疫苗的保護力會隨時間減弱，",
+      "start": 146.96,
+      "end": 158.52,
+      "wpm": 109
+    },
+    {
+      "id": "s5",
+      "text": "the CDC also suggests a second shot at age 16. The CDC also suggests the shots for people at higher risk.",
+      "zh": "CDC 也建議在十六歲時再打第二劑。CDC 同時建議高風險族群接種這種疫苗。",
+      "start": 158.52,
+      "end": 168.78,
+      "wpm": 117
+    },
+    {
+      "id": "s6",
+      "text": "Higher risk individuals might include those who live where an outbreak is taking place, or those with HIV infection, or other kinds of health conditions.",
+      "zh": "高風險族群可能包括住在疫情爆發地區的人、感染愛滋病毒的人，或是有其他健康狀況的人。",
+      "start": 169.54,
+      "end": 180.5,
+      "wpm": 137
+    },
+    {
+      "id": "s7",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 181.7,
+      "end": 183.16,
+      "wpm": 123
+    }
+  ],
+  "questions": []
+}

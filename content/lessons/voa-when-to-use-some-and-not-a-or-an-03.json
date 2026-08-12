@@ -1,0 +1,56 @@
+{
+  "id": "voa-when-to-use-some-and-not-a-or-an-03",
+  "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (3/3)",
+  "titleZh": "什麼時候該用 some 而不是 a 或 an (3/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "用新聞報導當例子，總結 a、an 和 some 各自該搭配哪種名詞。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/when-to-use-some-and-not-a-or-an-/6016083.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And every workday here at Learning English, we write a story, count noun, for you about the latest news, a non-count noun.",
+      "zh": "在 Learning English，我們每個上班日都會為你寫一篇報導，story 是可數名詞，內容是最新的消息，news 則是不可數名詞。",
+      "start": 170.26,
+      "end": 178.39,
+      "wpm": 170
+    },
+    {
+      "id": "s2",
+      "text": "The editor asked me to write a story about some news from Asia.",
+      "zh": "編輯要我寫一篇關於亞洲某些消息的報導。",
+      "start": 179.62,
+      "end": 183.54,
+      "wpm": 199
+    },
+    {
+      "id": "s3",
+      "text": "To sum up, you can use a or an before singular count nouns, and some before plural count nouns, and any non-count nouns.",
+      "zh": "總結來說，單數可數名詞前面可以用 a 或 an，複數可數名詞和任何不可數名詞前面則用 some。",
+      "start": 184.6,
+      "end": 195.7,
+      "wpm": 130
+    },
+    {
+      "id": "s4",
+      "text": "And that's Everyday Grammar.",
+      "zh": "以上就是今天的 Everyday Grammar。",
+      "start": 196.74,
+      "end": 198.88,
+      "wpm": 112
+    },
+    {
+      "id": "s5",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 198.98,
+      "end": 200.6,
+      "wpm": 111
+    }
+  ],
+  "questions": []
+}

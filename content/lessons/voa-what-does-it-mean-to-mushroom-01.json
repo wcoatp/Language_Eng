@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-does-it-mean-to-mushroom-01",
+  "title": "What Does It Mean 'To Mushroom'? (1/2)",
+  "titleZh": "「To Mushroom」是什麼意思？ (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "以蘑菇一夜之間冒出來為例，說明這個字當動詞表示快速暴增。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8008674.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And now, words and their stories from VOA Learning English.",
+      "zh": "現在是 VOA 學英語的《Words and Their Stories》單元。",
+      "start": 0.9,
+      "end": 7.22,
+      "wpm": 95
+    },
+    {
+      "id": "s2",
+      "text": "Mushrooms are a popular food in many parts of the world.",
+      "zh": "在世界上很多地方，蘑菇都是很受歡迎的食物。",
+      "start": 19.36,
+      "end": 23.54,
+      "wpm": 158
+    },
+    {
+      "id": "s3",
+      "text": "Some people even like to go out into the woods, or forest, to pick wild mushrooms.",
+      "zh": "有些人甚至喜歡到林子裡、也就是森林裡去採野生蘑菇。",
+      "start": 24.86,
+      "end": 31.37,
+      "wpm": 147
+    },
+    {
+      "id": "s4",
+      "text": "They know which ones to eat and where they grow.",
+      "zh": "他們知道哪些可以吃，也知道它們長在哪裡。",
+      "start": 32.88,
+      "end": 36.42,
+      "wpm": 169
+    },
+    {
+      "id": "s5",
+      "text": "Mushrooms grow very quickly, often overnight.",
+      "zh": "蘑菇長得非常快，常常一個晚上就冒出來。",
+      "start": 38.02,
+      "end": 41.42,
+      "wpm": 106
+    },
+    {
+      "id": "s6",
+      "text": "Dark, wet areas in the forest might be without mushrooms one day and filled with fungi by the next day.",
+      "zh": "森林裡陰暗潮濕的地方，今天可能一朵蘑菇都沒有，隔天就長滿了菇類。",
+      "start": 42.58,
+      "end": 51.38,
+      "wpm": 136
+    },
+    {
+      "id": "s7",
+      "text": "The mushrooms have sprung up overnight.",
+      "zh": "這些蘑菇一夜之間就冒了出來。",
+      "start": 52.48,
+      "end": 55.44,
+      "wpm": 122
+    },
+    {
+      "id": "s8",
+      "text": "To spring up means to appear or develop suddenly or quickly.",
+      "zh": "spring up 的意思是突然或很快地出現、發展起來。",
+      "start": 57.3,
+      "end": 63.06,
+      "wpm": 115
+    },
+    {
+      "id": "s9",
+      "text": "So we can compare things that grow fast, or increase suddenly, to springing up like mushrooms.",
+      "zh": "所以我們可以把長得很快、突然暴增的東西，形容成像蘑菇一樣冒出來。",
+      "start": 64.16,
+      "end": 72.41,
+      "wpm": 116
+    },
+    {
+      "id": "s10",
+      "text": "For example, because there are many online streaming platforms, new programs are springing up like mushrooms.",
+      "zh": "舉例來說，因為網路上的串流平台很多，新節目就像雨後春筍一樣冒出來。",
+      "start": 73.42,
+      "end": 82.72,
+      "wpm": 103
+    },
+    {
+      "id": "s11",
+      "text": "We can also use mushroom as a verb, meaning to grow or expand widely and over a short period of time.",
+      "zh": "我們也可以把 mushroom 當動詞用，意思是在短時間內大幅成長或擴張。",
+      "start": 82.98,
+      "end": 93.98,
+      "wpm": 115
+    },
+    {
+      "id": "s12",
+      "text": "For example, schools in the city improved greatly, and the number of parks increased as well.",
+      "zh": "舉例來說，這座城市的學校進步很多，公園的數量也增加了。",
+      "start": 94.94,
+      "end": 102.95,
+      "wpm": 120
+    },
+    {
+      "id": "s13",
+      "text": "So the number of families moving to the area mushroomed in recent years.",
+      "zh": "所以近幾年搬到這一帶的家庭數量就暴增了。",
+      "start": 103.64,
+      "end": 109.7,
+      "wpm": 129
+    },
+    {
+      "id": "s14",
+      "text": "Good things and bad things can develop quickly.",
+      "zh": "好事和壞事都有可能發展得很快。",
+      "start": 110.76,
+      "end": 114.56,
+      "wpm": 126
+    },
+    {
+      "id": "s15",
+      "text": "If a problem or issue gets bigger very quickly, we can say it mushroomed.",
+      "zh": "如果一個問題很快就變得更嚴重，我們就可以說它 mushroomed。",
+      "start": 115.56,
+      "end": 122.44,
+      "wpm": 122
+    }
+  ],
+  "questions": []
+}

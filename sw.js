@@ -1,7 +1,7 @@
 /* Service worker — offline-first app shell, network-first content.
    Bump CACHE when shipping a release so clients pick up new files. */
 
-const CACHE = 'echo-v1';
+const CACHE = 'echo-v3';
 
 const SHELL = [
   './',
@@ -17,6 +17,10 @@ const SHELL = [
   './js/recorder.js',
   './js/srs.js',
   './js/content.js',
+  './js/difficulty.js',
+  './js/storage.js',
+  './js/pack.js',
+  './js/youtube.js',
   './js/llm.js',
   './js/views/home.js',
   './js/views/library.js',
@@ -25,6 +29,7 @@ const SHELL = [
   './js/views/review.js',
   './js/views/talk.js',
   './js/views/import.js',
+  './js/views/yt.js',
   './js/views/settings.js',
   './js/views/progress.js',
   './icons/icon-192.png',

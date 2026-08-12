@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-johnny-cash-03",
+  "title": "What It Takes: Johnny Cash (3/4)",
+  "titleZh": "成功之道：強尼・凱許 (3/4)",
+  "level": 4,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "強尼・凱許談他如何不放棄夢想，終於得到唱片公司的機會。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3985187.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "His most famous or infamous commencement exercise speech was, Never, never, never, never, never give up.",
+      "zh": "他那場最有名、或者說最惡名昭彰的畢業典禮演講就是：絕對、絕對、絕對、絕對、絕對不要放棄。",
+      "start": 201.76,
+      "end": 210.97,
+      "wpm": 104
+    },
+    {
+      "id": "s2",
+      "text": "And then somebody else said, Every day in every way I'm getting better and better.",
+      "zh": "後來又有人說：我每一天、在每一方面，都變得越來越好。",
+      "start": 212.25,
+      "end": 216.8,
+      "wpm": 198
+    },
+    {
+      "id": "s3",
+      "text": "I didn't especially believe that about myself, but I said it every day, and I made myself believe it, and it worked.",
+      "zh": "我本來並不特別相信自己真是這樣，但我每天都這樣說，逼自己相信，結果真的有效。",
+      "start": 217.54,
+      "end": 223.2,
+      "wpm": 233
+    },
+    {
+      "id": "s4",
+      "text": "But I never, I persevered.",
+      "zh": "但我從來沒有…我撐下來了。",
+      "start": 223.2,
+      "end": 224.86,
+      "wpm": 181
+    },
+    {
+      "id": "s5",
+      "text": "I never gave up my dream to, quote, sing on the radio.",
+      "zh": "我從來沒有放棄我的夢想，也就是所謂的「在電台上唱歌」。",
+      "start": 224.96,
+      "end": 229.7,
+      "wpm": 152
+    },
+    {
+      "id": "s6",
+      "text": "And that dream came true in 1955. Tell us how that dream came true.",
+      "zh": "那個夢想在1955年實現了。跟我們說說那個夢想是怎麼實現的。",
+      "start": 230.44,
+      "end": 238.84,
+      "wpm": 93
+    },
+    {
+      "id": "s7",
+      "text": "Who gave you your first big break?",
+      "zh": "是誰給了你第一個大好機會？",
+      "start": 239.18,
+      "end": 241.73,
+      "wpm": 165
+    },
+    {
+      "id": "s8",
+      "text": "Sam Phillips at Sun Records.",
+      "zh": "Sun Records 的 Sam Phillips。",
+      "start": 241.84,
+      "end": 243.84,
+      "wpm": 150
+    },
+    {
+      "id": "s9",
+      "text": "There was a label called Sun Records in Memphis that was pretty hot with Elvis Presley and two or three locally well-known country acts and some black blues and gospel singers.",
+      "zh": "曼菲斯有一家叫 Sun Records 的唱片公司，當時滿紅的，旗下有貓王，還有兩三組本地小有名氣的鄉村樂團，以及一些黑人藍調和福音歌手。",
+      "start": 244.09,
+      "end": 257.92,
+      "wpm": 139
+    },
+    {
+      "id": "s10",
+      "text": "And when I got out of the Air Force, I went and knocked on that door and was turned away.",
+      "zh": "我從空軍退伍以後，就跑去敲那扇門，結果被拒絕了。",
+      "start": 259,
+      "end": 263.77,
+      "wpm": 252
+    },
+    {
+      "id": "s11",
+      "text": "I called back for an interview three or four times, was turned away.",
+      "zh": "我又打了三、四次電話想爭取面談，還是被拒絕。",
+      "start": 263.77,
+      "end": 267.6,
+      "wpm": 204
+    },
+    {
+      "id": "s12",
+      "text": "So one morning, I found out what time the man went to work.",
+      "zh": "所以有一天早上，我打聽到那個人幾點會去上班。",
+      "start": 267.6,
+      "end": 270.76,
+      "wpm": 247
+    },
+    {
+      "id": "s13",
+      "text": "I went down with my guitar and sat on his steps until he got there.",
+      "zh": "我就帶著吉他過去，坐在他門口的台階上等他來。",
+      "start": 270.76,
+      "end": 274.74,
+      "wpm": 226
+    },
+    {
+      "id": "s14",
+      "text": "And when he got there, I introduced myself, and he said, You're the one that's been calling.",
+      "zh": "他到了以後，我自我介紹，他就說：你就是一直打電話來的那個人。",
+      "start": 274.74,
+      "end": 279.4,
+      "wpm": 219
+    },
+    {
+      "id": "s15",
+      "text": "I said, Yeah.",
+      "zh": "我說：對。",
+      "start": 279.4,
+      "end": 280.49,
+      "wpm": 165
+    }
+  ],
+  "questions": []
+}

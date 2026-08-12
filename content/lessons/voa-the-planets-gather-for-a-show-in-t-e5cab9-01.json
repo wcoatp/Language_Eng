@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-planets-gather-for-a-show-in-t-e5cab9-01",
+  "title": "The Planets Gather for a Show in the Evening Sky (1/2)",
+  "titleZh": "行星齊聚，在傍晚的夜空中上演大秀 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "二月底七大行星同時現身傍晚天空，形成罕見的行星連珠景象。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7990134.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "All seven major planets form a kind of parade in the sky at the end of February.",
+      "zh": "二月底，七大行星會在天空中排成一列，像是在遊行一樣。",
+      "start": 0.44,
+      "end": 8.23,
+      "wpm": 131
+    },
+    {
+      "id": "s2",
+      "text": "Although two of the planets are not visible to the unaided eye, all are on the same side of the sun during the evening hours.",
+      "zh": "雖然其中兩顆用肉眼看不到，但傍晚時分它們全都位在太陽的同一側。",
+      "start": 9.2,
+      "end": 19.82,
+      "wpm": 141
+    },
+    {
+      "id": "s3",
+      "text": "This planetary grouping happens when the planets appear to line up in the night sky as seen from Earth.",
+      "zh": "當從地球看出去，這些行星在夜空中看起來排成一線時，就會出現這種行星聚集的現象。",
+      "start": 21.02,
+      "end": 29.43,
+      "wpm": 136
+    },
+    {
+      "id": "s4",
+      "text": "They do not form a straight line, but they do stretch across the evening sky this year.",
+      "zh": "它們並不會排成一直線，但今年確實會橫跨整片傍晚的天空。",
+      "start": 30,
+      "end": 37.08,
+      "wpm": 144
+    },
+    {
+      "id": "s5",
+      "text": "The American Space Agency, NASA, says these astronomical gatherings are common.",
+      "zh": "美國太空總署 NASA 表示，這類天文聚集現象其實很常見。",
+      "start": 37.58,
+      "end": 45.28,
+      "wpm": 86
+    },
+    {
+      "id": "s6",
+      "text": "A parade of four or five planets visible to the unaided eye happens every few years.",
+      "zh": "肉眼可見的四、五顆行星連成一列，每隔幾年就會出現一次。",
+      "start": 46.32,
+      "end": 54.22,
+      "wpm": 122
+    },
+    {
+      "id": "s7",
+      "text": "A similar parade took place last June, but only two planets could be seen without the use of special equipment.",
+      "zh": "去年六月也發生過類似的行星連珠，但不用特殊設備只看得到兩顆。",
+      "start": 55.32,
+      "end": 65.26,
+      "wpm": 121
+    },
+    {
+      "id": "s8",
+      "text": "Six planets were visible in January.",
+      "zh": "一月的時候有六顆行星看得見。",
+      "start": 67,
+      "end": 69.74,
+      "wpm": 131
+    },
+    {
+      "id": "s9",
+      "text": "Four were visible to the unaided eye.",
+      "zh": "其中四顆用肉眼就看得到。",
+      "start": 70.84,
+      "end": 73.56,
+      "wpm": 154
+    },
+    {
+      "id": "s10",
+      "text": "In recent weeks, Mercury joined the group.",
+      "zh": "最近幾週，水星也加入了行列。",
+      "start": 74.56,
+      "end": 78.45,
+      "wpm": 108
+    },
+    {
+      "id": "s11",
+      "text": "Venus, Mars, and Jupiter are all easily visible in the evening.",
+      "zh": "金星、火星和木星在傍晚都很容易看到。",
+      "start": 79.32,
+      "end": 85.78,
+      "wpm": 102
+    },
+    {
+      "id": "s12",
+      "text": "Saturn is now very close to the setting sun, and Mercury is close to the horizon, making both hard to see.",
+      "zh": "土星現在很靠近落日，水星則接近地平線，兩顆都不好觀察。",
+      "start": 87.16,
+      "end": 97.3,
+      "wpm": 124
+    },
+    {
+      "id": "s13",
+      "text": "Uranus and Neptune are the most distant planets.",
+      "zh": "天王星和海王星是距離最遠的行星。",
+      "start": 98.8,
+      "end": 102.69,
+      "wpm": 123
+    },
+    {
+      "id": "s14",
+      "text": "Uranus can be glimpsed with binoculars or a telescope under good conditions.",
+      "zh": "條件好的時候，用雙筒望遠鏡或天文望遠鏡可以瞥見天王星。",
+      "start": 103.32,
+      "end": 111,
+      "wpm": 94
+    },
+    {
+      "id": "s15",
+      "text": "But Neptune is now too close to the sun to be seen.",
+      "zh": "但海王星現在離太陽太近，看不到了。",
+      "start": 111.88,
+      "end": 116.8,
+      "wpm": 146
+    }
+  ],
+  "questions": []
+}

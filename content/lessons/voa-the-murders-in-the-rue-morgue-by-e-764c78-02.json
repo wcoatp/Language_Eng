@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-02",
+  "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (2/3)",
+  "titleZh": "愛倫坡《莫爾格街兇殺案》第二部分 (2/3)",
+  "level": 4,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "搜索的人在四樓破門而入，發現一間血跡斑斑、被翻得亂七八糟的房間。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — American Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/4015933.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The group searched, but found nothing, until the fourth floor.",
+      "zh": "這群人一路搜查，什麼也沒找到，直到四樓。",
+      "start": 122.04,
+      "end": 126.46,
+      "wpm": 136
+    },
+    {
+      "id": "s2",
+      "text": "There, they came to a door, locked from the inside.",
+      "zh": "在那裡，他們來到一扇從裡面鎖上的門前。",
+      "start": 127.48,
+      "end": 130.78,
+      "wpm": 182
+    },
+    {
+      "id": "s3",
+      "text": "Quickly, they forced it open.",
+      "zh": "他們很快就把門撞開。",
+      "start": 131.78,
+      "end": 133.53,
+      "wpm": 171
+    },
+    {
+      "id": "s4",
+      "text": "Before them was a bloody, horror scene.",
+      "zh": "眼前是一片血腥恐怖的景象。",
+      "start": 134.87,
+      "end": 137.72,
+      "wpm": 147
+    },
+    {
+      "id": "s5",
+      "text": "The room was in total disorder.",
+      "zh": "房間裡一片凌亂。",
+      "start": 138.84,
+      "end": 141.18,
+      "wpm": 154
+    },
+    {
+      "id": "s6",
+      "text": "Broken chairs and tables, and the mattress pulled from the bed.",
+      "zh": "破掉的桌椅，還有被從床上拖下來的床墊。",
+      "start": 141.92,
+      "end": 145.92,
+      "wpm": 165
+    },
+    {
+      "id": "s7",
+      "text": "Blood was everywhere.",
+      "zh": "到處都是血。",
+      "start": 146.96,
+      "end": 148.71,
+      "wpm": 103
+    },
+    {
+      "id": "s8",
+      "text": "On the walls, the floor, the bed.",
+      "zh": "牆上、地板上、床上都是。",
+      "start": 149.78,
+      "end": 152.32,
+      "wpm": 165
+    },
+    {
+      "id": "s9",
+      "text": "A sharp knife lay on the floor in a pool of blood.",
+      "zh": "一把鋒利的刀躺在地上的血泊裡。",
+      "start": 153.8,
+      "end": 157.6,
+      "wpm": 189
+    },
+    {
+      "id": "s10",
+      "text": "In front of the fireplace was a clump of long, gray hair.",
+      "zh": "壁爐前有一撮長長的灰白頭髮。",
+      "start": 158.68,
+      "end": 162.88,
+      "wpm": 171
+    },
+    {
+      "id": "s11",
+      "text": "It seemed to have been pulled straight out of a head.",
+      "zh": "看起來像是硬生生從頭皮上扯下來的。",
+      "start": 165.6,
+      "end": 169.6,
+      "wpm": 165
+    },
+    {
+      "id": "s12",
+      "text": "On the floor were four pieces of gold.",
+      "zh": "地板上有四枚金幣。",
+      "start": 170.02,
+      "end": 172.99,
+      "wpm": 162
+    },
+    {
+      "id": "s13",
+      "text": "Several silver objects.",
+      "zh": "還有幾樣銀器。",
+      "start": 174.9,
+      "end": 176.29,
+      "wpm": 129
+    },
+    {
+      "id": "s14",
+      "text": "And two bags containing a large amount of money, in gold.",
+      "zh": "以及兩個裝著大筆金幣的袋子。",
+      "start": 176.96,
+      "end": 181.16,
+      "wpm": 157
+    },
+    {
+      "id": "s15",
+      "text": "Clothes had been thrown around the room.",
+      "zh": "衣服被扔得滿房間都是。",
+      "start": 182.24,
+      "end": 184.79,
+      "wpm": 165
+    }
+  ],
+  "questions": []
+}

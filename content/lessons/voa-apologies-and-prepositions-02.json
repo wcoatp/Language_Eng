@@ -1,0 +1,160 @@
+{
+  "id": "voa-apologies-and-prepositions-02",
+  "title": "Apologies and Prepositions (2/2)",
+  "titleZh": "道歉與介系詞 (2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "示範道歉的各種說法，並用電影對白說明道歉是否真誠。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/apologies-and-prepositions/5843176.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "You should apologize to Sasha.",
+      "zh": "你應該向 Sasha 道歉。",
+      "start": 121.3,
+      "end": 123.6,
+      "wpm": 130
+    },
+    {
+      "id": "s2",
+      "text": "You should not take her toys.",
+      "zh": "你不應該拿走她的玩具。",
+      "start": 124.3,
+      "end": 126.68,
+      "wpm": 151
+    },
+    {
+      "id": "s3",
+      "text": "Finally, we can use the word apologize alone.",
+      "zh": "最後，apologize 這個字也可以單獨使用。",
+      "start": 128.12,
+      "end": 131.42,
+      "wpm": 145
+    },
+    {
+      "id": "s4",
+      "text": "An internet company made a mistake and sent out this message to their customers.",
+      "zh": "有一家網路公司出了錯，發了這則訊息給他們的客戶。",
+      "start": 132.42,
+      "end": 136.9,
+      "wpm": 187
+    },
+    {
+      "id": "s5",
+      "text": "Sometimes people say they are sorry, but we do not believe they really feel bad for saying or doing the wrong thing.",
+      "zh": "有時候別人說抱歉，但我們並不覺得他們真的為說錯話或做錯事感到愧疚。",
+      "start": 140.44,
+      "end": 151.16,
+      "wpm": 123
+    },
+    {
+      "id": "s6",
+      "text": "Here is an example from a popular movie of an apology that may not be sincere.",
+      "zh": "以下是一部熱門電影裡的例子，這個道歉可能並不真誠。",
+      "start": 152.1,
+      "end": 157.92,
+      "wpm": 165
+    },
+    {
+      "id": "s7",
+      "text": "In the comedy film A Fish Called Wanda, John Cleese plays Archie Leach and Kevin Kline plays Otto.",
+      "zh": "在喜劇電影《笨賊一籮筐》裡，John Cleese 飾演 Archie Leach，Kevin Kline 飾演 Otto。",
+      "start": 158.92,
+      "end": 166.6,
+      "wpm": 141
+    },
+    {
+      "id": "s8",
+      "text": "Otto becomes angry with Archie for saying Otto is crazy.",
+      "zh": "Archie 說 Otto 瘋了，Otto 因此很生氣。",
+      "start": 167.74,
+      "end": 171.56,
+      "wpm": 157
+    },
+    {
+      "id": "s9",
+      "text": "As Otto holds Archie by his feet upside down from a window, Archie must apologize.",
+      "zh": "Otto 抓著 Archie 的腳，把他從窗口倒吊出去，Archie 只好道歉。",
+      "start": 172.7,
+      "end": 178.5,
+      "wpm": 155
+    },
+    {
+      "id": "s10",
+      "text": "What, uh, me to you?",
+      "zh": "什麼？呃，我向你道歉嗎？",
+      "start": 182.58,
+      "end": 184.12,
+      "wpm": 195
+    },
+    {
+      "id": "s11",
+      "text": "All right, all right, I apologize.",
+      "zh": "好啦好啦，我道歉。",
+      "start": 187.26,
+      "end": 189.44,
+      "wpm": 165
+    },
+    {
+      "id": "s12",
+      "text": "You're really sorry.",
+      "zh": "你真的很抱歉。",
+      "start": 189.74,
+      "end": 190.74,
+      "wpm": 180
+    },
+    {
+      "id": "s13",
+      "text": "I'm really, really sorry.",
+      "zh": "我真的、真的很抱歉。",
+      "start": 190.74,
+      "end": 192.19,
+      "wpm": 165
+    },
+    {
+      "id": "s14",
+      "text": "I apologize unreservedly.",
+      "zh": "我毫無保留地道歉。",
+      "start": 192.34,
+      "end": 194.14,
+      "wpm": 100
+    },
+    {
+      "id": "s15",
+      "text": "You take it back.",
+      "zh": "你收回那句話。",
+      "start": 194.8,
+      "end": 196.04,
+      "wpm": 194
+    },
+    {
+      "id": "s16",
+      "text": "And I hereby undertake not to repeat any such slander at any time in the future.",
+      "zh": "我在此保證，以後絕不再說任何類似的毀謗。",
+      "start": 196.92,
+      "end": 202.7,
+      "wpm": 166
+    },
+    {
+      "id": "s17",
+      "text": "Now, do you really believe Archie means what he is saying?",
+      "zh": "那麼，你真的相信 Archie 說的是真心話嗎？",
+      "start": 206.28,
+      "end": 210.28,
+      "wpm": 165
+    },
+    {
+      "id": "s18",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 210.52,
+      "end": 211.79,
+      "wpm": 142
+    }
+  ],
+  "questions": []
+}

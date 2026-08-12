@@ -1,0 +1,88 @@
+{
+  "id": "voa-anyway-and-similar-words-02",
+  "title": "Anyway and Similar Words (2/2)",
+  "titleZh": "Anyway 及類似的用字 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "說明 anyway 的同義用法，介紹幾個表示「儘管如此」的轉折用語。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/anyway-and-similar-words/6252385.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "It is an adverb, too, and it means in spite of something that was said before.",
+      "zh": "它也是一個副詞，意思是儘管前面提到了某件事。",
+      "start": 100,
+      "end": 105.3,
+      "wpm": 181
+    },
+    {
+      "id": "s2",
+      "text": "It is more formal and sounds a little old-fashioned when compared to anyway.",
+      "zh": "跟 anyway 比起來，它比較正式，聽起來也有點老派。",
+      "start": 106.4,
+      "end": 111.62,
+      "wpm": 161
+    },
+    {
+      "id": "s3",
+      "text": "For example, COVID-19 infection rates are falling in my state.",
+      "zh": "舉例來說，我們州的 COVID-19 感染率正在下降。",
+      "start": 112.74,
+      "end": 118.91,
+      "wpm": 97
+    },
+    {
+      "id": "s4",
+      "text": "Nevertheless, we should still follow the safety guidelines.",
+      "zh": "儘管如此，我們還是應該遵守安全指引。",
+      "start": 120.14,
+      "end": 124.12,
+      "wpm": 121
+    },
+    {
+      "id": "s5",
+      "text": "Other words or expressions you may see that can serve the same purpose as anyway are anyways, nonetheless, regardless, in any case, and at any rate.",
+      "zh": "你可能還會看到其他和 anyway 功能一樣的字或說法，像是 anyways、nonetheless、regardless、in any case 和 at any rate。",
+      "start": 125.78,
+      "end": 137.82,
+      "wpm": 130
+    },
+    {
+      "id": "s6",
+      "text": "What question do you have about American English?",
+      "zh": "你對美式英語有什麼問題嗎？",
+      "start": 139.02,
+      "end": 142.22,
+      "wpm": 150
+    },
+    {
+      "id": "s7",
+      "text": "Send us an email at learningenglish at voanews.",
+      "zh": "請寄電子郵件給我們，地址是 learningenglish at voanews",
+      "start": 143.7,
+      "end": 148.02,
+      "wpm": 111
+    },
+    {
+      "id": "s8",
+      "text": "com And that's Ask a Teacher.",
+      "zh": "com 以上就是本集的《Ask a Teacher》。",
+      "start": 148.02,
+      "end": 151.2,
+      "wpm": 113
+    },
+    {
+      "id": "s9",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 151.78,
+      "end": 152.9,
+      "wpm": 161
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "voa-pill-drug-and-medicine-01",
+  "title": "Pill, Drug and Medicine (1/2)",
+  "titleZh": "Pill、Drug 和 Medicine (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "老師從觀眾提問出發，解說藥丸、藥物與醫學這幾個字的用法差別。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/pill-drug-and-medicine/6275405.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Welcome to Ask a Teacher.",
+      "zh": "歡迎收聽《Ask a Teacher》。",
+      "start": 2.1,
+      "end": 4.08,
+      "wpm": 152
+    },
+    {
+      "id": "s2",
+      "text": "This week we answer a question from Zafir in Turkey.",
+      "zh": "本週我們要回答來自土耳其的 Zafir 提出的問題。",
+      "start": 4.08,
+      "end": 8.76,
+      "wpm": 128
+    },
+    {
+      "id": "s3",
+      "text": "Would you please explain the difference between pill, drug, and medicine?",
+      "zh": "可以請你說明 pill、drug 和 medicine 之間的差別嗎？",
+      "start": 10.38,
+      "end": 15.02,
+      "wpm": 142
+    },
+    {
+      "id": "s4",
+      "text": "Thanks in advance.",
+      "zh": "先謝謝你了。",
+      "start": 15.51,
+      "end": 17.07,
+      "wpm": 115
+    },
+    {
+      "id": "s5",
+      "text": "Dear Zafir, thank you for writing to us.",
+      "zh": "親愛的 Zafir，謝謝你寫信給我們。",
+      "start": 18.7,
+      "end": 21.53,
+      "wpm": 170
+    },
+    {
+      "id": "s6",
+      "text": "These three words are most often used when we talk about health.",
+      "zh": "這三個字最常用在談論健康的時候。",
+      "start": 21.62,
+      "end": 26.72,
+      "wpm": 141
+    },
+    {
+      "id": "s7",
+      "text": "Let us begin with the word medicine.",
+      "zh": "我們先從 medicine 這個字開始。",
+      "start": 26.73,
+      "end": 29.58,
+      "wpm": 147
+    },
+    {
+      "id": "s8",
+      "text": "One meaning is a substance or drug used to treat disease or pain.",
+      "zh": "它的一個意思是用來治療疾病或疼痛的物質或藥物。",
+      "start": 29.58,
+      "end": 35.19,
+      "wpm": 139
+    },
+    {
+      "id": "s9",
+      "text": "But it is also a general term that describes the science or study of treating or curing disease.",
+      "zh": "但它也是個統稱，指的是研究如何治療或治癒疾病的科學或學問。",
+      "start": 35.19,
+      "end": 43.3,
+      "wpm": 133
+    },
+    {
+      "id": "s10",
+      "text": "Here is an example of that use.",
+      "zh": "以下就是這個用法的例子。",
+      "start": 43.54,
+      "end": 46.14,
+      "wpm": 162
+    },
+    {
+      "id": "s11",
+      "text": "Alex went to the university to study medicine.",
+      "zh": "Alex 到大學去讀醫學。",
+      "start": 47.5,
+      "end": 51.72,
+      "wpm": 114
+    },
+    {
+      "id": "s12",
+      "text": "Medication is another word you can use for medicine.",
+      "zh": "Medication 是另一個可以用來表示 medicine 的字。",
+      "start": 51.72,
+      "end": 57.39,
+      "wpm": 95
+    },
+    {
+      "id": "s13",
+      "text": "They mean the same thing.",
+      "zh": "這兩個字的意思一樣。",
+      "start": 57.39,
+      "end": 59.48,
+      "wpm": 144
+    },
+    {
+      "id": "s14",
+      "text": "An antiviral drug is the only government-approved medication for COVID-19. Both words are countable and non-countable nouns.",
+      "zh": "抗病毒藥物是政府唯一核准用來治療 COVID-19 的藥。這兩個字既可以當可數名詞，也可以當不可數名詞。",
+      "start": 59.48,
+      "end": 73.46,
+      "wpm": 82
+    },
+    {
+      "id": "s15",
+      "text": "A pill is a small rounded object that contains medicine.",
+      "zh": "pill 是指含有藥物成分的小圓形顆粒。",
+      "start": 73.46,
+      "end": 79.66,
+      "wpm": 97
+    }
+  ],
+  "questions": []
+}

@@ -223,6 +223,10 @@ p  { margin: 0 0 12px; color: var(--text-dim); }
 .badge-l4 { background: color-mix(in srgb, #c084fc 22%, transparent); color: #c084fc; }
 .badge-l5 { background: color-mix(in srgb, #fb923c 22%, transparent); color: #fb923c; }
 .badge-done { background: color-mix(in srgb, var(--good) 20%, transparent); color: var(--good); }
+.badge-real {
+  background: color-mix(in srgb, #f472b6 20%, transparent);
+  color: #f472b6;
+}
 
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
 .chip {

@@ -1,0 +1,136 @@
+{
+  "id": "voa-colombian-scientists-develop-subst-312309-01",
+  "title": "Colombian Scientists Develop Substance to Protect Bees from Chemicals (1/2)",
+  "titleZh": "哥倫比亞科學家研發保護蜜蜂免受農藥傷害的物質 (1/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "哥倫比亞研究團隊用植物類黃酮研發蜂食，保護蜜蜂免受農藥的神經毒害。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7840043.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Scientists in Colombia say they have developed a new food substance that protects bees from dangerous chemicals used in farming.",
+      "zh": "哥倫比亞的科學家表示，他們研發出一種新的食物，可以保護蜜蜂不受農業上使用的危險化學藥劑傷害。",
+      "start": 0.48,
+      "end": 11.6,
+      "wpm": 108
+    },
+    {
+      "id": "s2",
+      "text": "They claim it will protect the insects' brains from neurological damage caused by chemicals called pesticides.",
+      "zh": "他們宣稱這種食物能保護蜜蜂的大腦，避免農藥造成的神經損傷。",
+      "start": 12.38,
+      "end": 23.8,
+      "wpm": 84
+    },
+    {
+      "id": "s3",
+      "text": "As pollinators, bees are extremely important in the preservation of natural ecosystems and food production.",
+      "zh": "蜜蜂身為授粉者，對於維護自然生態系和糧食生產都非常重要。",
+      "start": 25.35,
+      "end": 35.86,
+      "wpm": 86
+    },
+    {
+      "id": "s4",
+      "text": "The plant-based food substance enables bees to deal with neurotoxins commonly used in agriculture.",
+      "zh": "這種以植物為原料的食物，能讓蜜蜂應付農業上常見的神經毒素。",
+      "start": 36.76,
+      "end": 47.3,
+      "wpm": 85
+    },
+    {
+      "id": "s5",
+      "text": "It protects their motor system and memory, harmed by the chemicals.",
+      "zh": "它能保護蜜蜂被化學藥劑傷害的運動系統和記憶力。",
+      "start": 48.76,
+      "end": 54.38,
+      "wpm": 117
+    },
+    {
+      "id": "s6",
+      "text": "Researchers at Colombia's Rosario University in Bogota developed the substance.",
+      "zh": "這種物質是由哥倫比亞波哥大羅薩里奧大學的研究人員研發的。",
+      "start": 55.8,
+      "end": 63.06,
+      "wpm": 83
+    },
+    {
+      "id": "s7",
+      "text": "They partnered with scientists from the Colombian Universidad Javeriana and the University of Arizona in the United States.",
+      "zh": "他們和哥倫比亞哈維里亞納大學以及美國亞利桑那大學的科學家合作。",
+      "start": 64.42,
+      "end": 74.61,
+      "wpm": 106
+    },
+    {
+      "id": "s8",
+      "text": "This is a nutritional solution to the problems bees face when exposed to pesticides, said André Riveros, a professor at Rosario University.",
+      "zh": "羅薩里奧大學教授 André Riveros 說，這是用營養的方式，來解決蜜蜂接觸農藥後遇到的問題。",
+      "start": 75.07,
+      "end": 88.64,
+      "wpm": 97
+    },
+    {
+      "id": "s9",
+      "text": "Riveros explained that the food substance causes the bees to develop protection against pesticides.",
+      "zh": "Riveros 解釋，這種食物能讓蜜蜂產生對抗農藥的保護力。",
+      "start": 89.64,
+      "end": 98.38,
+      "wpm": 96
+    },
+    {
+      "id": "s10",
+      "text": "The substance is created with flavonoids, which are known for their health benefits.",
+      "zh": "這種物質是用類黃酮製成的，類黃酮以對健康有益而聞名。",
+      "start": 100.05,
+      "end": 105.92,
+      "wpm": 133
+    },
+    {
+      "id": "s11",
+      "text": "Flavonoids come from plants and are a kind of secondary metabolite.",
+      "zh": "類黃酮來自植物，是一種次級代謝物。",
+      "start": 107.24,
+      "end": 113.16,
+      "wpm": 111
+    },
+    {
+      "id": "s12",
+      "text": "Secondary metabolites are substances made by plants that make them competitive in their environment.",
+      "zh": "次級代謝物是植物製造的物質，能讓植物在環境中更有競爭力。",
+      "start": 114.3,
+      "end": 122.48,
+      "wpm": 103
+    },
+    {
+      "id": "s13",
+      "text": "During the first round of testing, scientists put the bees to sleep and placed them into small laboratory tubes.",
+      "zh": "在第一輪測試中，科學家先讓蜜蜂睡著，再把牠們放進實驗室的小管子裡。",
+      "start": 123.02,
+      "end": 134.1,
+      "wpm": 103
+    },
+    {
+      "id": "s14",
+      "text": "Then they fed the bees the substance one by one.",
+      "zh": "然後再一隻一隻餵蜜蜂吃這種物質。",
+      "start": 134.74,
+      "end": 138.7,
+      "wpm": 152
+    },
+    {
+      "id": "s15",
+      "text": "Testing has now moved to real-world situations.",
+      "zh": "現在測試已經進入真實環境了。",
+      "start": 140.32,
+      "end": 143.48,
+      "wpm": 152
+    }
+  ],
+  "questions": []
+}

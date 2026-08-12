@@ -1,0 +1,136 @@
+{
+  "id": "voa-us-officials-warn-of-increase-in-b-ca8b53-01",
+  "title": "US Officials Warn of Increase in Bacterial Illnesses That Could Be Deadly (1/2)",
+  "titleZh": "美國官方警告：可能致命的細菌感染增加（1/2）",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "美國疾管中心警告侵襲性腦膜炎雙球菌感染增加，並說明症狀。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7551865.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "United States health officials are warning of an increase in rare bacterial illnesses that can lead to meningitis.",
+      "zh": "美國衛生官員警告，一種可能引發腦膜炎的罕見細菌感染正在增加。",
+      "start": 0,
+      "end": 11.12,
+      "wpm": 97
+    },
+    {
+      "id": "s2",
+      "text": "It is a serious and often deadly disease in which an outside barrier of the brain or related tissues becomes infected and swollen.",
+      "zh": "腦膜炎是一種嚴重、而且常常致命的疾病，患者的腦部外層或相關組織會受到感染並腫脹。",
+      "start": 11.18,
+      "end": 23.02,
+      "wpm": 117
+    },
+    {
+      "id": "s3",
+      "text": "The Centers for Disease Control and Prevention, CDC,",
+      "zh": "美國疾病管制與預防中心，也就是 CDC，",
+      "start": 24.6,
+      "end": 28.82,
+      "wpm": 114
+    },
+    {
+      "id": "s4",
+      "text": "issued a warning on March 28th about the increase in one kind of invasive meningococcal disease called serogroup Y. Last year,",
+      "zh": "在三月二十八日發出警告，指出一種名為 Y 血清群的侵襲性腦膜炎雙球菌疾病病例增加。去年，",
+      "start": 29.18,
+      "end": 39.75,
+      "wpm": 119
+    },
+    {
+      "id": "s5",
+      "text": "422 cases of it were reported in the U.S., the most in a year since 2014. So far this year,",
+      "zh": "美國通報了四百二十二例，是二〇一四年以來單年最多的一次。今年到目前為止，",
+      "start": 39.75,
+      "end": 50.08,
+      "wpm": 110
+    },
+    {
+      "id": "s6",
+      "text": "143 cases have been reported.",
+      "zh": "已經通報一百四十三例。",
+      "start": 50.08,
+      "end": 53.9,
+      "wpm": 63
+    },
+    {
+      "id": "s7",
+      "text": "That means infections are on their way to go above 2023 numbers, the CDC said.",
+      "zh": "CDC 表示，這代表感染人數有可能超過二〇二三年的數字。",
+      "start": 54.6,
+      "end": 61.96,
+      "wpm": 114
+    },
+    {
+      "id": "s8",
+      "text": "Most of the cases last year did not involve meningitis, though at least 17 died.",
+      "zh": "去年大部分的病例並沒有引發腦膜炎，不過至少有十七人死亡。",
+      "start": 63.26,
+      "end": 70.14,
+      "wpm": 122
+    },
+    {
+      "id": "s9",
+      "text": "The cases were more common in adults ages 30 to 60, in black people, and those who have HIV, the CDC said.",
+      "zh": "CDC 說，這些病例比較常出現在三十到六十歲的成年人、黑人族群，以及帶有愛滋病毒的人身上。",
+      "start": 71.64,
+      "end": 80.31,
+      "wpm": 138
+    },
+    {
+      "id": "s10",
+      "text": "HIV is a virus that can lead to AIDS, a serious disease that can destroy the body's natural defense system.",
+      "zh": "愛滋病毒可能導致愛滋病，那是一種會破壞人體自然防禦系統的嚴重疾病。",
+      "start": 81.74,
+      "end": 89.15,
+      "wpm": 162
+    },
+    {
+      "id": "s11",
+      "text": "The infection caused by meningococcal disease can lead to symptoms that may include high body temperature, head and upper body pain, nausea, and throwing up.",
+      "zh": "腦膜炎雙球菌造成的感染可能出現的症狀包括發高燒、頭部和上半身疼痛、噁心和嘔吐。",
+      "start": 90.2,
+      "end": 102.86,
+      "wpm": 118
+    },
+    {
+      "id": "s12",
+      "text": "The bacteria can also cause an infection in the blood system.",
+      "zh": "這種細菌也可能造成血液系統的感染。",
+      "start": 104.04,
+      "end": 107.73,
+      "wpm": 179
+    },
+    {
+      "id": "s13",
+      "text": "That infection could bring cold, tiredness, cold hands and feet, quick breathing, diarrhea, or discoloration of the skin.",
+      "zh": "這種感染可能帶來發冷、疲倦、手腳冰冷、呼吸急促、腹瀉，或是皮膚變色。",
+      "start": 108.74,
+      "end": 118.66,
+      "wpm": 109
+    },
+    {
+      "id": "s14",
+      "text": "The infection can be treated with medications like antibiotics.",
+      "zh": "這種感染可以用抗生素之類的藥物治療。",
+      "start": 119.66,
+      "end": 123.5,
+      "wpm": 141
+    },
+    {
+      "id": "s15",
+      "text": "But treatment must beậtous, but treatment must be quick to be successful.",
+      "zh": "但治療必須……但治療必須夠快，才會有效。",
+      "start": 124.5,
+      "end": 128.86,
+      "wpm": 179
+    }
+  ],
+  "questions": []
+}

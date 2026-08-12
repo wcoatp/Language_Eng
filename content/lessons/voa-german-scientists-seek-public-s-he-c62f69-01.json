@@ -1,0 +1,136 @@
+{
+  "id": "voa-german-scientists-seek-public-s-he-c62f69-01",
+  "title": "German Scientists Seek Public’s Help to Count Insects This Summer (1/2)",
+  "titleZh": "德國科學家邀請民眾今夏一起數昆蟲 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "德國團體號召民眾在夏天數算身邊的昆蟲，協助科學家觀察氣候變遷的影響。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/german-scientists-seek-public-s-help-to-count-insects-this-summer/7634103.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "How many insects can you count in one hour?",
+      "zh": "一個小時內你能數出多少隻昆蟲？",
+      "start": 0.3,
+      "end": 3.76,
+      "wpm": 156
+    },
+    {
+      "id": "s2",
+      "text": "That was the question being asked by a group of environmentalists outside of Berlin's Natural History Museum recently.",
+      "zh": "最近一群環保人士就在柏林自然史博物館外提出了這個問題。",
+      "start": 4.7,
+      "end": 13.74,
+      "wpm": 119
+    },
+    {
+      "id": "s3",
+      "text": "The Nature and Biodiversity Conservation Union, or NABU,",
+      "zh": "自然與生物多樣性保護聯盟，簡稱 NABU，",
+      "start": 14.3,
+      "end": 19.83,
+      "wpm": 87
+    },
+    {
+      "id": "s4",
+      "text": "is asking regular people to help count the insects they see in any 10-meter area available to them.",
+      "zh": "正邀請一般民眾幫忙數算他們在任何十公尺範圍內看到的昆蟲。",
+      "start": 19.83,
+      "end": 30.07,
+      "wpm": 105
+    },
+    {
+      "id": "s5",
+      "text": "NABU organizes Insect Summer.",
+      "zh": "NABU 主辦了「昆蟲之夏」活動。",
+      "start": 31.26,
+      "end": 34.12,
+      "wpm": 84
+    },
+    {
+      "id": "s6",
+      "text": "It is now in its seventh year.",
+      "zh": "今年已經是第七屆了。",
+      "start": 34.12,
+      "end": 36.78,
+      "wpm": 158
+    },
+    {
+      "id": "s7",
+      "text": "The effort is a way to follow the movements of insects, such as aphids, ladybugs, and bees.",
+      "zh": "這項活動可以用來追蹤蚜蟲、瓢蟲和蜜蜂等昆蟲的動向。",
+      "start": 37.26,
+      "end": 45.23,
+      "wpm": 128
+    },
+    {
+      "id": "s8",
+      "text": "Laura Breitkreutz is an expert on insects and biodiversity at NABU.",
+      "zh": "Laura Breitkreutz 是 NABU 的昆蟲與生物多樣性專家。",
+      "start": 46.24,
+      "end": 52.85,
+      "wpm": 100
+    },
+    {
+      "id": "s9",
+      "text": "She said, the project helps scientists observe the effects of climate change.",
+      "zh": "她說，這個計畫能幫助科學家觀察氣候變遷帶來的影響。",
+      "start": 53.38,
+      "end": 59.83,
+      "wpm": 112
+    },
+    {
+      "id": "s10",
+      "text": "We have seen that a few insects that normally occur only in the south might be spreading further north, she said, noting the appearance of the violet carpenter bee in Germany.",
+      "zh": "她說：「我們發現有些原本只出現在南方的昆蟲，可能正在往北擴散。」並提到紫木蜂已經在德國現蹤。",
+      "start": 60.05,
+      "end": 73.8,
+      "wpm": 135
+    },
+    {
+      "id": "s11",
+      "text": "The Citizen Science Project aims to give researchers information.",
+      "zh": "這項公民科學計畫的目的是提供研究人員資訊。",
+      "start": 75.24,
+      "end": 80.33,
+      "wpm": 106
+    },
+    {
+      "id": "s12",
+      "text": "It is not like precise scientific observations.",
+      "zh": "它並不像精準的科學觀測那樣嚴謹。",
+      "start": 81.5,
+      "end": 85.24,
+      "wpm": 112
+    },
+    {
+      "id": "s13",
+      "text": "However, the discoveries of regular people can give formal researchers unexpected insights.",
+      "zh": "不過，一般民眾的發現可以給專業研究人員意想不到的啟發。",
+      "start": 86.06,
+      "end": 94.06,
+      "wpm": 90
+    },
+    {
+      "id": "s14",
+      "text": "From bees to butterflies, scientists consider insects an important part of the ecosystem.",
+      "zh": "從蜜蜂到蝴蝶，科學家都認為昆蟲是生態系裡重要的一環。",
+      "start": 94.62,
+      "end": 102.46,
+      "wpm": 99
+    },
+    {
+      "id": "s15",
+      "text": "They are important to pollination, the food chain, and keeping soil productive.",
+      "zh": "牠們對授粉、食物鏈和維持土壤肥沃都很重要。",
+      "start": 103.24,
+      "end": 109.04,
+      "wpm": 124
+    }
+  ],
+  "questions": []
+}

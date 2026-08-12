@@ -8,6 +8,7 @@ import { el, toast, backButton, mount } from "../ui.js";
 import { scoreDifficulty, saveUserLesson, TOPICS } from '../content.js';
 import { settings } from '../store.js';
 import { chat, LlmError } from '../llm.js';
+import { readPack, installPack, PackError } from '../pack.js';
 
 const ABBR = /\b(mr|mrs|ms|dr|prof|sr|jr|st|vs|etc|e\.g|i\.e|approx|inc|ltd|co|no|fig|al)\.$/i;
 
@@ -87,9 +88,13 @@ export async function render(root) {
 
   mount(root, 
     backButton('課程', '#/library'),
-    el('h1', { style: 'margin-top:12px', text: '匯入文章' }),
+    el('h1', { style: 'margin-top:12px', text: '匯入' }),
+
+    packSection(),
+
+    el('h2', { text: '貼上文章' }),
     el('p', { class: 'sub' },
-      ['貼上任何英文文章,自動切句、判定難度,馬上就能拿來做聽力訓練。']),
+      ['貼上任何英文文章,自動切句、判定難度,用裝置語音朗讀。']),
 
     el('div', { class: 'field' }, [
       el('label', { text: '標題' }),
@@ -203,6 +208,54 @@ export async function render(root) {
       },
     }, ['建立課程']),
   );
+}
+
+/* ---------- lesson packs ---------- */
+
+/* Packs carry real recordings cut from your own media on the Mac. They stay on
+   your devices, which is why anything you do not own the rights to redistribute
+   belongs here rather than in the shared course list. */
+function packSection() {
+  const status = el('p', { class: 'hint', style: 'margin:10px 0 0' });
+
+  const input = el('input', {
+    type: 'file', accept: '.echopack', style: 'display:none',
+    onchange: async e => {
+      const f = e.target.files?.[0];
+      if (!f) return;
+      status.style.color = '';
+      status.textContent = `讀取 ${f.name}…`;
+      try {
+        const pack = await readPack(f);
+        status.textContent = `匯入中:${pack.lessons.length} 課、${pack.total} 句…`;
+        const n = await installPack(pack);
+        const missing = pack.total - pack.withAudio;
+        toast(`已匯入 ${n} 課`);
+        status.style.color = 'var(--good)';
+        status.textContent = `✓ 匯入 ${n} 課、${pack.withAudio} 段真人錄音` +
+          (missing ? `(${missing} 句沒有音檔)` : '');
+        setTimeout(() => { location.hash = '#/library'; }, 900);
+      } catch (err) {
+        status.style.color = 'var(--bad)';
+        status.textContent = '✕ ' + (err instanceof PackError ? err.message : (err.message || '匯入失敗'));
+      } finally {
+        e.target.value = '';
+      }
+    },
+  });
+
+  return el('div', { class: 'card' }, [
+    el('h3', { style: 'margin-bottom:6px', text: '課程包(真人錄音)' }),
+    el('p', { class: 'hint', style: 'margin-bottom:12px' },
+      ['在 Mac 上用 tools/align-media.mjs 把你自己的影片或 podcast 切成課程,' +
+       '產生的 .echopack 用 AirDrop 傳過來匯入。音檔只存在這台裝置。']),
+    el('button', {
+      class: 'btn btn-block',
+      onclick: () => input.click(),
+    }, ['選擇 .echopack 檔案']),
+    input,
+    status,
+  ]);
 }
 
 /* ---------- optional AI prep ---------- */

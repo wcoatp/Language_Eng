@@ -12,6 +12,8 @@ const ROUTES = [
   { re: /^\/talk$/,             load: () => import('./views/talk.js'),     tab: '/talk' },
   { re: /^\/talk\/(.+)$/,       load: () => import('./views/talk.js'),     tab: '/talk', full: true },
   { re: /^\/import$/,           load: () => import('./views/import.js'),   tab: '/library' },
+  { re: /^\/yt$/,               load: () => import('./views/yt.js'),       tab: '/library' },
+  { re: /^\/yt\/(.+)$/,         load: () => import('./views/yt.js'),       tab: '/library', full: true },
   { re: /^\/settings$/,         load: () => import('./views/settings.js'), tab: '/settings' },
   { re: /^\/progress$/,         load: () => import('./views/progress.js'), tab: '/' },
 ];

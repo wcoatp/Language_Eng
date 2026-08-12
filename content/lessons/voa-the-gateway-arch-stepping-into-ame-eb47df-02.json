@@ -1,0 +1,48 @@
+{
+  "id": "voa-the-gateway-arch-stepping-into-ame-eb47df-02",
+  "title": "The Gateway Arch- Stepping into America’s West (2/2)",
+  "titleZh": "大拱門──走進美國西部的門戶（2/2）",
+  "level": 2,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "談大拱門每年的遊客人數，以及設計師留下的另一件知名作品。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — America's National Parks",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8000985.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "National Park Service information shows that about 2.4 million people visited the arch in 2023. Saarinen died in 1961. While",
+      "zh": "美國國家公園管理局的資料顯示，二〇二三年約有兩百四十萬人造訪這座拱門。Saarinen 在一九六一年過世。雖然",
+      "start": 150.58,
+      "end": 164.77,
+      "wpm": 72
+    },
+    {
+      "id": "s2",
+      "text": "he never saw his arch built, his design lives on.",
+      "zh": "他從沒親眼看到拱門蓋好，他的設計卻流傳了下來。",
+      "start": 165.54,
+      "end": 170.69,
+      "wpm": 117
+    },
+    {
+      "id": "s3",
+      "text": "Saarinen also designed another American landmark, the TWA Flight Center at John F. Kennedy Airport in the city of New York.",
+      "zh": "Saarinen 還設計了另一個美國地標，就是紐約市甘迺迪機場的環球航空航廈。",
+      "start": 172.04,
+      "end": 184.06,
+      "wpm": 105
+    },
+    {
+      "id": "s4",
+      "text": "I'm Andrew Smith.",
+      "zh": "我是 Andrew Smith。",
+      "start": 185.06,
+      "end": 186.94,
+      "wpm": 96
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-johnny-cash-04",
+  "title": "What It Takes: Johnny Cash (4/4)",
+  "titleZh": "成功之道：強尼‧凱許 (4/4)",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "強尼‧凱許回憶他如何爭取到錄音機會，並組成樂團錄下第一批歌曲。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3985187.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "You know, I had to take the chance.",
+      "zh": "你知道嗎，我一定得賭這一把。",
+      "start": 280.64,
+      "end": 282.69,
+      "wpm": 234
+    },
+    {
+      "id": "s2",
+      "text": "He was either going to let me come in or he was going to run me off, turn me down again.",
+      "zh": "他要嘛讓我進去，要嘛就把我趕走、再拒絕我一次。",
+      "start": 282.69,
+      "end": 288.22,
+      "wpm": 228
+    },
+    {
+      "id": "s3",
+      "text": "But evidently, he woke up on the right sit-up side of bed that morning.",
+      "zh": "但顯然那天早上他起床時心情不錯。",
+      "start": 288.22,
+      "end": 292.66,
+      "wpm": 203
+    },
+    {
+      "id": "s4",
+      "text": "He said, Come on in.",
+      "zh": "他說：進來吧。",
+      "start": 293.07,
+      "end": 293.99,
+      "wpm": 326
+    },
+    {
+      "id": "s5",
+      "text": "So he did.",
+      "zh": "他真的就讓我進去了。",
+      "start": 295.08,
+      "end": 296.17,
+      "wpm": 165
+    },
+    {
+      "id": "s6",
+      "text": "He said, Come back tomorrow and bring some musicians.",
+      "zh": "他說：明天再來，帶幾個樂手一起來。",
+      "start": 296.28,
+      "end": 299.54,
+      "wpm": 166
+    },
+    {
+      "id": "s7",
+      "text": "So I went down to a garage where I worked, where my brother Roy worked, and was introduced to two musicians down there.",
+      "zh": "於是我到我工作的那家修車廠，也就是我哥哥 Roy 上班的地方，在那裡認識了兩位樂手。",
+      "start": 299.54,
+      "end": 308.88,
+      "wpm": 148
+    },
+    {
+      "id": "s8",
+      "text": "Brought them back to the studio, and the next day was our first session.",
+      "zh": "我把他們帶回錄音室，隔天就是我們第一次錄音。",
+      "start": 309,
+      "end": 313.26,
+      "wpm": 197
+    },
+    {
+      "id": "s9",
+      "text": "We recorded and released the songs that we recorded the second day.",
+      "zh": "我們錄了音，也把第二天錄的那些歌發行了。",
+      "start": 313.26,
+      "end": 317.6,
+      "wpm": 166
+    },
+    {
+      "id": "s10",
+      "text": "I keep a close watch on this heart of mine.",
+      "zh": "我緊緊看守著自己這顆心。",
+      "start": 318.23,
+      "end": 321.78,
+      "wpm": 169
+    },
+    {
+      "id": "s11",
+      "text": "I keep my eyes wide open all the time.",
+      "zh": "我隨時都把眼睛睜得大大的。",
+      "start": 322.3,
+      "end": 326.3,
+      "wpm": 135
+    },
+    {
+      "id": "s12",
+      "text": "I keep the ends out for the tie that binds.",
+      "zh": "我守住那份把彼此繫在一起的牽絆。",
+      "start": 327.1,
+      "end": 331.06,
+      "wpm": 152
+    },
+    {
+      "id": "s13",
+      "text": "Because you're mine.",
+      "zh": "因為你是我的。",
+      "start": 331.79,
+      "end": 333.22,
+      "wpm": 126
+    },
+    {
+      "id": "s14",
+      "text": "I walk the line.",
+      "zh": "我謹守分際。",
+      "start": 333.9,
+      "end": 335.5,
+      "wpm": 150
+    },
+    {
+      "id": "s15",
+      "text": "Did you ever sense back, sitting on Sam Phillips' doorstep, that you would one day be a Household World?",
+      "zh": "當年坐在 Sam Phillips 家門口台階上的時候，你有沒有預感自己有一天會家喻戶曉？",
+      "start": 340.01,
+      "end": 348.22,
+      "wpm": 139
+    }
+  ],
+  "questions": []
+}

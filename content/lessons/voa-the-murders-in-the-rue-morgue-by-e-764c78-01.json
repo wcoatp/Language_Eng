@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-01",
+  "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (1/3)",
+  "titleZh": "愛倫坡〈莫爾格街兇殺案〉第二部分 (1/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "愛倫坡故事第二部分：敘述者結識杜賓，兩人從報上讀到莫爾格街的兇殺案。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — American Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/4015933.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "was in Paris, in the summer of 1840, that I met Auguste Dupin.",
+      "zh": "是在 1840 年夏天的巴黎，我認識了奧古斯特‧杜賓。",
+      "start": 19,
+      "end": 25.35,
+      "wpm": 113
+    },
+    {
+      "id": "s2",
+      "text": "Dupin was a strangely interesting young man with a busy, forceful mind.",
+      "zh": "杜賓是個奇特而有趣的年輕人，頭腦活躍又敏銳。",
+      "start": 26.32,
+      "end": 33.08,
+      "wpm": 107
+    },
+    {
+      "id": "s3",
+      "text": "He seemed to look right through a person and uncover their deepest thoughts.",
+      "zh": "他好像能看穿一個人，把對方內心最深處的想法挖出來。",
+      "start": 34,
+      "end": 40.3,
+      "wpm": 124
+    },
+    {
+      "id": "s4",
+      "text": "Sometimes, Dupin seemed to be not one, but two people.",
+      "zh": "有時候，杜賓感覺不像一個人，倒像是兩個人。",
+      "start": 41.28,
+      "end": 46.75,
+      "wpm": 110
+    },
+    {
+      "id": "s5",
+      "text": "One who coldly put things together, and another who just as coldly took them apart.",
+      "zh": "一個冷靜地把線索拼湊起來，另一個同樣冷靜地把它們拆解開來。",
+      "start": 47.04,
+      "end": 55.01,
+      "wpm": 113
+    },
+    {
+      "id": "s6",
+      "text": "One morning, in the heat of the summer, Dupin showed me once again his special mental power.",
+      "zh": "在一個酷熱夏日的早晨，杜賓再一次讓我見識到他特殊的心智能力。",
+      "start": 56.32,
+      "end": 65.14,
+      "wpm": 116
+    },
+    {
+      "id": "s7",
+      "text": "We read in the newspaper about a terrible killing.",
+      "zh": "我們在報紙上讀到一起可怕的兇殺案。",
+      "start": 65.88,
+      "end": 69.98,
+      "wpm": 132
+    },
+    {
+      "id": "s8",
+      "text": "An old woman and her daughter, living alone in an old house in the Rue Morgue, had been killed in the middle of the night.",
+      "zh": "一位老婦人和她的女兒獨自住在莫爾格街的一棟老房子裡，半夜遭到殺害。",
+      "start": 70.88,
+      "end": 80.67,
+      "wpm": 153
+    },
+    {
+      "id": "s9",
+      "text": "The story in the paper went...",
+      "zh": "報紙上的報導是這樣寫的……",
+      "start": 81.34,
+      "end": 84.21,
+      "wpm": 125
+    },
+    {
+      "id": "s10",
+      "text": "Paris, July 7th, 1840. Early this morning, cries of terror were heard in the western part of the city.",
+      "zh": "巴黎，1840 年 7 月 7 日。今天清晨，城市西邊傳出驚恐的尖叫聲。",
+      "start": 85.16,
+      "end": 94.5,
+      "wpm": 116
+    },
+    {
+      "id": "s11",
+      "text": "They reportedly came from a house on the Rue Morgue, in which the only occupants were a Mrs. L'Espanier and her daughter Camille.",
+      "zh": "據報導，聲音來自莫爾格街的一棟房子，屋裡只住著 L'Espanier 夫人和她的女兒 Camille。",
+      "start": 95.16,
+      "end": 105.02,
+      "wpm": 140
+    },
+    {
+      "id": "s12",
+      "text": "Several neighbors and a policeman ran to the house.",
+      "zh": "幾位鄰居和一名警察趕到那棟房子。",
+      "start": 106.04,
+      "end": 109.42,
+      "wpm": 160
+    },
+    {
+      "id": "s13",
+      "text": "By the time they reached it, the cries had stopped.",
+      "zh": "等他們趕到時，尖叫聲已經停了。",
+      "start": 110.42,
+      "end": 114.06,
+      "wpm": 165
+    },
+    {
+      "id": "s14",
+      "text": "They forced the door open.",
+      "zh": "他們強行把門撞開。",
+      "start": 114.3,
+      "end": 116.02,
+      "wpm": 174
+    },
+    {
+      "id": "s15",
+      "text": "As they entered, they heard two voices, apparently from above.",
+      "zh": "一進門，他們就聽見兩個說話的聲音，似乎是從樓上傳來的。",
+      "start": 116.82,
+      "end": 121.44,
+      "wpm": 130
+    }
+  ],
+  "questions": []
+}

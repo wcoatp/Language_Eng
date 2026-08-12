@@ -1,0 +1,88 @@
+{
+  "id": "voa-electric-spoons-chopsticks-may-hel-b4c510-02",
+  "title": "Electric Spoons, Chopsticks May Help Cut Salt (2/2)",
+  "titleZh": "電子湯匙與筷子或許能幫助減鹽 (2/2)",
+  "level": 4,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "日本麒麟公司研發電子餐具，希望在不減風味下幫民眾降低鹽分攝取。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7622238.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "He has also developed a lickable TV screen that can recreate the taste of food.",
+      "zh": "他還開發出一種可以舔的電視螢幕，能重現食物的味道。",
+      "start": 124.24,
+      "end": 130.04,
+      "wpm": 155
+    },
+    {
+      "id": "s2",
+      "text": "The beer producer Kirin is turning to health care products to expand its traditional business.",
+      "zh": "啤酒製造商麒麟正轉向健康照護產品，想擴展原本的本業。",
+      "start": 131,
+      "end": 137.58,
+      "wpm": 137
+    },
+    {
+      "id": "s3",
+      "text": "A company spokesperson said the technology might be especially useful for Japanese people, whose traditional diet favors salty foods.",
+      "zh": "公司發言人表示，這項技術對日本人可能特別有用，因為他們的傳統飲食偏鹹。",
+      "start": 139.16,
+      "end": 148.28,
+      "wpm": 125
+    },
+    {
+      "id": "s4",
+      "text": "The average adult in Japan consumes about 10 grams of salt per day.",
+      "zh": "日本成年人平均每天攝取大約 10 公克的鹽。",
+      "start": 149.4,
+      "end": 154.06,
+      "wpm": 155
+    },
+    {
+      "id": "s5",
+      "text": "The World Health Organization recommends half that amount.",
+      "zh": "世界衛生組織建議的量只有這個數字的一半。",
+      "start": 155.12,
+      "end": 158.58,
+      "wpm": 139
+    },
+    {
+      "id": "s6",
+      "text": "Eating foods with too much sodium can increase the chances of having high blood pressure, strokes, and other health problems.",
+      "zh": "吃太多含鈉量高的食物，會提高罹患高血壓、中風和其他健康問題的機率。",
+      "start": 159.72,
+      "end": 167.29,
+      "wpm": 159
+    },
+    {
+      "id": "s7",
+      "text": "To prevent these diseases, we need to reduce the amount of salt we take, said Kirin researcher Ai Sato.",
+      "zh": "麒麟的研究員佐藤愛說，要預防這些疾病，我們就得減少鹽分的攝取量。",
+      "start": 168.76,
+      "end": 175.86,
+      "wpm": 161
+    },
+    {
+      "id": "s8",
+      "text": "Sato said, it is hard to cut salt in the usual way because it would mean eating bland food.",
+      "zh": "佐藤說，用一般的方法減鹽很難，因為那代表要吃很清淡的食物。",
+      "start": 177.46,
+      "end": 183.58,
+      "wpm": 186
+    },
+    {
+      "id": "s9",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 185,
+      "end": 186.34,
+      "wpm": 134
+    }
+  ],
+  "questions": []
+}

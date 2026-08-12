@@ -1,7 +1,7 @@
 /* IndexedDB wrapper — all learner state lives on-device, nothing is uploaded. */
 
 const DB_NAME = 'echo';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 /** @type {Promise<IDBDatabase>|null} */
 let dbp = null;
@@ -32,6 +32,9 @@ function open() {
       }
       if (!db.objectStoreNames.contains('chats')) {
         db.createObjectStore('chats', { keyPath: 'id', autoIncrement: true });
+      }
+      if (!db.objectStoreNames.contains('videos')) {
+        db.createObjectStore('videos', { keyPath: 'id' });
       }
     };
     req.onsuccess = () => resolve(req.result);
@@ -92,7 +95,7 @@ export function kvSet(k, v) {
 
 /** Wipe every store. Used by Settings → reset. */
 export async function wipeAll() {
-  for (const s of ['kv', 'cards', 'sessions', 'lessons', 'recordings', 'chats']) {
+  for (const s of ['kv', 'cards', 'sessions', 'lessons', 'recordings', 'chats', 'videos']) {
     await db.clear(s);
   }
 }

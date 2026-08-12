@@ -1,0 +1,96 @@
+{
+  "id": "voa-kindly-and-please-02",
+  "title": "Kindly and Please (2/2)",
+  "titleZh": "kindly 和 please 的差別（2/2）",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "示範 please 在請求句與動詞用法中的實例，並收尾節目。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/kindly-and-please/5466911.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And Americans almost always use please when making a request in the form of a statement as opposed to a question.",
+      "zh": "而美國人在用直述句、而不是疑問句提出請求時，幾乎一定會加上 please。",
+      "start": 85.96,
+      "end": 94.36,
+      "wpm": 150
+    },
+    {
+      "id": "s2",
+      "text": "Give me two tickets, please.",
+      "zh": "請給我兩張票。",
+      "start": 95.46,
+      "end": 97.32,
+      "wpm": 161
+    },
+    {
+      "id": "s3",
+      "text": "Please, sir, help us.",
+      "zh": "先生，拜託幫幫我們。",
+      "start": 97.58,
+      "end": 99.46,
+      "wpm": 128
+    },
+    {
+      "id": "s4",
+      "text": "I hope this answer pleases you.",
+      "zh": "希望這個回答能讓你滿意。",
+      "start": 100.78,
+      "end": 102.92,
+      "wpm": 168
+    },
+    {
+      "id": "s5",
+      "text": "There, I used it as a verb.",
+      "zh": "在這句話裡，我把它當成動詞來用。",
+      "start": 102.92,
+      "end": 105.4,
+      "wpm": 169
+    },
+    {
+      "id": "s6",
+      "text": "Kindly visit our website again for more lessons.",
+      "zh": "歡迎再上我們的網站，看看更多課程。",
+      "start": 106.94,
+      "end": 109.74,
+      "wpm": 171
+    },
+    {
+      "id": "s7",
+      "text": "What questions do you have about English?",
+      "zh": "你對英文有什麼問題呢？",
+      "start": 111.24,
+      "end": 113.42,
+      "wpm": 193
+    },
+    {
+      "id": "s8",
+      "text": "Send us an email at learningenglish at voanews.",
+      "zh": "寫電子郵件給我們，地址是 learningenglish 小老鼠 voanews。",
+      "start": 114.5,
+      "end": 118.5,
+      "wpm": 120
+    },
+    {
+      "id": "s9",
+      "text": "com And that's Ask a Teacher for this week.",
+      "zh": "com。本週的《問老師》就到這裡。",
+      "start": 118.88,
+      "end": 122.52,
+      "wpm": 148
+    },
+    {
+      "id": "s10",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 122.52,
+      "end": 124.34,
+      "wpm": 99
+    }
+  ],
+  "questions": []
+}

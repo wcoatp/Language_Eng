@@ -7,6 +7,10 @@ import { asrSupported } from '../asr.js';
 import { recorderSupported } from '../recorder.js';
 import { PROVIDERS, modelsFor, defaultModelFor, testKey, LlmError } from '../llm.js';
 import { wipeAll } from '../db.js';
+import {
+  estimate, offlineSize, clearOffline, isPersisted, requestPersistence,
+  fmtBytes, needsHomeScreenPrompt, isIos, isStandalone, cacheSupported,
+} from '../storage.js';
 
 export function destroy() { cancelSpeech(); }
 
@@ -30,6 +34,9 @@ export async function render(root) {
 
     el('h2', { text: '裝置支援' }),
     supportSection(),
+
+    el('h2', { text: '離線與儲存' }),
+    storageSection(),
 
     el('h2', { text: '資料' }),
     dataSection(),
@@ -257,6 +264,69 @@ function supportSection() {
         text: ok ? '✓' : '✕',
       }),
     ])));
+}
+
+/* ---------- storage ---------- */
+
+function storageSection() {
+  const box = el('div', { class: 'card' });
+  const usageLine = el('p', { class: 'hint', style: 'margin:0', text: '計算中…' });
+  const offlineLine = el('p', { class: 'hint', style: 'margin:6px 0 0', text: '' });
+
+  async function refresh() {
+    const [est, off, persisted] = await Promise.all([
+      estimate(), cacheSupported() ? offlineSize() : { count: 0, bytes: 0 }, isPersisted(),
+    ]);
+    usageLine.textContent = est
+      ? `已使用 ${fmtBytes(est.usage)}${est.quota ? ` / 可用 ${fmtBytes(est.quota)}` : ''}`
+      : '這個瀏覽器不提供儲存空間資訊';
+    offlineLine.textContent = off.count
+      ? `其中離線音檔 ${off.count} 段,約 ${fmtBytes(off.bytes)}`
+      : '尚未下載任何離線音檔';
+    persistLine.textContent = persisted
+      ? '✓ 瀏覽器已承諾不會自動清除這個 app 的資料'
+      : '⚠ 資料可能在儲存空間不足時被清除';
+    persistLine.style.color = persisted ? 'var(--good)' : 'var(--warn)';
+  }
+
+  const persistLine = el('p', { class: 'hint', style: 'margin:10px 0 0' });
+
+  box.append(
+    el('p', { style: 'margin-bottom:12px' },
+      ['課程音檔只在你播放或按下載時才會存到裝置,不會一次全部抓下來。']),
+    usageLine,
+    offlineLine,
+    persistLine,
+
+    el('button', {
+      class: 'btn btn-block', style: 'margin-top:14px',
+      onclick: async e => {
+        e.currentTarget.disabled = true;
+        const ok = await requestPersistence();
+        toast(ok ? '已申請持久化儲存' : '瀏覽器沒有授予持久化(iOS 請改用加入主畫面)');
+        e.currentTarget.disabled = false;
+        refresh();
+      },
+    }, ['申請持久化儲存']),
+
+    el('button', {
+      class: 'btn btn-block', style: 'margin-top:10px',
+      onclick: async () => {
+        if (!await confirmBox('清除所有已下載的離線音檔?課程本身和學習紀錄都會保留。', '清除音檔')) return;
+        await clearOffline();
+        toast('已清除離線音檔');
+        refresh();
+      },
+    }, ['清除離線音檔']),
+
+    isIos() ? el('p', { class: 'hint', style: 'margin-top:12px' },
+      [isStandalone()
+        ? '✓ 這是從主畫面啟動的,iOS 不會在七天後清除你的紀錄。'
+        : '⚠ 你正用 Safari 直接開啟。iOS 會在七天沒使用後清除網站資料 — 請用「分享 → 加入主畫面」安裝,才不會遺失練習紀錄。']) : null,
+  );
+
+  refresh();
+  return box;
 }
 
 /* ---------- data ---------- */

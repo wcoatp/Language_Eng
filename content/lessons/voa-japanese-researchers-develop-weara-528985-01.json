@@ -1,0 +1,136 @@
+{
+  "id": "voa-japanese-researchers-develop-weara-528985-01",
+  "title": "Japanese Researchers Develop Wearable Robot Arms (1/2)",
+  "titleZh": "日本研究人員開發穿戴式機械手臂 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "東京大學團隊研發穿戴式機械手臂，希望它像樂器一樣延伸人的能力與創意。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7158814.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "A team at Tokyo University is developing robotic arms that people can wear.",
+      "zh": "東京大學的一個團隊正在研發可以穿戴在身上的機械手臂。",
+      "start": 0,
+      "end": 9.38,
+      "wpm": 83
+    },
+    {
+      "id": "s2",
+      "text": "The devices could find use in areas from creative expression to search and rescue operations.",
+      "zh": "這些裝置的用途可能從創作表演一路延伸到搜救行動。",
+      "start": 9.38,
+      "end": 17.37,
+      "wpm": 113
+    },
+    {
+      "id": "s3",
+      "text": "Masahiko Inami is a professor who develops systems to expand human abilities.",
+      "zh": "稻見昌彥是一位專門開發系統來擴展人類能力的教授。",
+      "start": 17.96,
+      "end": 24.44,
+      "wpm": 111
+    },
+    {
+      "id": "s4",
+      "text": "Inami's team at the University of Tokyo is designing the wearable robotic arms.",
+      "zh": "稻見在東京大學的團隊正在設計這種穿戴式機械手臂。",
+      "start": 24.64,
+      "end": 32.61,
+      "wpm": 98
+    },
+    {
+      "id": "s5",
+      "text": "The team is developing a series of technologies rooted in the idea of Jitsai.",
+      "zh": "團隊正在開發一系列以「自在」這個概念為基礎的技術。",
+      "start": 32.78,
+      "end": 40.1,
+      "wpm": 115
+    },
+    {
+      "id": "s6",
+      "text": "It is a Japanese idea that he says roughly means the autonomy and the freedom to do as one wants.",
+      "zh": "他說這是一個日文概念，大致是指自主，以及隨心所欲去做的自由。",
+      "start": 40.1,
+      "end": 48.58,
+      "wpm": 142
+    },
+    {
+      "id": "s7",
+      "text": "The aim is to create something like the relationship between a musician and an instrument.",
+      "zh": "目標是創造出類似音樂家與樂器之間的那種關係。",
+      "start": 48.7,
+      "end": 56.02,
+      "wpm": 123
+    },
+    {
+      "id": "s8",
+      "text": "Inami said, \"Lying somewhere between a human and a tool,\" like how a musical instrument can become as if a part of your body.",
+      "zh": "稻見說，它「介於人與工具之間」，就像樂器可以變成彷彿是你身體的一部分。",
+      "start": 56.02,
+      "end": 67.08,
+      "wpm": 130
+    },
+    {
+      "id": "s9",
+      "text": "Inami says the idea came to him when he thought of traditional Japanese puppetry and a short story by Yasunari Kawabata.",
+      "zh": "稻見說，這個想法是他想到日本傳統人偶劇和川端康成的一篇短篇小說時冒出來的。",
+      "start": 67.08,
+      "end": 77.07,
+      "wpm": 126
+    },
+    {
+      "id": "s10",
+      "text": "The story is about a young man who borrows a young woman's right arm.",
+      "zh": "那篇小說講的是一個年輕男子借走一位年輕女子右手臂的故事。",
+      "start": 77.1,
+      "end": 82.52,
+      "wpm": 155
+    },
+    {
+      "id": "s11",
+      "text": "Inami said, \"The robotic device is not a rival to human beings, but rather something that helps us do as we please.\"",
+      "zh": "稻見說：「這種機械裝置不是要跟人類競爭，而是幫助我們隨心所欲做想做的事。」",
+      "start": 82.52,
+      "end": 93.46,
+      "wpm": 121
+    },
+    {
+      "id": "s12",
+      "text": "He added that it was like a bicycle or e-bike.",
+      "zh": "他還說，它就像腳踏車或電動腳踏車一樣。",
+      "start": 93.46,
+      "end": 97.74,
+      "wpm": 154
+    },
+    {
+      "id": "s13",
+      "text": "It supports us and can unlock creativity.",
+      "zh": "它支撐著我們，也能激發創造力。",
+      "start": 98.04,
+      "end": 103.23,
+      "wpm": 81
+    },
+    {
+      "id": "s14",
+      "text": "A video called Jitsai Arms shows two dancers performing with the robotic arms on their backs.",
+      "zh": "一支名為「自在手臂」的影片裡，兩名舞者背著機械手臂演出。",
+      "start": 103.26,
+      "end": 111.78,
+      "wpm": 113
+    },
+    {
+      "id": "s15",
+      "text": "The humans and machines move together in the performance.",
+      "zh": "在表演中，人和機器一起律動。",
+      "start": 111.78,
+      "end": 116.68,
+      "wpm": 110
+    }
+  ],
+  "questions": []
+}

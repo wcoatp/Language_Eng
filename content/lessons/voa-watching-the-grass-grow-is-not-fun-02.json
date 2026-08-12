@@ -1,0 +1,128 @@
+{
+  "id": "voa-watching-the-grass-grow-is-not-fun-02",
+  "title": "'Watching the Grass Grow' Is Not Fun (2/2)",
+  "titleZh": "「看草長大」一點都不好玩 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "介紹英文慣用語「不讓腳下長草」，用來形容一個人總是很積極、閒不下來。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8006750.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "he gave a two-hour-long acceptance speech.",
+      "zh": "他發表了長達兩小時的得獎感言。",
+      "start": 99.8,
+      "end": 104.28,
+      "wpm": 107
+    },
+    {
+      "id": "s2",
+      "text": "Now, grass grows on the ground all the time.",
+      "zh": "草在地上無時無刻都在生長。",
+      "start": 106.71,
+      "end": 112.39,
+      "wpm": 95
+    },
+    {
+      "id": "s3",
+      "text": "And usually, we don't give it much thought.",
+      "zh": "而我們通常不會太去注意它。",
+      "start": 122.92,
+      "end": 125.64,
+      "wpm": 176
+    },
+    {
+      "id": "s4",
+      "text": "For people who are always active, always moving,",
+      "zh": "對於那些總是很有活力、不停在動的人，",
+      "start": 126.07,
+      "end": 131.12,
+      "wpm": 95
+    },
+    {
+      "id": "s5",
+      "text": "always on the go, we can say they don't let grass grow under their feet.",
+      "zh": "也就是老是在跑來跑去的人，我們可以說他們「不讓草長在腳下」。",
+      "start": 138.99,
+      "end": 145.36,
+      "wpm": 141
+    },
+    {
+      "id": "s6",
+      "text": "We can also say beneath their feet.",
+      "zh": "我們也可以說 beneath their feet。",
+      "start": 146.14,
+      "end": 149.06,
+      "wpm": 144
+    },
+    {
+      "id": "s7",
+      "text": "And sometimes, we use this expression as a command.",
+      "zh": "有時候我們還會把這個說法拿來當命令句用。",
+      "start": 150.5,
+      "end": 154.53,
+      "wpm": 134
+    },
+    {
+      "id": "s8",
+      "text": "Let's hear some examples.",
+      "zh": "我們來聽幾個例子。",
+      "start": 155.82,
+      "end": 157.7,
+      "wpm": 128
+    },
+    {
+      "id": "s9",
+      "text": "Don't let the grass grow beneath your feet.",
+      "zh": "別讓草長在你腳下。",
+      "start": 158.82,
+      "end": 161.73,
+      "wpm": 165
+    },
+    {
+      "id": "s10",
+      "text": "Get back to work.",
+      "zh": "快回去工作。",
+      "start": 161.74,
+      "end": 163.19,
+      "wpm": 165
+    },
+    {
+      "id": "s11",
+      "text": "She certainly doesn't let the grass grow under her feet.",
+      "zh": "她絕對是個閒不下來的人。",
+      "start": 164.1,
+      "end": 167.32,
+      "wpm": 186
+    },
+    {
+      "id": "s12",
+      "text": "She's been traveling non-stop for over a year.",
+      "zh": "她已經連續旅行一年多沒停過。",
+      "start": 167.94,
+      "end": 171.4,
+      "wpm": 156
+    },
+    {
+      "id": "s13",
+      "text": "And that's all the time we have for this Words and Their Stories.",
+      "zh": "本集〈詞語背後的故事〉的時間就到這裡。",
+      "start": 173.58,
+      "end": 178.1,
+      "wpm": 173
+    },
+    {
+      "id": "s14",
+      "text": "Until next time, I'm Ana Mateo.",
+      "zh": "下次見，我是 Ana Mateo。",
+      "start": 178.1,
+      "end": 180.98,
+      "wpm": 125
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-03",
+  "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (3/3)",
+  "titleZh": "愛倫坡〈莫爾格街兇殺案〉第二部 (3/3)",
+  "level": 2,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "愛倫坡故事中，眾人發現母女兩具屍體，隔天報紙刊出目擊者的說法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — American Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/4015933.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "A lockbox was found left open, with just a few old letters and papers inside.",
+      "zh": "有一個保險箱被打開放在那裡，裡面只剩幾封舊信和文件。",
+      "start": 185.24,
+      "end": 191.49,
+      "wpm": 144
+    },
+    {
+      "id": "s2",
+      "text": "There was no one there.",
+      "zh": "那裡一個人也沒有。",
+      "start": 192.87,
+      "end": 194.06,
+      "wpm": 252
+    },
+    {
+      "id": "s3",
+      "text": "But when the group inspected the fireplace, they discovered another horror.",
+      "zh": "但眾人檢查壁爐的時候，又發現了另一件恐怖的事。",
+      "start": 194.06,
+      "end": 199.68,
+      "wpm": 117
+    },
+    {
+      "id": "s4",
+      "text": "A still warm body had been forced up the chimney.",
+      "zh": "一具還帶著餘溫的屍體，被硬塞進了煙囪裡。",
+      "start": 200.48,
+      "end": 204.12,
+      "wpm": 165
+    },
+    {
+      "id": "s5",
+      "text": "It was the old woman's daughter.",
+      "zh": "那是老婦人的女兒。",
+      "start": 204.5,
+      "end": 206.56,
+      "wpm": 175
+    },
+    {
+      "id": "s6",
+      "text": "There was blood on the face, and dark, deep finger marks on the neck, suggesting a strangling.",
+      "zh": "她臉上有血，脖子上有又深又黑的指痕，看起來是被勒死的。",
+      "start": 207.64,
+      "end": 214.63,
+      "wpm": 146
+    },
+    {
+      "id": "s7",
+      "text": "After searching the house, the group went outside.",
+      "zh": "搜完屋子之後，眾人走到外面。",
+      "start": 216.07,
+      "end": 219.8,
+      "wpm": 129
+    },
+    {
+      "id": "s8",
+      "text": "They found the body of the old woman behind the building.",
+      "zh": "他們在建築物後面找到了老婦人的屍體。",
+      "start": 220.2,
+      "end": 224.72,
+      "wpm": 146
+    },
+    {
+      "id": "s9",
+      "text": "Her neck had been cut so severely, that when they tried to lift the body, the head fell off.",
+      "zh": "她的脖子被割得太深，眾人想抬起屍體的時候，頭就掉了下來。",
+      "start": 225.72,
+      "end": 233.84,
+      "wpm": 140
+    },
+    {
+      "id": "s10",
+      "text": "The next day, the newspaper offered to its readers these new facts.",
+      "zh": "隔天，報紙向讀者披露了這些新的細節。",
+      "start": 236.26,
+      "end": 242.6,
+      "wpm": 114
+    },
+    {
+      "id": "s11",
+      "text": "The police have questioned many people about the vicious murders in the old house on the rue morgue.",
+      "zh": "警方針對莫爾格街那棟老屋裡的兇殘命案，已經訊問了許多人。",
+      "start": 244.99,
+      "end": 255.26,
+      "wpm": 105
+    },
+    {
+      "id": "s12",
+      "text": "Pauline Dubourg, a wash woman, said she has known both of the victims for more than three years,",
+      "zh": "洗衣婦 Pauline Dubourg 說，她認識這兩位死者已經三年多，",
+      "start": 255.92,
+      "end": 269.28,
+      "wpm": 81
+    },
+    {
+      "id": "s13",
+      "text": "and washed their clothes.",
+      "zh": "還一直幫她們洗衣服。",
+      "start": 269.28,
+      "end": 271.04,
+      "wpm": 136
+    },
+    {
+      "id": "s14",
+      "text": "She said, \"The two seemed to love each other dearly.",
+      "zh": "她說：「這兩個人看起來感情非常好。",
+      "start": 271.99,
+      "end": 276,
+      "wpm": 150
+    },
+    {
+      "id": "s15",
+      "text": "They always paid her well.",
+      "zh": "她們給她的工錢也一向很優厚。",
+      "start": 276,
+      "end": 278.16,
+      "wpm": 139
+    }
+  ],
+  "questions": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "voa-when-to-use-some-and-not-a-or-an-01",
+  "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (1/3)",
+  "titleZh": "什麼時候該用 some 而不是 a 或 an (1/3)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "說明可數與不可數名詞的差別，以及單數名詞前該用 a 還是 an。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/when-to-use-some-and-not-a-or-an-/6016083.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "On this program, you have learned about count and non-count nouns.",
+      "zh": "在這個節目裡，你已經學過可數名詞和不可數名詞。",
+      "start": 0,
+      "end": 6.23,
+      "wpm": 116
+    },
+    {
+      "id": "s2",
+      "text": "A count noun is something you can count and make plural, as in two trees, five girls, and so on.",
+      "zh": "可數名詞就是可以計數、可以變成複數的東西，例如兩棵樹、五個女孩等等。",
+      "start": 6.23,
+      "end": 15.84,
+      "wpm": 125
+    },
+    {
+      "id": "s3",
+      "text": "Non-count nouns are grammatically singular.",
+      "zh": "不可數名詞在文法上算是單數。",
+      "start": 16.57,
+      "end": 20.44,
+      "wpm": 93
+    },
+    {
+      "id": "s4",
+      "text": "For example, rice is non-count, but it is made up of many small pieces.",
+      "zh": "例如 rice（米）是不可數的，但它其實是由很多小顆粒組成的。",
+      "start": 20.44,
+      "end": 26.72,
+      "wpm": 143
+    },
+    {
+      "id": "s5",
+      "text": "You can count glasses of water, but you would not normally count waters, unless you are talking about the many kinds of water on sale in some markets.",
+      "zh": "你可以數有幾杯水，但通常不會說 waters，除非你講的是市面上賣的那些不同種類的水。",
+      "start": 27.28,
+      "end": 39.42,
+      "wpm": 138
+    },
+    {
+      "id": "s6",
+      "text": "We can count songs, but not music.",
+      "zh": "我們可以數歌曲，但不能數音樂。",
+      "start": 39.42,
+      "end": 42.77,
+      "wpm": 125
+    },
+    {
+      "id": "s7",
+      "text": "So song is a count noun, while music is a non-count noun.",
+      "zh": "所以 song 是可數名詞，music 則是不可數名詞。",
+      "start": 42.93,
+      "end": 47.01,
+      "wpm": 191
+    },
+    {
+      "id": "s8",
+      "text": "John wrote two songs last week.",
+      "zh": "John 上禮拜寫了兩首歌。",
+      "start": 47.22,
+      "end": 51.12,
+      "wpm": 92
+    },
+    {
+      "id": "s9",
+      "text": "His band plays new age music.",
+      "zh": "他的樂團演奏新世紀音樂。",
+      "start": 51.54,
+      "end": 54.08,
+      "wpm": 142
+    },
+    {
+      "id": "s10",
+      "text": "With the singular form of count nouns, we use a before a word that begins with a consonant sound, and an before a word that begins with a vowel sound.",
+      "zh": "可數名詞用單數形式時，字首發子音的前面用 a，字首發母音的前面用 an。",
+      "start": 54.08,
+      "end": 65.94,
+      "wpm": 152
+    },
+    {
+      "id": "s11",
+      "text": "There are exceptions, but this rule usually holds true.",
+      "zh": "雖然有例外，但這個規則大致上都成立。",
+      "start": 65.94,
+      "end": 71.42,
+      "wpm": 99
+    },
+    {
+      "id": "s12",
+      "text": "Here are examples.",
+      "zh": "來看幾個例子。",
+      "start": 71.42,
+      "end": 73.44,
+      "wpm": 89
+    },
+    {
+      "id": "s13",
+      "text": "They have an office on the first floor.",
+      "zh": "他們在一樓有一間辦公室。",
+      "start": 73.44,
+      "end": 76.5,
+      "wpm": 157
+    },
+    {
+      "id": "s14",
+      "text": "I left a banana on the table for you.",
+      "zh": "我在桌上留了一根香蕉給你。",
+      "start": 77.7,
+      "end": 79.97,
+      "wpm": 238
+    },
+    {
+      "id": "s15",
+      "text": "With the plural form of count nouns, we can use some instead of a or an.",
+      "zh": "可數名詞用複數形式時，我們可以用 some 來取代 a 或 an。",
+      "start": 79.97,
+      "end": 86.66,
+      "wpm": 143
+    }
+  ],
+  "questions": []
+}

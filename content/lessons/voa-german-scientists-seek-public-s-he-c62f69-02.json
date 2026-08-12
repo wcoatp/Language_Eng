@@ -1,0 +1,80 @@
+{
+  "id": "voa-german-scientists-seek-public-s-he-c62f69-02",
+  "title": "German Scientists Seek Public’s Help to Count Insects This Summer (2/2)",
+  "titleZh": "德國科學家今夏邀請民眾一起數昆蟲 (2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "德國團隊號召民眾參與昆蟲普查，了解昆蟲數量下降的情況。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/german-scientists-seek-public-s-help-to-count-insects-this-summer/7634103.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "In recent years, for example, scientists have expressed concerns about what appears to be a decrease in the bee population worldwide.",
+      "zh": "舉例來說，近幾年科學家很擔心全球蜜蜂的數量似乎正在減少。",
+      "start": 110.1,
+      "end": 121.24,
+      "wpm": 113
+    },
+    {
+      "id": "s2",
+      "text": "The drop in some kinds of insects is often blamed on human causes, including chemicals and damage to the environment.",
+      "zh": "某些昆蟲數量下降，常被歸咎於人為因素，包括化學藥劑和環境破壞。",
+      "start": 122.13,
+      "end": 132.28,
+      "wpm": 118
+    },
+    {
+      "id": "s3",
+      "text": "Breitkreutz said, the Insect Count Project helps the scientists, and it also helps people respect the role insects play in their daily lives.",
+      "zh": "Breitkreutz 說，昆蟲普查計畫不只幫了科學家，也讓大家更重視昆蟲在日常生活中扮演的角色。",
+      "start": 133.72,
+      "end": 145.92,
+      "wpm": 113
+    },
+    {
+      "id": "s4",
+      "text": "It's very important for us to show people how important, great, and interesting insects are, she said.",
+      "zh": "她說，讓大家看見昆蟲有多重要、多了不起、多有趣，對我們來說非常重要。",
+      "start": 147.22,
+      "end": 153.78,
+      "wpm": 155
+    },
+    {
+      "id": "s5",
+      "text": "Breitkreutz said, some people lack knowledge of what is crawling around outside.",
+      "zh": "Breitkreutz 說，有些人其實不太清楚外面爬來爬去的到底是什麼。",
+      "start": 154.98,
+      "end": 161.71,
+      "wpm": 107
+    },
+    {
+      "id": "s6",
+      "text": "The first insect count is happening until June 9th, and the next one is from August 2nd to 11th.",
+      "zh": "第一次昆蟲普查進行到六月九日，下一次則是八月二日到十一日。",
+      "start": 162.38,
+      "end": 171.06,
+      "wpm": 131
+    },
+    {
+      "id": "s7",
+      "text": "The NABU provides a document to fill out, and an app for the citizen scientists to report their findings.",
+      "zh": "NABU 提供一份表格，還有一款應用程式，讓公民科學家回報他們的觀察結果。",
+      "start": 172.31,
+      "end": 180.78,
+      "wpm": 135
+    },
+    {
+      "id": "s8",
+      "text": "I'm Dan Friedel.",
+      "zh": "我是 Dan Friedel。",
+      "start": 181.48,
+      "end": 182.78,
+      "wpm": 138
+    }
+  ],
+  "questions": []
+}

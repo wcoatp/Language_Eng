@@ -1,0 +1,136 @@
+{
+  "id": "voa-yosemite-one-of-america-s-most-fam-949310-01",
+  "title": "Yosemite: One of America’s Most Famous National Parks (1/2)",
+  "titleZh": "優勝美地：美國最著名的國家公園之一 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "介紹加州優勝美地國家公園的瀑布、巨杉、野生動物與公園的歷史。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — America's National Parks",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8002539.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Yosemite National Park is one of the most famous parks in the United States.",
+      "zh": "優勝美地國家公園是美國最有名的公園之一。",
+      "start": 0.76,
+      "end": 7.59,
+      "wpm": 123
+    },
+    {
+      "id": "s2",
+      "text": "It has high waterfalls, huge trees, wild animals, and beautiful rivers.",
+      "zh": "這裡有高聳的瀑布、巨大的樹木、野生動物和美麗的河流。",
+      "start": 8.7,
+      "end": 16.08,
+      "wpm": 89
+    },
+    {
+      "id": "s3",
+      "text": "Yosemite is in the Sierra Nevada Mountains in California.",
+      "zh": "優勝美地位在加州的內華達山脈。",
+      "start": 17.3,
+      "end": 21.84,
+      "wpm": 119
+    },
+    {
+      "id": "s4",
+      "text": "It has valleys formed by ancient ice that cut deep into the earth millions of years ago.",
+      "zh": "園內的山谷，是幾百萬年前古老的冰河深深切割大地所形成的。",
+      "start": 21.84,
+      "end": 30.98,
+      "wpm": 112
+    },
+    {
+      "id": "s5",
+      "text": "Water from high in the mountains falls in many places to the Green Valley far below.",
+      "zh": "水從高山上的許多地方傾瀉而下，落入下方遠處的綠色山谷。",
+      "start": 32.14,
+      "end": 39.5,
+      "wpm": 130
+    },
+    {
+      "id": "s6",
+      "text": "One of these waterfalls, Yosemite Falls, is the fifth highest on earth.",
+      "zh": "其中的優勝美地瀑布是全世界第五高的瀑布。",
+      "start": 40.58,
+      "end": 47.36,
+      "wpm": 106
+    },
+    {
+      "id": "s7",
+      "text": "In Yosemite's Mariposa Grove, visitors can see some of the tallest and oldest trees on earth, giant sequoia.",
+      "zh": "在優勝美地的馬里波薩林區，遊客可以看到地球上最高、最古老的樹木之一：巨杉。",
+      "start": 47.6,
+      "end": 59.08,
+      "wpm": 94
+    },
+    {
+      "id": "s8",
+      "text": "One of them, known as the Grizzly Giant, is estimated to be almost 3,000 years old.",
+      "zh": "其中一棵叫做「灰熊巨人」，據估計已經將近三千歲了。",
+      "start": 60.1,
+      "end": 69.02,
+      "wpm": 101
+    },
+    {
+      "id": "s9",
+      "text": "In 1864, President Abraham Lincoln signed a bill that made Yosemite a state park of California.",
+      "zh": "1864 年，林肯總統簽署法案，讓優勝美地成為加州的州立公園。",
+      "start": 69.52,
+      "end": 79.94,
+      "wpm": 86
+    },
+    {
+      "id": "s10",
+      "text": "It was named a national park in 1890. There are several beautiful old hotels in Yosemite, as well as other housing for visitors.",
+      "zh": "它在 1890 年被指定為國家公園。優勝美地裡有幾間漂亮的老飯店，也有其他提供遊客住宿的地方。",
+      "start": 80.92,
+      "end": 93.34,
+      "wpm": 106
+    },
+    {
+      "id": "s11",
+      "text": "People can also camp in the park.",
+      "zh": "遊客也可以在園區裡露營。",
+      "start": 94.56,
+      "end": 98.14,
+      "wpm": 117
+    },
+    {
+      "id": "s12",
+      "text": "More than 60 kinds of animals live in Yosemite.",
+      "zh": "有超過六十種動物住在優勝美地。",
+      "start": 98.24,
+      "end": 102.12,
+      "wpm": 124
+    },
+    {
+      "id": "s13",
+      "text": "Deer are common.",
+      "zh": "鹿很常見。",
+      "start": 103.18,
+      "end": 104.4,
+      "wpm": 148
+    },
+    {
+      "id": "s14",
+      "text": "Black bears, coyotes, and mountain lions also live in Yosemite.",
+      "zh": "黑熊、郊狼和美洲獅也棲息在優勝美地。",
+      "start": 105.38,
+      "end": 111.08,
+      "wpm": 105
+    },
+    {
+      "id": "s15",
+      "text": "People come from all over the world to climb the park's huge rock formations.",
+      "zh": "世界各地的人都來這裡攀爬園內巨大的岩壁。",
+      "start": 112.1,
+      "end": 118.68,
+      "wpm": 128
+    }
+  ],
+  "questions": []
+}

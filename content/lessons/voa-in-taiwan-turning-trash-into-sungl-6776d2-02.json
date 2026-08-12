@@ -1,0 +1,88 @@
+{
+  "id": "voa-in-taiwan-turning-trash-into-sungl-6776d2-02",
+  "title": "In Taiwan, Turning Trash into Sunglasses (2/2)",
+  "titleZh": "在台灣，把垃圾變成太陽眼鏡 (2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "台灣的回收工作坊讓民眾反思垃圾問題，學著少用塑膠、多做回收。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — As It Is",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7771326.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "As for consumers, it is important for them to get first-hand experience, so a workshop like this is very helpful, she said.",
+      "zh": "至於消費者，親身體驗很重要，所以像這樣的工作坊很有幫助，她說。",
+      "start": 117.99,
+      "end": 127.81,
+      "wpm": 141
+    },
+    {
+      "id": "s2",
+      "text": "People taking part in the workshop said it made them think twice about producing trash and made them pay more attention to reusable goods.",
+      "zh": "參加工作坊的人說，這讓他們對製造垃圾這件事多想了一下，也更注意可重複使用的物品。",
+      "start": 128.67,
+      "end": 139.88,
+      "wpm": 128
+    },
+    {
+      "id": "s3",
+      "text": "I have two children.",
+      "zh": "我有兩個小孩。",
+      "start": 140.43,
+      "end": 141.8,
+      "wpm": 175
+    },
+    {
+      "id": "s4",
+      "text": "I need to think about their future, said business owner Debbie Wu.",
+      "zh": "我得為他們的未來著想，企業主 Debbie Wu 說。",
+      "start": 141.87,
+      "end": 147,
+      "wpm": 140
+    },
+    {
+      "id": "s5",
+      "text": "If you throw away trash without thinking, you kick the problem down the road.",
+      "zh": "如果你不加思索就把垃圾丟掉，等於是把問題留給以後。",
+      "start": 148,
+      "end": 152.94,
+      "wpm": 170
+    },
+    {
+      "id": "s6",
+      "text": "So if everyone can do their best, recycle and use less plastic, that will make a big difference, Wu said.",
+      "zh": "所以只要每個人都盡一份力，做回收、少用塑膠，就會有很大的改變，吳女士說。",
+      "start": 153.64,
+      "end": 162.42,
+      "wpm": 137
+    },
+    {
+      "id": "s7",
+      "text": "Data from the Ministry of Environment estimates that Taiwan produced a record 11.6 million metric tons of waste in 2023. More than 6 million tons of",
+      "zh": "環境部的資料估計，台灣在 2023 年產生了創紀錄的 1,160 萬公噸垃圾。其中超過 600 萬公噸的",
+      "start": 162.99,
+      "end": 177.03,
+      "wpm": 98
+    },
+    {
+      "id": "s8",
+      "text": "that waste was recyclable.",
+      "zh": "垃圾是可以回收的。",
+      "start": 177.03,
+      "end": 179.74,
+      "wpm": 89
+    },
+    {
+      "id": "s9",
+      "text": "I'm John Russell.",
+      "zh": "我是 John Russell。",
+      "start": 180.85,
+      "end": 181.8,
+      "wpm": 189
+    }
+  ],
+  "questions": []
+}

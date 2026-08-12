@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-oprah-winfrey-part-1-01",
+  "title": "What It Takes: Oprah Winfrey, Part 1 (1/4)",
+  "titleZh": "What It Takes：歐普拉，第一部分 (1/4)",
+  "level": 4,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "這集節目先播出多段人生體悟的話語，再介紹本集主角歐普拉。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3993205.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Adam A., this child is gifted, and I heard that enough that I started to believe it.",
+      "zh": "Adam A.，這孩子很有天分，這種話我聽多了，久了自己也開始相信。",
+      "start": 0.04,
+      "end": 8.6,
+      "wpm": 119
+    },
+    {
+      "id": "s2",
+      "text": "If you have the opportunity, not a perfect opportunity, and you don't take it, you may never have another chance.",
+      "zh": "如果機會來了，就算不是完美的機會，你卻沒有把握住，可能就再也沒有下一次了。",
+      "start": 8.65,
+      "end": 14.88,
+      "wpm": 193
+    },
+    {
+      "id": "s3",
+      "text": "It all was so clear.",
+      "zh": "一切都那麼清楚。",
+      "start": 15.01,
+      "end": 16.14,
+      "wpm": 265
+    },
+    {
+      "id": "s4",
+      "text": "It was just like the picture started to form itself.",
+      "zh": "就好像那幅畫面自己慢慢成形一樣。",
+      "start": 16.14,
+      "end": 19.4,
+      "wpm": 184
+    },
+    {
+      "id": "s5",
+      "text": "There was no way in which a lie could prevail over the truth, darkness over light, death over life.",
+      "zh": "謊言不可能勝過真相，黑暗不可能勝過光明，死亡也不可能勝過生命。",
+      "start": 19.67,
+      "end": 27.2,
+      "wpm": 151
+    },
+    {
+      "id": "s6",
+      "text": "Every day I wake up and decide, today I'm going to love my life.",
+      "zh": "我每天醒來都會決定，今天我要好好愛我的人生。",
+      "start": 27.25,
+      "end": 31.92,
+      "wpm": 180
+    },
+    {
+      "id": "s7",
+      "text": "My advice is, if they're going to break your leg once when you go in that place, stay out of there.",
+      "zh": "我的建議是，如果你每次進那個地方都會被打斷一次腿，那就別再進去了。",
+      "start": 34.84,
+      "end": 39.86,
+      "wpm": 251
+    },
+    {
+      "id": "s8",
+      "text": "And then along come these differential experiences that you don't look for, you don't plan for, but boy, you better not miss them.",
+      "zh": "然後就會出現一些你沒去找、也沒計畫過的特別經歷，但天啊，你千萬別錯過。",
+      "start": 39.86,
+      "end": 47.9,
+      "wpm": 172
+    },
+    {
+      "id": "s9",
+      "text": "Welcome to another episode of What It Takes, a podcast about passion, vision, and perseverance from the Academy of Achievement's recorded collection.",
+      "zh": "歡迎收聽新一集的《What It Takes》，這是一個關於熱情、遠見和毅力的節目，內容取自 Academy of Achievement 的錄音典藏。",
+      "start": 52.21,
+      "end": 60.96,
+      "wpm": 151
+    },
+    {
+      "id": "s10",
+      "text": "I'm Alice Winkler.",
+      "zh": "我是 Alice Winkler。",
+      "start": 61.72,
+      "end": 62.7,
+      "wpm": 184
+    },
+    {
+      "id": "s11",
+      "text": "On every episode of What It Takes, we play you a revealing conversation with someone who has literally changed the world.",
+      "zh": "在《What It Takes》的每一集裡，我們都會播出一段深入的對談，訪問真正改變了世界的人。",
+      "start": 63.14,
+      "end": 69.45,
+      "wpm": 200
+    },
+    {
+      "id": "s12",
+      "text": "And mind you, a lot of people say literally these days when they mean figuratively, but I mean literally, literally.",
+      "zh": "提醒一下，現在很多人嘴上說「真的」，其實只是比喻，但我說的「真的」，是字面上的真的。",
+      "start": 70.22,
+      "end": 76.27,
+      "wpm": 198
+    },
+    {
+      "id": "s13",
+      "text": "The Academy of Achievement has been recording these conversations for decades to document the extraordinary lives of people like Bill Gates, Alan Shepard, and Hank Aaron.",
+      "zh": "Academy of Achievement 幾十年來一直在錄下這些對談，記錄像 Bill Gates、Alan Shepard 和 Hank Aaron 這些人不凡的一生。",
+      "start": 76.27,
+      "end": 86.68,
+      "wpm": 150
+    },
+    {
+      "id": "s14",
+      "text": "But mostly to show that all of us can learn what it takes to do a little better, aim a little higher.",
+      "zh": "但更重要的是要讓大家知道，我們每個人都能學會怎麼做得更好一點、把目標放得更高一點。",
+      "start": 86.91,
+      "end": 93.76,
+      "wpm": 193
+    },
+    {
+      "id": "s15",
+      "text": "There is arguably no one alive who has built a bigger empire of inspiration than Oprah Winfrey.",
+      "zh": "在世的人當中，大概沒有人打造出比歐普拉更龐大的勵志王國。",
+      "start": 93.76,
+      "end": 100.46,
+      "wpm": 152
+    }
+  ],
+  "questions": []
+}

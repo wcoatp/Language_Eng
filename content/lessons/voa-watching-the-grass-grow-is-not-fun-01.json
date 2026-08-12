@@ -1,0 +1,136 @@
+{
+  "id": "voa-watching-the-grass-grow-is-not-fun-01",
+  "title": "'Watching the Grass Grow' Is Not Fun (1/2)",
+  "titleZh": "「看草生長」一點也不有趣 (1/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "以春天草木生長為引子，介紹形容無聊乏味的英文慣用語。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/8006750.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And now, words and their stories from VOA Learning English.",
+      "zh": "接下來是 VOA Learning English 的《詞語背後的故事》單元。",
+      "start": 0.43,
+      "end": 6.75,
+      "wpm": 95
+    },
+    {
+      "id": "s2",
+      "text": "Springtime is a time of renewal and growth.",
+      "zh": "春天是萬物更新、生長的季節。",
+      "start": 19.28,
+      "end": 23.44,
+      "wpm": 115
+    },
+    {
+      "id": "s3",
+      "text": "Many plants end their long winter sleep and form new buds.",
+      "zh": "許多植物結束漫長的冬眠，冒出新芽。",
+      "start": 24.74,
+      "end": 29.96,
+      "wpm": 126
+    },
+    {
+      "id": "s4",
+      "text": "Beautiful flowers will soon be showing their bright colors.",
+      "zh": "美麗的花朵很快就會綻放出鮮豔的顏色。",
+      "start": 30.43,
+      "end": 36.8,
+      "wpm": 85
+    },
+    {
+      "id": "s5",
+      "text": "And the grass will grow thicker and greener again.",
+      "zh": "草地也會再次長得更濃密、更翠綠。",
+      "start": 38.24,
+      "end": 41.72,
+      "wpm": 155
+    },
+    {
+      "id": "s6",
+      "text": "Some flowers bloom in a very noticeable way.",
+      "zh": "有些花開得非常引人注目。",
+      "start": 43.38,
+      "end": 46.72,
+      "wpm": 144
+    },
+    {
+      "id": "s7",
+      "text": "But that is not the case with grass.",
+      "zh": "但草就不是這樣了。",
+      "start": 47.76,
+      "end": 50.2,
+      "wpm": 197
+    },
+    {
+      "id": "s8",
+      "text": "Imagine you are sitting in a grassy field.",
+      "zh": "想像你坐在一片草地上。",
+      "start": 51.34,
+      "end": 55.04,
+      "wpm": 130
+    },
+    {
+      "id": "s9",
+      "text": "And you have only one job, to watch the grass grow.",
+      "zh": "而你只有一件工作，就是看著草長大。",
+      "start": 55.98,
+      "end": 60.26,
+      "wpm": 154
+    },
+    {
+      "id": "s10",
+      "text": "That does not sound very interesting.",
+      "zh": "聽起來不怎麼有趣。",
+      "start": 61.2,
+      "end": 63.94,
+      "wpm": 131
+    },
+    {
+      "id": "s11",
+      "text": "In fact, it sounds really boring.",
+      "zh": "說真的，聽起來超級無聊。",
+      "start": 65.04,
+      "end": 68.3,
+      "wpm": 110
+    },
+    {
+      "id": "s12",
+      "text": "That idea is what gives us the expression like watching grass grow.",
+      "zh": "這個畫面就是 like watching grass grow 這個說法的由來。",
+      "start": 69.84,
+      "end": 74.96,
+      "wpm": 141
+    },
+    {
+      "id": "s13",
+      "text": "We use this expression to describe an experience that is uninteresting.",
+      "zh": "我們用這個說法來形容一件很無趣的事。",
+      "start": 75.17,
+      "end": 81.68,
+      "wpm": 101
+    },
+    {
+      "id": "s14",
+      "text": "Another good word to describe it is tedious.",
+      "zh": "另一個很適合形容它的字是 tedious。",
+      "start": 83.28,
+      "end": 86.87,
+      "wpm": 134
+    },
+    {
+      "id": "s15",
+      "text": "After the politician won his campaign,",
+      "zh": "那位政治人物勝選之後，",
+      "start": 88.91,
+      "end": 92.7,
+      "wpm": 95
+    }
+  ],
+  "questions": []
+}

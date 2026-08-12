@@ -1,0 +1,64 @@
+{
+  "id": "voa-what-do-americans-say-at-the-new-y-fd1849-02",
+  "title": "What Do Americans Say at the New Year? (2/2)",
+  "titleZh": "美國人在新年時會說什麼？(2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "節目結尾感謝聽眾一年來的支持，祝福新年學習順利，並邀請大家來信提問。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/what-do-americans-say-at-the-new-year-/6348032.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Thank you for your friendship.",
+      "zh": "謝謝你們的情誼。",
+      "start": 100,
+      "end": 103,
+      "wpm": 100
+    },
+    {
+      "id": "s2",
+      "text": "The VOA Learning English team would like to thank readers like you, Maria, for making 2021 a great year for us.",
+      "zh": "VOA Learning English 團隊要感謝像 Maria 你這樣的讀者，讓 2021 年對我們來說是很棒的一年。",
+      "start": 103,
+      "end": 114,
+      "wpm": 109
+    },
+    {
+      "id": "s3",
+      "text": "We wish you all a wonderful year of learning together in 2022. What question do you have about American English?",
+      "zh": "祝大家在 2022 年一起度過美好的學習時光。你對美式英文有什麼問題嗎？",
+      "start": 114,
+      "end": 125,
+      "wpm": 104
+    },
+    {
+      "id": "s4",
+      "text": "Send us an email at learningenglish@voanews.",
+      "zh": "請寄電子郵件到 learningenglish@voanews.",
+      "start": 125,
+      "end": 128.79,
+      "wpm": 111
+    },
+    {
+      "id": "s5",
+      "text": "com And that's Ask a Teacher.",
+      "zh": "com。以上就是〈Ask a Teacher〉。",
+      "start": 130.54,
+      "end": 134,
+      "wpm": 104
+    },
+    {
+      "id": "s6",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 134,
+      "end": 136,
+      "wpm": 90
+    }
+  ],
+  "questions": []
+}

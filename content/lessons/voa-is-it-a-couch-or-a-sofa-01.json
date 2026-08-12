@@ -1,0 +1,136 @@
+{
+  "id": "voa-is-it-a-couch-or-a-sofa-01",
+  "title": "Is It a Couch or a Sofa? (1/2)",
+  "titleZh": "沙發到底叫 couch 還是 sofa？（1/2）",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "解說美式英文中 couch 與 sofa 的差別與由來。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/5861794.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "This week on Ask a Teacher, we answer a question from Abid about something a lot of people have in their living rooms.",
+      "zh": "這週的《問老師》單元，我們要回答 Abid 的問題，跟很多人客廳裡都有的一樣東西有關。",
+      "start": 0.92,
+      "end": 10.3,
+      "wpm": 147
+    },
+    {
+      "id": "s2",
+      "text": "Here is what he says.",
+      "zh": "他是這麼說的。",
+      "start": 10.31,
+      "end": 12.84,
+      "wpm": 119
+    },
+    {
+      "id": "s3",
+      "text": "Hi, I have a question.",
+      "zh": "嗨，我有一個問題。",
+      "start": 13.78,
+      "end": 15.69,
+      "wpm": 157
+    },
+    {
+      "id": "s4",
+      "text": "What is the difference between couch and sofa?",
+      "zh": "couch 和 sofa 有什麼不一樣？",
+      "start": 15.77,
+      "end": 19.26,
+      "wpm": 138
+    },
+    {
+      "id": "s5",
+      "text": "In my living room, I have a long piece of furniture covered in cloth.",
+      "zh": "我家客廳裡有一件長長的家具，外面包著布。",
+      "start": 20.88,
+      "end": 26.71,
+      "wpm": 144
+    },
+    {
+      "id": "s6",
+      "text": "Sometimes I call it a couch.",
+      "zh": "有時候我叫它 couch。",
+      "start": 27.58,
+      "end": 29.98,
+      "wpm": 150
+    },
+    {
+      "id": "s7",
+      "text": "Other times I call it a sofa.",
+      "zh": "有時候我又叫它 sofa。",
+      "start": 29.98,
+      "end": 32.46,
+      "wpm": 169
+    },
+    {
+      "id": "s8",
+      "text": "In the United States, the words couch and sofa are generally interchangeable.",
+      "zh": "在美國，couch 和 sofa 這兩個字大致上可以互換使用。",
+      "start": 33.64,
+      "end": 40.34,
+      "wpm": 107
+    },
+    {
+      "id": "s9",
+      "text": "That means either word is used to describe this piece of furniture, which a person can sit or lie down on.",
+      "zh": "也就是說，這兩個字都可以用來形容這種可以坐、也可以躺的家具。",
+      "start": 41.76,
+      "end": 50.46,
+      "wpm": 145
+    },
+    {
+      "id": "s10",
+      "text": "A Google n-gram of the two words tells us that, in the U.S. today, the words are about equally common, with couch being a little more popular.",
+      "zh": "從 Google 的詞頻統計來看，這兩個字在今天的美國使用頻率差不多，其中 couch 稍微常見一點。",
+      "start": 51.6,
+      "end": 64.17,
+      "wpm": 138
+    },
+    {
+      "id": "s11",
+      "text": "Historically, however, the meanings were different.",
+      "zh": "不過在歷史上，這兩個字的意思其實不一樣。",
+      "start": 66.4,
+      "end": 69.31,
+      "wpm": 124
+    },
+    {
+      "id": "s12",
+      "text": "The word couch comes from the French word couche, and once meant a low, bed-like piece of furniture that did not have arms.",
+      "zh": "couch 這個字來自法文的 couche，以前指的是一種低矮、像床一樣、而且沒有扶手的家具。",
+      "start": 70.48,
+      "end": 81.3,
+      "wpm": 133
+    },
+    {
+      "id": "s13",
+      "text": "And the word sofa, which comes from Arabic, was something more like a bench, with arms and a back.",
+      "zh": "而 sofa 這個字來自阿拉伯文，比較像是有扶手和椅背的長椅。",
+      "start": 82.3,
+      "end": 90.63,
+      "wpm": 137
+    },
+    {
+      "id": "s14",
+      "text": "Today, the American public uses either word, whether or not the piece of furniture has arms.",
+      "zh": "現在美國人不管那件家具有沒有扶手，兩個字都會用。",
+      "start": 91.92,
+      "end": 100.25,
+      "wpm": 115
+    },
+    {
+      "id": "s15",
+      "text": "However, some people consider the word couch to be less formal than sofa.",
+      "zh": "不過有些人覺得 couch 這個字比 sofa 來得沒那麼正式。",
+      "start": 102.02,
+      "end": 108.22,
+      "wpm": 126
+    }
+  ],
+  "questions": []
+}

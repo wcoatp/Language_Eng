@@ -1,0 +1,136 @@
+{
+  "id": "voa-in-taiwan-turning-trash-into-sungl-6776d2-01",
+  "title": "In Taiwan, Turning Trash into Sunglasses (1/2)",
+  "titleZh": "在台灣，把垃圾變成太陽眼鏡 (1/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "台北的零廢棄工作坊讓民眾親手把塑膠垃圾做成太陽眼鏡，推廣循環時尚。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — As It Is",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7771326.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "A workshop in Taipei, Taiwan, is giving new life to bottle caps, food packaging, old toys, and other kinds of plastic waste.",
+      "zh": "台灣台北的一間工作坊，讓瓶蓋、食品包裝、舊玩具等各種塑膠垃圾重獲新生。",
+      "start": 0.01,
+      "end": 12.63,
+      "wpm": 105
+    },
+    {
+      "id": "s2",
+      "text": "The Zero Waste Workshop, known as Trash Kitchen, gives people hands-on experience in the recycling process.",
+      "zh": "這個名為「垃圾廚房」的零廢棄工作坊，讓大家親手體驗回收的過程。",
+      "start": 13.24,
+      "end": 23.05,
+      "wpm": 104
+    },
+    {
+      "id": "s3",
+      "text": "People take plastic waste, then soften and shape it into a pair of sunglasses within two hours.",
+      "zh": "參加的人拿塑膠垃圾來軟化、塑形，兩個小時內就能做出一副太陽眼鏡。",
+      "start": 23.51,
+      "end": 31.82,
+      "wpm": 123
+    },
+    {
+      "id": "s4",
+      "text": "Arthur Wong started the company that holds the workshop.",
+      "zh": "舉辦這個工作坊的公司是 Arthur Wong 創立的。",
+      "start": 33.26,
+      "end": 36.82,
+      "wpm": 152
+    },
+    {
+      "id": "s5",
+      "text": "He spoke to Reuters News Agency.",
+      "zh": "他接受了路透社的訪問。",
+      "start": 37.76,
+      "end": 40.08,
+      "wpm": 155
+    },
+    {
+      "id": "s6",
+      "text": "He said, what we are trying to show in the Trash Kitchen is to let you see, feel,",
+      "zh": "他說，我們在「垃圾廚房」想呈現的，就是讓你親眼看到、親身感受、",
+      "start": 40.59,
+      "end": 47.99,
+      "wpm": 146
+    },
+    {
+      "id": "s7",
+      "text": "touch within minutes how this process can actually work without secondary pollution, and you can actually turn it into something of value directly in front of you.",
+      "zh": "在幾分鐘內親手摸到這個過程如何真的運作、又不會產生二次污染，而且就在你眼前把垃圾變成有價值的東西。",
+      "start": 47.99,
+      "end": 61.54,
+      "wpm": 120
+    },
+    {
+      "id": "s8",
+      "text": "Wong is the founder of MiniWiz.",
+      "zh": "Wong 是 MiniWiz 的創辦人。",
+      "start": 61.93,
+      "end": 64.69,
+      "wpm": 130
+    },
+    {
+      "id": "s9",
+      "text": "The company recycles waste material into goods that people want to buy.",
+      "zh": "這家公司把廢棄材料回收，變成大家願意買的商品。",
+      "start": 65.64,
+      "end": 71.05,
+      "wpm": 133
+    },
+    {
+      "id": "s10",
+      "text": "MiniWiz also produces tiles, bricks, hangers, and other daily necessities from plastic and organic waste.",
+      "zh": "MiniWiz 也用塑膠和有機廢棄物做出磁磚、磚塊、衣架等日常用品。",
+      "start": 72.32,
+      "end": 81.45,
+      "wpm": 99
+    },
+    {
+      "id": "s11",
+      "text": "Wong said the company uses a machine it developed in 2017 called a Mini Trash Presso.",
+      "zh": "Wong 說，公司使用一台 2017 年自行研發、名為 Mini Trash Presso 的機器。",
+      "start": 81.87,
+      "end": 90.17,
+      "wpm": 108
+    },
+    {
+      "id": "s12",
+      "text": "The machine processes the waste material for a new use.",
+      "zh": "這台機器會處理廢棄材料，讓它們有新的用途。",
+      "start": 91.21,
+      "end": 95.57,
+      "wpm": 138
+    },
+    {
+      "id": "s13",
+      "text": "Cora Shea is editor-in-chief for fashion magazine Harper's Bazaar Taiwan.",
+      "zh": "Cora Shea 是時尚雜誌《哈潑時尚》台灣版的總編輯。",
+      "start": 96.64,
+      "end": 102.52,
+      "wpm": 122
+    },
+    {
+      "id": "s14",
+      "text": "Shea said the project making sunglasses is a good way to bring attention to sustainable fashion.",
+      "zh": "Shea 說，做太陽眼鏡這個計畫，是讓大家關注永續時尚的好方法。",
+      "start": 103.62,
+      "end": 110.51,
+      "wpm": 139
+    },
+    {
+      "id": "s15",
+      "text": "I think environmental protection and fashion still have a long way to go.",
+      "zh": "我覺得環保和時尚還有很長的一段路要走。",
+      "start": 110.98,
+      "end": 116.85,
+      "wpm": 133
+    }
+  ],
+  "questions": []
+}

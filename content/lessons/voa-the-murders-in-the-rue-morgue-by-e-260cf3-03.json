@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-murders-in-the-rue-morgue-by-e-260cf3-03",
+  "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part One (3/3)",
+  "titleZh": "愛倫坡《莫爾格街兇殺案》第一部分 (3/3)",
+  "level": 2,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "杜邦說中了敘事者心裡的想法，讓他察覺對方驚人的推理能力。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — American Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/4015930.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "One who coldly put things together, and another who just as coldly took them apart.",
+      "zh": "一個人冷靜地把事情拼湊起來，另一個人同樣冷靜地把它們拆解開來。",
+      "start": 194.48,
+      "end": 202.44,
+      "wpm": 113
+    },
+    {
+      "id": "s2",
+      "text": "One night, we were walking down one of Paris' long, dirty streets.",
+      "zh": "有一天晚上，我們走在巴黎一條又長又髒的街上。",
+      "start": 203.44,
+      "end": 208.56,
+      "wpm": 141
+    },
+    {
+      "id": "s3",
+      "text": "We were quiet, both busy with our own thoughts.",
+      "zh": "我們都沒說話，各自想著自己的心事。",
+      "start": 208.77,
+      "end": 213.93,
+      "wpm": 105
+    },
+    {
+      "id": "s4",
+      "text": "But suddenly, Dupin spoke.",
+      "zh": "但杜邦突然開口了。",
+      "start": 213.93,
+      "end": 216.18,
+      "wpm": 107
+    },
+    {
+      "id": "s5",
+      "text": "You're right, he said.",
+      "zh": "他說：「你說得沒錯。」",
+      "start": 216.86,
+      "end": 218.8,
+      "wpm": 124
+    },
+    {
+      "id": "s6",
+      "text": "He is a very little fellow, that's true, and he would be more successful if he acted in lighter, less serious plays.",
+      "zh": "他確實是個矮小的傢伙，這是真的，如果他去演比較輕鬆、不那麼嚴肅的戲，應該會更成功。",
+      "start": 219.28,
+      "end": 226.92,
+      "wpm": 173
+    },
+    {
+      "id": "s7",
+      "text": "Yes, there can be no doubt of that, I said.",
+      "zh": "我說：「對，這一點毫無疑問。」",
+      "start": 228.2,
+      "end": 231.62,
+      "wpm": 175
+    },
+    {
+      "id": "s8",
+      "text": "At first, I saw nothing strange in this.",
+      "zh": "一開始，我並不覺得這有什麼奇怪。",
+      "start": 231.62,
+      "end": 236.01,
+      "wpm": 109
+    },
+    {
+      "id": "s9",
+      "text": "Dupin had agreed with me.",
+      "zh": "杜邦同意了我的看法。",
+      "start": 236.07,
+      "end": 238.38,
+      "wpm": 130
+    },
+    {
+      "id": "s10",
+      "text": "This, of course, seemed to me quite natural.",
+      "zh": "當然，這在我看來再自然不過。",
+      "start": 238.5,
+      "end": 241.74,
+      "wpm": 148
+    },
+    {
+      "id": "s11",
+      "text": "A few moments passed.",
+      "zh": "過了一會兒。",
+      "start": 241.74,
+      "end": 244.73,
+      "wpm": 80
+    },
+    {
+      "id": "s12",
+      "text": "Then it hit me.",
+      "zh": "然後我突然想通了。",
+      "start": 244.73,
+      "end": 246.81,
+      "wpm": 115
+    },
+    {
+      "id": "s13",
+      "text": "Dupin had not agreed with something I had said.",
+      "zh": "杜邦同意的並不是我說出口的話。",
+      "start": 246.82,
+      "end": 251.59,
+      "wpm": 113
+    },
+    {
+      "id": "s14",
+      "text": "He had agreed directly with my thoughts.",
+      "zh": "他直接同意的是我心裡的想法。",
+      "start": 251.6,
+      "end": 255.23,
+      "wpm": 116
+    },
+    {
+      "id": "s15",
+      "text": "I had not spoken a word.",
+      "zh": "我根本一個字都沒說。",
+      "start": 255.23,
+      "end": 257.52,
+      "wpm": 157
+    }
+  ],
+  "questions": []
+}

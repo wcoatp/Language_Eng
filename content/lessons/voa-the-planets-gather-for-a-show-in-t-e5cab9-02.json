@@ -1,0 +1,88 @@
+{
+  "id": "voa-the-planets-gather-for-a-show-in-t-e5cab9-02",
+  "title": "The Planets Gather for a Show in the Evening Sky (2/2)",
+  "titleZh": "行星齊聚夜空上演天文秀 (2/2)",
+  "level": 2,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "教你在日落後的晴朗夜空中，辨認火星、木星和金星等明亮的行星。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Science & Technology",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7990134.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Seeing the brightest planets is easy.",
+      "zh": "要看到最亮的那幾顆行星其實很容易。",
+      "start": 117.96,
+      "end": 121.25,
+      "wpm": 109
+    },
+    {
+      "id": "s2",
+      "text": "Go outside on a clear night after sunset.",
+      "zh": "在晴朗的夜晚，日落之後走到戶外就行了。",
+      "start": 122.24,
+      "end": 125.43,
+      "wpm": 150
+    },
+    {
+      "id": "s3",
+      "text": "The planets will shine brighter than the stars.",
+      "zh": "這些行星會比恆星還要亮。",
+      "start": 126.24,
+      "end": 130.77,
+      "wpm": 106
+    },
+    {
+      "id": "s4",
+      "text": "Mars is a bright reddish-orange light, appearing high in the constellation Gemini.",
+      "zh": "火星是一顆明亮的橘紅色光點，高掛在雙子座的位置。",
+      "start": 132.16,
+      "end": 139.56,
+      "wpm": 105
+    },
+    {
+      "id": "s5",
+      "text": "Jupiter is very bright, and a little lower than Mars, toward the constellation Taurus.",
+      "zh": "木星非常亮，位置比火星稍微低一點，靠近金牛座。",
+      "start": 140.74,
+      "end": 148.98,
+      "wpm": 102
+    },
+    {
+      "id": "s6",
+      "text": "Venus, in the constellation of Pisces, is the brightest natural object in the sky, besides the sun and moon.",
+      "zh": "位在雙魚座的金星，是天空中除了太陽和月亮以外最亮的自然天體。",
+      "start": 149.98,
+      "end": 159.98,
+      "wpm": 114
+    },
+    {
+      "id": "s7",
+      "text": "There are many stargazing apps available that can help identify the planets and bright stars.",
+      "zh": "現在有很多觀星 App 可以幫你辨認行星和亮星。",
+      "start": 161.34,
+      "end": 169.16,
+      "wpm": 115
+    },
+    {
+      "id": "s8",
+      "text": "The planets will slowly move lower and lower in the west throughout the spring.",
+      "zh": "整個春天，這些行星會在西邊的天空慢慢愈降愈低。",
+      "start": 170.18,
+      "end": 176.57,
+      "wpm": 131
+    },
+    {
+      "id": "s9",
+      "text": "I'm Mario Ritter, Jr.",
+      "zh": "我是 Mario Ritter, Jr.",
+      "start": 177.96,
+      "end": 179.96,
+      "wpm": 120
+    }
+  ],
+  "questions": []
+}

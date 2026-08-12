@@ -1,0 +1,136 @@
+{
+  "id": "voa-apologies-and-prepositions-01",
+  "title": "Apologies and Prepositions (1/2)",
+  "titleZh": "道歉與介系詞 (1/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "以梅克爾的道歉開場，說明 apologize 常見的三種句型用法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Everyday Grammar",
+  "sourceUrl": "https://learningenglish.voanews.com/a/apologies-and-prepositions/5843176.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "German Chancellor Angela Merkel recently caused protests with the call for a five-day lockdown over the Easter holiday to slow the spread of the coronavirus.",
+      "zh": "德國總理梅克爾最近呼籲在復活節假期實施五天封城來減緩新冠病毒擴散，結果引發抗議。",
+      "start": 0,
+      "end": 13.2,
+      "wpm": 118
+    },
+    {
+      "id": "s2",
+      "text": "She reacted to the opposition by apologizing to members of the German parliament.",
+      "zh": "面對反對聲浪，她向德國國會議員道歉。",
+      "start": 14.32,
+      "end": 20.48,
+      "wpm": 127
+    },
+    {
+      "id": "s3",
+      "text": "The mistake is my mistake alone.",
+      "zh": "這個錯誤完全是我一個人的錯。",
+      "start": 21.98,
+      "end": 24.16,
+      "wpm": 165
+    },
+    {
+      "id": "s4",
+      "text": "I ask both the public and you for forgiveness.",
+      "zh": "我請求民眾和各位的原諒。",
+      "start": 24.36,
+      "end": 27.34,
+      "wpm": 181
+    },
+    {
+      "id": "s5",
+      "text": "In an apology, someone takes responsibility for making a mistake.",
+      "zh": "所謂道歉，就是有人為自己犯的錯負起責任。",
+      "start": 29.12,
+      "end": 33.22,
+      "wpm": 146
+    },
+    {
+      "id": "s6",
+      "text": "Today, we will look at how we use the verb apologize with prepositions and gerunds.",
+      "zh": "今天我們要來看看動詞 apologize 怎麼跟介系詞和動名詞搭配使用。",
+      "start": 34.54,
+      "end": 40.74,
+      "wpm": 145
+    },
+    {
+      "id": "s7",
+      "text": "The most common sentence structure we find with the word apologize is apologize for verb plus ing.",
+      "zh": "apologize 這個字最常見的句型是 apologize for 加上動詞的 ing 形式。",
+      "start": 41.62,
+      "end": 50.28,
+      "wpm": 118
+    },
+    {
+      "id": "s8",
+      "text": "For example, after an argument with a friend, you might say,",
+      "zh": "舉例來說，跟朋友吵架之後，你可能會說：",
+      "start": 51.38,
+      "end": 55.9,
+      "wpm": 146
+    },
+    {
+      "id": "s9",
+      "text": "It is easy to change this sentence to talk about something you did not do by simply adding the word not.",
+      "zh": "只要加上 not 這個字，就能輕鬆把這個句子改成講你沒有做的事。",
+      "start": 58.24,
+      "end": 70.78,
+      "wpm": 100
+    },
+    {
+      "id": "s10",
+      "text": "The ing form of a verb is called a gerund.",
+      "zh": "動詞的 ing 形式叫做動名詞。",
+      "start": 72.56,
+      "end": 78.88,
+      "wpm": 95
+    },
+    {
+      "id": "s11",
+      "text": "It acts like a noun.",
+      "zh": "它的作用就像名詞一樣。",
+      "start": 83.92,
+      "end": 85.74,
+      "wpm": 165
+    },
+    {
+      "id": "s12",
+      "text": "We can also use the word apologize before a noun as in this sentence structure.",
+      "zh": "我們也可以像這個句型一樣，把 apologize 放在名詞前面。",
+      "start": 86,
+      "end": 91.38,
+      "wpm": 167
+    },
+    {
+      "id": "s13",
+      "text": "The third structure you will see with the word apologize",
+      "zh": "你會看到 apologize 的第三種句型",
+      "start": 92.98,
+      "end": 99.3,
+      "wpm": 95
+    },
+    {
+      "id": "s14",
+      "text": "is apologize to noun.",
+      "zh": "是 apologize to 加名詞。",
+      "start": 110.68,
+      "end": 113.52,
+      "wpm": 85
+    },
+    {
+      "id": "s15",
+      "text": "Parents often need to tell their young children to apologize to a friend after a fight.",
+      "zh": "家長常常得要小孩子在吵架之後跟朋友道歉。",
+      "start": 114.92,
+      "end": 120.3,
+      "wpm": 178
+    }
+  ],
+  "questions": []
+}

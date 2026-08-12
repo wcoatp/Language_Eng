@@ -51,6 +51,7 @@ async function play() {
   const c = card();
   if (!c) return;
   const s = sentenceOf(c);
+  const lesson = ctx.lessons.get(c.lessonId);
   if (!s.text) return;
   unlock();
   cancelSpeech();
@@ -59,6 +60,7 @@ async function play() {
     await say(s.text, {
       lessonId: c.lessonId, sentenceId: c.sentenceId,
       langCode: ctx.cfg.accentLang, voiceURI: ctx.cfg.accent, rate: ctx.cfg.normalRate,
+      realAudio: !!lesson?.realAudio, blob: s.audio || null,
     });
   } catch { /* silent — the text is still on screen */ }
   document.getElementById('revwave')?.classList.remove('is-on');

@@ -1,0 +1,104 @@
+{
+  "id": "voa-japanese-researchers-develop-weara-528985-02",
+  "title": "Japanese Researchers Develop Wearable Robot Arms (2/2)",
+  "titleZh": "日本研究人員開發穿戴式機器手臂 (2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "介紹日本研發的穿戴式機器手臂，以及它未來可能的各種用途。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Health & Lifestyle",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7158814.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The dancers come together and move in similar ways, either leading or following the robot arms.",
+      "zh": "舞者聚在一起，用相似的方式移動，有時帶領機器手臂，有時跟著手臂動。",
+      "start": 116.68,
+      "end": 124.66,
+      "wpm": 120
+    },
+    {
+      "id": "s2",
+      "text": "Inami said, \"Some wearers grow attached to the arms after some time.",
+      "zh": "稻見說：「有些使用者戴久了會對這些手臂產生感情。",
+      "start": 124.82,
+      "end": 130.54,
+      "wpm": 126
+    },
+    {
+      "id": "s3",
+      "text": "Taking them off after using them for a while feels a little sad.",
+      "zh": "用了一陣子之後再把它們拆下來，會覺得有點捨不得。",
+      "start": 130.54,
+      "end": 136.15,
+      "wpm": 139
+    },
+    {
+      "id": "s4",
+      "text": "That's where they're a little different to other tools,\" he said.",
+      "zh": "他說，這就是它們跟其他工具有點不一樣的地方。」",
+      "start": 136.18,
+      "end": 141.18,
+      "wpm": 132
+    },
+    {
+      "id": "s5",
+      "text": "But Inami added that the possibilities for the robot arms go beyond turning a short story into real life.",
+      "zh": "不過稻見補充說，這種機器手臂的可能性不只是把小說情節變成現實。",
+      "start": 141.18,
+      "end": 149.17,
+      "wpm": 143
+    },
+    {
+      "id": "s6",
+      "text": "He said such machines could help in search and rescue operations.",
+      "zh": "他說這類機器可以用來協助搜救工作。",
+      "start": 150.06,
+      "end": 156.49,
+      "wpm": 103
+    },
+    {
+      "id": "s7",
+      "text": "He wondered if similar devices could be used to fly or perform sports in the future.",
+      "zh": "他好奇未來類似的裝置能不能拿來飛行，或是用來做運動。",
+      "start": 156.5,
+      "end": 163.82,
+      "wpm": 131
+    },
+    {
+      "id": "s8",
+      "text": "In the future, we might see wings growing out of people's backs or drones attached to people.",
+      "zh": "未來我們可能會看到人的背上長出翅膀，或是身上裝著無人機。",
+      "start": 163.82,
+      "end": 171.79,
+      "wpm": 128
+    },
+    {
+      "id": "s9",
+      "text": "Maybe someone will come up with a sport that requires six arms.",
+      "zh": "說不定有人會想出一種需要六隻手臂的運動。",
+      "start": 171.84,
+      "end": 177.4,
+      "wpm": 129
+    },
+    {
+      "id": "s10",
+      "text": "Or invent a new type of swimming,\" Inami said.",
+      "zh": "稻見說：「或是發明一種新的游泳方式。」",
+      "start": 177.4,
+      "end": 183.34,
+      "wpm": 91
+    },
+    {
+      "id": "s11",
+      "text": "I'm Jill Robbins.",
+      "zh": "我是 Jill Robbins。",
+      "start": 183.44,
+      "end": 184.44,
+      "wpm": 180
+    }
+  ],
+  "questions": []
+}

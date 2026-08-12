@@ -1,0 +1,136 @@
+{
+  "id": "voa-what-it-takes-oprah-winfrey-part-1-02",
+  "title": "What It Takes: Oprah Winfrey, Part 1 (2/4)",
+  "titleZh": "What It Takes：歐普拉·溫芙蕾 第一集 (2/4)",
+  "level": 4,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "歐普拉受訪談起童年在農場的日子，以及她從小就相信自己的人生會不一樣。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — What It Takes",
+  "sourceUrl": "https://learningenglish.voanews.com/a/3993205.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Or since America's on a first-name basis with her, Oprah.",
+      "zh": "或者說，美國人都直接叫她的名字——歐普拉。",
+      "start": 100.71,
+      "end": 104.49,
+      "wpm": 175
+    },
+    {
+      "id": "s2",
+      "text": "Billy is grieving, and we, you know, feel compassion for him.",
+      "zh": "Billy 正在難過，而我們，你知道的，都很同情他。",
+      "start": 105.06,
+      "end": 109.08,
+      "wpm": 164
+    },
+    {
+      "id": "s3",
+      "text": "And that's okay that he's grieving.",
+      "zh": "他會難過，這是沒關係的。",
+      "start": 109.4,
+      "end": 111.05,
+      "wpm": 218
+    },
+    {
+      "id": "s4",
+      "text": "Yeah, I think it's important for his mom, Sherry, to know that it's okay for him to be sad.",
+      "zh": "對，我覺得他媽媽 Sherry 很需要知道，他難過是可以的。",
+      "start": 111.05,
+      "end": 115.84,
+      "wpm": 238
+    },
+    {
+      "id": "s5",
+      "text": "I mean, something tremendous has happened in his life, and he deserves that.",
+      "zh": "我是說，他的人生發生了很大的事，他有資格難過。",
+      "start": 115.84,
+      "end": 119.8,
+      "wpm": 197
+    },
+    {
+      "id": "s6",
+      "text": "Gail Eikenthal sat down with Oprah for the Academy of Achievement in 1991. It was five years into her groundbreaking talk show and many years before the production company, the magazine, or the television network.",
+      "zh": "Gail Eikenthal 在 1991 年代表 Academy of Achievement 訪問了歐普拉。當時她那個開創性的脫口秀已經播了五年，距離她後來的製作公司、雜誌和電視台還有很多年。",
+      "start": 119.85,
+      "end": 132.68,
+      "wpm": 159
+    },
+    {
+      "id": "s7",
+      "text": "Gail started by asking Oprah if she'd had any clue she'd one day make it so big.",
+      "zh": "Gail 一開始就問歐普拉，她當年有沒有想過自己有一天會這麼成功。",
+      "start": 133.56,
+      "end": 138.92,
+      "wpm": 190
+    },
+    {
+      "id": "s8",
+      "text": "As a young child, I had a vision not of what I wanted to accomplish, but I knew that my current circumstances,",
+      "zh": "小時候我心裡有一種想像，不是想達成什麼，而是我知道自己當時的處境，",
+      "start": 139.37,
+      "end": 148.16,
+      "wpm": 150
+    },
+    {
+      "id": "s9",
+      "text": "I was raised on a farm with my grandmother for the first six years of my life.",
+      "zh": "我人生的前六年，是在農場跟著外婆長大的。",
+      "start": 148.16,
+      "end": 153.72,
+      "wpm": 183
+    },
+    {
+      "id": "s10",
+      "text": "I knew somehow that my life would be different and it would be better.",
+      "zh": "我不知怎麼地就是知道，我的人生會不一樣，而且會更好。",
+      "start": 154.06,
+      "end": 157.95,
+      "wpm": 216
+    },
+    {
+      "id": "s11",
+      "text": "I never had a clear-cut vision of what it was I would be doing.",
+      "zh": "我從來沒有很明確地想過自己以後會做什麼。",
+      "start": 157.95,
+      "end": 164,
+      "wpm": 149
+    },
+    {
+      "id": "s12",
+      "text": "I just always felt somehow.",
+      "zh": "我就只是一直有那種感覺。",
+      "start": 164.2,
+      "end": 166.05,
+      "wpm": 162
+    },
+    {
+      "id": "s13",
+      "text": "I remember absolutely physically feeling it at around four years old.",
+      "zh": "我記得大概四歲的時候，身體真的清清楚楚感覺到了。",
+      "start": 166.18,
+      "end": 171.38,
+      "wpm": 127
+    },
+    {
+      "id": "s14",
+      "text": "I remember standing on the back porch.",
+      "zh": "我記得自己站在後面的門廊上。",
+      "start": 171.46,
+      "end": 174.18,
+      "wpm": 154
+    },
+    {
+      "id": "s15",
+      "text": "It was a screened-in porch, and my grandmother was boiling clothes because, you know, at that time we didn't have washing machines.",
+      "zh": "那是一個裝了紗窗的門廊，外婆正在煮衣服，因為那個年代我們沒有洗衣機。",
+      "start": 174.27,
+      "end": 181.55,
+      "wpm": 190
+    }
+  ],
+  "questions": []
+}

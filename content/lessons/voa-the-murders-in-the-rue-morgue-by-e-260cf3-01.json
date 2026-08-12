@@ -1,0 +1,136 @@
+{
+  "id": "voa-the-murders-in-the-rue-morgue-by-e-260cf3-01",
+  "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part One (1/3)",
+  "titleZh": "愛倫坡《莫爾格街兇殺案》第一部分 (1/3)",
+  "level": 2,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "故事開場，敘事者在巴黎的舊書店結識了博學而清貧的青年杜邦。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — American Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/4015930.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The Murders in the Rue Morgue by Edgar Allan Poe Part 1 Paris",
+      "zh": "《莫爾格街兇殺案》，愛倫坡著，第一部分，巴黎",
+      "start": 0.52,
+      "end": 8.73,
+      "wpm": 88
+    },
+    {
+      "id": "s2",
+      "text": "It was in Paris during the summer of 1840. There and then I met a strange and interesting young man named Auguste D",
+      "zh": "那是 1840 年夏天的巴黎。就在那個時候、那個地方，我認識了一位奇特又有趣的年輕人，名叫奧古斯特‧D",
+      "start": 16.75,
+      "end": 30.76,
+      "wpm": 94
+    },
+    {
+      "id": "s3",
+      "text": "Dupin was the last member of a well-known family, a family that had once been rich and famous.",
+      "zh": "杜邦是一個名門世家的最後一位後代，那個家族曾經既富有又顯赫。",
+      "start": 31.56,
+      "end": 42.22,
+      "wpm": 107
+    },
+    {
+      "id": "s4",
+      "text": "Auguste Dupin, however, was far from rich.",
+      "zh": "然而，奧古斯特‧杜邦一點也不有錢。",
+      "start": 42.22,
+      "end": 47.02,
+      "wpm": 87
+    },
+    {
+      "id": "s5",
+      "text": "He cared little about money.",
+      "zh": "他幾乎不在乎錢。",
+      "start": 47.02,
+      "end": 51.06,
+      "wpm": 74
+    },
+    {
+      "id": "s6",
+      "text": "He had enough to buy necessities and a few books.",
+      "zh": "他的錢只夠買生活必需品和幾本書。",
+      "start": 51.07,
+      "end": 56.22,
+      "wpm": 117
+    },
+    {
+      "id": "s7",
+      "text": "That was all, just books.",
+      "zh": "就這樣而已，就只有書。",
+      "start": 56.22,
+      "end": 59.14,
+      "wpm": 103
+    },
+    {
+      "id": "s8",
+      "text": "With books, he was happy.",
+      "zh": "只要有書，他就很快樂。",
+      "start": 59.14,
+      "end": 61.92,
+      "wpm": 108
+    },
+    {
+      "id": "s9",
+      "text": "In fact, we first met in an old bookstore.",
+      "zh": "事實上，我們第一次見面就是在一家舊書店裡。",
+      "start": 61.92,
+      "end": 66.9,
+      "wpm": 108
+    },
+    {
+      "id": "s10",
+      "text": "A few more chance meetings at such stores followed.",
+      "zh": "後來我們又在這類書店裡偶然遇到了幾次。",
+      "start": 66.9,
+      "end": 72.31,
+      "wpm": 100
+    },
+    {
+      "id": "s11",
+      "text": "Soon, we began to talk.",
+      "zh": "很快地，我們開始聊了起來。",
+      "start": 72.31,
+      "end": 74.52,
+      "wpm": 136
+    },
+    {
+      "id": "s12",
+      "text": "I was deeply interested in the family history, he told me.",
+      "zh": "他跟我說了家族的歷史，我聽得非常入迷。",
+      "start": 74.52,
+      "end": 79.91,
+      "wpm": 122
+    },
+    {
+      "id": "s13",
+      "text": "I was surprised, too, at how much and how widely he had read.",
+      "zh": "他讀過的書之多、涉獵之廣，也讓我很驚訝。",
+      "start": 79.91,
+      "end": 85.96,
+      "wpm": 129
+    },
+    {
+      "id": "s14",
+      "text": "More important, the force of his busy mind was like a bright light in my soul.",
+      "zh": "更重要的是，他那顆活躍腦袋的力量，像一道亮光照進我的心裡。",
+      "start": 85.96,
+      "end": 94.38,
+      "wpm": 114
+    },
+    {
+      "id": "s15",
+      "text": "I felt that the friendship of such a man would be, for me, riches without price.",
+      "zh": "我覺得能和這樣的人做朋友，對我來說是無價之寶。",
+      "start": 94.39,
+      "end": 101.66,
+      "wpm": 132
+    }
+  ],
+  "questions": []
+}

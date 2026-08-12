@@ -5,7 +5,8 @@ import { el, mount } from "../ui.js";
 import { stats, settings, fmtDuration } from '../store.js';
 import { dueCount, allLessonProgress } from '../srs.js';
 import { allLessons } from '../content.js';
-import { kvGet } from '../db.js';
+import { kvGet, kvSet } from '../db.js';
+import { needsHomeScreenPrompt, requestPersistence } from '../storage.js';
 
 const GOAL_HOURS = 1000;
 
@@ -23,7 +24,11 @@ export async function render(root) {
     || lessons.filter(l => !started.has(l.id)).sort((a, b) => a.level - b.level)[0]
     || lessons[0];
 
+  // Chrome grants persistence silently; on iOS only installing actually helps.
+  requestPersistence();
+
   mount(root, 
+    await iosInstallBanner(),
     el('h1', { text: '今天' }),
     el('p', { class: 'sub', text: greeting(s) }),
 
@@ -80,6 +85,31 @@ export async function render(root) {
     el('a', { class: 'btn btn-ghost btn-block', href: '#/talk', style: 'margin-top:10px' },
       ['🗣 練對話']),
   );
+}
+
+/* On iOS a plain Safari tab loses all its storage after seven days idle, so
+   this is a data-loss warning, not an install advert. Shown once, dismissible. */
+async function iosInstallBanner() {
+  if (!needsHomeScreenPrompt()) return null;
+  if (await kvGet('hideInstallHint', false)) return null;
+
+  return el('div', {
+    class: 'card',
+    style: 'border-color:color-mix(in srgb,var(--warn) 45%,var(--line));' +
+           'background:color-mix(in srgb,var(--warn) 8%,var(--surface))',
+  }, [
+    el('div', { style: 'font-weight:600;margin-bottom:6px', text: '請加入主畫面' }),
+    el('p', { class: 'hint', style: 'margin:0 0 10px' },
+      ['iOS 會清除七天沒使用的網站資料,你的練習紀錄和累積時數都會不見。' +
+       '按下方分享鈕選「加入主畫面」,資料才會長期保留。']),
+    el('button', {
+      class: 'btn btn-ghost', style: 'min-height:38px;font-size:13px',
+      onclick: async e => {
+        await kvSet('hideInstallHint', true);
+        e.currentTarget.closest('.card').remove();
+      },
+    }, ['知道了,不再提醒']),
+  ]);
 }
 
 function stat(n, label) {

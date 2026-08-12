@@ -1,0 +1,136 @@
+{
+  "id": "voa-kindly-and-please-01",
+  "title": "Kindly and Please (1/2)",
+  "titleZh": "kindly 和 please 的差別（1/2）",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "解說 kindly 與 please 的詞性差異，以及禮貌請求的用法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Ask a Teacher",
+  "sourceUrl": "https://learningenglish.voanews.com/a/kindly-and-please/5466911.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "This week we received a question from Iguero in Nigeria.",
+      "zh": "這週我們收到來自奈及利亞的 Iguero 的問題。",
+      "start": 0,
+      "end": 6.7,
+      "wpm": 90
+    },
+    {
+      "id": "s2",
+      "text": "What is the difference between please and kindly?",
+      "zh": "please 和 kindly 有什麼不一樣？",
+      "start": 6.7,
+      "end": 11.22,
+      "wpm": 106
+    },
+    {
+      "id": "s3",
+      "text": "Some use the two words together, e.g. please kindly assist.",
+      "zh": "有些人會把這兩個字放在一起用，例如 please kindly assist（請協助）。",
+      "start": 11.22,
+      "end": 17.19,
+      "wpm": 111
+    },
+    {
+      "id": "s4",
+      "text": "Dear Iguero, thank you kindly for writing to us.",
+      "zh": "親愛的 Iguero，非常感謝你寫信給我們。",
+      "start": 20.68,
+      "end": 25.4,
+      "wpm": 114
+    },
+    {
+      "id": "s5",
+      "text": "Kindly can be an adverb, a word that usually describes a verb.",
+      "zh": "kindly 可以當副詞，也就是通常用來修飾動詞的字。",
+      "start": 27,
+      "end": 31.38,
+      "wpm": 164
+    },
+    {
+      "id": "s6",
+      "text": "If your teacher says, kindly hand in your homework, she is using kindly as an adverb to make a polite request.",
+      "zh": "如果你的老師說 kindly hand in your homework（請交作業），她就是把 kindly 當副詞，用來客氣地提出要求。",
+      "start": 31.39,
+      "end": 40.54,
+      "wpm": 138
+    },
+    {
+      "id": "s7",
+      "text": "Another way to use the word as an adverb is, the animal doctor always treats our pets kindly.",
+      "zh": "這個字當副詞的另一種用法是：獸醫對待我們的寵物一向很親切。",
+      "start": 41.36,
+      "end": 48.72,
+      "wpm": 147
+    },
+    {
+      "id": "s8",
+      "text": "Kindly is also an adjective.",
+      "zh": "kindly 也可以當形容詞。",
+      "start": 50.18,
+      "end": 51.83,
+      "wpm": 182
+    },
+    {
+      "id": "s9",
+      "text": "If someone helped you at the post office, you might say, a kindly man helped me mail my letter.",
+      "zh": "如果有人在郵局幫了你，你可能會說：有一位親切的先生幫我把信寄出去。",
+      "start": 51.84,
+      "end": 59.6,
+      "wpm": 147
+    },
+    {
+      "id": "s10",
+      "text": "There, kindly describes man, which is a noun.",
+      "zh": "在這句話裡，kindly 修飾的是 man，也就是一個名詞。",
+      "start": 59.6,
+      "end": 65.46,
+      "wpm": 82
+    },
+    {
+      "id": "s11",
+      "text": "You could also use the word nice to express the same idea.",
+      "zh": "你也可以用 nice 這個字來表達一樣的意思。",
+      "start": 66.46,
+      "end": 70.46,
+      "wpm": 180
+    },
+    {
+      "id": "s12",
+      "text": "Please can be an adverb or a verb.",
+      "zh": "please 可以當副詞，也可以當動詞。",
+      "start": 72.18,
+      "end": 74.3,
+      "wpm": 226
+    },
+    {
+      "id": "s13",
+      "text": "It also can be used to make a request politely.",
+      "zh": "它同樣可以用來客氣地提出請求。",
+      "start": 74.3,
+      "end": 78.88,
+      "wpm": 131
+    },
+    {
+      "id": "s14",
+      "text": "Would you please pass the salt?",
+      "zh": "可以麻煩你把鹽遞給我嗎？",
+      "start": 80.4,
+      "end": 82.31,
+      "wpm": 188
+    },
+    {
+      "id": "s15",
+      "text": "Please give me your homework.",
+      "zh": "請把你的作業交給我。",
+      "start": 82.31,
+      "end": 84.4,
+      "wpm": 144
+    }
+  ],
+  "questions": []
+}

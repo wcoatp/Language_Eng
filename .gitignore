@@ -8,3 +8,9 @@ node_modules/
 # Generated lesson audio IS committed on purpose: GitHub Pages serves it to
 # phones and tablets, which cannot run the generator themselves. Regenerate
 # with `npm run audio` after adding lessons.
+
+# Whisper models are large and downloaded on demand by tools/align-media.mjs.
+models/
+
+# Private lesson packs built from your own media. Never publish these.
+*.echopack

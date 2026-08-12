@@ -76,6 +76,8 @@ for (const file of files) {
     topic: lesson.topic || 'daily',
     count: lesson.sentences.length,
     questions: (lesson.questions || []).length,
+    realAudio: !!lesson.realAudio,
+    source: lesson.source || '',
   });
 }
 

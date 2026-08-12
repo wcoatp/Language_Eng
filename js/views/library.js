@@ -5,7 +5,7 @@ import { allLessons, LEVELS, TOPICS } from '../content.js';
 import { allLessonProgress } from '../srs.js';
 import { kvGet, kvSet } from '../db.js';
 
-let state = { level: 0, topic: '' };
+let state = { level: 0, topic: '', realOnly: false };
 
 export async function render(root) {
   state = { ...state, ...(await kvGet('libraryFilter', {})) };
@@ -15,8 +15,12 @@ export async function render(root) {
   mount(root, 
     el('div', { style: 'display:flex;justify-content:space-between;align-items:center' }, [
       el('h1', { text: '課程' }),
-      el('a', { class: 'btn', href: '#/import', style: 'min-height:38px;padding:8px 14px;font-size:14px' },
-        ['+ 匯入文章']),
+      el('div', { style: 'display:flex;gap:8px' }, [
+        el('a', { class: 'btn', href: '#/yt', style: 'min-height:38px;padding:8px 12px;font-size:14px' },
+          ['▶ YouTube']),
+        el('a', { class: 'btn', href: '#/import', style: 'min-height:38px;padding:8px 12px;font-size:14px' },
+          ['+ 匯入']),
+      ]),
     ]),
     el('p', { class: 'sub', text: `${lessons.length} 課 · 由淺到深` }),
     filters(() => paint(host, lessons, prog)),
@@ -40,6 +44,9 @@ function filters(onChange) {
     ...Object.entries(TOPICS).map(([k, v]) => chip(v, state.topic === k, () => {
       state.topic = state.topic === k ? '' : k; save(); onChange();
     })),
+    chip('🎙 真人錄音', state.realOnly, () => {
+      state.realOnly = !state.realOnly; save(); onChange();
+    }),
   ]);
 
   wrap.append(levelRow, topicRow);
@@ -58,7 +65,8 @@ function paint(host, lessons, prog) {
   });
   const shown = lessons.filter(l =>
     (!state.level || l.level === state.level) &&
-    (!state.topic || (l.topic || 'custom') === state.topic));
+    (!state.topic || (l.topic || 'custom') === state.topic) &&
+    (!state.realOnly || l.realAudio));
 
   if (!shown.length) {
     mount(host, emptyState('這個條件下沒有課程', '換個程度或主題看看'));
@@ -93,6 +101,7 @@ function paint(host, lessons, prog) {
     chips[1].children[0].classList.toggle('is-on', !state.topic);
     Object.keys(TOPICS).forEach((k, i) =>
       chips[1].children[i + 1]?.classList.toggle('is-on', state.topic === k));
+    chips[1].lastElementChild?.classList.toggle('is-on', state.realOnly);
   }
 }
 
@@ -103,6 +112,7 @@ function card(l, p) {
       el('span', { class: `badge badge-l${l.level}`, text: `L${l.level}` }),
       el('span', { class: 'lesson-title', text: l.title }),
       done ? el('span', { class: 'badge badge-done', text: '完成' }) : null,
+      l.realAudio ? el('span', { class: 'badge badge-real', text: '真人' }) : null,
       l.custom ? el('span', { class: 'badge', text: '我的' }) : null,
     ]),
     el('div', { class: 'lesson-zh', text: l.titleZh || l.summaryZh || '' }),

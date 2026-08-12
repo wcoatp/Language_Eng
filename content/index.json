@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T11:59:38.615Z",
+  "generatedAt": "2026-08-12T04:50:22.577Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -10,7 +10,9 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 13,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l1-02",
@@ -21,7 +23,9 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 14,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l1-03",
@@ -32,7 +36,9 @@
       "type": "article",
       "topic": "daily",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l1-04",
@@ -43,7 +49,9 @@
       "type": "dialogue",
       "topic": "travel",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l2-01",
@@ -54,7 +62,9 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l2-02",
@@ -65,7 +75,9 @@
       "type": "dialogue",
       "topic": "work",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l2-03",
@@ -76,7 +88,9 @@
       "type": "article",
       "topic": "travel",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l2-04",
@@ -87,7 +101,360 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
+    },
+    {
+      "id": "voa-all-thumbs-01",
+      "title": "'All Thumbs' (1/3)",
+      "titleZh": "「笨手笨腳」(1/3)",
+      "summaryZh": "本集介紹片語 all thumbs，用來形容一個人笨手笨腳。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-anyway-and-similar-words-02",
+      "title": "Anyway and Similar Words (2/2)",
+      "titleZh": "Anyway 及類似的用字 (2/2)",
+      "summaryZh": "說明 anyway 的同義用法，介紹幾個表示「儘管如此」的轉折用語。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 9,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-colombian-scientists-develop-subst-312309-02",
+      "title": "Colombian Scientists Develop Substance to Protect Bees from Chemicals (2/2)",
+      "titleZh": "哥倫比亞科學家研發新物質，保護蜜蜂免受化學藥劑傷害 (2/2)",
+      "summaryZh": "哥倫比亞學者研究能改善蜜蜂健康、防止農藥造成神經損傷的分子。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 6,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-german-scientists-seek-public-s-he-c62f69-01",
+      "title": "German Scientists Seek Public’s Help to Count Insects This Summer (1/2)",
+      "titleZh": "德國科學家邀請民眾今夏一起數昆蟲 (1/2)",
+      "summaryZh": "德國團體號召民眾在夏天數算身邊的昆蟲，協助科學家觀察氣候變遷的影響。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-is-it-a-couch-or-a-sofa-02",
+      "title": "Is It a Couch or a Sofa? (2/2)",
+      "titleZh": "沙發到底叫 couch 還是 sofa？（2/2）",
+      "summaryZh": "說明 sofa 一詞的正式語感，以及家具業偏好用它的原因。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 5,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-japanese-researchers-develop-weara-528985-01",
+      "title": "Japanese Researchers Develop Wearable Robot Arms (1/2)",
+      "titleZh": "日本研究人員開發穿戴式機械手臂 (1/2)",
+      "summaryZh": "東京大學團隊研發穿戴式機械手臂，希望它像樂器一樣延伸人的能力與創意。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-kindly-and-please-01",
+      "title": "Kindly and Please (1/2)",
+      "titleZh": "kindly 和 please 的差別（1/2）",
+      "summaryZh": "解說 kindly 與 please 的詞性差異，以及禮貌請求的用法。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-pill-drug-and-medicine-01",
+      "title": "Pill, Drug and Medicine (1/2)",
+      "titleZh": "Pill、Drug 和 Medicine (1/2)",
+      "summaryZh": "老師從觀眾提問出發，解說藥丸、藥物與醫學這幾個字的用法差別。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-pill-drug-and-medicine-02",
+      "title": "Pill, Drug and Medicine (2/2)",
+      "titleZh": "Pill、Drug 和 Medicine 的用法 (2/2)",
+      "summaryZh": "延續藥物用字的討論，說明藥丸和藥物的差別，以及什麼是處方藥。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 14,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-sometimes-we-spread-ourself-too-th-649b2f-01",
+      "title": "Sometimes We 'Spread Ourself Too Thin' (1/2)",
+      "titleZh": "有時候我們會「分身乏術」(1/2)",
+      "summaryZh": "本集談的是事情攬太多、把自己搞得分身乏術的英文說法。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-the-gateway-arch-stepping-into-ame-eb47df-02",
+      "title": "The Gateway Arch- Stepping into America’s West (2/2)",
+      "titleZh": "大拱門──走進美國西部的門戶（2/2）",
+      "summaryZh": "談大拱門的遊客人數，以及設計師沙里南留下的其他作品。",
+      "level": 2,
+      "type": "article",
+      "topic": "travel",
+      "count": 4,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — America's National Parks"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-260cf3-01",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part One (1/3)",
+      "titleZh": "愛倫坡《莫爾格街兇殺案》第一部分 (1/3)",
+      "summaryZh": "故事開場，敘事者在巴黎的舊書店結識了博學而清貧的青年杜邦。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-260cf3-02",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part One (2/3)",
+      "titleZh": "愛倫坡〈莫爾格街兇殺案〉第一部 (2/3)",
+      "summaryZh": "敘事者與杜邦同住巴黎，驚訝發現杜邦能看透人心，彷彿有兩個靈魂。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-260cf3-03",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part One (3/3)",
+      "titleZh": "愛倫坡《莫爾格街兇殺案》第一部分 (3/3)",
+      "summaryZh": "杜邦說中了敘事者心裡的想法，讓他察覺對方驚人的推理能力。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-03",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (3/3)",
+      "titleZh": "愛倫坡〈莫爾格街兇殺案〉第二部 (3/3)",
+      "summaryZh": "愛倫坡故事中，眾人發現母女兩具屍體，隔天報紙刊出目擊者的說法。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-the-planets-gather-for-a-show-in-t-e5cab9-01",
+      "title": "The Planets Gather for a Show in the Evening Sky (1/2)",
+      "titleZh": "行星齊聚，在傍晚的夜空中上演大秀 (1/2)",
+      "summaryZh": "二月底七大行星同時現身傍晚天空，形成罕見的行星連珠景象。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-the-planets-gather-for-a-show-in-t-e5cab9-02",
+      "title": "The Planets Gather for a Show in the Evening Sky (2/2)",
+      "titleZh": "行星齊聚夜空上演天文秀 (2/2)",
+      "summaryZh": "教你在日落後的晴朗夜空中，辨認火星、木星和金星等明亮的行星。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 9,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-thomas-edison-inventor-and-busy-te-f2883e-01",
+      "title": "Thomas Edison: Inventor and Busy Team Leader (1/2)",
+      "titleZh": "湯瑪斯・愛迪生：發明家與忙碌的團隊領導者 (1/2)",
+      "summaryZh": "介紹愛迪生的成長與發明，以及他如何帶領團隊不斷創新。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — As It Is"
+    },
+    {
+      "id": "voa-thomas-edison-inventor-and-busy-te-f2883e-02",
+      "title": "Thomas Edison: Inventor and Busy Team Leader (2/2)",
+      "titleZh": "愛迪生：發明家與忙碌的團隊領導者 (2/2)",
+      "summaryZh": "介紹愛迪生的工作習慣、他認為最難的發明電燈，以及他留下的影響。",
+      "level": 2,
+      "type": "article",
+      "topic": "media",
+      "count": 8,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — As It Is"
+    },
+    {
+      "id": "voa-us-officials-warn-of-increase-in-b-ca8b53-02",
+      "title": "US Officials Warn of Increase in Bacterial Illnesses That Could Be Deadly (2/2)",
+      "titleZh": "美國官方警告：可能致命的細菌感染增加（2/2）",
+      "summaryZh": "說明這種細菌感染的死亡率與後遺症，以及疫苗接種建議。",
+      "level": 2,
+      "type": "article",
+      "topic": "science",
+      "count": 7,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-watching-the-grass-grow-is-not-fun-01",
+      "title": "'Watching the Grass Grow' Is Not Fun (1/2)",
+      "titleZh": "「看草生長」一點也不有趣 (1/2)",
+      "summaryZh": "以春天草木生長為引子，介紹形容無聊乏味的英文慣用語。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-watching-the-grass-grow-is-not-fun-02",
+      "title": "'Watching the Grass Grow' Is Not Fun (2/2)",
+      "titleZh": "「看草長大」一點都不好玩 (2/2)",
+      "summaryZh": "介紹英文慣用語「不讓腳下長草」，用來形容一個人總是很積極、閒不下來。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 14,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-what-do-americans-say-at-the-new-y-fd1849-01",
+      "title": "What Do Americans Say at the New Year? (1/2)",
+      "titleZh": "美國人過新年時都說些什麼？ (1/2)",
+      "summaryZh": "介紹美國人在新年賀卡上常寫的祝福語，像是健康、順利與平安。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-what-do-americans-say-at-the-new-y-fd1849-02",
+      "title": "What Do Americans Say at the New Year? (2/2)",
+      "titleZh": "美國人在新年時會說什麼？(2/2)",
+      "summaryZh": "節目結尾感謝聽眾一年來的支持，祝福新年學習順利，並邀請大家來信提問。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 6,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-what-does-it-mean-to-mushroom-01",
+      "title": "What Does It Mean 'To Mushroom'? (1/2)",
+      "titleZh": "「To Mushroom」是什麼意思？ (1/2)",
+      "summaryZh": "以蘑菇一夜之間冒出來為例，說明這個字當動詞表示快速暴增。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-yosemite-one-of-america-s-most-fam-949310-01",
+      "title": "Yosemite: One of America’s Most Famous National Parks (1/2)",
+      "titleZh": "優勝美地：美國最著名的國家公園之一 (1/2)",
+      "summaryZh": "介紹加州優勝美地國家公園的瀑布、巨杉、野生動物與公園的歷史。",
+      "level": 2,
+      "type": "article",
+      "topic": "travel",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — America's National Parks"
+    },
+    {
+      "id": "voa-yosemite-one-of-america-s-most-fam-949310-02",
+      "title": "Yosemite: One of America’s Most Famous National Parks (2/2)",
+      "titleZh": "優勝美地：美國最著名的國家公園之一 (2/2)",
+      "summaryZh": "介紹優勝美地酋長岩的攀岩紀錄，以及攝影家鏡頭下的公園之美。",
+      "level": 2,
+      "type": "article",
+      "topic": "travel",
+      "count": 14,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — America's National Parks"
     },
     {
       "id": "l3-01",
@@ -98,7 +465,9 @@
       "type": "dialogue",
       "topic": "work",
       "count": 14,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l3-02",
@@ -109,7 +478,9 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l3-03",
@@ -120,7 +491,9 @@
       "type": "article",
       "topic": "travel",
       "count": 14,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l3-04",
@@ -131,7 +504,321 @@
       "type": "article",
       "topic": "work",
       "count": 14,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
+    },
+    {
+      "id": "voa-all-thumbs-02",
+      "title": "'All Thumbs' (2/3)",
+      "titleZh": "「笨手笨腳」(2/3)",
+      "summaryZh": "說明形容笨手笨腳的英文說法，並用籌備驚喜派對的對話示範用法。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-all-thumbs-03",
+      "title": "'All Thumbs' (3/3)",
+      "titleZh": "「All Thumbs」笨手笨腳 (3/3)",
+      "summaryZh": "以凱西老是把東西弄掉為例，說明「笨手笨腳」這個說法的用法。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 8,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-anyway-and-similar-words-01",
+      "title": "Anyway and Similar Words (1/2)",
+      "titleZh": "Anyway 和意思相近的字 (1/2)",
+      "summaryZh": "老師解說副詞 anyway 的三種常見用法，並提到意思相近的 nevertheless。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-apologies-and-prepositions-01",
+      "title": "Apologies and Prepositions (1/2)",
+      "titleZh": "道歉與介系詞 (1/2)",
+      "summaryZh": "以梅克爾的道歉開場，說明 apologize 常見的三種句型用法。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-apologies-and-prepositions-02",
+      "title": "Apologies and Prepositions (2/2)",
+      "titleZh": "道歉與介系詞 (2/2)",
+      "summaryZh": "示範道歉的各種說法，並用電影對白說明道歉是否真誠。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 18,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-colombian-scientists-develop-subst-312309-01",
+      "title": "Colombian Scientists Develop Substance to Protect Bees from Chemicals (1/2)",
+      "titleZh": "哥倫比亞科學家研發保護蜜蜂免受農藥傷害的物質 (1/2)",
+      "summaryZh": "哥倫比亞研究團隊用植物類黃酮研發蜂食，保護蜜蜂免受農藥的神經毒害。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-electric-spoons-chopsticks-may-hel-b4c510-01",
+      "title": "Electric Spoons, Chopsticks May Help Cut Salt (1/2)",
+      "titleZh": "電子湯匙和筷子有助減鹽 (1/2)",
+      "summaryZh": "日本團隊推出電子湯匙和筷子，用微弱電流讓食物吃起來更鹹，幫助減少用鹽。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-german-scientists-seek-public-s-he-c62f69-02",
+      "title": "German Scientists Seek Public’s Help to Count Insects This Summer (2/2)",
+      "titleZh": "德國科學家今夏邀請民眾一起數昆蟲 (2/2)",
+      "summaryZh": "德國團隊號召民眾參與昆蟲普查，了解昆蟲數量下降的情況。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 8,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Science & Technology"
+    },
+    {
+      "id": "voa-in-taiwan-turning-trash-into-sungl-6776d2-01",
+      "title": "In Taiwan, Turning Trash into Sunglasses (1/2)",
+      "titleZh": "在台灣，把垃圾變成太陽眼鏡 (1/2)",
+      "summaryZh": "台北的零廢棄工作坊讓民眾親手把塑膠垃圾做成太陽眼鏡，推廣循環時尚。",
+      "level": 3,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — As It Is"
+    },
+    {
+      "id": "voa-in-taiwan-turning-trash-into-sungl-6776d2-02",
+      "title": "In Taiwan, Turning Trash into Sunglasses (2/2)",
+      "titleZh": "在台灣，把垃圾變成太陽眼鏡 (2/2)",
+      "summaryZh": "台灣的回收工作坊讓民眾反思垃圾問題，學著少用塑膠、多做回收。",
+      "level": 3,
+      "type": "article",
+      "topic": "media",
+      "count": 9,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — As It Is"
+    },
+    {
+      "id": "voa-is-it-a-couch-or-a-sofa-01",
+      "title": "Is It a Couch or a Sofa? (1/2)",
+      "titleZh": "沙發到底叫 couch 還是 sofa？（1/2）",
+      "summaryZh": "解說美式英文中 couch 與 sofa 的差別與由來。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-japanese-researchers-develop-weara-528985-02",
+      "title": "Japanese Researchers Develop Wearable Robot Arms (2/2)",
+      "titleZh": "日本研究人員開發穿戴式機器手臂 (2/2)",
+      "summaryZh": "介紹日本研發的穿戴式機器手臂，以及它未來可能的各種用途。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 11,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-kindly-and-please-02",
+      "title": "Kindly and Please (2/2)",
+      "titleZh": "kindly 和 please 的差別（2/2）",
+      "summaryZh": "示範 please 在請求句與動詞用法中的實例，並收尾節目。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 10,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Ask a Teacher"
+    },
+    {
+      "id": "voa-making-sense-of-demonyms-nationali-a87024-01",
+      "title": "Making Sense of Demonyms - Nationality Nouns (1/2)",
+      "titleZh": "搞懂國民稱謂──表示國籍的名詞（1/2）",
+      "summaryZh": "介紹英文如何用字尾構成稱呼某國人民的名詞。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-making-sense-of-demonyms-nationali-a87024-02",
+      "title": "Making Sense of Demonyms - Nationality Nouns (2/2)",
+      "titleZh": "搞懂國民稱謂──表示國籍的名詞（2/2）",
+      "summaryZh": "繼續介紹各種國民稱謂字尾的來源，並提供查證資料的網站。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 14,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-sometimes-we-spread-ourself-too-th-649b2f-02",
+      "title": "Sometimes We 'Spread Ourself Too Thin' (2/2)",
+      "titleZh": "有時候我們會「分身乏術」(2/2)",
+      "summaryZh": "透過兩位老師的對話，示範「事情攬太多、分身乏術」相關的英文說法。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 18,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-the-gateway-arch-stepping-into-ame-eb47df-01",
+      "title": "The Gateway Arch- Stepping into America’s West (1/2)",
+      "titleZh": "大拱門──走進美國西部的門戶（1/2）",
+      "summaryZh": "介紹聖路易大拱門的外觀、建造過程與它象徵的西部拓荒歷史。",
+      "level": 3,
+      "type": "article",
+      "topic": "travel",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — America's National Parks"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-01",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (1/3)",
+      "titleZh": "愛倫坡〈莫爾格街兇殺案〉第二部分 (1/3)",
+      "summaryZh": "愛倫坡故事第二部分：敘述者結識杜賓，兩人從報上讀到莫爾格街的兇殺案。",
+      "level": 3,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-us-officials-warn-of-increase-in-b-ca8b53-01",
+      "title": "US Officials Warn of Increase in Bacterial Illnesses That Could Be Deadly (1/2)",
+      "titleZh": "美國官方警告：可能致命的細菌感染增加（1/2）",
+      "summaryZh": "美國疾管中心警告侵襲性腦膜炎雙球菌感染增加，並說明症狀。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-what-does-it-mean-to-mushroom-02",
+      "title": "What Does It Mean 'To Mushroom'? (2/2)",
+      "titleZh": "「to mushroom」是什麼意思？ (2/2)",
+      "summaryZh": "介紹 mushroom 當動詞的用法，用來形容事情快速膨脹、甚至擴大到失控。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 10,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Words and Their Stories"
+    },
+    {
+      "id": "voa-what-it-takes-johnny-cash-04",
+      "title": "What It Takes: Johnny Cash (4/4)",
+      "titleZh": "成功之道：強尼‧凱許 (4/4)",
+      "summaryZh": "強尼‧凱許回憶他如何爭取到錄音機會，並組成樂團錄下第一批歌曲。",
+      "level": 3,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-when-to-use-some-and-not-a-or-an-01",
+      "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (1/3)",
+      "titleZh": "什麼時候該用 some 而不是 a 或 an (1/3)",
+      "summaryZh": "說明可數與不可數名詞的差別，以及單數名詞前該用 a 還是 an。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-when-to-use-some-and-not-a-or-an-02",
+      "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (2/3)",
+      "titleZh": "什麼時候該用 some 而不是 a 或 an (2/3)",
+      "summaryZh": "說明不可數名詞為什麼要搭配 some，並用實際例句示範用法。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
+    },
+    {
+      "id": "voa-when-to-use-some-and-not-a-or-an-03",
+      "title": "When to Use ‘Some’ and Not ‘A’ or ‘An’ (3/3)",
+      "titleZh": "什麼時候該用 some 而不是 a 或 an (3/3)",
+      "summaryZh": "用新聞報導當例子，總結 a、an 和 some 各自該搭配哪種名詞。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 5,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
       "id": "l4-01",
@@ -142,7 +829,9 @@
       "type": "dialogue",
       "topic": "work",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l4-02",
@@ -153,7 +842,9 @@
       "type": "article",
       "topic": "media",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l4-03",
@@ -164,7 +855,126 @@
       "type": "dialogue",
       "topic": "daily",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
+    },
+    {
+      "id": "voa-electric-spoons-chopsticks-may-hel-b4c510-02",
+      "title": "Electric Spoons, Chopsticks May Help Cut Salt (2/2)",
+      "titleZh": "電子湯匙與筷子或許能幫助減鹽 (2/2)",
+      "summaryZh": "日本麒麟公司研發電子餐具，希望在不減風味下幫民眾降低鹽分攝取。",
+      "level": 4,
+      "type": "article",
+      "topic": "science",
+      "count": 9,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — Health & Lifestyle"
+    },
+    {
+      "id": "voa-the-murders-in-the-rue-morgue-by-e-764c78-02",
+      "title": "'The Murders in the Rue Morgue,' by Edgar Allen Poe, Part Two (2/3)",
+      "titleZh": "愛倫坡《莫爾格街兇殺案》第二部分 (2/3)",
+      "summaryZh": "搜索的人在四樓破門而入，發現一間血跡斑斑、被翻得亂七八糟的房間。",
+      "level": 4,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — American Stories"
+    },
+    {
+      "id": "voa-what-it-takes-johnny-cash-01",
+      "title": "What It Takes: Johnny Cash (1/4)",
+      "titleZh": "《What It Takes》：強尼‧凱許 (1/4)",
+      "summaryZh": "節目開場精選名人語錄，並介紹本集主角鄉村歌手強尼‧凱許。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-johnny-cash-02",
+      "title": "What It Takes: Johnny Cash (2/4)",
+      "titleZh": "成功的條件：強尼・凱許 (2/4)",
+      "summaryZh": "強尼・凱許回憶四歲時聽到火車歌曲，從此立志要在廣播上唱歌。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-johnny-cash-03",
+      "title": "What It Takes: Johnny Cash (3/4)",
+      "titleZh": "成功之道：強尼・凱許 (3/4)",
+      "summaryZh": "強尼・凱許談他如何不放棄夢想，終於得到唱片公司的機會。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-oprah-winfrey-part-1-01",
+      "title": "What It Takes: Oprah Winfrey, Part 1 (1/4)",
+      "titleZh": "What It Takes：歐普拉，第一部分 (1/4)",
+      "summaryZh": "這集節目先播出多段人生體悟的話語，再介紹本集主角歐普拉。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-oprah-winfrey-part-1-02",
+      "title": "What It Takes: Oprah Winfrey, Part 1 (2/4)",
+      "titleZh": "What It Takes：歐普拉·溫芙蕾 第一集 (2/4)",
+      "summaryZh": "歐普拉受訪談起童年在農場的日子，以及她從小就相信自己的人生會不一樣。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-oprah-winfrey-part-1-03",
+      "title": "What It Takes: Oprah Winfrey, Part 1 (3/4)",
+      "titleZh": "《What It Takes》：歐普拉，第一部分 (3/4)",
+      "summaryZh": "歐普拉回憶四歲時的頓悟，並談到她一直想當演員的夢想。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
+    },
+    {
+      "id": "voa-what-it-takes-oprah-winfrey-part-1-04",
+      "title": "What It Takes: Oprah Winfrey, Part 1 (4/4)",
+      "titleZh": "成功的條件：歐普拉，第一部 (4/4)",
+      "summaryZh": "歐普拉回憶四年級開始相信自己，在學校模仿牧師講道，被取笑也不在意。",
+      "level": 4,
+      "type": "article",
+      "topic": "work",
+      "count": 15,
+      "questions": 0,
+      "realAudio": true,
+      "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
       "id": "l5-01",
@@ -175,7 +985,9 @@
       "type": "article",
       "topic": "media",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l5-02",
@@ -186,7 +998,9 @@
       "type": "dialogue",
       "topic": "work",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     },
     {
       "id": "l5-03",
@@ -197,7 +1011,9 @@
       "type": "article",
       "topic": "science",
       "count": 15,
-      "questions": 3
+      "questions": 3,
+      "realAudio": false,
+      "source": ""
     }
   ]
 }

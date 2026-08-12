@@ -1,0 +1,160 @@
+{
+  "id": "voa-sometimes-we-spread-ourself-too-th-649b2f-02",
+  "title": "Sometimes We 'Spread Ourself Too Thin' (2/2)",
+  "titleZh": "有時候我們會「分身乏術」(2/2)",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "透過兩位老師的對話，示範「事情攬太多、分身乏術」相關的英文說法。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7941440.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Now, let's hear some of these terms and expressions used in a conversation.",
+      "zh": "現在我們來聽聽這些用語和說法在對話中怎麼使用。",
+      "start": 120.5,
+      "end": 125.92,
+      "wpm": 144
+    },
+    {
+      "id": "s2",
+      "text": "So, how are your classes going?",
+      "zh": "那你的課上得怎麼樣？",
+      "start": 127.18,
+      "end": 129.54,
+      "wpm": 153
+    },
+    {
+      "id": "s3",
+      "text": "Many of my best students are failing my course.",
+      "zh": "我班上很多最優秀的學生都快被當了。",
+      "start": 132,
+      "end": 135.56,
+      "wpm": 152
+    },
+    {
+      "id": "s4",
+      "text": "They all missed an important deadline for a project.",
+      "zh": "他們都錯過了一份報告的重要繳交期限。",
+      "start": 136.36,
+      "end": 139.84,
+      "wpm": 155
+    },
+    {
+      "id": "s5",
+      "text": "What else do they have going on?",
+      "zh": "他們還有在忙些什麼？",
+      "start": 142.4,
+      "end": 144.56,
+      "wpm": 194
+    },
+    {
+      "id": "s6",
+      "text": "They are all performing in the same play.",
+      "zh": "他們都在同一齣戲裡演出。",
+      "start": 145.84,
+      "end": 149.28,
+      "wpm": 140
+    },
+    {
+      "id": "s7",
+      "text": "So, they have had rehearsals every night for the past month.",
+      "zh": "所以這一個月來，他們每天晚上都在排練。",
+      "start": 150.02,
+      "end": 154.78,
+      "wpm": 139
+    },
+    {
+      "id": "s8",
+      "text": "And many have part-time jobs as well.",
+      "zh": "而且很多人還有兼職工作。",
+      "start": 155.52,
+      "end": 158.46,
+      "wpm": 163
+    },
+    {
+      "id": "s9",
+      "text": "Sounds like they've spread themselves too thin.",
+      "zh": "聽起來他們是事情攬太多、分身乏術了。",
+      "start": 159.3,
+      "end": 162.88,
+      "wpm": 117
+    },
+    {
+      "id": "s10",
+      "text": "They've got too much going on.",
+      "zh": "他們手上的事情實在太多了。",
+      "start": 163.6,
+      "end": 165.44,
+      "wpm": 196
+    },
+    {
+      "id": "s11",
+      "text": "I think you're right.",
+      "zh": "我覺得你說得對。",
+      "start": 166.08,
+      "end": 167.38,
+      "wpm": 185
+    },
+    {
+      "id": "s12",
+      "text": "So, what are you going to do?",
+      "zh": "那你打算怎麼做？",
+      "start": 168.48,
+      "end": 171.03,
+      "wpm": 165
+    },
+    {
+      "id": "s13",
+      "text": "Well, first I'll extend the deadline.",
+      "zh": "嗯，我會先把繳交期限延後。",
+      "start": 171.5,
+      "end": 174.96,
+      "wpm": 104
+    },
+    {
+      "id": "s14",
+      "text": "And then I'm going to warn them about biting off more than they can chew.",
+      "zh": "然後我要提醒他們，不要什麼都想做、超出自己能負荷的範圍。",
+      "start": 175.84,
+      "end": 181.4,
+      "wpm": 162
+    },
+    {
+      "id": "s15",
+      "text": "And that's all the time we have for this Words and Their Stories.",
+      "zh": "本集的〈Words and Their Stories〉時間就到這裡。",
+      "start": 183.8,
+      "end": 187.92,
+      "wpm": 189
+    },
+    {
+      "id": "s16",
+      "text": "Until next time, I'm Ana Mateo.",
+      "zh": "下次見，我是 Ana Mateo。",
+      "start": 187.92,
+      "end": 190.64,
+      "wpm": 132
+    },
+    {
+      "id": "s17",
+      "text": "For more information",
+      "zh": "想知道更多資訊",
+      "start": 206.74,
+      "end": 208.63,
+      "wpm": 95
+    },
+    {
+      "id": "s18",
+      "text": ", visit www.",
+      "zh": "，請上 www.",
+      "start": 235.82,
+      "end": 235.82,
+      "wpm": null
+    }
+  ],
+  "questions": []
+}

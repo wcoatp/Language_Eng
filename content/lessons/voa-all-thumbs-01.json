@@ -1,0 +1,136 @@
+{
+  "id": "voa-all-thumbs-01",
+  "title": "'All Thumbs' (1/3)",
+  "titleZh": "「笨手笨腳」(1/3)",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "本集介紹片語 all thumbs，用來形容一個人笨手笨腳。",
+  "realAudio": true,
+  "accent": "real",
+  "source": "VOA Learning English (public domain) — Words and Their Stories",
+  "sourceUrl": "https://learningenglish.voanews.com/a/7158649.html",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "And now, words and their stories from VOA Learning English.",
+      "zh": "接下來是 VOA 學習英語的「詞語故事」節目。",
+      "start": 0.85,
+      "end": 7.17,
+      "wpm": 95
+    },
+    {
+      "id": "s2",
+      "text": "On this show, we explore words and expressions a little more deeply.",
+      "zh": "在這個節目裡，我們會更深入地探討單字和用語。",
+      "start": 18.88,
+      "end": 24.7,
+      "wpm": 124
+    },
+    {
+      "id": "s3",
+      "text": "We give you synonyms, words that mean close to the same thing.",
+      "zh": "我們會告訴你同義詞，也就是意思很接近的字。",
+      "start": 25.88,
+      "end": 30.76,
+      "wpm": 148
+    },
+    {
+      "id": "s4",
+      "text": "And we use the expressions in a conversation.",
+      "zh": "我們還會把這些用語放進對話裡示範。",
+      "start": 31.68,
+      "end": 35.26,
+      "wpm": 134
+    },
+    {
+      "id": "s5",
+      "text": "Today, we talk about our hands.",
+      "zh": "今天我們要來聊聊我們的手。",
+      "start": 37.12,
+      "end": 40.24,
+      "wpm": 115
+    },
+    {
+      "id": "s6",
+      "text": "More specifically, our thumbs.",
+      "zh": "更精確地說，是我們的大拇指。",
+      "start": 41.08,
+      "end": 43.56,
+      "wpm": 97
+    },
+    {
+      "id": "s7",
+      "text": "Most of us have one thumb and four fingers on each hand.",
+      "zh": "我們大多數人每隻手都有一根大拇指和四根手指。",
+      "start": 44.58,
+      "end": 50.34,
+      "wpm": 125
+    },
+    {
+      "id": "s8",
+      "text": "Our thumbs let us perform certain tasks.",
+      "zh": "大拇指讓我們能完成某些動作。",
+      "start": 51.74,
+      "end": 54.9,
+      "wpm": 133
+    },
+    {
+      "id": "s9",
+      "text": "But what if all our fingers were replaced with thumbs?",
+      "zh": "但如果我們所有的手指都變成大拇指呢？",
+      "start": 56.2,
+      "end": 61.55,
+      "wpm": 112
+    },
+    {
+      "id": "s10",
+      "text": "Those tasks we normally perform with ease would become much more difficult.",
+      "zh": "那些我們平常輕輕鬆鬆就能做到的事，會變得困難許多。",
+      "start": 62.98,
+      "end": 69.3,
+      "wpm": 114
+    },
+    {
+      "id": "s11",
+      "text": "In fact, we would lose the ability to do many things with our hands.",
+      "zh": "事實上，我們會失去用手做很多事情的能力。",
+      "start": 69.3,
+      "end": 75.8,
+      "wpm": 129
+    },
+    {
+      "id": "s12",
+      "text": "Our movements would become careless and clumsy.",
+      "zh": "我們的動作會變得粗手粗腳、笨拙不靈活。",
+      "start": 77.16,
+      "end": 81.06,
+      "wpm": 108
+    },
+    {
+      "id": "s13",
+      "text": "We would drop things all the time.",
+      "zh": "我們會一直把東西掉在地上。",
+      "start": 82.06,
+      "end": 85.08,
+      "wpm": 139
+    },
+    {
+      "id": "s14",
+      "text": "And that is what the saying, to be all thumbs, means.",
+      "zh": "這就是 all thumbs 這個說法的意思。",
+      "start": 86.34,
+      "end": 91.12,
+      "wpm": 138
+    },
+    {
+      "id": "s15",
+      "text": "If I am all thumbs, I lack grace with my hands.",
+      "zh": "如果說我 all thumbs，就是說我的手不夠靈巧。",
+      "start": 91.12,
+      "end": 97.7,
+      "wpm": 100
+    }
+  ],
+  "questions": []
+}

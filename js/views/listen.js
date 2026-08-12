@@ -35,7 +35,7 @@ export async function render(root, lessonId) {
     cfg,
     i: 0,
     stage: 'blind',
-    rate: cfg.normalRate * rateFor(lesson.level),
+    rate: lesson.realAudio ? cfg.normalRate : cfg.normalRate * rateFor(lesson.level),
     slowStep: 0,
     busy: false,
     attempt: null,
@@ -67,7 +67,12 @@ const cur = () => sentences()[ctx.i];
 const SLOW_STEPS = [0.7, 0.55, 0.45];
 
 function currentRate() {
-  const base = ctx.cfg.normalRate * rateFor(ctx.lesson.level);
+  /* Synthetic speech is generated at one flat pace, so we scale it per level to
+     approximate how fast that level should sound. A real recording already has
+     its own delivery — rescaling it would misrepresent the speaker. */
+  const base = ctx.lesson.realAudio
+    ? ctx.cfg.normalRate
+    : ctx.cfg.normalRate * rateFor(ctx.lesson.level);
   if (ctx.stage === 'slow') return base * SLOW_STEPS[ctx.slowStep];
   return base;
 }
@@ -85,6 +90,8 @@ async function play() {
       langCode: ctx.cfg.accentLang,
       voiceURI: ctx.cfg.accent,
       rate: currentRate(),
+      realAudio: !!ctx.lesson.realAudio,
+      blob: s.audio || null,
     });
   } catch (e) {
     toast('播放失敗:' + (e.message || '瀏覽器沒有可用的語音'));
