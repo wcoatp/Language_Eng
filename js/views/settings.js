@@ -2,7 +2,11 @@
 
 import { el, toast, confirmBox, mount } from "../ui.js";
 import { settings, setSetting, DEFAULTS } from '../store.js';
-import { loadVoices, voicesFor, ACCENTS, say, cancel as cancelSpeech, unlock, ttsSupported } from '../tts.js';
+import {
+  loadVoices, voicesFor, ACCENTS, say, hasAudio,
+  cancel as cancelSpeech, unlock, ttsSupported,
+} from '../tts.js';
+import { forLang, pickVoice, describeAuto, AUTO } from '../voices.js';
 import { asrSupported } from '../asr.js';
 import { recorderSupported } from '../recorder.js';
 import { PROVIDERS, modelsFor, defaultModelFor, testKey, LlmError } from '../llm.js';
@@ -15,6 +19,7 @@ import {
 export function destroy() { cancelSpeech(); }
 
 const SAMPLE = 'The quick brown fox jumps over the lazy dog.';
+const SAMPLE_LESSON_TEXT = "Hi there, I'm Ben. Are you new here?";
 
 export async function render(root) {
   const cfg = await settings();
@@ -51,37 +56,61 @@ export async function render(root) {
 function accentSection(cfg) {
   const box = el('div', { class: 'card' });
 
+  /* A voice set only exists for a lesson if it was pre-generated, so the picker
+     shows what is actually there rather than a matrix of plausible-looking
+     combinations. Accents with no generated set still work — they fall back to
+     whatever voice the device itself has. */
   const accentRow = el('div', { class: 'chips' },
     ACCENTS.map(a => {
-      const available = voicesFor(a.code).length > 0;
+      const sets = forLang(a.code);
+      const deviceOnly = sets.length === 0;
       return el('button', {
         class: `chip ${cfg.accentLang === a.code ? 'is-on' : ''}`,
-        disabled: !available,
-        style: available ? '' : 'opacity:.35',
-        title: available ? '' : '這台裝置沒有這個口音的語音',
+        style: deviceOnly ? 'opacity:.55' : '',
+        title: deviceOnly ? '沒有預生成音檔,會用裝置內建語音' : `${sets.length} 種聲音`,
         onclick: async () => {
-          await setSetting({ accentLang: a.code, accent: '' });
+          const next = { accentLang: a.code, accent: '' };
+          // A voice belongs to one accent; switching accent invalidates it.
+          if (cfg.voice !== AUTO && !forLang(a.code).some(v => v.id === cfg.voice)) {
+            next.voice = AUTO;
+          }
+          await setSetting(next);
           toast(`已切換到${a.label}`);
           render(document.getElementById('view'));
         },
-      }, [a.label]);
+      }, [a.label, deviceOnly ? el('span', { style: 'opacity:.6', text: ' ·裝置' }) : null]);
     }));
 
-  const voices = voicesFor(cfg.accentLang);
+  const sets = forLang(cfg.accentLang);
+  const deviceVoices = voicesFor(cfg.accentLang);
+
   const picker = el('select', {
-    onchange: async e => { await setSetting({ accent: e.target.value }); preview(); },
+    onchange: async e => { await setSetting({ voice: e.target.value }); preview(); },
   }, [
-    el('option', { value: '', selected: !cfg.accent }, ['自動挑選最佳語音']),
-    ...voices.map(v => el('option', {
-      value: v.voiceURI, selected: cfg.accent === v.voiceURI,
-    }, [`${v.name}${v.localService ? '' : ' (線上)'}`])),
+    el('option', { value: AUTO, selected: cfg.voice === AUTO }, ['自動(依課程難度)']),
+    ...sets.map(v => el('option', {
+      value: v.id, selected: cfg.voice === v.id,
+    }, [`${v.label} — ${v.engine} · ${v.wpm} wpm`])),
   ]);
+
+  const chosen = sets.find(v => v.id === cfg.voice);
 
   const preview = async () => {
     const c = await settings();
+    const voice = pickVoice(c.voice, c.accentLang, 3);
     unlock(); cancelSpeech();
     try {
-      await say(SAMPLE, { langCode: c.accentLang, voiceURI: c.accent, rate: c.normalRate });
+      // Sample a real lesson clip so you hear the actual voice set, not the
+      // device's stand-in reading a pangram.
+      const ok = voice && await hasAudio('l1-01', 's1', voice.id);
+      await say(ok ? SAMPLE_LESSON_TEXT : SAMPLE, {
+        lessonId: ok ? 'l1-01' : undefined,
+        sentenceId: ok ? 's1' : undefined,
+        voiceId: voice?.id || '',
+        langCode: c.accentLang,
+        voiceURI: c.accent,
+        rate: c.normalRate,
+      });
     } catch { toast('這個語音無法播放'); }
   };
 
@@ -89,18 +118,27 @@ function accentSection(cfg) {
     el('div', { class: 'field' }, [
       el('label', { text: '口音' }),
       accentRow,
-      voices.length === 0
+    ]),
+
+    el('div', { class: 'field' }, [
+      el('label', { text: '聲音' }),
+      picker,
+      el('div', { class: 'hint' }, [
+        cfg.voice === AUTO
+          ? describeAuto(cfg.accentLang)
+          : (chosen?.note || `${chosen?.engine || ''} · ${chosen?.wpm || ''} wpm`),
+      ]),
+      sets.length === 0
         ? el('div', { class: 'hint', style: 'color:var(--warn)' },
-            ['這台裝置沒有可用的英語語音。Mac/iOS 可到「系統設定 → 輔助使用 → 朗讀內容」下載。'])
+            ['這個口音沒有預生成音檔,會使用裝置內建語音。' +
+             (deviceVoices.length ? '' : '而這台裝置也沒有這個口音的語音,請改選其他口音。')])
         : null,
     ]),
-    voices.length ? el('div', { class: 'field' }, [
-      el('label', { text: '語音' }),
-      picker,
-      el('div', { class: 'hint' },
-        ['名稱含 Natural / Enhanced / Premium 的通常最自然,可能需要先在系統設定裡下載。']),
-    ]) : null,
+
     el('button', { class: 'btn btn-block', onclick: preview }, ['🔊 試聽']),
+
+    el('p', { class: 'hint', style: 'margin-top:12px' },
+      ['真人錄音的課程不受這裡影響 —— 那是實際的錄音,沒有另一個版本可以選。']),
   );
   return box;
 }

@@ -7,6 +7,7 @@
 
 import { el, toast, backButton, emptyState, sleep, mount } from "../ui.js";
 import { settings, stopwatch } from "../store.js";
+import { voiceIdForLesson } from "../voices.js";
 import { allLessons, getLesson } from "../content.js";
 import { say, cancel as cancelSpeech, unlock } from "../tts.js";
 import { listen as listenASR, asrSupported, scoreAttempt } from "../asr.js";
@@ -190,6 +191,7 @@ async function stepRP() {
         sentenceId: s.id,
         langCode: ctx.cfg.accentLang,
         voiceURI: ctx.cfg.accent,
+        voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
         rate: ctx.cfg.normalRate,
       });
     } catch {
@@ -352,6 +354,7 @@ function paintRP() {
                   sentenceId: s.id,
                   langCode: ctx.cfg.accentLang,
                   voiceURI: ctx.cfg.accent,
+        voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
                   rate: ctx.cfg.slowRate,
                 });
               } catch {
@@ -563,6 +566,7 @@ async function speakAI(text) {
     await say(text, {
       langCode: ctx.cfg.accentLang,
       voiceURI: ctx.cfg.accent,
+        voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
       rate: ctx.cfg.normalRate,
     });
   } catch {

@@ -6,6 +6,7 @@
 
 import { el, toast, backButton, sleep, mount } from "../ui.js";
 import { getLesson, rateFor } from '../content.js';
+import { voiceIdForLesson } from '../voices.js';
 import { say, cancel as cancelSpeech, unlock } from '../tts.js';
 import { settings } from '../store.js';
 import { stopwatch } from '../store.js';
@@ -89,6 +90,7 @@ async function play() {
       sentenceId: s.id,
       langCode: ctx.cfg.accentLang,
       voiceURI: ctx.cfg.accent,
+      voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
       rate: currentRate(),
       realAudio: !!ctx.lesson.realAudio,
       blob: s.audio || null,

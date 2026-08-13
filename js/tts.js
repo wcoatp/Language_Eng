@@ -178,27 +178,24 @@ function accentShort(langCode) {
    and there is no other take to choose from. */
 export const REAL = "real";
 
-function folderFor(langCode, realAudio) {
-  return realAudio ? REAL : accentShort(langCode);
+/* A lesson's clips live in one folder: the chosen voice set, or "real" when
+   the lesson is a human recording and there is nothing to choose. */
+function folderFor(voiceId, realAudio) {
+  return realAudio ? REAL : voiceId;
 }
 
 /** Does a stored clip exist for this sentence? */
-export async function hasAudio(
-  lessonId,
-  sentenceId,
-  langCode,
-  realAudio = false,
-) {
+export async function hasAudio(lessonId, sentenceId, voiceId, realAudio = false) {
   const m = await getManifest();
   if (!m) return false;
-  const list = m.lessons?.[lessonId]?.[folderFor(langCode, realAudio)];
+  const list = m.lessons?.[lessonId]?.[folderFor(voiceId, realAudio)];
   return Array.isArray(list) && list.includes(sentenceId);
 }
 
 /** Where a lesson's clips live, for offline download and cache checks. */
-export async function clipUrls(lessonId, langCode, realAudio = false) {
+export async function clipUrls(lessonId, voiceId, realAudio = false) {
   const m = await getManifest();
-  const folder = folderFor(langCode, realAudio);
+  const folder = folderFor(voiceId, realAudio);
   const ids = m?.lessons?.[lessonId]?.[folder];
   if (!Array.isArray(ids)) return [];
   return ids.map((id) => `./content/audio/${folder}/${lessonId}/${id}.mp3`);
@@ -288,6 +285,7 @@ export async function say(text, opts = {}) {
     langCode = "en-US",
     rate = 1,
     voiceURI = "",
+    voiceId = "",
     realAudio = false,
     blob = null,
   } = opts;
@@ -304,9 +302,9 @@ export async function say(text, opts = {}) {
   if (
     lessonId &&
     sentenceId &&
-    (await hasAudio(lessonId, sentenceId, langCode, realAudio))
+    (await hasAudio(lessonId, sentenceId, voiceId, realAudio))
   ) {
-    const folder = folderFor(langCode, realAudio);
+    const folder = folderFor(voiceId, realAudio);
     const url = `./content/audio/${folder}/${lessonId}/${sentenceId}.mp3`;
     try {
       return await playFile(url, rate);

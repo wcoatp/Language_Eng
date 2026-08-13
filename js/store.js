@@ -3,8 +3,9 @@
 import { db, kvGet, kvSet } from './db.js';
 
 export const DEFAULTS = {
-  accent: '',            // preferred voice URI; '' = auto-pick for accentLang
-  accentLang: 'en-US',
+  accent: '',            // device voice URI, used only for the browser fallback
+  accentLang: 'en-US',   // accent; also the speech-recognition language
+  voice: 'auto',         // a voice id from js/voices.js, or 'auto' to follow level
   slowRate: 0.7,
   normalRate: 1.0,
   showZh: true,

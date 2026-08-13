@@ -14,3 +14,13 @@ models/
 
 # Private lesson packs built from your own media. Never publish these.
 *.echopack
+
+# TTS listening-test output; regenerate with tools/tts_bakeoff.py
+bakeoff/
+
+# Python environments for the neural TTS engines (torch pulls in gigabytes).
+# One per engine because Chatterbox and Dia pin conflicting torch versions.
+.venv-tts/
+.venv-dia/
+
+__pycache__/

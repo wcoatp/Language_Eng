@@ -4,6 +4,7 @@
 import { el, emptyState, toast, backButton, mount } from "../ui.js";
 import { dueCards, grade } from '../srs.js';
 import { getLesson } from '../content.js';
+import { voiceIdForLesson } from '../voices.js';
 import { settings, stopwatch } from '../store.js';
 import { say, cancel as cancelSpeech, unlock } from '../tts.js';
 
@@ -60,6 +61,7 @@ async function play() {
     await say(s.text, {
       lessonId: c.lessonId, sentenceId: c.sentenceId,
       langCode: ctx.cfg.accentLang, voiceURI: ctx.cfg.accent, rate: ctx.cfg.normalRate,
+      voiceId: voiceIdForLesson(ctx.cfg, lesson),
       realAudio: !!lesson?.realAudio, blob: s.audio || null,
     });
   } catch { /* silent — the text is still on screen */ }

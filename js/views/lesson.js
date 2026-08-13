@@ -7,6 +7,7 @@ import { settings } from '../store.js';
 import { say, cancel as cancelSpeech, unlock } from '../tts.js';
 import { kvSet } from '../db.js';
 import { downloadLesson, removeLesson, isLessonOffline, cacheSupported } from '../storage.js';
+import { voiceIdForLesson, voiceForLesson } from '../voices.js';
 
 export function destroy() { cancelSpeech(); }
 
@@ -93,17 +94,17 @@ function offlineButton(lesson, cfg) {
     btn.classList.toggle('btn-ghost', stored);
   };
 
-  isLessonOffline(lesson, cfg.accentLang).then(v => { stored = v; paint(); });
+  isLessonOffline(lesson, voiceIdForLesson(cfg, lesson)).then(v => { stored = v; paint(); });
 
   btn.onclick = async () => {
     btn.disabled = true;
     try {
       if (stored) {
-        await removeLesson(lesson, cfg.accentLang);
+        await removeLesson(lesson, voiceIdForLesson(cfg, lesson));
         stored = false;
         toast('已移除離線音檔');
       } else {
-        const n = await downloadLesson(lesson, cfg.accentLang,
+        const n = await downloadLesson(lesson, voiceIdForLesson(cfg, lesson),
           (done, total) => { btn.textContent = `下載中 ${done}/${total}`; });
         stored = true;
         toast(`已下載 ${n} 段音檔`);
@@ -129,6 +130,7 @@ function row(s, lesson, cfg) {
         await say(s.text, {
           lessonId: lesson.id, sentenceId: s.id,
           langCode: cfg.accentLang, voiceURI: cfg.accent, rate: cfg.normalRate,
+          voiceId: voiceIdForLesson(cfg, lesson),
           realAudio: !!lesson.realAudio, blob: s.audio || null,
         });
       } catch { toast('播放失敗'); }
