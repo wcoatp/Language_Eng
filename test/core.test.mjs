@@ -316,16 +316,13 @@ test('every routed view is available in the offline app shell', async () => {
   const views = [...app.matchAll(/import\('\.\/(views\/[^']+\.js)'\)/g)]
     .map((match) => `./js/${match[1]}`);
   assert.ok(views.includes('./js/views/player.js'));
-  for (const view of views) assert.ok(serviceWorker.includes(`'${view}'`), `${view} missing from SHELL`);
-  assert.match(serviceWorker, /'\.\/js\/daily\.js'/);
-  assert.match(serviceWorker, /k !== OFFLINE_CACHE/);
+  // Quote-agnostic: the formatter is free to restyle sw.js.
+  const listed = (path) => serviceWorker.includes(`'${path}'`) || serviceWorker.includes(`"${path}"`);
+  for (const view of views) assert.ok(listed(view), `${view} missing from SHELL`);
+  assert.ok(listed('./js/daily.js'));
 
+  const { caches, stores } = fakeCaches();
   const handlers = {};
-  const cached = [];
-  const cache = {
-    add: async (url) => { cached.push(url); },
-    put: async () => {},
-  };
   runInNewContext(serviceWorker, {
     self: {
       addEventListener: (name, handler) => { handlers[name] = handler; },
@@ -333,7 +330,7 @@ test('every routed view is available in the offline app shell', async () => {
       clients: { claim: async () => {} },
       location: { origin: 'https://example.test' },
     },
-    caches: { open: async () => cache, keys: async () => [] },
+    caches,
     fetch: async () => ({
       ok: true,
       clone: () => ({
@@ -349,9 +346,62 @@ test('every routed view is available in the offline app shell', async () => {
     URL,
     Response,
   });
-  let installPromise;
-  handlers.install({ waitUntil: (promise) => { installPromise = promise; } });
-  await installPromise;
-  assert.ok(cached.includes('./content/lessons/daily-2026-08-14.json'));
-  assert.ok(!cached.includes('./content/lessons/regular-lesson.json'));
+
+  const run = async (name, event = {}) => {
+    let pending;
+    handlers[name]({ ...event, waitUntil: (promise) => { pending = promise; } });
+    await pending;
+  };
+
+  await run('install');
+  const content = [...(stores.get('echo-content')?.keys() || [])];
+  assert.ok(content.includes('./content/lessons/daily-2026-08-14.json'),
+    'daily stories precache into the content cache');
+  assert.ok(!content.includes('./content/lessons/regular-lesson.json'));
+  assert.ok([...stores.keys()].some((k) => /^echo-v\d+$/.test(k)), 'shell has its own versioned cache');
+
+  /* Shipping a release must not cost the learner their audio. Content used to
+     live in the versioned bucket, so bumping the version deleted every clip
+     they had played and a phone re-fetched them over mobile data. */
+  const old = stores.get('echo-v6') || stores.set('echo-v6', new Map()).get('echo-v6');
+  old.set('https://example.test/js/app.js', 'stale shell');
+  old.set('https://example.test/content/audio/kokoro-us/l3-01/s1.mp3', 'a clip already played');
+  stores.set('echo-offline', new Map([['https://example.test/content/audio/l1-01/s1.mp3', 'pinned']]));
+
+  await run('activate');
+  const survivors = [...stores.keys()];
+  assert.ok(!survivors.includes('echo-v6'), 'the old shell cache is retired');
+  assert.ok(survivors.includes('echo-offline'), 'explicitly pinned lessons survive');
+  assert.equal(stores.get('echo-content').get('https://example.test/content/audio/kokoro-us/l3-01/s1.mp3'),
+    'a clip already played', 'played audio is carried over, not deleted');
+  assert.ok(!stores.get('echo-content').has('https://example.test/js/app.js'),
+    'only content is carried over');
 });
+
+/** Minimal in-memory CacheStorage, enough to drive the service worker. */
+function fakeCaches() {
+  const stores = new Map();
+  const key = (req) => (typeof req === 'string' ? req : req.url);
+  const open = async (name) => {
+    if (!stores.has(name)) stores.set(name, new Map());
+    const store = stores.get(name);
+    return {
+      add: async (url) => { store.set(String(url), 'added'); },
+      put: async (req, res) => { store.set(key(req), res); },
+      match: async (req) => store.get(key(req)) ?? null,
+      keys: async () => [...store.keys()].map((url) => ({ url })),
+    };
+  };
+  return {
+    stores,
+    caches: {
+      open,
+      keys: async () => [...stores.keys()],
+      delete: async (name) => stores.delete(name),
+      match: async (req) => {
+        for (const store of stores.values()) if (store.has(key(req))) return store.get(key(req));
+        return null;
+      },
+    },
+  };
+}
