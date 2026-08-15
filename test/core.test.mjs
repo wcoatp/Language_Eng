@@ -16,6 +16,7 @@ import { AUTO, CORE_VOICES, VOICES, fallbackChain, forLang, pickVoice } from '..
 import { cuesToSegments, parseTranscript, parseVideoId } from '../js/youtube.js';
 import { MIN_SLOW_WPM, nextLessonFor, playbackSequence, speechRates } from '../js/playback.js';
 import { describeInterval, newCard, schedule } from '../js/srs.js';
+import { orderForRecall, readyForRecall, recallCue, thinkingMs, wordsOf } from '../js/recall.js';
 import {
   dailyLessonForDate,
   dailyLessonProblems,
@@ -449,4 +450,48 @@ test('hands-free follows the story before it follows the library', () => {
   assert.equal(nextLessonFor(index, byId('l3-02')), null, 'L5 is out of reach from L3');
   assert.equal(nextLessonFor(index, byId('l2-01')).id, 'l3-01');
   assert.equal(nextLessonFor(index, null), null);
+});
+
+test('the retrieval cue always leaves something to retrieve', () => {
+  const text = 'Every morning at seven she walks up the hill.';
+  assert.equal(wordsOf(text).length, 9);
+
+  const none = recallCue(text, 0);
+  assert.equal(none.lead, '');
+  assert.equal(none.missing, 9, 'with no run-up the whole sentence is produced');
+
+  const two = recallCue(text, 2);
+  assert.equal(two.lead, 'Every morning');
+  assert.equal(two.missing, 7);
+
+  // A run-up longer than the sentence would turn the drill back into reading.
+  const greedy = recallCue('Two words', 9);
+  assert.equal(greedy.missing, 1, 'at least one word is always withheld');
+  assert.deepEqual(recallCue('', 2), { lead: '', missing: 0, total: 0 });
+});
+
+test('thinking time scales with the sentence but stays inside sane bounds', () => {
+  const short = thinkingMs('Hello there.');
+  const long = thinkingMs(new Array(40).fill('word').join(' '));
+  assert.ok(long > short, 'a longer sentence gets longer to retrieve');
+  assert.ok(short >= 2500, 'never so short that there is no time to reach');
+  assert.ok(long <= 12000, 'never so long that the drill stalls');
+  assert.equal(thinkingMs(''), 2500);
+});
+
+test('retrieval is gated on having recognised the sentence first', () => {
+  // Producing a sentence you have never understood tests nothing.
+  assert.equal(readyForRecall({ reps: 0, lastGrade: 2 }), false);
+  assert.equal(readyForRecall({ reps: 2, lastGrade: 0 }), false, 'a lapse goes back to recognition');
+  assert.equal(readyForRecall({ reps: 1, lastGrade: 1 }), true);
+  assert.equal(readyForRecall(null), false);
+
+  const queue = [
+    { id: 'new', reps: 0, lastGrade: 2 },
+    { id: 'ready', reps: 3, lastGrade: 2 },
+    { id: 'lapsed', reps: 4, lastGrade: 0 },
+  ];
+  // The harder, more valuable rep goes first so a short session gets it.
+  assert.deepEqual(orderForRecall(queue).map((c) => c.id), ['ready', 'new', 'lapsed']);
+  assert.equal(orderForRecall(queue).length, queue.length, 'nothing is dropped');
 });

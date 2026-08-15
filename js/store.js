@@ -10,6 +10,9 @@ export const DEFAULTS = {
   normalRate: 1.0,
   showZh: true,
   autoAdvance: true,
+  // Retrieval practice in review: produce the sentence before hearing it.
+  recallMode: true,
+  recallScaffold: 2,   // English opening words given as a run-up
   dailyGoalMin: 20,
   // Conversation (Phase 3) — key never leaves this device.
   provider: "anthropic",

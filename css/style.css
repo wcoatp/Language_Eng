@@ -679,3 +679,44 @@ p  { margin: 0 0 12px; color: var(--text-dim); }
   .view { padding-top: 28px; }
   .sentence { font-size: 24px; }
 }
+
+/* ---------- retrieval practice (複習的回想模式) ---------- */
+
+.recall-cue {
+  margin: 4px 0 18px;
+  padding: 16px 14px;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+.recall-zh {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.recall-lead {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
+
+/* Drains over the thinking gap. Retrieval is slower than reading, and the
+   learner needs to feel the time rather than reach for the answer button. */
+.think-track {
+  margin-top: 14px;
+  height: 4px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--line) 60%, transparent);
+  overflow: hidden;
+}
+
+.think-track i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.1s linear;
+}
