@@ -96,7 +96,15 @@ def gen_chatterbox(lesson, speakers):
 
 
 def gen_dia(lesson, speakers):
-    """Dia is dialogue-native: the whole conversation goes in as one script."""
+    """Dia is dialogue-native: the whole conversation goes in as one script.
+
+    Not installed. Dia lost the bake-off by rushing the script to about 283
+    wpm, well past conversational pace, so its 1.2 GB environment was removed.
+    To hear it again:
+
+        python3.11 -m venv .venv-dia && .venv-dia/bin/pip install nari-tts
+        .venv-dia/bin/python tools/tts_bakeoff.py --engines dia
+    """
     import numpy as np, torch
     from dia.model import Dia
 
