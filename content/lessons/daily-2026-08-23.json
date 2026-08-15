@@ -1,0 +1,239 @@
+{
+  "id": "daily-2026-08-23",
+  "title": "The Notebook They Needed",
+  "titleZh": "他們需要的那本筆記",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "谷地要做防洪研究,顧問公司來看了瑪格麗特的三十本筆記,然後說這些資料不能用。兩個星期後,他們又回來了。",
+  "daily": {
+    "date": "2026-08-23",
+    "seriesId": "rain-gauge-on-the-hill",
+    "seriesTitle": "Thirty Years of Rain",
+    "seriesTitleZh": "三十年的雨",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s11",
+    "turn": "s20",
+    "resolution": "s30"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "By October, Emil was coming up the hill most Saturday mornings.",
+      "zh": "到了十月,艾米爾大部分的星期六早上都會上山。"
+    },
+    {
+      "id": "s2",
+      "text": "He had started copying the old notebooks into a spreadsheet on his laptop.",
+      "zh": "他開始把舊筆記本抄進筆電裡的試算表。"
+    },
+    {
+      "id": "s3",
+      "text": "He was up to 2003 and it was taking much longer than he had expected.",
+      "zh": "他抄到二〇〇三年,花的時間比他預期的久得多。"
+    },
+    {
+      "id": "s4",
+      "text": "Margaret's handwriting from the nineties was small and very neat.",
+      "zh": "瑪格麗特九〇年代的字很小,而且非常工整。"
+    },
+    {
+      "id": "s5",
+      "text": "That autumn the council announced a flood study for the whole valley.",
+      "zh": "那年秋天,鎮公所宣布要對整個谷地做防洪研究。"
+    },
+    {
+      "id": "s6",
+      "text": "Three houses on the low road had been flooded twice in the last four years.",
+      "zh": "低窪路段上有三戶人家,過去四年淹了兩次水。"
+    },
+    {
+      "id": "s7",
+      "text": "A consulting company was hired to work out how high the water could get.",
+      "zh": "鎮公所雇了一間顧問公司,要算出水位可能會漲到多高。"
+    },
+    {
+      "id": "s8",
+      "text": "It was Emil's mother who told them about the box on the hill.",
+      "zh": "是艾米爾的媽媽跟他們提起山上那個箱子的。"
+    },
+    {
+      "id": "s9",
+      "text": "Two engineers came to the house on a Tuesday and stayed for an hour.",
+      "zh": "星期二,兩位工程師到她家來,待了一個小時。"
+    },
+    {
+      "id": "s10",
+      "text": "They took photographs of the box, the gauge, and the ground all around it.",
+      "zh": "他們拍了箱子、雨量筒,還有周圍地面的照片。"
+    },
+    {
+      "id": "s11",
+      "text": "They were polite, and they looked at all thirty notebooks.",
+      "zh": "他們很有禮貌,把三十本筆記全都看過了。"
+    },
+    {
+      "id": "s12",
+      "text": "The older one explained the problem carefully, so that it would not sound unkind.",
+      "zh": "年長的那位仔細解釋了問題所在,盡量不讓話聽起來刺耳。"
+    },
+    {
+      "id": "s13",
+      "text": "The gauge was not a certified instrument and the site had never been inspected.",
+      "zh": "那個雨量筒不是經過認證的儀器,場地也從來沒有被檢查過。"
+    },
+    {
+      "id": "s14",
+      "text": "For a study that decided where people could build, that mattered a great deal.",
+      "zh": "對一份要決定哪裡可以蓋房子的研究來說,這件事非常重要。"
+    },
+    {
+      "id": "s15",
+      "text": "Margaret said that she understood the problem, and she meant it.",
+      "zh": "瑪格麗特說她理解這個問題,而且是真心的。"
+    },
+    {
+      "id": "s16",
+      "text": "She had taught science for twenty-eight years and she knew what a standard was.",
+      "zh": "她教了二十八年自然科學,知道什麼叫做標準。"
+    },
+    {
+      "id": "s17",
+      "text": "Emil was a great deal angrier about all of it than she was.",
+      "zh": "艾米爾對這一切生氣的程度,遠遠超過她。"
+    },
+    {
+      "id": "s18",
+      "text": "He stopped working on the spreadsheet for almost three weeks.",
+      "zh": "他有將近三個星期沒有再碰那份試算表。"
+    },
+    {
+      "id": "s19",
+      "text": "Margaret kept walking up the hill at seven, exactly as before.",
+      "zh": "瑪格麗特照樣每天七點上山,跟以前一模一樣。"
+    },
+    {
+      "id": "s20",
+      "text": "In November the older engineer telephoned and asked to come back.",
+      "zh": "十一月,那位年長的工程師打電話來,問能不能再來一趟。"
+    },
+    {
+      "id": "s21",
+      "text": "The flood they most needed to understand had happened in September 2004.",
+      "zh": "他們最需要弄清楚的那場水災,發生在二〇〇四年九月。"
+    },
+    {
+      "id": "s22",
+      "text": "It was the largest one anybody in the valley could remember.",
+      "zh": "那是谷地裡所有人記憶中最大的一次。"
+    },
+    {
+      "id": "s23",
+      "text": "The certified station on the far side of the ridge had only opened in 2009.",
+      "zh": "山脊另一邊那個認證測站,是二〇〇九年才啟用的。"
+    },
+    {
+      "id": "s24",
+      "text": "For 2004 it had nothing at all, because in 2004 it did not exist.",
+      "zh": "二〇〇四年它什麼資料都沒有,因為那時候它根本還不存在。"
+    },
+    {
+      "id": "s25",
+      "text": "Margaret opened the cupboard in the hall and took out the notebook for that year.",
+      "zh": "瑪格麗特打開走廊上的櫃子,拿出那一年的筆記本。"
+    },
+    {
+      "id": "s26",
+      "text": "September the eleventh, 2004: one hundred and six millimetres in a single day.",
+      "zh": "二〇〇四年九月十一日:一天下了一百零六毫米。"
+    },
+    {
+      "id": "s27",
+      "text": "The engineer read the line twice and then asked whether she had the days around it.",
+      "zh": "工程師把那一行讀了兩遍,然後問她前後幾天有沒有。"
+    },
+    {
+      "id": "s28",
+      "text": "She had them. She had every day of that month, and of every month since 1996.",
+      "zh": "她有。那個月的每一天她都有,而且從一九九六年起每個月都有。"
+    },
+    {
+      "id": "s29",
+      "text": "Nobody in the room said anything while the engineer turned the pages.",
+      "zh": "工程師翻頁的時候,房間裡沒有人說話。"
+    },
+    {
+      "id": "s30",
+      "text": "The study calls her record an uncertified local series, and uses it anyway.",
+      "zh": "那份研究把她的紀錄稱為「未認證的地方序列」,但還是採用了。"
+    },
+    {
+      "id": "s31",
+      "text": "It is written into the report as the only measurement of the 2004 event in the valley.",
+      "zh": "報告裡寫著,這是谷地裡對二〇〇四年那場事件唯一的實測資料。"
+    },
+    {
+      "id": "s32",
+      "text": "Nothing about the hill itself has changed since any of that happened.",
+      "zh": "自從那些事發生之後,山上本身什麼都沒有改變。"
+    },
+    {
+      "id": "s33",
+      "text": "The box is still white, the pencil is still kept on the shelf inside it.",
+      "zh": "箱子還是白的,鉛筆還是放在裡面的架子上。"
+    },
+    {
+      "id": "s34",
+      "text": "Margaret still walks up at seven, and it still takes her longer than it used to.",
+      "zh": "瑪格麗特還是七點上山,還是走得比以前久。"
+    },
+    {
+      "id": "s35",
+      "text": "She was not proved right about anything at all, and she does not describe it that way.",
+      "zh": "她並沒有被證明什麼是對的,她自己也不那樣講。"
+    },
+    {
+      "id": "s36",
+      "text": "Nobody knew that those numbers would ever be needed, and that is rather the point.",
+      "zh": "沒有人知道那些數字有一天會被需要,而重點大概就在這裡。"
+    },
+    {
+      "id": "s37",
+      "text": "Emil has his own key to the box now, and he finished the spreadsheet in March.",
+      "zh": "艾米爾現在有自己那把箱子的鑰匙,試算表也在三月抄完了。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the engineers first refuse to use Margaret's records?",
+      "options": [
+        "The gauge was not certified and the site was never inspected",
+        "The notebooks were too old to be read clearly",
+        "She had missed too many mornings over the years"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why did the engineer telephone and come back?",
+      "options": [
+        "The certified station did not exist during the 2004 flood",
+        "The council had ordered them to accept local readings",
+        "Emil had finished the spreadsheet and sent it to them"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does the ending suggest about keeping records?",
+      "options": [
+        "Their value cannot be known at the time they are made",
+        "They should always be made with certified instruments",
+        "They matter most to the person who writes them"
+      ],
+      "answer": 0
+    }
+  ]
+}

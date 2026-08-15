@@ -6,7 +6,6 @@
   "type": "dialogue",
   "topic": "travel",
   "summaryZh": "旅客抵達機場後找不到行李，在服務櫃台描述行李並安排送到飯店。",
-  "preGeneratedAudio": false,
   "sentences": [
     {
       "id": "s1",

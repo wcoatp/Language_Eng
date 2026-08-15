@@ -6,7 +6,6 @@
   "type": "dialogue",
   "topic": "travel",
   "summaryZh": "旅客在火車站詢問往台中的列車月台、行走方向和驗票方式。",
-  "preGeneratedAudio": false,
   "sentences": [
     {
       "id": "s1",

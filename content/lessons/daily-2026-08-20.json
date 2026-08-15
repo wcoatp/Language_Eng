@@ -1,0 +1,89 @@
+{
+  "id": "daily-2026-08-20",
+  "title": "The Shallow End",
+  "titleZh": "淺水區",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "四十一歲的伊萬報名了成人游泳課。第一堂課有六個大人站在淺水區,還有一位比他年輕十六歲的教練。",
+  "daily": {
+    "date": "2026-08-20",
+    "seriesId": "learning-at-forty",
+    "seriesTitle": "Learning to Swim at Forty",
+    "seriesTitleZh": "四十歲學游泳",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s10",
+    "turn": "s20",
+    "resolution": "s28"
+  },
+  "sentences": [
+    { "id": "s1", "text": "Ivan was forty-one years old and he could not swim.", "zh": "伊萬四十一歲,不會游泳。" },
+    { "id": "s2", "text": "He had walked past the town pool twice a week for eleven years without going in.", "zh": "十一年來,他一週兩次經過鎮上的游泳池,從來沒進去過。" },
+    { "id": "s3", "text": "The class was on Tuesday evenings and it was called Adult Beginners.", "zh": "那堂課在星期二晚上,名字叫「成人初級班」。" },
+    { "id": "s4", "text": "He filled in the form online so that he would not have to say it out loud.", "zh": "他在網路上填了表格,這樣就不必開口講出來。" },
+    { "id": "s5", "text": "On the first evening there were six of them standing in the shallow end.", "zh": "第一堂課那天晚上,他們六個人站在淺水區。" },
+    { "id": "s6", "text": "The water came up to his chest and it was colder than he had expected.", "zh": "水到他胸口,比他想像中冷。" },
+    { "id": "s7", "text": "Nobody looked at anybody else, which told him everything about the group.", "zh": "沒有人看別人,這件事就說明了這一群人的一切。" },
+    { "id": "s8", "text": "Their teacher was a young woman called Petra who was twenty-five.", "zh": "教練是一位二十五歲的年輕女子,叫佩特拉。" },
+    { "id": "s9", "text": "Ivan did the arithmetic without meaning to: she was sixteen years younger than him.", "zh": "伊萬不自覺算了一下:她比他小十六歲。" },
+    { "id": "s10", "text": "Petra did not begin with arms or legs or any kind of stroke.", "zh": "佩特拉一開始沒教手、沒教腳,也沒教任何一種泳式。" },
+    { "id": "s11", "text": "She asked them to put their faces in the water and blow out slowly.", "zh": "她要他們把臉放進水裡,慢慢把氣吐出來。" },
+    { "id": "s12", "text": "That was the whole first lesson, and it took forty minutes.", "zh": "整堂課就只有這件事,做了四十分鐘。" },
+    { "id": "s13", "text": "Ivan could do it for two seconds, then three, then five.", "zh": "伊萬可以撐兩秒,然後三秒,然後五秒。" },
+    { "id": "s14", "text": "The man beside him, who was perhaps sixty, could not do it at all.", "zh": "他旁邊那位大概六十歲的男士,完全做不到。" },
+    { "id": "s15", "text": "Petra stayed with that man for most of the lesson and did not hurry him.", "zh": "佩特拉整堂課大部分時間都陪著那位男士,沒有催他。" },
+    { "id": "s16", "text": "By the fourth week, four of the six could float on their backs.", "zh": "到了第四週,六個人裡有四個可以仰躺著漂浮。" },
+    { "id": "s17", "text": "By the seventh, Ivan could swim the width of the shallow end without stopping.", "zh": "到了第七週,伊萬可以不停歇地游完淺水區的寬度。" },
+    { "id": "s18", "text": "It was not beautiful and his legs sank, but it was swimming.", "zh": "動作不好看,腳一直往下沉,但那確實是在游泳。" },
+    { "id": "s19", "text": "He started telling people at work that he was learning, which surprised him.", "zh": "他開始跟公司同事說他在學游泳,這件事連他自己都很意外。" },
+    { "id": "s20", "text": "In the ninth week Petra asked the class to move to the deep end.", "zh": "第九週,佩特拉要全班移動到深水區。" },
+    { "id": "s21", "text": "Ivan got out of the water instead, and said that his shoulder hurt.", "zh": "伊萬反而爬出了水,說他肩膀痛。" },
+    { "id": "s22", "text": "His shoulder did not hurt.", "zh": "他的肩膀根本不痛。" },
+    { "id": "s23", "text": "He sat on the edge with his feet in the water and watched the other five.", "zh": "他坐在池邊,腳泡在水裡,看著另外五個人。" },
+    { "id": "s24", "text": "The man of sixty, who could not blow bubbles in week one, swam past him.", "zh": "那位第一週連吐氣都做不到、六十歲的男士,從他面前游了過去。" },
+    { "id": "s25", "text": "Petra did not call him back in, and she did not ask about the shoulder.", "zh": "佩特拉沒有叫他回水裡,也沒有問肩膀的事。" },
+    { "id": "s26", "text": "At the end she sat down beside him with her feet in the water too.", "zh": "課程結束時,她在他旁邊坐下,也把腳泡進水裡。" },
+    { "id": "s27", "text": "\"The deep end is the same water,\" she said. \"That is not the problem.\"", "zh": "「深水區是同樣的水,」她說。「問題不在那裡。」" },
+    { "id": "s28", "text": "Ivan said nothing, because she was right and he had not known it until then.", "zh": "伊萬沒有說話,因為她說對了,而他到那一刻才知道。" },
+    { "id": "s29", "text": "He went home and did not sleep well.", "zh": "他回到家,那晚沒睡好。" },
+    { "id": "s30", "text": "He was not afraid of drowning. He had proved that for nine weeks.", "zh": "他不是怕溺水。這件事他已經證明了九個星期。" },
+    { "id": "s31", "text": "He was afraid of the moment when the floor stops being there.", "zh": "他怕的是池底不再存在的那一刻。" },
+    { "id": "s32", "text": "That was a different fear, and it was much older than the swimming pool.", "zh": "那是另一種恐懼,而且比這座游泳池老得多。" },
+    { "id": "s33", "text": "On Tuesday he put his bag in the car an hour before he needed to leave.", "zh": "星期二,他提早一個小時就把包包放進車裡。" },
+    { "id": "s34", "text": "He did not know yet whether he was going to get in.", "zh": "他還不知道自己會不會下水。" },
+    { "id": "s35", "text": "He only knew that he was going.", "zh": "他只知道自己會去。" }
+  ],
+  "questions": [
+    {
+      "q": "What did Petra teach in the very first lesson?",
+      "options": [
+        "How to put your face in the water and breathe out",
+        "How to float on your back across the pool",
+        "How to swim the width of the shallow end"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why did Ivan leave the water in the ninth week?",
+      "options": [
+        "He did not want to go to the deep end",
+        "His shoulder was genuinely too painful",
+        "He had already learned everything in the class"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does Ivan understand about his fear that night?",
+      "options": [
+        "It is older than swimming and not about drowning",
+        "It will disappear once his shoulder heals",
+        "It is caused by being the slowest in the class"
+      ],
+      "answer": 0
+    }
+  ]
+}

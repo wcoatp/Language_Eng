@@ -30,7 +30,8 @@ Echo 的每日課程是一日一篇、約 500 個英文單字的原創故事。�
 - L2–L3 優先：句子適合逐句精聽，但全文仍要像自然故事。
 - 固定三題理解題：明確資訊、因果或推論、人物選擇或主旨。
 - 英文使用 ASCII 引號與連字號，避免語音引擎誤讀智慧標點。
-- 首批使用 `preGeneratedAudio: false`，由裝置語音朗讀；日後可以生成高品質音檔。
+- 不要寫 `preGeneratedAudio`。每日課程和一般課程一樣要有預生成音檔；
+  只有使用者自己匯入的文章才是 `false`（見 `js/views/import.js`）。
 
 ### 起承轉合
 
@@ -54,7 +55,6 @@ Echo 的每日課程是一日一篇、約 500 個英文單字的原創故事。�
   "type": "article",
   "topic": "science",
   "summaryZh": "不揭露結局的中文故事摘要。",
-  "preGeneratedAudio": false,
   "daily": {
     "date": "2026-08-14",
     "seriesId": "recipe-in-the-recording",
@@ -83,7 +83,10 @@ Echo 的每日課程是一日一篇、約 500 個英文單字的原創故事。�
 ## 發布流程
 
 1. 依日期建立 `content/lessons/daily-YYYY-MM-DD.json`。
-2. 執行 `npm run index` 產生含日期、系列與實際字數的摘要。
-3. 執行 `npm run check`；它會檢查真實日期、字數、中文翻譯、故事四段、理解題、系列日序、連續日期及標題防重複。
-4. 人工閱讀英文與中文，確認單篇和跨日故事都自然，因為結構檢查無法替代編輯判斷。
-5. 執行 `npm run deploy` 發布到 Firebase Hosting。
+2. 執行 `npm run audio` 產生 11 組聲音的音檔。
+   已存在的檔案會自動跳過，所以重跑只會補上新課程。
+3. 執行 `npm run index` 產生含日期、系列與實際字數的摘要，以及音檔清單。
+4. 執行 `npm run check`；它會檢查真實日期、字數、中文翻譯、故事四段、理解題、
+   系列日序、連續日期、標題防重複，以及每一課的 11 組音檔是否齊全。
+5. 人工閱讀英文與中文，確認單篇和跨日故事都自然，因為結構檢查無法替代編輯判斷。
+6. 執行 `npm run deploy` 發布到 Firebase Hosting。

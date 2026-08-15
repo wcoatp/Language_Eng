@@ -1,0 +1,89 @@
+{
+  "id": "daily-2026-08-21",
+  "title": "Where the Floor Stops",
+  "titleZh": "池底消失的地方",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "伊萬回到游泳池,站在深水區的線前面。他想起了六歲那年的一件事,而佩特拉問了他一個他從來沒被問過的問題。",
+  "daily": {
+    "date": "2026-08-21",
+    "seriesId": "learning-at-forty",
+    "seriesTitle": "Learning to Swim at Forty",
+    "seriesTitleZh": "四十歲學游泳",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s10",
+    "turn": "s19",
+    "resolution": "s28"
+  },
+  "sentences": [
+    { "id": "s1", "text": "There is a line painted on the floor of the town pool.", "zh": "鎮上游泳池的池底畫著一條線。" },
+    { "id": "s2", "text": "On one side the water is one metre deep, and on the other it is three.", "zh": "線的一邊水深一公尺,另一邊三公尺。" },
+    { "id": "s3", "text": "Ivan stood with his toes against that line for a long time.", "zh": "伊萬腳趾抵著那條線,站了很久。" },
+    { "id": "s4", "text": "The rest of the class had already gone past it without discussing it.", "zh": "班上其他人早就越過去了,沒有人討論這件事。" },
+    { "id": "s5", "text": "He was six years old the first time he understood what deep water was.", "zh": "他第一次明白什麼叫深水,是六歲那年。" },
+    { "id": "s6", "text": "It was a river, not a pool, and it was the summer his family moved.", "zh": "那是一條河,不是游泳池,那年夏天他們全家搬了家。" },
+    { "id": "s7", "text": "An older boy pushed him from a rock, probably without meaning anything by it.", "zh": "一個大一點的男孩從石頭上把他推下去,大概沒什麼惡意。" },
+    { "id": "s8", "text": "Somebody pulled him out within a few seconds, and nobody talked about it afterwards.", "zh": "幾秒鐘之內就有人把他拉了上來,事後也沒有人再提。" },
+    { "id": "s9", "text": "For thirty-five years Ivan had described himself as a person who never learned.", "zh": "三十五年來,伊萬一直說自己是那種「沒學過」的人。" },
+    { "id": "s10", "text": "Petra swam over and rested her arms on the edge beside him.", "zh": "佩特拉游了過來,手臂靠在他旁邊的池邊。" },
+    { "id": "s11", "text": "She did not tell him that the water was safe, or that he was ready.", "zh": "她沒有告訴他水很安全,也沒有說他準備好了。" },
+    { "id": "s12", "text": "She asked him a question that nobody had ever asked him about it.", "zh": "她問了他一個關於這件事、從來沒有人問過他的問題。" },
+    { "id": "s13", "text": "\"What do you think is going to happen?\"", "zh": "「你覺得會發生什麼事?」" },
+    { "id": "s14", "text": "Ivan opened his mouth and found that he did not have a sentence ready.", "zh": "伊萬張開嘴,發現自己並沒有現成的句子可以說。" },
+    { "id": "s15", "text": "He had carried the fear for so long that he had never taken it out to look at.", "zh": "他把這份恐懼帶了太久,久到從來沒有拿出來看過。" },
+    { "id": "s16", "text": "\"I will go under,\" he said at last, \"and nobody will notice.\"", "zh": "「我會沉下去,」他終於說,「而且沒有人會發現。」" },
+    { "id": "s17", "text": "Petra nodded as though this were a completely reasonable thing to say.", "zh": "佩特拉點了點頭,好像這是一句完全合理的話。" },
+    { "id": "s18", "text": "\"That is the part I can fix,\" she said. \"I will notice. That is my job.\"", "zh": "「這部分我可以解決,」她說。「我會發現。那是我的工作。」" },
+    { "id": "s19", "text": "It was such a small answer that Ivan almost laughed at it.", "zh": "那個回答小到伊萬幾乎要笑出來。" },
+    { "id": "s20", "text": "He had expected to be told that his fear was not real.", "zh": "他本來以為對方會說,他的恐懼不是真的。" },
+    { "id": "s21", "text": "Instead she had agreed with the fear and then answered it.", "zh": "結果她先同意了那份恐懼,然後才回答它。" },
+    { "id": "s22", "text": "He crossed the line, and for two strokes it was exactly as bad as he had imagined.", "zh": "他越過了那條線,前兩下划水,真的和他想像中一樣糟。" },
+    { "id": "s23", "text": "His feet reached down for a floor that was no longer there.", "zh": "他的腳往下探,想找一個已經不在那裡的池底。" },
+    { "id": "s24", "text": "Then he remembered to blow out slowly, which was the very first lesson.", "zh": "然後他想起來要慢慢把氣吐出來——那是第一堂課教的。" },
+    { "id": "s25", "text": "The water held him up, the way it had been holding him up for nine weeks.", "zh": "水把他撐了起來,就像過去九個星期一直撐著他那樣。" },
+    { "id": "s26", "text": "He swam eight metres, turned around badly, and swam eight metres back.", "zh": "他游了八公尺,笨拙地轉了個身,又游了八公尺回來。" },
+    { "id": "s27", "text": "When he stood up in the shallow end his hands were shaking.", "zh": "他在淺水區站起來時,雙手在發抖。" },
+    { "id": "s28", "text": "The man of sixty said well done, and then went back to his own lengths.", "zh": "那位六十歲的男士說了聲「做得好」,然後回去游他自己的。" },
+    { "id": "s29", "text": "Nobody clapped, and Ivan was grateful for that.", "zh": "沒有人鼓掌,伊萬很感謝這一點。" },
+    { "id": "s30", "text": "He is not a good swimmer now, four months later.", "zh": "四個月後的現在,他還是游得不好。" },
+    { "id": "s31", "text": "He is a slow one, and his legs still sink when he gets tired.", "zh": "他游得很慢,累的時候腳還是會往下沉。" },
+    { "id": "s32", "text": "But he goes on Tuesdays, and he swims in the three-metre water.", "zh": "但他每個星期二都去,而且在三公尺深的水裡游。" },
+    { "id": "s33", "text": "What changed was not his body, and it was not really his courage either.", "zh": "改變的不是他的身體,其實也不是他的勇氣。" },
+    { "id": "s34", "text": "Somebody had asked him what he thought would happen, and had waited for the answer.", "zh": "有人問了他覺得會發生什麼事,而且真的等他把答案說出來。" },
+    { "id": "s35", "text": "Thirty-five years, and the question had taken about four seconds to ask.", "zh": "三十五年,而那個問題問出口只花了大約四秒鐘。" }
+  ],
+  "questions": [
+    {
+      "q": "What happened to Ivan when he was six years old?",
+      "options": [
+        "He was pushed into a river and pulled out again",
+        "He failed a swimming test at the town pool",
+        "He watched somebody else get into difficulty"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What was Ivan actually afraid of?",
+      "options": [
+        "Going under without anybody noticing",
+        "Being the slowest swimmer in his class",
+        "Discovering that he could not float at all"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why did Petra's answer work on him?",
+      "options": [
+        "She accepted the fear instead of denying it, then answered it",
+        "She promised that nothing bad could ever happen in a pool",
+        "She told him the deep end was not really three metres"
+      ],
+      "answer": 0
+    }
+  ]
+}

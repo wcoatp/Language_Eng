@@ -1,0 +1,239 @@
+{
+  "id": "daily-2026-08-17",
+  "title": "The Empty Half of the Market",
+  "titleZh": "空掉的半個市場",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "娜迪雅在週三市場賣了十九年的菜。環城路上的超市開了兩年之後,四十個攤位只剩十一個。這天她第一次走進那間超市。",
+  "daily": {
+    "date": "2026-08-17",
+    "seriesId": "wednesday-market-stall",
+    "seriesTitle": "The Last Wednesday Stall",
+    "seriesTitleZh": "最後一攤",
+    "day": 1,
+    "totalDays": 3
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s12",
+    "turn": "s23",
+    "resolution": "s32"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Nadia had sold vegetables in the Wednesday market for nineteen years.",
+      "zh": "娜迪雅在週三市場賣菜已經十九年了。"
+    },
+    {
+      "id": "s2",
+      "text": "Her stall stood in the same corner, under the same green roof, every single week.",
+      "zh": "她的攤位每個星期都在同一個角落、同一片綠色屋頂底下。"
+    },
+    {
+      "id": "s3",
+      "text": "When she started, there were forty stalls and the aisles were hard to walk through.",
+      "zh": "她剛開始擺攤時有四十個攤位,走道擠得幾乎走不過去。"
+    },
+    {
+      "id": "s4",
+      "text": "This morning she counted them again and stopped at eleven.",
+      "zh": "今天早上她又數了一次,數到十一就沒了。"
+    },
+    {
+      "id": "s5",
+      "text": "The supermarket on the ring road had opened two winters ago.",
+      "zh": "環城路上那間超市是兩個冬天前開的。"
+    },
+    {
+      "id": "s6",
+      "text": "It was warm inside, it stayed open until ten at night, and it had a car park.",
+      "zh": "裡面很暖和,開到晚上十點,而且有停車場。"
+    },
+    {
+      "id": "s7",
+      "text": "One by one, the other sellers had stopped coming.",
+      "zh": "其他攤商一個接一個不再來了。"
+    },
+    {
+      "id": "s8",
+      "text": "The fish man went first, then the bread woman, then the brothers who sold cheese.",
+      "zh": "先是賣魚的,接著是賣麵包的太太,然後是賣起司的兄弟倆。"
+    },
+    {
+      "id": "s9",
+      "text": "Each of them had said the same thing on the way out: I am sorry, Nadia.",
+      "zh": "他們每個人離開時說的都是同一句話:對不起,娜迪雅。"
+    },
+    {
+      "id": "s10",
+      "text": "Nadia kept her prices low and her tomatoes better than anybody else's.",
+      "zh": "娜迪雅價格壓得很低,番茄也比誰家的都好。"
+    },
+    {
+      "id": "s11",
+      "text": "None of it had been anything like enough.",
+      "zh": "這些完全不夠。"
+    },
+    {
+      "id": "s12",
+      "text": "Her son Karim came to help her pack up at noon.",
+      "zh": "中午時,她兒子卡林來幫她收攤。"
+    },
+    {
+      "id": "s13",
+      "text": "He was twenty-four and he worked with numbers at an insurance office.",
+      "zh": "他二十四歲,在一間保險公司做數字相關的工作。"
+    },
+    {
+      "id": "s14",
+      "text": "\"You could sell online,\" he said, for the third Wednesday in a row.",
+      "zh": "「你可以在網路上賣啊,」他說。這已經是連續第三個星期三了。"
+    },
+    {
+      "id": "s15",
+      "text": "\"Photographs, a delivery van, a website. I could build all of it for you.\"",
+      "zh": "「拍照、送貨車、一個網站。這些我都可以幫你弄。」"
+    },
+    {
+      "id": "s16",
+      "text": "Nadia looked at the eleven stalls and the wide empty spaces between them.",
+      "zh": "娜迪雅看著那十一個攤位,還有攤位之間空蕩蕩的大片空地。"
+    },
+    {
+      "id": "s17",
+      "text": "\"And then who would I talk to?\" she said.",
+      "zh": "「那我要跟誰講話?」她說。"
+    },
+    {
+      "id": "s18",
+      "text": "Karim did not have an answer for that one, and he did not pretend to.",
+      "zh": "這個問題卡林答不上來,他也沒有假裝答得上來。"
+    },
+    {
+      "id": "s19",
+      "text": "He carried the crates out to the van and said nothing more about websites.",
+      "zh": "他把箱子搬上車,沒有再提網站的事。"
+    },
+    {
+      "id": "s20",
+      "text": "That night Nadia sat at her kitchen table and did the arithmetic properly.",
+      "zh": "那天晚上,娜迪雅坐在廚房桌前,認真把帳算了一遍。"
+    },
+    {
+      "id": "s21",
+      "text": "If Wednesdays stayed like this until winter, she would have to stop.",
+      "zh": "如果星期三一直是這樣到冬天,她就得收了。"
+    },
+    {
+      "id": "s22",
+      "text": "She wrote the last number at the bottom of the page and drew a line beneath it.",
+      "zh": "她把最後一個數字寫在頁面底端,在下面畫了一條線。"
+    },
+    {
+      "id": "s23",
+      "text": "On Thursday she drove out to the supermarket on the ring road.",
+      "zh": "星期四,她開車去了環城路上那間超市。"
+    },
+    {
+      "id": "s24",
+      "text": "In two years she had never once walked through its doors.",
+      "zh": "開了兩年,她一次也沒有走進去過。"
+    },
+    {
+      "id": "s25",
+      "text": "The tomatoes were stacked in a perfect red wall, and they cost less than hers.",
+      "zh": "番茄堆成一面完美的紅色牆,價錢還比她的便宜。"
+    },
+    {
+      "id": "s26",
+      "text": "She stood in the aisle for a long time, holding one of them.",
+      "zh": "她在走道上站了很久,手裡拿著一顆。"
+    },
+    {
+      "id": "s27",
+      "text": "It was heavy and cold in her hand, and it had no smell at all.",
+      "zh": "拿在手裡沉甸甸的、冰冰的,一點味道也沒有。"
+    },
+    {
+      "id": "s28",
+      "text": "Then she noticed the woman beside her, also holding a tomato, also not moving.",
+      "zh": "然後她注意到旁邊那位太太,也拿著一顆番茄,也一動不動。"
+    },
+    {
+      "id": "s29",
+      "text": "It was Mrs. Haddad, who had bought from Nadia every Wednesday for eleven years.",
+      "zh": "那是哈達太太,十一年來每個星期三都跟娜迪雅買菜。"
+    },
+    {
+      "id": "s30",
+      "text": "They looked at each other and neither of them spoke for a moment.",
+      "zh": "兩人對望著,一時之間誰也沒開口。"
+    },
+    {
+      "id": "s31",
+      "text": "\"My daughter drives me here now,\" Mrs. Haddad said. \"It is easier for her.\"",
+      "zh": "「現在是我女兒載我來的,」哈達太太說。「這樣她比較方便。」"
+    },
+    {
+      "id": "s32",
+      "text": "Nadia put the tomato back on the perfect red wall.",
+      "zh": "娜迪雅把番茄放回那面完美的紅色牆上。"
+    },
+    {
+      "id": "s33",
+      "text": "She walked out of the supermarket without buying a single thing.",
+      "zh": "她什麼都沒買就走出了超市。"
+    },
+    {
+      "id": "s34",
+      "text": "On the way home she did not think about prices, or websites, or empty stalls.",
+      "zh": "回家的路上,她想的不是價格、網站,也不是空掉的攤位。"
+    },
+    {
+      "id": "s35",
+      "text": "She thought about how long Mrs. Haddad had stood there, holding a tomato she did not want.",
+      "zh": "她想的是哈達太太站在那裡多久,手裡拿著一顆她根本不想要的番茄。"
+    },
+    {
+      "id": "s36",
+      "text": "By the time she reached her own street, Nadia had the beginning of an idea.",
+      "zh": "回到自己那條街時,娜迪雅心裡已經有了一個想法的開頭。"
+    },
+    {
+      "id": "s37",
+      "text": "It was not a good idea yet, and it was not finished, but it was hers.",
+      "zh": "那還算不上一個好想法,也還沒完整,但那是她自己的。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What has happened to the Wednesday market over the years?",
+      "options": [
+        "It has shrunk from forty stalls to eleven",
+        "It has moved to a warmer building with a car park",
+        "It has started opening until ten at night"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why does Nadia refuse her son's idea of selling online?",
+      "options": [
+        "It would leave her with nobody to talk to",
+        "She does not believe her tomatoes would sell",
+        "The delivery van would cost more than she earns"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does Nadia realise while watching Mrs. Haddad?",
+      "options": [
+        "Her old customer is not happy shopping there either",
+        "Her own tomatoes are no longer good enough",
+        "Her prices will have to come down again"
+      ],
+      "answer": 0
+    }
+  ]
+}

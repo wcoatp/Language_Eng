@@ -6,7 +6,6 @@
   "type": "dialogue",
   "topic": "work",
   "summaryZh": "客戶臨時將展示日期提前，團隊討論工作進度、分工和可交付範圍。",
-  "preGeneratedAudio": false,
   "sentences": [
     {
       "id": "s1",

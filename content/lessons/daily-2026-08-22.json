@@ -1,0 +1,239 @@
+{
+  "id": "daily-2026-08-22",
+  "title": "Why Write It Down?",
+  "titleZh": "為什麼還要用手寫",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "退休老師瑪格麗特三十年來每天早上七點上山抄氣象數字。一個十五歲的男孩帶著手機來問她:這些手機都知道了,妳為什麼還要寫?",
+  "daily": {
+    "date": "2026-08-22",
+    "seriesId": "rain-gauge-on-the-hill",
+    "seriesTitle": "Thirty Years of Rain",
+    "seriesTitleZh": "三十年的雨",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s11",
+    "turn": "s21",
+    "resolution": "s31"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Every morning at seven, Margaret Rowe walks up the hill behind her house.",
+      "zh": "每天早上七點,瑪格麗特・羅走上她家後面那座小山。"
+    },
+    {
+      "id": "s2",
+      "text": "At the top there is a small white wooden box standing on four legs.",
+      "zh": "山頂上有一個白色小木箱,立在四隻腳上。"
+    },
+    {
+      "id": "s3",
+      "text": "Inside the box are two thermometers, and beside it stands a rain gauge.",
+      "zh": "箱子裡有兩支溫度計,旁邊立著一個雨量筒。"
+    },
+    {
+      "id": "s4",
+      "text": "She writes down three numbers: the highest temperature, the lowest, and the rain.",
+      "zh": "她記下三個數字:最高溫、最低溫,還有雨量。"
+    },
+    {
+      "id": "s5",
+      "text": "She has done this since the spring of 1996.",
+      "zh": "從一九九六年春天開始,她就一直這樣做。"
+    },
+    {
+      "id": "s6",
+      "text": "Margaret taught science at the school in the valley for twenty-eight years.",
+      "zh": "瑪格麗特在谷地那所學校教了二十八年自然科學。"
+    },
+    {
+      "id": "s7",
+      "text": "She is seventy-one now, and the walk takes her longer than it used to.",
+      "zh": "她現在七十一歲,這段路走起來比以前久。"
+    },
+    {
+      "id": "s8",
+      "text": "The notebooks are kept in a cupboard, one for each year, thirty of them.",
+      "zh": "筆記本收在一個櫃子裡,一年一本,總共三十本。"
+    },
+    {
+      "id": "s9",
+      "text": "In thirty years, nobody has ever once asked to see them.",
+      "zh": "三十年來,從來沒有人開口要看過它們。"
+    },
+    {
+      "id": "s10",
+      "text": "The cupboard is in the hall, and its door does not close properly any more.",
+      "zh": "櫃子放在走廊上,櫃門已經關不太緊了。"
+    },
+    {
+      "id": "s11",
+      "text": "In August a boy named Emil came up the hill with her.",
+      "zh": "八月時,一個叫艾米爾的男孩跟著她上了山。"
+    },
+    {
+      "id": "s12",
+      "text": "He was fifteen and he needed a science project for the new school year.",
+      "zh": "他十五歲,新學年需要一份自然科學報告。"
+    },
+    {
+      "id": "s13",
+      "text": "His mother had suggested Margaret, and he had come without much interest.",
+      "zh": "他媽媽建議他來找瑪格麗特,他來的時候興趣不大。"
+    },
+    {
+      "id": "s14",
+      "text": "He watched her open the box, read the thermometers, and write in pencil.",
+      "zh": "他看著她打開箱子、讀溫度計,然後用鉛筆記下來。"
+    },
+    {
+      "id": "s15",
+      "text": "The whole thing took four minutes, and he had his question ready before she finished.",
+      "zh": "整件事花了四分鐘,她還沒寫完,他的問題就準備好了。"
+    },
+    {
+      "id": "s16",
+      "text": "He held up his phone and showed her the weather for their village.",
+      "zh": "他舉起手機,給她看他們村子的天氣。"
+    },
+    {
+      "id": "s17",
+      "text": "Temperature, rainfall, wind, all of it, updated every ten minutes and free.",
+      "zh": "溫度、雨量、風速,全都有,每十分鐘更新一次,而且免費。"
+    },
+    {
+      "id": "s18",
+      "text": "\"So why write it down at all?\" he asked. It was not a rude question.",
+      "zh": "「那到底為什麼還要用手寫?」他問。這不是一個沒禮貌的問題。"
+    },
+    {
+      "id": "s19",
+      "text": "Margaret said something about habit, and about liking the walk up in the morning.",
+      "zh": "瑪格麗特說了些關於習慣的話,還說她喜歡早上走這段上坡。"
+    },
+    {
+      "id": "s20",
+      "text": "She knew while she was saying it that it was not a real answer.",
+      "zh": "她一邊說一邊知道,這不是一個真正的答案。"
+    },
+    {
+      "id": "s21",
+      "text": "Then Emil looked properly at the open page of her notebook, and he stopped.",
+      "zh": "接著艾米爾認真看了她攤開的那一頁,然後停了下來。"
+    },
+    {
+      "id": "s22",
+      "text": "Her rainfall for the previous day was fourteen millimetres.",
+      "zh": "她記的前一天雨量是十四毫米。"
+    },
+    {
+      "id": "s23",
+      "text": "His phone, for the same day and the same village, said two.",
+      "zh": "他的手機上,同一天、同一個村子,顯示的是兩毫米。"
+    },
+    {
+      "id": "s24",
+      "text": "He checked it twice, and then he went back and checked the day before as well.",
+      "zh": "他檢查了兩次,然後又往回查了前一天。"
+    },
+    {
+      "id": "s25",
+      "text": "Nine millimetres in the notebook, and nothing at all on the phone.",
+      "zh": "筆記本上是九毫米,手機上完全沒有。"
+    },
+    {
+      "id": "s26",
+      "text": "\"Your phone is not measuring anything here,\" Margaret said.",
+      "zh": "「你的手機在這裡沒有量任何東西,」瑪格麗特說。"
+    },
+    {
+      "id": "s27",
+      "text": "\"The nearest real station is twelve kilometres away, on the far side of the ridge.\"",
+      "zh": "「最近的實測站在十二公里外,在山脊的另一邊。」"
+    },
+    {
+      "id": "s28",
+      "text": "\"Everything it tells you about this valley is a calculation, not a reading.\"",
+      "zh": "「它告訴你的關於這座山谷的一切,都是算出來的,不是量出來的。」"
+    },
+    {
+      "id": "s29",
+      "text": "Emil put his phone into his pocket and did not take it out again.",
+      "zh": "艾米爾把手機放進口袋,之後就沒有再拿出來。"
+    },
+    {
+      "id": "s30",
+      "text": "Emil looked at the ridge, and then at the white box, and then at the notebook.",
+      "zh": "艾米爾看了看山脊,再看看白箱子,然後看看筆記本。"
+    },
+    {
+      "id": "s31",
+      "text": "\"So this is the only record of the rain that actually falls here,\" he said.",
+      "zh": "「所以這是這裡實際落下的雨,唯一的紀錄,」他說。"
+    },
+    {
+      "id": "s32",
+      "text": "Margaret said yes, because it was simply true and there was nothing to add.",
+      "zh": "瑪格麗特說是,因為這就是事實,沒有什麼好補充的。"
+    },
+    {
+      "id": "s33",
+      "text": "Emil asked how many mornings she had missed in thirty years.",
+      "zh": "艾米爾問她,三十年來有幾個早上沒去。"
+    },
+    {
+      "id": "s34",
+      "text": "\"Four,\" she said, and she named all four without having to think.",
+      "zh": "「四個,」她說,而且不用想就把四個都說了出來。"
+    },
+    {
+      "id": "s35",
+      "text": "A funeral, two days in hospital, and the morning that her husband died.",
+      "zh": "一場葬禮、住院兩天,還有她丈夫過世的那個早上。"
+    },
+    {
+      "id": "s36",
+      "text": "Emil did not say anything for a while, and then he asked her about Saturdays.",
+      "zh": "艾米爾好一陣子沒說話,然後他問了她星期六的事。"
+    },
+    {
+      "id": "s37",
+      "text": "He wanted to know whether he could come up on his own and read the numbers.",
+      "zh": "他想知道自己能不能一個人上來,親手讀那些數字。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What does Margaret record every morning?",
+      "options": [
+        "The highest and lowest temperature and the rainfall",
+        "The wind speed and the direction of the clouds",
+        "The time of sunrise and the state of the sky"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why do the phone and the notebook disagree about the rain?",
+      "options": [
+        "The phone calculates from a station beyond the ridge",
+        "The rain gauge on the hill has stopped working properly",
+        "Margaret writes down the weekly total, not the daily one"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What makes Emil change his mind about the notebooks?",
+      "options": [
+        "He works out that nothing else measures this valley",
+        "He learns that Margaret used to teach at his school",
+        "He finds that his project needs thirty years of data"
+      ],
+      "answer": 0
+    }
+  ]
+}

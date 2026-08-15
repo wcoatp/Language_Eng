@@ -1,0 +1,239 @@
+{
+  "id": "daily-2026-08-19",
+  "title": "What the Market Was For",
+  "titleZh": "市場真正的用處",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "十一個攤商決定一起試一個辦法。第四個星期三,一個穿西裝的人走進市場,所有人都以為麻煩來了。",
+  "daily": {
+    "date": "2026-08-19",
+    "seriesId": "wednesday-market-stall",
+    "seriesTitle": "The Last Wednesday Stall",
+    "seriesTitleZh": "最後一攤",
+    "day": 3,
+    "totalDays": 3
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s11",
+    "turn": "s21",
+    "resolution": "s31"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "It took Nadia two weeks to talk to the other ten sellers.",
+      "zh": "娜迪雅花了兩個星期,跟其他十個攤商談過一輪。"
+    },
+    {
+      "id": "s2",
+      "text": "She did not take the notebook with her, because she knew what was written in it.",
+      "zh": "她沒有把筆記本帶在身上,因為裡面寫什麼她都記得。"
+    },
+    {
+      "id": "s3",
+      "text": "The plan was small enough that nobody could really argue with it.",
+      "zh": "那個計畫小到沒有人真的能反對。"
+    },
+    {
+      "id": "s4",
+      "text": "Each seller would bring one thing that was not theirs to sell.",
+      "zh": "每個攤商都多帶一樣不屬於自己本行的東西。"
+    },
+    {
+      "id": "s5",
+      "text": "Milk at the egg stall. Soap beside the potatoes. Bread next to the flowers.",
+      "zh": "蛋攤上放牛奶。馬鈴薯旁邊放肥皂。花攤旁邊放麵包。"
+    },
+    {
+      "id": "s6",
+      "text": "The list came from what eighty-six people had told her they bought elsewhere.",
+      "zh": "這張清單來自八十六個人告訴她、他們在別的地方買了什麼。"
+    },
+    {
+      "id": "s7",
+      "text": "There was no sign, no name for it, and no announcement of any kind.",
+      "zh": "沒有招牌,沒有取名字,也沒有任何宣傳。"
+    },
+    {
+      "id": "s8",
+      "text": "Two of the sellers said it would not work and joined anyway.",
+      "zh": "有兩個攤商說這不會有用,但還是加入了。"
+    },
+    {
+      "id": "s9",
+      "text": "The oldest of them said only that his father had done the same thing in 1974.",
+      "zh": "年紀最大的那位只說,他父親一九七四年也做過一樣的事。"
+    },
+    {
+      "id": "s10",
+      "text": "Nobody wrote anything down, and nobody asked what would happen if it failed.",
+      "zh": "沒有人寫下任何東西,也沒有人問萬一失敗了怎麼辦。"
+    },
+    {
+      "id": "s11",
+      "text": "On the first Wednesday, eleven new customers came.",
+      "zh": "第一個星期三,來了十一位新客人。"
+    },
+    {
+      "id": "s12",
+      "text": "Karim counted them from the end of the aisle and wrote the number on his hand.",
+      "zh": "卡林站在走道尾端數,把數字寫在手上。"
+    },
+    {
+      "id": "s13",
+      "text": "Eleven was not enough to save anything, and everybody there knew it.",
+      "zh": "十一個救不了什麼,在場每個人都心知肚明。"
+    },
+    {
+      "id": "s14",
+      "text": "\"Give it a month,\" Nadia said, to the sellers and to herself.",
+      "zh": "「再給一個月,」娜迪雅說,說給攤商聽,也說給自己聽。"
+    },
+    {
+      "id": "s15",
+      "text": "The second Wednesday brought nineteen, and the third brought twenty-four.",
+      "zh": "第二個星期三來了十九個,第三個星期三來了二十四個。"
+    },
+    {
+      "id": "s16",
+      "text": "It was growing, but slowly, the way a small thing grows.",
+      "zh": "確實在成長,但很慢,像小東西那樣慢慢長。"
+    },
+    {
+      "id": "s17",
+      "text": "Nadia started standing at the entrance for the first hour of every market.",
+      "zh": "娜迪雅開始在每次市場的頭一個小時站在入口。"
+    },
+    {
+      "id": "s18",
+      "text": "She was not selling anything at the entrance. She was saying people's names.",
+      "zh": "她在入口不賣任何東西。她在叫人的名字。"
+    },
+    {
+      "id": "s19",
+      "text": "Good morning, Mrs. Haddad. Good morning, Mr. Sarr. Good morning, Ines.",
+      "zh": "早安,哈達太太。早安,薩爾先生。早安,伊內絲。"
+    },
+    {
+      "id": "s20",
+      "text": "Karim thought it was strange for about two weeks, and then he stopped thinking so.",
+      "zh": "卡林覺得這件事很奇怪,大概持續了兩個星期,之後就不覺得了。"
+    },
+    {
+      "id": "s21",
+      "text": "On the fourth Wednesday a man in a grey suit walked into the market.",
+      "zh": "第四個星期三,一個穿灰色西裝的男人走進市場。"
+    },
+    {
+      "id": "s22",
+      "text": "Nobody in the aisle had ever seen him before, but everybody guessed who he was.",
+      "zh": "走道上沒有人見過他,但每個人都猜得到他是誰。"
+    },
+    {
+      "id": "s23",
+      "text": "The sellers went quiet in the way people do when they expect trouble.",
+      "zh": "攤商們安靜了下來,那是人們預期麻煩上門時的那種安靜。"
+    },
+    {
+      "id": "s24",
+      "text": "He introduced himself as Mr. Diallo, the manager of the supermarket on the ring road.",
+      "zh": "他自我介紹叫迪亞洛先生,是環城路上那間超市的店長。"
+    },
+    {
+      "id": "s25",
+      "text": "Then he said something nobody in the market had prepared an answer for.",
+      "zh": "接著他說了一句話,市場裡沒有人準備好要怎麼回。"
+    },
+    {
+      "id": "s26",
+      "text": "\"My mother had stopped leaving her flat,\" he said. \"For nearly a year.\"",
+      "zh": "「我母親本來已經不出門了,」他說。「將近一年。」"
+    },
+    {
+      "id": "s27",
+      "text": "\"Somebody told her about Wednesday. Now she comes here and she talks to people.\"",
+      "zh": "「有人跟她說了星期三的事。現在她會來這裡,而且會跟人講話。」"
+    },
+    {
+      "id": "s28",
+      "text": "\"I sell her everything she needs and I could not sell her that.\"",
+      "zh": "「她需要的東西我都賣,但那樣東西我賣不了。」"
+    },
+    {
+      "id": "s29",
+      "text": "He asked whether the market would use his car park on Saturday mornings.",
+      "zh": "他問,星期六早上市場願不願意用他的停車場。"
+    },
+    {
+      "id": "s30",
+      "text": "The market was so quiet that Nadia could hear the flags moving above the stalls.",
+      "zh": "市場安靜到娜迪雅可以聽見攤位上方旗子飄動的聲音。"
+    },
+    {
+      "id": "s31",
+      "text": "Nadia said that she would have to ask the other ten sellers first.",
+      "zh": "娜迪雅說她得先問過另外十位攤商。"
+    },
+    {
+      "id": "s32",
+      "text": "She asked them that same afternoon, and by evening the answer was yes.",
+      "zh": "她當天下午就問了,到了傍晚,答案是好。"
+    },
+    {
+      "id": "s33",
+      "text": "The market is still eleven stalls, and the empty half is still empty.",
+      "zh": "市場還是十一個攤位,空掉的那半邊還是空的。"
+    },
+    {
+      "id": "s34",
+      "text": "Nadia still does not know whether she will get through the coming winter.",
+      "zh": "娜迪雅還是不知道自己能不能撐過即將到來的冬天。"
+    },
+    {
+      "id": "s35",
+      "text": "What she knows is what the market was always for, underneath the vegetables.",
+      "zh": "她知道的是,在蔬菜底下,這個市場一直以來真正的用處是什麼。"
+    },
+    {
+      "id": "s36",
+      "text": "You can buy an onion almost anywhere in this town, and it will cost you rather less.",
+      "zh": "在這個鎮上,幾乎哪裡都買得到洋蔥,而且便宜得多。"
+    },
+    {
+      "id": "s37",
+      "text": "But on a Wednesday morning, somebody in that aisle says your name twice.",
+      "zh": "但在星期三早上,那條走道上會有人叫你的名字兩次。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the eleven sellers agree to do?",
+      "options": [
+        "Each would stock one item outside their own trade",
+        "Each would lower prices to match the supermarket",
+        "Each would open on Saturday as well as Wednesday"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why did Mr. Diallo come to the market?",
+      "options": [
+        "Because the market gave his mother something he could not sell her",
+        "Because he wanted the sellers to close down for good",
+        "Because he had been asked to buy their vegetables"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "How does the story leave Nadia's situation?",
+      "options": [
+        "Still uncertain, but clear about what the market is for",
+        "Fully solved, with the empty stalls filled again",
+        "Worse than before, with the sellers about to give up"
+      ],
+      "answer": 0
+    }
+  ]
+}

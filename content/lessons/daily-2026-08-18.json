@@ -1,0 +1,239 @@
+{
+  "id": "daily-2026-08-18",
+  "title": "A List of Names",
+  "titleZh": "一張名字清單",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "娜迪雅帶了一本筆記本到市場,想問清楚客人到底要什麼。她以為答案會跟價錢有關,結果一位老客人講了完全不同的東西。",
+  "daily": {
+    "date": "2026-08-18",
+    "seriesId": "wednesday-market-stall",
+    "seriesTitle": "The Last Wednesday Stall",
+    "seriesTitleZh": "最後一攤",
+    "day": 2,
+    "totalDays": 3
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s11",
+    "turn": "s21",
+    "resolution": "s31"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The following Wednesday, Nadia brought a notebook to the market.",
+      "zh": "下一個星期三,娜迪雅帶了一本筆記本到市場。"
+    },
+    {
+      "id": "s2",
+      "text": "It was the cheap kind, with a soft cover and lines that were much too wide.",
+      "zh": "那是最便宜的那種,軟皮封面,格線寬得太多。"
+    },
+    {
+      "id": "s3",
+      "text": "She had decided to ask every customer one question before they left.",
+      "zh": "她決定在每位客人離開前問一個問題。"
+    },
+    {
+      "id": "s4",
+      "text": "The question was simple: what do you buy that I do not sell?",
+      "zh": "問題很簡單:你會買什麼是我這裡沒有的?"
+    },
+    {
+      "id": "s5",
+      "text": "She expected to hear about prices, or about the car park, or about the late hours.",
+      "zh": "她以為聽到的會是價錢、停車場,或是營業到很晚。"
+    },
+    {
+      "id": "s6",
+      "text": "By ten o'clock she had written down eleven answers in careful pencil.",
+      "zh": "到了十點,她已經用鉛筆工整地記下十一個答案。"
+    },
+    {
+      "id": "s7",
+      "text": "Milk. Rice. Soap. Batteries. Bread. Milk again. Coffee.",
+      "zh": "牛奶。米。肥皂。電池。麵包。又是牛奶。咖啡。"
+    },
+    {
+      "id": "s8",
+      "text": "Not one item on the list was anything that she could grow herself.",
+      "zh": "清單上沒有一樣是她自己種得出來的。"
+    },
+    {
+      "id": "s9",
+      "text": "She looked at the list and felt the whole idea go quiet inside her.",
+      "zh": "她看著那張清單,覺得整個想法在心裡安靜了下來。"
+    },
+    {
+      "id": "s10",
+      "text": "She put the pencil down and looked at the empty half of the market for a while.",
+      "zh": "她放下鉛筆,看著市場空掉的那半邊,看了好一會兒。"
+    },
+    {
+      "id": "s11",
+      "text": "Then Mr. Sarr came, as he did every Wednesday, and bought four onions.",
+      "zh": "接著薩爾先生來了,跟每個星期三一樣,買了四顆洋蔥。"
+    },
+    {
+      "id": "s12",
+      "text": "He was eighty-one and he always bought exactly four onions and nothing else.",
+      "zh": "他八十一歲,永遠只買四顆洋蔥,別的什麼都不買。"
+    },
+    {
+      "id": "s13",
+      "text": "In nine years Nadia had never once thought to ask him why.",
+      "zh": "九年來,娜迪雅從來沒想過要問他為什麼。"
+    },
+    {
+      "id": "s14",
+      "text": "She asked him her question, and he did not understand it at first.",
+      "zh": "她問了他那個問題,他一開始沒聽懂。"
+    },
+    {
+      "id": "s15",
+      "text": "\"What do I buy that you do not sell?\" he repeated slowly.",
+      "zh": "「我買什麼是妳這裡沒有的?」他慢慢重複了一遍。"
+    },
+    {
+      "id": "s16",
+      "text": "\"Nothing. I buy everything else on Monday, at the shop by my house.\"",
+      "zh": "「沒有。其他東西我星期一在我家旁邊那間店買。」"
+    },
+    {
+      "id": "s17",
+      "text": "Nadia did not write anything at all in the notebook.",
+      "zh": "娜迪雅在筆記本上什麼都沒寫。"
+    },
+    {
+      "id": "s18",
+      "text": "\"Then why do you come here on Wednesday, just for onions?\" she asked.",
+      "zh": "「那你為什麼星期三還要來這裡,只買洋蔥?」她問。"
+    },
+    {
+      "id": "s19",
+      "text": "Mr. Sarr put his four onions carefully into his bag before he answered.",
+      "zh": "薩爾先生把四顆洋蔥小心地放進袋子,才回答。"
+    },
+    {
+      "id": "s20",
+      "text": "He did not seem embarrassed by it, only surprised that she had needed to ask.",
+      "zh": "他看起來一點也不尷尬,只是驚訝她居然需要問。"
+    },
+    {
+      "id": "s21",
+      "text": "\"Because on Wednesday somebody says my name,\" he said.",
+      "zh": "「因為星期三會有人叫我的名字,」他說。"
+    },
+    {
+      "id": "s22",
+      "text": "\"You say it when I arrive, and you say it again when I go.\"",
+      "zh": "「我來的時候妳叫一次,我走的時候妳再叫一次。」"
+    },
+    {
+      "id": "s23",
+      "text": "\"Nobody at the shop by my house knows what I am called.\"",
+      "zh": "「我家旁邊那間店,沒有人知道我叫什麼。」"
+    },
+    {
+      "id": "s24",
+      "text": "He said thank you, and he walked away down the empty half of the market.",
+      "zh": "他說了聲謝謝,沿著市場空掉的那半邊走了。"
+    },
+    {
+      "id": "s25",
+      "text": "For a moment the only sound was a plastic crate being dragged across the concrete.",
+      "zh": "有那麼一下子,唯一的聲音是塑膠箱在水泥地上拖過的聲音。"
+    },
+    {
+      "id": "s26",
+      "text": "Nadia stood behind her crates and did not move for a long time after that.",
+      "zh": "娜迪雅站在箱子後面,之後好長一段時間都沒有動。"
+    },
+    {
+      "id": "s27",
+      "text": "She turned the notebook over and looked at the back of the page.",
+      "zh": "她把筆記本翻過來,看著那一頁的背面。"
+    },
+    {
+      "id": "s28",
+      "text": "She had been writing down the wrong list for the whole of that morning.",
+      "zh": "她整個早上記的,都是錯的那張清單。"
+    },
+    {
+      "id": "s29",
+      "text": "The right list was not a list of goods at all, and never had been.",
+      "zh": "對的那張根本不是商品清單,從來都不是。"
+    },
+    {
+      "id": "s30",
+      "text": "It was a list of names, and she already knew every single one of them.",
+      "zh": "那是一張名字的清單,而且她本來就每一個都記得。"
+    },
+    {
+      "id": "s31",
+      "text": "That afternoon she wrote them out, one under the other, until the page was full.",
+      "zh": "那天下午,她把名字一個一個寫下來,寫滿了整頁。"
+    },
+    {
+      "id": "s32",
+      "text": "Eighty-six names, and beside each one, what that person always bought.",
+      "zh": "八十六個名字,每個名字旁邊寫著那個人固定會買的東西。"
+    },
+    {
+      "id": "s33",
+      "text": "Karim found the notebook on the kitchen table that evening.",
+      "zh": "那天傍晚,卡林在廚房桌上看到了那本筆記本。"
+    },
+    {
+      "id": "s34",
+      "text": "\"This is a customer database,\" he said. \"On paper.\"",
+      "zh": "「這是客戶資料庫欸,」他說。「紙本的。」"
+    },
+    {
+      "id": "s35",
+      "text": "\"It is a market,\" Nadia said. \"On paper. Nineteen years of one.\"",
+      "zh": "「這是一個市場,」娜迪雅說。「紙本的。十九年的市場。」"
+    },
+    {
+      "id": "s36",
+      "text": "Karim read the page again, and this time he did not offer to build a website.",
+      "zh": "卡林又把那頁看了一遍,這次他沒有再說要幫她做網站。"
+    },
+    {
+      "id": "s37",
+      "text": "Instead he asked her what she wanted to do with it.",
+      "zh": "他反而問她,想拿這個做什麼。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did Nadia expect her customers to talk about?",
+      "options": [
+        "Prices, parking, and opening hours",
+        "The quality of her tomatoes and onions",
+        "The stalls that had already closed down"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why does Mr. Sarr come to the market for only four onions?",
+      "options": [
+        "Because someone there uses his name",
+        "Because his local shop has no onions on Wednesday",
+        "Because Nadia's onions are cheaper than anywhere else"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What changes in Karim by the end of the day?",
+      "options": [
+        "He stops pushing his own solution and asks what she wants",
+        "He decides the market cannot be saved after all",
+        "He agrees to leave his job and work at the stall"
+      ],
+      "answer": 0
+    }
+  ]
+}

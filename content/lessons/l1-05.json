@@ -6,7 +6,6 @@
   "type": "dialogue",
   "topic": "daily",
   "summaryZh": "上班族到餐廳點外帶午餐，選擇配菜、飲料和付款方式。",
-  "preGeneratedAudio": false,
   "sentences": [
     {
       "id": "s1",
