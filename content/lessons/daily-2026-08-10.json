@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-10",
+  "title": "Before the Lighthouse Closed",
+  "titleZh": "燈塔關門以前",
+  "level": 3,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "Ava 和 Ben 騎著借來的腳踏車趕往燈塔，接連遇到鏈條脫落與橋梁封閉，必須學會求助、溝通並調整原本的採訪計畫。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-10",
+    "seriesId": "detour-to-remember",
+    "seriesTitle": "A Detour to Remember",
+    "seriesTitleZh": "難忘的繞路旅行",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Ava and Ben left Omar's bicycle shop with two hours and forty minutes before their interview.",
+      "zh": "Ava 和 Ben 離開 Omar 的腳踏車店時，距離訪談還有兩小時四十分鐘。"
+    },
+    {
+      "id": "s2",
+      "text": "The first part of the coastal road was flat, quiet, and easier than they had expected under a pale blue sky.",
+      "zh": "在淡藍色天空下，沿海道路的前半段平坦又安靜，比他們原先預期的更容易騎。"
+    },
+    {
+      "id": "s3",
+      "text": "Fishing boats moved across the water while gulls circled high above the brother and sister.",
+      "zh": "漁船在水面移動，海鷗則在這對姊弟的上方盤旋。"
+    },
+    {
+      "id": "s4",
+      "text": "Ben began recording waves and bells from passing bicycles, hoping they could become the opening of their podcast.",
+      "zh": "Ben 開始錄下海浪與經過的腳踏車鈴聲，希望能把它們用在 podcast 的開場。"
+    },
+    {
+      "id": "s5",
+      "text": "Ava reminded him that reaching the lighthouse mattered more than collecting extra material.",
+      "zh": "Ava 提醒他，抵達燈塔比收集額外素材更重要。"
+    },
+    {
+      "id": "s6",
+      "text": "They passed a beach, a row of painted cottages, and a sign pointing toward Northpoint.",
+      "zh": "他們經過一處海灘、一排彩色小屋，以及一面指向 Northpoint 的路標。"
+    },
+    {
+      "id": "s7",
+      "text": "According to Omar's map, only one bridge stood between them and the lighthouse road.",
+      "zh": "按照 Omar 的地圖，他們和燈塔道路之間只剩下一座橋。"
+    },
+    {
+      "id": "s8",
+      "text": "For the first time since missing the transfer, Ava believed they would arrive comfortably early.",
+      "zh": "自從錯過轉車以來，Ava 第一次相信他們能夠從容提早抵達。"
+    },
+    {
+      "id": "s9",
+      "text": "Then Ben's bicycle chain slipped off with a sharp metallic snap.",
+      "zh": "接著，Ben 的腳踏車鏈條發出尖銳金屬聲，突然脫落了。"
+    },
+    {
+      "id": "s10",
+      "text": "He pushed the pedals twice before realizing they were turning without moving the rear wheel.",
+      "zh": "他踩了兩次踏板，才發現踏板空轉，後輪卻完全沒有動。"
+    },
+    {
+      "id": "s11",
+      "text": "Ava opened the repair kit on the roadside, but neither of them had ever replaced a chain.",
+      "zh": "Ava 在路邊打開修理工具包，但他們兩個都從未裝回過鏈條。"
+    },
+    {
+      "id": "s12",
+      "text": "They studied a tiny instruction card and finally guided the greasy links onto the gear.",
+      "zh": "他們研究一張小小的說明卡，終於把油膩的鏈節引回齒輪上。"
+    },
+    {
+      "id": "s13",
+      "text": "The repair cost them twenty minutes and left black marks across Ava's fingers.",
+      "zh": "這次修理花掉二十分鐘，也讓 Ava 的手指沾滿黑色油痕。"
+    },
+    {
+      "id": "s14",
+      "text": "They rode harder until the bridge appeared beyond a bend in the road.",
+      "zh": "他們更加用力騎，直到那座橋出現在道路轉彎處之外。"
+    },
+    {
+      "id": "s15",
+      "text": "Orange barriers blocked its entrance, and a notice said the bridge was closed for repairs.",
+      "zh": "橘色護欄封住入口，告示寫著橋梁因施工而封閉。"
+    },
+    {
+      "id": "s16",
+      "text": "The official detour added eight kilometers, which made arriving before five almost impossible.",
+      "zh": "官方替代道路多出八公里，讓他們幾乎不可能在五點前抵達。"
+    },
+    {
+      "id": "s17",
+      "text": "Ben suggested returning the bicycles and admitting that the assignment had failed.",
+      "zh": "Ben 提議歸還腳踏車，坦承這次任務已經失敗。"
+    },
+    {
+      "id": "s18",
+      "text": "Ava insisted on trying the long detour, although she knew they could not finish it quickly.",
+      "zh": "Ava 堅持嘗試較遠的繞道路線，儘管她知道他們不可能很快騎完。"
+    },
+    {
+      "id": "s19",
+      "text": "Their argument stopped when a fisher named Lena rolled a cart from the nearby harbor toward the barriers.",
+      "zh": "一位名叫 Lena 的漁民從附近港口推著手推車走向護欄，打斷了他們的爭論。"
+    },
+    {
+      "id": "s20",
+      "text": "She recognized Omar's bicycles and asked why two students looked ready to abandon them.",
+      "zh": "她認出 Omar 的腳踏車，便問為什麼兩個學生看起來準備放棄。"
+    },
+    {
+      "id": "s21",
+      "text": "After hearing their story, Lena pointed to a footpath that climbed around the damaged bridge.",
+      "zh": "聽完他們的故事後，Lena 指向一條繞過受損橋梁、向上延伸的步道。"
+    },
+    {
+      "id": "s22",
+      "text": "The path was too narrow for riding, but they could safely walk their bicycles along it.",
+      "zh": "那條路窄得無法騎車，但他們可以安全地牽著腳踏車通過。"
+    },
+    {
+      "id": "s23",
+      "text": "Before they left, Lena made Ava call the lighthouse instead of sending another uncertain message.",
+      "zh": "在他們離開前，Lena 要 Ava 直接打電話給燈塔，而不是再留一段不確定的留言。"
+    },
+    {
+      "id": "s24",
+      "text": "Mr. Price answered and agreed to wait fifteen minutes, provided they stayed on the safe path.",
+      "zh": "Mr. Price 接起電話，同意多等十五分鐘，條件是他們必須走安全的路。"
+    },
+    {
+      "id": "s25",
+      "text": "Ava and Ben pushed uphill, crossed above the bridge, and raced through the final kilometers.",
+      "zh": "Ava 和 Ben 推車上坡，從橋上方繞過，再飛快騎完最後幾公里。"
+    },
+    {
+      "id": "s26",
+      "text": "They reached Northpoint as Mr. Price was preparing to lock the heavy blue door.",
+      "zh": "他們抵達 Northpoint 時，Mr. Price 正準備鎖上那扇沉重的藍色大門。"
+    },
+    {
+      "id": "s27",
+      "text": "Their interview was shorter than planned, yet the keeper answered every important question.",
+      "zh": "他們的訪談比原定時間短，但管理員回答了每一個重要問題。"
+    },
+    {
+      "id": "s28",
+      "text": "When Ben mentioned the missed train, Mr. Price asked him to keep the recorder running.",
+      "zh": "當 Ben 提到錯過火車時，Mr. Price 要他繼續讓錄音機運轉。"
+    },
+    {
+      "id": "s29",
+      "text": "He said lighthouses existed because travelers sometimes needed help after plans went wrong.",
+      "zh": "他說，燈塔之所以存在，正是因為旅人有時會在計畫出錯後需要幫助。"
+    },
+    {
+      "id": "s30",
+      "text": "They returned Omar's bicycles before seven, and on the train home Ava realized their mistakes belonged in the episode rather than outside it.",
+      "zh": "他們在七點前歸還了 Omar 的腳踏車；搭火車回家時，Ava 發現那些錯誤其實應該放進節目，而不是排除在外。"
+    },
+    {
+      "id": "s31",
+      "text": "The finished podcast combined lighthouse history, comments from Omar and Lena, and sounds from the coastal road.",
+      "zh": "完成的 podcast 結合了燈塔歷史、Omar 和 Lena 的談話，以及沿海道路的聲音。"
+    },
+    {
+      "id": "s32",
+      "text": "What began as a travel mistake finally became a memorable story about asking for help and continuing forward.",
+      "zh": "一場旅行失誤，最後成了一個關於開口求助與繼續前進的難忘故事。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which two problems delayed Ava and Ben on the coastal route?",
+      "options": [
+        "A flat tire and a missing map",
+        "A loose chain and a closed bridge",
+        "Heavy rain and a broken microphone"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What did Lena require Ava to do before using the footpath?",
+      "options": [
+        "Call the lighthouse and explain the delay directly",
+        "Leave both bicycles beside the bridge",
+        "Ask Omar to collect them by truck"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "How did the difficult journey improve the podcast?",
+      "options": [
+        "It gave them a story about adapting and accepting help",
+        "It allowed them to replace the lighthouse interview completely",
+        "It proved that train travel was safer than cycling"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "daily-2026-08-15",
+  "title": "The Bus That Waited",
+  "titleZh": "等人的公車",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "哈金開了十一年的九號公車,每天早上都會在第三站多等兩分鐘。公司裝上準點計分螢幕之後,他被叫進了辦公室。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-15",
+    "seriesId": "two-minutes-north-road",
+    "seriesTitle": "Two Minutes on the North Road",
+    "seriesTitleZh": "北路上的兩分鐘",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s11",
+    "turn": "s22",
+    "resolution": "s30"
+  },
+  "sentences": [
+    { "id": "s1", "text": "Hakim had driven the number nine bus along the north road for eleven years.", "zh": "哈金在北路上開九號公車已經十一年了。" },
+    { "id": "s2", "text": "The route began at the town square and ended at the last farm before the hills.", "zh": "這條路線從鎮上的廣場開始,一直到山腳下最後一座農場為止。" },
+    { "id": "s3", "text": "He knew every turn, every hole in the road, and every passenger by name.", "zh": "每個轉彎、路上每個坑洞,還有每位乘客的名字,他都記得。" },
+    { "id": "s4", "text": "He also knew that Mrs. Oyelaran was always going to be late.", "zh": "他也知道歐耶拉蘭太太一定會遲到。" },
+    { "id": "s5", "text": "She lived in a green house with a heavy iron gate, just past the third stop.", "zh": "她住在第三站再過去一點,一棟有著沉重鐵門的綠色房子裡。" },
+    { "id": "s6", "text": "Most mornings she came through that gate at the exact moment the bus was pulling away.", "zh": "多數的早晨,她走出那道鐵門時,公車正好要開走。" },
+    { "id": "s7", "text": "So, without telling anyone, Hakim started waiting for her.", "zh": "於是哈金沒有告訴任何人,就開始等她。" },
+    { "id": "s8", "text": "He would stop the bus, open the door, and count slowly to one hundred and twenty.", "zh": "他會把車停下、打開車門,然後慢慢數到一百二十。" },
+    { "id": "s9", "text": "Two minutes, and never a second more than that.", "zh": "就兩分鐘,一秒都不會多。" },
+    { "id": "s10", "text": "In eleven years, not one passenger had ever complained about those two minutes.", "zh": "這十一年來,沒有任何一位乘客抱怨過那兩分鐘。" },
+    { "id": "s11", "text": "Then the company put a small screen on the panel beside his seat.", "zh": "後來公司在他座位旁的面板上裝了一個小螢幕。" },
+    { "id": "s12", "text": "It showed a single number, and that number was his punctuality score.", "zh": "螢幕上只顯示一個數字,那個數字就是他的準點分數。" },
+    { "id": "s13", "text": "Green meant that he was on time, and red meant that he was late.", "zh": "綠色代表他準時,紅色代表他遲到。" },
+    { "id": "s14", "text": "By the end of the first week, his screen was red every single morning.", "zh": "第一週結束時,他的螢幕每天早上都是紅的。" },
+    { "id": "s15", "text": "Drivers began comparing their scores in the yard, and Hakim stopped joining them.", "zh": "司機們開始在車場裡比分數,哈金就不再加入他們了。" },
+    { "id": "s16", "text": "On Friday, the dispatcher asked him to come into the office before his shift.", "zh": "星期五,調度員請他上班前先到辦公室一趟。" },
+    { "id": "s17", "text": "\"You lose two minutes at stop three,\" she said. \"Every day, for years.\"", "zh": "「你在第三站少了兩分鐘,」她說。「每一天,而且好幾年了。」" },
+    { "id": "s18", "text": "Hakim explained about the green house and the gate that opened so slowly.", "zh": "哈金解釋了那棟綠色房子,還有那道開得很慢的鐵門。" },
+    { "id": "s19", "text": "He said that it was only two minutes, and that the bus always caught up.", "zh": "他說那只有兩分鐘,而且公車後面總是追得回來。" },
+    { "id": "s20", "text": "The dispatcher listened to all of it without once interrupting him.", "zh": "調度員從頭到尾聽完,一次也沒有打斷他。" },
+    { "id": "s21", "text": "Then she turned her own screen around so that he could see it.", "zh": "然後她把自己的螢幕轉過來,讓他看得見。" },
+    { "id": "s22", "text": "\"Look at the card data,\" she said quietly.", "zh": "「你看一下刷卡紀錄,」她輕聲說。" },
+    { "id": "s23", "text": "Every passenger touched a card to the reader when they got on the bus.", "zh": "每位乘客上車時都要把卡片碰一下感應機。" },
+    { "id": "s24", "text": "Mrs. Oyelaran's card had not been used once in the last three weeks.", "zh": "歐耶拉蘭太太的卡片,在過去三個星期裡一次都沒有用過。" },
+    { "id": "s25", "text": "Hakim looked at the empty row of dates for a long time.", "zh": "哈金盯著那排空白的日期看了很久。" },
+    { "id": "s26", "text": "Every morning he had been holding the door open for someone who was no longer coming.", "zh": "他每天早上把門開著等的,是一個再也不會來的人。" },
+    { "id": "s27", "text": "He could not think of a single thing to say.", "zh": "他一句話也想不出來。" },
+    { "id": "s28", "text": "The dispatcher waited, and then she said something he had not expected at all.", "zh": "調度員等了一會兒,然後說了一句他完全沒想到的話。" },
+    { "id": "s29", "text": "\"I am not asking you to stop waiting. I am asking you to tell me why.\"", "zh": "「我不是要你別再等了。我是要你告訴我為什麼。」" },
+    { "id": "s30", "text": "So Hakim told her.", "zh": "於是哈金告訴了她。" },
+    { "id": "s31", "text": "He told her about the iron gate, and about the eleven years behind it.", "zh": "他說了那道鐵門,也說了鐵門背後那十一年。" },
+    { "id": "s32", "text": "He told her that in three weeks, nobody at all had gone to check on the old woman.", "zh": "他說,這三個星期以來,根本沒有任何人去看看那位老太太。" },
+    { "id": "s33", "text": "The dispatcher wrote the address down on a piece of paper and folded it.", "zh": "調度員把地址寫在一張紙上,然後折了起來。" },
+    { "id": "s34", "text": "\"Go and drive your route,\" she said. \"I will make a call this morning.\"", "zh": "「你去開你的車吧,」她說。「我今天早上會打通電話。」" },
+    { "id": "s35", "text": "That day Hakim stopped at the third stop exactly as he always had.", "zh": "那天,哈金還是跟以前一樣停在第三站。" },
+    { "id": "s36", "text": "He opened the door to an empty pavement and counted to one hundred and twenty.", "zh": "他對著空無一人的人行道打開車門,數到一百二十。" },
+    { "id": "s37", "text": "The waiting felt different now, but he did not believe that it was wrong.", "zh": "現在這樣的等待感覺不一樣了,但他不覺得這樣做是錯的。" }
+  ],
+  "questions": [
+    {
+      "q": "Why did Hakim stop for two extra minutes at the third stop?",
+      "options": [
+        "Because Mrs. Oyelaran was usually late reaching the bus",
+        "Because the company told drivers to wait there",
+        "Because the road ahead was often blocked"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What did the card data show the dispatcher?",
+      "options": [
+        "That Mrs. Oyelaran had not taken the bus for three weeks",
+        "That Hakim had been arriving early at every other stop",
+        "That more passengers were using stop three than before"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What did the dispatcher want from Hakim?",
+      "options": [
+        "An explanation, not an end to the waiting",
+        "A promise that he would never wait again",
+        "A new route with fewer stops on it"
+      ],
+      "answer": 0
+    }
+  ]
+}

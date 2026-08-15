@@ -7,12 +7,20 @@ import { dueCount, allLessonProgress } from '../srs.js';
 import { allLessons } from '../content.js';
 import { kvGet, kvSet } from '../db.js';
 import { needsHomeScreenPrompt, requestPersistence } from '../storage.js';
+import {
+  dailyLessonForDate,
+  formatDailyDate,
+  isDailyLesson,
+  isDailyComplete,
+  localDateKey,
+} from '../daily.js';
 
 const GOAL_HOURS = 1000;
 
 export async function render(root) {
-  const [s, cfg, due, lessons, prog, lastId] = await Promise.all([
+  const [s, cfg, due, lessons, prog, lastId, dailyCompletions] = await Promise.all([
     stats(), settings(), dueCount(), allLessons(), allLessonProgress(), kvGet('lastLesson'),
+    kvGet('dailyCompletions', {}),
   ]);
 
   const hours = s.totalSeconds / 3600;
@@ -20,9 +28,11 @@ export async function render(root) {
   const todayPct = Math.min(100, (s.todaySeconds / goalSec) * 100);
 
   const started = new Set(prog.keys());
-  const next = lessons.find(l => l.id === lastId && (prog.get(l.id)?.learned || 0) < l.count)
-    || lessons.filter(l => !started.has(l.id)).sort((a, b) => a.level - b.level)[0]
-    || lessons[0];
+  const daily = dailyLessonForDate(lessons);
+  const regularLessons = lessons.filter((lesson) => !isDailyLesson(lesson));
+  const next = regularLessons.find(l => l.id === lastId && (prog.get(l.id)?.learned || 0) < l.count)
+    || regularLessons.filter(l => !started.has(l.id)).sort((a, b) => a.level - b.level)[0]
+    || regularLessons[0];
 
   // Chrome grants persistence silently; on iOS only installing actually helps.
   requestPersistence();
@@ -31,6 +41,9 @@ export async function render(root) {
     await iosInstallBanner(),
     el('h1', { text: '今天' }),
     el('p', { class: 'sub', text: greeting(s) }),
+
+    daily ? dailyCard(daily,
+      isDailyComplete(daily, prog.get(daily.id), dailyCompletions)) : null,
 
     // --- 1000 hour counter ---
     el('a', { class: 'hero card-tap', href: '#/progress', style: 'display:block;text-decoration:none' }, [
@@ -85,6 +98,32 @@ export async function render(root) {
     el('a', { class: 'btn btn-ghost btn-block', href: '#/talk', style: 'margin-top:10px' },
       ['🗣 練對話']),
   );
+}
+
+function dailyCard(lesson, done) {
+  const exact = lesson.daily.date === localDateKey();
+  return el('div', { class: 'daily-home-wrap' }, [
+    el('a', {
+      class: 'card card-tap daily-home',
+      href: `#/lesson/${encodeURIComponent(lesson.id)}`,
+    }, [
+      el('div', { class: 'lesson-head' }, [
+        el('span', { class: 'badge badge-daily', text: exact ? '今日課程' : '最新課程' }),
+        el('span', { class: `badge badge-l${lesson.level}`, text: `L${lesson.level}` }),
+        done ? el('span', { class: 'badge badge-done', text: '完成' }) : null,
+        el('span', { class: 'muted daily-home-date', text: formatDailyDate(lesson.daily.date) }),
+      ]),
+      el('div', { class: 'daily-home-title', text: lesson.title }),
+      el('div', { class: 'lesson-zh', text: lesson.titleZh }),
+      el('p', { class: 'daily-home-summary', text: lesson.summaryZh }),
+      el('div', { class: 'lesson-meta' }, [
+        el('span', { text: lesson.daily.seriesTitleZh }),
+        el('span', { text: `第 ${lesson.daily.day}/${lesson.daily.totalDays} 日` }),
+        el('span', { text: `${lesson.wordCount || 500} 字` }),
+      ]),
+    ]),
+    el('a', { class: 'daily-schedule-link', href: '#/daily' }, ['查看完整每日課表 →']),
+  ]);
 }
 
 /* On iOS a plain Safari tab loses all its storage after seven days idle, so

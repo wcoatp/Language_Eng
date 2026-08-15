@@ -1,0 +1,113 @@
+{
+  "id": "l3-07",
+  "title": "A Better Way to Run the Weekly Meeting",
+  "titleZh": "讓每週會議更有效率",
+  "level": 3,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "兩位同事討論如何把冗長的每週例會，改成書面更新加上短時間解決問題。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Do you have a minute to talk about our Friday meeting?",
+      "zh": "你有空談一下我們星期五的會議嗎？"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Sure, although I can probably guess what you are going to say.",
+      "zh": "可以，不過我大概猜得到你要說什麼。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "It takes an hour, but most weeks we do not make any real decisions.",
+      "zh": "它花上一小時，但大多數星期我們都沒有做出真正的決定。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "I agree, and half the meeting is just people reading numbers from the screen.",
+      "zh": "我同意，而且一半的時間只是大家照著螢幕念數字。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "What if everyone sent a short written update before Thursday afternoon?",
+      "zh": "如果每個人在星期四下午前交一份簡短的書面更新呢？"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "Then we could read the updates first and use the meeting only for problems.",
+      "zh": "那我們可以先讀更新，只把會議時間用來處理問題。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "Exactly, and if there are no problems, we can cancel the meeting that week.",
+      "zh": "沒錯，如果沒有問題，那一週就可以取消會議。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "I like the idea, but some people may forget to send their updates.",
+      "zh": "我喜歡這個想法，但有些人可能會忘記交更新。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "We can make a simple template with three questions and set an automatic reminder.",
+      "zh": "我們可以做一份只有三個問題的簡單範本，再設自動提醒。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "That would help, especially if the update takes less than five minutes to write.",
+      "zh": "那會有幫助，尤其是更新內容不到五分鐘就能寫完的話。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "For urgent issues, we could still have a fifteen minute call on Friday morning.",
+      "zh": "遇到緊急問題時，我們星期五早上仍然可以開十五分鐘的通話。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Let us try it for a month and ask the team what they think afterward.",
+      "zh": "我們先試一個月，之後再問團隊的想法。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Good plan, and I will explain that the goal is to protect everyone's time.",
+      "zh": "好主意，我會說明這樣做是為了珍惜每個人的時間。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "If it works, Friday might finally feel like a day for finishing work.",
+      "zh": "如果有效，星期五或許終於會像是能把工作完成的一天。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What is the main problem with the current Friday meeting?",
+      "options": ["It lasts an hour without producing many decisions", "It begins too early for most team members", "It includes people from the wrong department"],
+      "answer": 0
+    },
+    {
+      "q": "What do A and B want people to do before the meeting?",
+      "options": ["Record a short video", "Send a brief written update", "Call the team leader"],
+      "answer": 1
+    },
+    {
+      "q": "How long will they test the new system?",
+      "options": ["One week", "One month", "Three months"],
+      "answer": 1
+    }
+  ]
+}

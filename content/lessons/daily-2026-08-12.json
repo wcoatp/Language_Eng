@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-12",
+  "title": "The Wind Changed the Design",
+  "titleZh": "風改變了設計",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "強風破壞了屋頂示範區，團隊在主管視察前選擇誠實面對失敗，並把現場損害轉化成改善安全、維護與責任分工的設計資料。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-12",
+    "seriesId": "roof-with-a-purpose",
+    "seriesTitle": "A Roof with a Purpose",
+    "seriesTitleZh": "讓屋頂有新用途",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Early Monday morning, before most employees arrived, Sofia received a message from Ravi asking her to inspect what strong winds had done to the roof over the weekend.",
+      "zh": "星期一一早，多數員工都還沒抵達時，Sofia 收到 Ravi 的訊息，請她查看週末強風對屋頂造成的影響。"
+    },
+    {
+      "id": "s2",
+      "text": "Strong winds over the weekend had pushed one folding table across the rooftop and overturned every empty planter.",
+      "zh": "週末的強風吹得一張折疊桌橫越屋頂，也吹倒了所有空花盆。"
+    },
+    {
+      "id": "s3",
+      "text": "Mint plants lay on their sides, with dark soil scattered across the gray surface far beyond the demonstration corner.",
+      "zh": "薄荷盆栽倒在一旁，深色土壤越過示範區角落，散落在灰色屋頂表面很遠的地方。"
+    },
+    {
+      "id": "s4",
+      "text": "A cardboard information board had disappeared, and three chairs were pressed against the safety wall.",
+      "zh": "一塊紙板說明牌不見了，三張椅子則被吹到緊貼安全牆。"
+    },
+    {
+      "id": "s5",
+      "text": "No one had been hurt, but the scene made their cheerful photographs seem dishonest.",
+      "zh": "沒有人受傷，但眼前的景象讓他們先前那些愉快照片顯得不真實。"
+    },
+    {
+      "id": "s6",
+      "text": "Director Chen was scheduled to inspect the space and eat lunch there in four hours.",
+      "zh": "Chen 主管預定四小時後來視察這個空間，並在這裡吃午餐。"
+    },
+    {
+      "id": "s7",
+      "text": "June arrived carrying cleaning supplies and stopped silently when she saw the damage.",
+      "zh": "June 帶著清潔用品抵達，一看到損害便沉默地停下腳步。"
+    },
+    {
+      "id": "s8",
+      "text": "Their demonstration, built after a week of work, seemed to have failed before its official presentation even began.",
+      "zh": "他們花了一週打造的示範區，似乎在正式展示開始前就已經失敗了。"
+    },
+    {
+      "id": "s9",
+      "text": "June suggested clearing everything away and showing the director only the pictures from Friday.",
+      "zh": "June 建議把一切清走，只向主管展示星期五拍的照片。"
+    },
+    {
+      "id": "s10",
+      "text": "They could explain that bad weather had forced them to move the trial indoors.",
+      "zh": "他們可以解釋惡劣天氣迫使團隊把試用活動移到室內。"
+    },
+    {
+      "id": "s11",
+      "text": "Sofia understood the temptation, because the original corner had looked welcoming for one calm afternoon.",
+      "zh": "Sofia 理解這個誘惑，因為原本的角落至少在那個平靜的下午看來十分舒適。"
+    },
+    {
+      "id": "s12",
+      "text": "However, hiding the damage would also hide the most useful result of their experiment.",
+      "zh": "然而，隱瞞損害也會掩蓋這場實驗最有用的結果。"
+    },
+    {
+      "id": "s13",
+      "text": "Ravi agreed and, before anyone began cleaning, photographed where each object had moved for their records.",
+      "zh": "Ravi 表示同意，並在任何人開始清理前，為團隊紀錄拍下每件物品被吹到的位置。"
+    },
+    {
+      "id": "s14",
+      "text": "The tallest items had traveled farthest, while the low wooden boxes had barely shifted.",
+      "zh": "最高的物品被吹得最遠，而低矮的木箱幾乎沒有移動。"
+    },
+    {
+      "id": "s15",
+      "text": "The folding table had moved because nobody had closed it and stored it after Friday's setup.",
+      "zh": "折疊桌會移動，是因為星期五布置完成後，沒有人把它收起來存放。"
+    },
+    {
+      "id": "s16",
+      "text": "Their problem involved both weak equipment and an unclear maintenance routine.",
+      "zh": "他們的問題同時來自不夠穩固的設備，以及不明確的維護流程。"
+    },
+    {
+      "id": "s17",
+      "text": "The team decided to redesign the demonstration instead of simply rebuilding the same arrangement.",
+      "zh": "團隊決定重新設計示範區，而不是照原樣重新搭建。"
+    },
+    {
+      "id": "s18",
+      "text": "They transferred every plant into one of the shallow, broad-based recycled boxes donated by their coworkers.",
+      "zh": "他們把每株植物移進同事捐出的低矮回收木箱，每個木箱都有寬大的底座。"
+    },
+    {
+      "id": "s19",
+      "text": "Reusable fabric straps connected the containers to weighted platforms without attaching anything to the roof.",
+      "zh": "可重複使用的布帶把容器連接到加重平台，完全沒有將任何東西固定在屋頂上。"
+    },
+    {
+      "id": "s20",
+      "text": "Ravi marked space for chairs and tables in an approved roof-access storage room that did not block the emergency exit.",
+      "zh": "Ravi 在經核准的屋頂通道儲藏室裡標出桌椅存放空間，並確認不會阻塞緊急出口。"
+    },
+    {
+      "id": "s21",
+      "text": "June replaced the missing cardboard sign with a small weatherproof board attached to a heavy stand.",
+      "zh": "June 用一塊固定在沉重支架上的小型防水板，取代不見的紙板標示。"
+    },
+    {
+      "id": "s22",
+      "text": "Sofia expanded the watering schedule into a checklist covering drains, forecasts, furniture, and plants.",
+      "zh": "Sofia 把澆水輪值表擴充成檢查清單，包含排水孔、天氣預報、家具和植物。"
+    },
+    {
+      "id": "s23",
+      "text": "Each task had a named volunteer, so responsibility would not disappear between departments.",
+      "zh": "每項工作都有具名志工負責，因此責任不會消失在部門之間。"
+    },
+    {
+      "id": "s24",
+      "text": "By eleven thirty, the corner looked simpler than before but considerably safer.",
+      "zh": "到了十一點半，那個角落看起來比以前簡單，卻安全了許多。"
+    },
+    {
+      "id": "s25",
+      "text": "When Director Chen arrived, Sofia first explained what had happened and showed her photographs of the wind damage.",
+      "zh": "Chen 主管抵達時，Sofia 先解釋事情的經過，並向她展示強風造成損害的照片。"
+    },
+    {
+      "id": "s26",
+      "text": "She identified which assumptions had been wrong and how the new design addressed each failure.",
+      "zh": "她指出哪些假設出了錯，以及新設計如何處理每一項失敗。"
+    },
+    {
+      "id": "s27",
+      "text": "The director tested a container, examined the storage plan, and read every volunteer's name.",
+      "zh": "主管測試一個容器、查看收納計畫，也讀了每一位志工的名字。"
+    },
+    {
+      "id": "s28",
+      "text": "She said the damaged version taught her more than a perfect display would have done.",
+      "zh": "她說，受損的版本帶來的資訊，比完美無缺的展示還要多。"
+    },
+    {
+      "id": "s29",
+      "text": "Director Chen approved a three-month trial with weekly safety checks and a strict weight limit.",
+      "zh": "Chen 主管批准了三個月的試辦，條件是每週進行安全檢查並嚴守重量限制。"
+    },
+    {
+      "id": "s30",
+      "text": "At lunch, employees carried food upstairs and discussed which herbs they could donate next.",
+      "zh": "午餐時，員工帶著食物上樓，討論接下來可以捐出哪些香草植物。"
+    },
+    {
+      "id": "s31",
+      "text": "Sofia watched the mint leaves move gently above the traffic in a much lighter breeze.",
+      "zh": "Sofia 看著車流上方的薄荷葉，在微弱許多的風中輕輕擺動。"
+    },
+    {
+      "id": "s32",
+      "text": "The garden succeeded not because its first design was perfect, but because the team changed it.",
+      "zh": "這座花園能成功，不是因為第一版設計完美，而是因為團隊願意改變它。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What did the wind reveal about the original demonstration?",
+      "options": [
+        "Tall items were unstable and the storage routine was unclear",
+        "Employees had chosen plants that could not survive outdoors",
+        "The roof was too small for six people to use safely"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why did Sofia reject the idea of hiding the damage?",
+      "options": [
+        "The director had already seen the rooftop from another building",
+        "The damage provided useful information for improving the design",
+        "The team did not have enough time to remove the broken items"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "Why did Director Chen approve the three-month trial?",
+      "options": [
+        "The team honestly used the failure to make safety and responsibility clearer",
+        "The engineering review had been completed earlier than expected",
+        "The employees agreed to pay for permanent construction themselves"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "id": "daily-2026-08-06",
+  "title": "The Umbrella by the Cafe Door",
+  "titleZh": "咖啡店門邊的那把傘",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "一場大雨讓 Maya 看見鄰居借傘的需要；當三把藍傘遲遲沒有回來時，一張感謝字條讓她和林女士決定把善意變成共享計畫。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-06",
+    "seriesId": "blue-umbrella-plan",
+    "seriesTitle": "The Blue Umbrella Plan",
+    "seriesTitleZh": "藍傘共享計畫",
+    "day": 1,
+    "totalDays": 3
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s8",
+    "turn": "s18",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "On Monday morning, Maya left home under a dark sky and hurried toward the bus stop near Ms. Lin's cafe.",
+      "zh": "星期一早上，Maya 在陰暗的天空下離開家，匆匆走向林女士咖啡店附近的公車站。"
+    },
+    {
+      "id": "s2",
+      "text": "She carried a small umbrella, but cold rain splashed her shoes and books before she reached the corner.",
+      "zh": "她帶著一把小傘，但還沒走到街角，冰冷的雨水就濺濕了她的鞋子和書本。"
+    },
+    {
+      "id": "s3",
+      "text": "Under the bus shelter, an older man named Mr. Chen was holding a paper bag over his head.",
+      "zh": "公車亭下，一位名叫陳先生的長者正把紙袋頂在頭上擋雨。"
+    },
+    {
+      "id": "s4",
+      "text": "Strong wind pushed rain under the shelter, and he could not cross the wide puddle when his bus arrived.",
+      "zh": "強風吹得雨水灌進公車亭；公車抵達時，他無法跨過前方那一大片積水。"
+    },
+    {
+      "id": "s5",
+      "text": "Maya offered him her umbrella, but her college class started across town in twenty minutes.",
+      "zh": "Maya 想把自己的傘借給他，但她在城鎮另一頭的大學課程二十分鐘後就要開始。"
+    },
+    {
+      "id": "s6",
+      "text": "Before she could decide, Ms. Lin ran out of the cafe with a bright blue umbrella.",
+      "zh": "她還沒做出決定，林女士就拿著一把亮藍色的傘從咖啡店跑了出來。"
+    },
+    {
+      "id": "s7",
+      "text": "She helped Mr. Chen onto the bus and asked him to return the umbrella whenever he could.",
+      "zh": "她協助陳先生上公車，並請他方便時再把傘送回來。"
+    },
+    {
+      "id": "s8",
+      "text": "Back inside, Maya noticed two more blue umbrellas standing in a tall basket beside the cafe door.",
+      "zh": "回到店內後，Maya 注意到咖啡店門邊的高籃子裡還立著兩把藍傘。"
+    },
+    {
+      "id": "s9",
+      "text": "Ms. Lin explained that customers often forgot umbrellas, so she had saved several clean ones for rainy days.",
+      "zh": "林女士解釋，客人常把傘忘在店裡，因此她留了幾把乾淨的傘供雨天使用。"
+    },
+    {
+      "id": "s10",
+      "text": "She wanted neighbors to borrow them during sudden rain instead of buying cheap umbrellas they did not need.",
+      "zh": "她希望鄰居遇到突如其來的雨時可以借用，而不必購買其實不需要的便宜雨傘。"
+    },
+    {
+      "id": "s11",
+      "text": "Maya liked the idea and made a simple sign with thick black letters on a piece of cardboard.",
+      "zh": "Maya 很喜歡這個點子，便在一塊紙板上用粗黑字做了一張簡單的告示。"
+    },
+    {
+      "id": "s12",
+      "text": "It said, \"Take a blue umbrella today, and bring it back tomorrow.\"",
+      "zh": "上面寫著：「今天帶走一把藍傘，明天再把它帶回來。」"
+    },
+    {
+      "id": "s13",
+      "text": "By lunchtime, a delivery worker borrowed one umbrella, and a tired mother took the other.",
+      "zh": "到了午餐時間，一名外送員借走一把傘，一位疲憊的母親也拿走了另一把。"
+    },
+    {
+      "id": "s14",
+      "text": "Ms. Lin smiled because the empty basket showed that her umbrellas were useful to people caught outside.",
+      "zh": "林女士笑了，因為空籃子證明了她的雨傘真的幫到了在外遇雨的人。"
+    },
+    {
+      "id": "s15",
+      "text": "Maya returned after class and found the rain had stopped and the evening sun was shining.",
+      "zh": "Maya 下課後回來，發現雨已經停了，傍晚的陽光也露了出來。"
+    },
+    {
+      "id": "s16",
+      "text": "She expected to see at least one blue umbrella by the door, but the basket was still empty.",
+      "zh": "她原以為門邊至少會有一把藍傘，但籃子仍然空空的。"
+    },
+    {
+      "id": "s17",
+      "text": "Ms. Lin said good plans sometimes needed patience, although Maya could see worry on her face.",
+      "zh": "林女士說，好計畫有時需要耐心，不過 Maya 看得出她臉上的擔憂。"
+    },
+    {
+      "id": "s18",
+      "text": "At seven, they closed the kitchen, cleaned the last table, and checked the basket again.",
+      "zh": "七點時，她們關閉廚房、清理最後一張桌子，接著再次查看籃子。"
+    },
+    {
+      "id": "s19",
+      "text": "None of the three umbrellas had returned, and Ms. Lin quietly folded the cardboard sign.",
+      "zh": "三把傘一把也沒有回來，林女士默默把紙板告示折了起來。"
+    },
+    {
+      "id": "s20",
+      "text": "After only one day, she wondered if people understood that borrowing was different from keeping.",
+      "zh": "才過了一天，她便開始懷疑大家是否明白借用和占為己有並不相同。"
+    },
+    {
+      "id": "s21",
+      "text": "Maya began planning labels and a list of names, but Ms. Lin did not want the project to feel strict.",
+      "zh": "Maya 開始構想標籤和借用名單，但林女士不希望這個計畫讓人感到規定森嚴。"
+    },
+    {
+      "id": "s22",
+      "text": "Just then, the front door opened, and Mr. Chen stepped in with the first blue umbrella.",
+      "zh": "就在這時，前門打開了，陳先生帶著第一把藍傘走了進來。"
+    },
+    {
+      "id": "s23",
+      "text": "A dry thank-you note was tied around its handle with a piece of white string.",
+      "zh": "傘柄上用一條白繩綁著一張乾燥的感謝字條。"
+    },
+    {
+      "id": "s24",
+      "text": "He said the umbrella had protected both him and his medicine during the wet trip home.",
+      "zh": "他說，在濕答答的回家路上，這把傘保護了他，也保護了他的藥。"
+    },
+    {
+      "id": "s25",
+      "text": "Mr. Chen also offered an old umbrella from his closet for the basket.",
+      "zh": "陳先生還願意從自家衣櫃拿出一把舊傘放進籃子。"
+    },
+    {
+      "id": "s26",
+      "text": "His return did not fill the basket, but it changed the feeling in the room.",
+      "zh": "他歸還的傘沒有填滿籃子，卻改變了店裡的氣氛。"
+    },
+    {
+      "id": "s27",
+      "text": "Maya suggested giving every umbrella a blue ribbon and adding one clear return message.",
+      "zh": "Maya 建議在每把傘上繫一條藍絲帶，並加上一句清楚的歸還提醒。"
+    },
+    {
+      "id": "s28",
+      "text": "Ms. Lin agreed, as long as anyone could borrow without money, an app, or a membership card.",
+      "zh": "林女士答應了，條件是任何人都能借用，不必付錢、不必使用應用程式，也不必持有會員卡。"
+    },
+    {
+      "id": "s29",
+      "text": "They named it the Blue Umbrella Plan and invited the neighborhood to add more umbrellas.",
+      "zh": "她們將它命名為「藍傘共享計畫」，並邀請鄰居提供更多雨傘。"
+    },
+    {
+      "id": "s30",
+      "text": "When Maya left, the basket held two umbrellas and a new sign about sharing, trust, and tomorrow.",
+      "zh": "Maya 離開時，籃子裡已有兩把傘，還有一張談著分享、信任與明天的新告示。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Ms. Lin first carry a blue umbrella outside?",
+      "options": ["To help Mr. Chen reach his bus", "To sell it to a delivery worker", "To cover the cafe sign"],
+      "answer": 0
+    },
+    {
+      "q": "What worried Maya and Ms. Lin near closing time?",
+      "options": ["The rain was getting colder", "None of the umbrellas had returned", "The cardboard sign was wet"],
+      "answer": 1
+    },
+    {
+      "q": "What was important to Ms. Lin about the new plan?",
+      "options": ["Borrowers had to pay first", "Only cafe members could join", "Anyone could borrow without money or an app"],
+      "answer": 2
+    }
+  ]
+}

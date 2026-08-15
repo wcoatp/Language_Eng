@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-09",
+  "title": "Beyond the Last Stop",
+  "titleZh": "時刻表最後一站之外",
+  "level": 2,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "Ava 和弟弟 Ben 為了學校節目搭火車前往燈塔，卻因誤聽轉車廣播來到錯誤的終點，只能在有限時間內尋找替代交通方式。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-09",
+    "seriesId": "detour-to-remember",
+    "seriesTitle": "A Detour to Remember",
+    "seriesTitleZh": "難忘的繞路旅行",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Ava had checked the train schedule three times before she and her younger brother Ben left home.",
+      "zh": "Ava 在和弟弟 Ben 離家前，已經把火車時刻表確認了三遍。"
+    },
+    {
+      "id": "s2",
+      "text": "They were traveling to Northpoint Lighthouse to record an interview with its keeper for their school podcast.",
+      "zh": "他們正要前往 Northpoint 燈塔，採訪燈塔管理員，為學校的 podcast 錄製內容。"
+    },
+    {
+      "id": "s3",
+      "text": "The lighthouse keeper had set aside forty minutes for their interview before the building closed at five that afternoon.",
+      "zh": "燈塔管理員已在建築物當天下午五點關門前，為他們的訪談預留四十分鐘。"
+    },
+    {
+      "id": "s4",
+      "text": "Ava carried the microphones, while Ben guarded a notebook filled with carefully prepared questions.",
+      "zh": "Ava 帶著麥克風，Ben 則小心保管寫滿預先準備問題的筆記本。"
+    },
+    {
+      "id": "s5",
+      "text": "Their mother offered to drive, but Ava wanted the trip to feel like a real assignment.",
+      "zh": "媽媽原本願意開車送他們，但 Ava 希望這趟旅程像一次真正的採訪任務。"
+    },
+    {
+      "id": "s6",
+      "text": "At Central Station, the departure board showed their coastal train leaving from platform six.",
+      "zh": "在中央車站，出發資訊板顯示他們的海岸列車將從第六月台開出。"
+    },
+    {
+      "id": "s7",
+      "text": "They found two window seats and watched apartment blocks slowly give way to green fields and distant hills.",
+      "zh": "他們找到兩個靠窗座位，看著公寓大樓逐漸被綠色田野和遠方山丘取代。"
+    },
+    {
+      "id": "s8",
+      "text": "For the first hour, everything happened exactly as Ava had planned.",
+      "zh": "第一個小時裡，一切都完全照著 Ava 的計畫進行。"
+    },
+    {
+      "id": "s9",
+      "text": "Near the coast, a noisy announcement from several old speakers told lighthouse passengers to transfer at Harbor End.",
+      "zh": "接近海岸時，一段從幾個老舊喇叭傳出的嘈雜廣播，通知前往燈塔的乘客要在 Harbor End 轉車。"
+    },
+    {
+      "id": "s10",
+      "text": "Ben heard the word direct and told Ava that they should remain on board.",
+      "zh": "Ben 聽見了「直達」這個字，便告訴 Ava 他們應該留在車上。"
+    },
+    {
+      "id": "s11",
+      "text": "Ava thought the speaker had said something different, but the train doors were already closing.",
+      "zh": "Ava 覺得廣播說的似乎不一樣，但列車門已經關上了。"
+    },
+    {
+      "id": "s12",
+      "text": "They agreed to trust Ben's ears and continued past the station without asking anyone.",
+      "zh": "他們決定相信 Ben 的耳朵，沒有詢問任何人就繼續坐過了那一站。"
+    },
+    {
+      "id": "s13",
+      "text": "Twenty minutes later, every other passenger stepped off at a quiet village called Seabrook.",
+      "zh": "二十分鐘後，其他乘客全都在名叫 Seabrook 的寧靜村莊下車。"
+    },
+    {
+      "id": "s14",
+      "text": "The conductor looked surprised when Ava asked how many stops remained before Northpoint.",
+      "zh": "Ava 詢問距離 Northpoint 還有幾站時，列車長露出驚訝的表情。"
+    },
+    {
+      "id": "s15",
+      "text": "He explained that Seabrook was the final stop and Northpoint lay twelve kilometers behind them.",
+      "zh": "他解釋 Seabrook 就是終點站，而 Northpoint 位在他們後方十二公里處。"
+    },
+    {
+      "id": "s16",
+      "text": "Ben opened the schedule again and finally noticed the small transfer symbol beside Harbor End.",
+      "zh": "Ben 再次打開時刻表，終於注意到 Harbor End 旁邊那個小小的轉車符號。"
+    },
+    {
+      "id": "s17",
+      "text": "The station clerk said the next bus toward the lighthouse would not arrive until evening.",
+      "zh": "車站職員說，下一班開往燈塔方向的公車要到傍晚才會抵達。"
+    },
+    {
+      "id": "s18",
+      "text": "Their interview began in three hours, and walking the whole distance under the afternoon sun would take nearly as long.",
+      "zh": "他們的訪談三小時後開始，而頂著午後陽光走完全程也幾乎需要同樣久。"
+    },
+    {
+      "id": "s19",
+      "text": "Ava blamed Ben for guessing, and Ben replied that she had heard the same unclear message.",
+      "zh": "Ava 責怪 Ben 亂猜，Ben 則回說她也聽到了同一段不清楚的廣播。"
+    },
+    {
+      "id": "s20",
+      "text": "For several uncomfortable minutes, they sat outside the station without speaking.",
+      "zh": "接下來尷尬的幾分鐘裡，他們坐在車站外，一句話也沒說。"
+    },
+    {
+      "id": "s21",
+      "text": "A handwritten sign across the street listed bicycle repairs, maps, and cold lemonade.",
+      "zh": "街對面一塊手寫招牌列著腳踏車維修、地圖和冰檸檬水。"
+    },
+    {
+      "id": "s22",
+      "text": "Ben pointed at two dusty bicycles standing beside the shop and suggested asking about them.",
+      "zh": "Ben 指著店旁兩輛滿是灰塵的腳踏車，提議去問問看。"
+    },
+    {
+      "id": "s23",
+      "text": "The owner, Omar, listened patiently while Ava described the missed transfer and their limited time.",
+      "zh": "店主 Omar 耐心聽 Ava 說明錯過轉車以及他們剩下的有限時間。"
+    },
+    {
+      "id": "s24",
+      "text": "Instead of laughing, he unfolded a local map and showed them a narrow road along the shore with one finger.",
+      "zh": "他沒有嘲笑他們，而是攤開當地地圖，用一根手指指出沿海岸的一條狹窄道路。"
+    },
+    {
+      "id": "s25",
+      "text": "Omar offered them the old bicycles if they promised to return them before his shop closed at seven.",
+      "zh": "Omar 願意把舊腳踏車借給他們，只要他們答應在店家七點打烊前歸還。"
+    },
+    {
+      "id": "s26",
+      "text": "He checked both brakes, raised Ben's seat, and placed a repair kit in Ava's basket.",
+      "zh": "他檢查兩輛車的煞車、調高 Ben 的座椅，並在 Ava 的車籃裡放了一套修理工具。"
+    },
+    {
+      "id": "s27",
+      "text": "The coastal route was longer than the highway, but it was safe enough for bicycles.",
+      "zh": "沿海道路比公路更遠，但對腳踏車來說足夠安全。"
+    },
+    {
+      "id": "s28",
+      "text": "Ava called the lighthouse office and left a message explaining that they might arrive late.",
+      "zh": "Ava 打電話到燈塔辦公室留言，說明他們可能會遲到。"
+    },
+    {
+      "id": "s29",
+      "text": "Then she apologized to Ben, who admitted that he should have asked the conductor sooner.",
+      "zh": "接著她向 Ben 道歉，Ben 也承認自己早該詢問列車長。"
+    },
+    {
+      "id": "s30",
+      "text": "They tightened their backpack straps and repeated Omar's directions one final time.",
+      "zh": "他們拉緊背包帶，最後再複誦一次 Omar 指的方向。"
+    },
+    {
+      "id": "s31",
+      "text": "As they rode away, the sea appeared beyond the rooftops like a bright silver path.",
+      "zh": "他們騎車離開時，海面在屋頂後方出現，像一條明亮的銀色小徑。"
+    },
+    {
+      "id": "s32",
+      "text": "The mistake had changed their journey, but it had not ended their assignment.",
+      "zh": "這個錯誤改變了他們的旅程，卻還沒有結束他們的任務。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Ava and Ben remain on the train at Harbor End?",
+      "options": [
+        "They believed the train would take them directly to Northpoint",
+        "They wanted to visit the village at the final stop",
+        "They were waiting for the lighthouse keeper to call"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Why was walking from Seabrook not a good solution?",
+      "options": [
+        "The road was completely closed to pedestrians",
+        "It would use nearly all the time before the interview",
+        "Their recording equipment was too heavy to carry"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What solution did Omar provide?",
+      "options": [
+        "He drove them to the lighthouse in his truck",
+        "He changed the time of their interview",
+        "He lent them bicycles and showed them a coastal route"
+      ],
+      "answer": 2
+    }
+  ]
+}

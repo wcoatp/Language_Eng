@@ -1,0 +1,44 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      ".claude/**",
+      ".git/**",
+      ".github/**",
+      ".venv/**",
+      ".venv-dia/**",
+      ".venv-tts/**",
+      "**/node_modules/**",
+      "README.md",
+      "package.json",
+      "tools/**",
+      "test/**",
+      "models/**",
+      "bakeoff/**",
+      "docs/**",
+      "*.echopack",
+      "*.log"
+    ],
+    "headers": [
+      {
+        "source": "/index.html",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "/sw.js",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "/content/index.json",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      },
+      {
+        "source": "/content/audio/**",
+        "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }]
+      }
+    ]
+  }
+}

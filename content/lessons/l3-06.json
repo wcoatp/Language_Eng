@@ -1,0 +1,121 @@
+{
+  "id": "l3-06",
+  "title": "Negotiating a Lease Renewal",
+  "titleZh": "協商租約續簽",
+  "level": 3,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "租客與房東討論續約、租金調幅和老舊冷氣，最後以兩年租期達成共識。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Thanks for meeting with me. Your lease ends next month.",
+      "zh": "謝謝你來和我談。你的租約下個月到期。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "I'd like to stay, but I noticed the proposed rent increase.",
+      "zh": "我想繼續住，但我注意到提議的租金漲幅。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Maintenance costs have risen, so I proposed an eight percent increase.",
+      "zh": "維護成本上升了，所以我提議調漲百分之八。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "I understand, but eight percent would be difficult for my budget.",
+      "zh": "我了解，但百分之八會讓我的預算很吃緊。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "What kind of increase did you have in mind?",
+      "zh": "你心裡可以接受的調幅是多少？",
+      "note": "have in mind 表示心裡正在考慮某個想法或數字。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "I could manage three percent if the bedroom air conditioner were repaired.",
+      "zh": "如果臥室冷氣能修好，我可以接受百分之三。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "The technician said the unit still works, although it is old.",
+      "zh": "技師說那台冷氣雖然老舊，但仍可運作。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "It cools the room, but it is noisy and my electric bill has increased.",
+      "zh": "它能讓房間變涼，但很吵，而且我的電費也增加了。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Replacing it would be a much bigger expense than a repair.",
+      "zh": "更換新機會比維修多出一大筆費用。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "If I sign a two-year lease, would you consider a new unit and a four percent increase?",
+      "zh": "如果我簽兩年租約，你願意考慮換新機，並把漲幅訂在百分之四嗎？"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "A two-year agreement would give me more stability, so that could work.",
+      "zh": "兩年合約能給我更多穩定性，所以這個方案可行。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Could we keep the same rent for both years without another adjustment?",
+      "zh": "那兩年內可以維持同樣租金，不再調整嗎？"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Yes, provided that we sign the renewal by the end of this week.",
+      "zh": "可以，前提是我們在本週結束前簽好續約。",
+      "note": "provided that 表示以某件事為條件。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "Please send me the revised agreement and an installation date.",
+      "zh": "請把修改後的合約和冷氣安裝日期傳給我。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "I will. Please review the agreement and confirm that your deposit remains unchanged.",
+      "zh": "我會的。請確認合約內容，也確認你的押金維持不變。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does the tenant object to the original increase?",
+      "options": ["The lease is too long", "It would be difficult for the tenant's budget", "The apartment is too far from work"],
+      "answer": 1
+    },
+    {
+      "q": "What problem does the bedroom air conditioner have?",
+      "options": ["It leaks water every day", "It does not turn on", "It is noisy and uses more electricity"],
+      "answer": 2
+    },
+    {
+      "q": "What agreement do they reach?",
+      "options": ["A two-year lease, a new unit, and a four percent increase", "A one-year lease with an eight percent increase", "No rent increase and no new air conditioner"],
+      "answer": 0
+    }
+  ]
+}

@@ -82,8 +82,9 @@ const files = (await readdir(lessonDir)).filter(f => f.endsWith('.json')).sort()
 const lessons = [];
 for (const f of files) {
   const l = JSON.parse(await readFile(join(lessonDir, f), 'utf8'));
-  // Real recordings keep their human voice.
-  if (!l.realAudio) lessons.push(l);
+  // Real recordings keep their human voice. Device-TTS lessons deliberately
+  // stay lightweight until preGeneratedAudio is explicitly switched on.
+  if (!l.realAudio && l.preGeneratedAudio !== false) lessons.push(l);
 }
 console.log(`${lessons.length} synthetic lessons, ` +
   `${lessons.reduce((n, l) => n + l.sentences.length, 0)} sentences`);

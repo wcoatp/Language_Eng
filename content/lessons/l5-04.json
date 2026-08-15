@@ -1,0 +1,125 @@
+{
+  "id": "l5-04",
+  "title": "Can Productivity Be Reduced to a Score?",
+  "titleZh": "生產力能化成一個分數嗎？",
+  "level": 5,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "經理與資料分析師討論員工生產力分數的盲點，並設計兼顧決策用途與人性風險的評估方式。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "The board wants a single productivity score for every department by the end of the quarter.",
+      "zh": "董事會希望在本季結束前，為每個部門建立單一生產力分數。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "A single score is easy to compare, but that convenience may be exactly what makes it dangerous.",
+      "zh": "單一分數很容易比較，但這種便利或許正是它危險的原因。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "They are not asking us to judge individuals, only to see which teams need more support.",
+      "zh": "他們不是要我們評判個人，只是想看哪些團隊需要更多支援。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "That intention helps, although department metrics have a habit of becoming individual targets later.",
+      "zh": "這個出發點有幫助，不過部門指標往往之後會變成個人目標。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "What would be wrong with combining completed projects, response time, and customer ratings?",
+      "zh": "把完成的專案數、回應時間與客戶評分合在一起，有什麼問題？"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "Those measures reward visible output, while maintenance and careful prevention often remain invisible.",
+      "zh": "那些衡量方式獎勵看得見的產出，但維護與謹慎預防往往是看不見的。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "So the team that prevents a crisis could score lower than the team that fixes one dramatically.",
+      "zh": "所以預防危機的團隊，分數可能比轟轟烈烈解決危機的團隊更低。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "Exactly, and once people know the formula, they will naturally organize their work around it.",
+      "zh": "正是如此，而且人們一旦知道公式，自然會圍繞它安排工作。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "That does not mean every measurement is useless; we still need evidence for staffing decisions.",
+      "zh": "這不表示所有衡量都沒用，我們在人力決策上仍然需要證據。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "I agree, but I would present a dashboard of several signals rather than compressing them into one rank.",
+      "zh": "我同意，但我會呈現包含多項訊號的儀表板，而不是把它們壓成單一排名。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "The board will ask how to interpret a dashboard when the signals point in different directions.",
+      "zh": "當不同訊號指向不同方向時，董事會會問該如何解讀儀表板。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "That disagreement is information, because it tells us where a simple story would hide a tradeoff.",
+      "zh": "那種不一致本身就是資訊，因為它告訴我們簡單說法會在哪裡掩蓋取捨。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Could we add a written review so teams can explain unusual conditions behind their numbers?",
+      "zh": "我們能否加入書面檢視，讓團隊解釋數字背後的特殊情況？"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "Yes, and we should prevent the data from being used for bonuses until we have tested it for bias.",
+      "zh": "可以，而且在檢驗資料是否有偏誤之前，我們應避免把它用於獎金決定。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "I will propose a six month pilot with department trends, written context, and no employee ranking.",
+      "zh": "我會提議進行六個月試行，觀察部門趨勢、附上書面脈絡，且不做員工排名。"
+    },
+    {
+      "id": "s16",
+      "speaker": "B",
+      "text": "That gives us something useful to learn from without pretending the score knows more than we do.",
+      "zh": "這樣我們能得到有用的學習材料，也不會假裝分數比我們懂得更多。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why is B concerned about creating one productivity score?",
+      "options": ["It would take too long to calculate", "It could hide important work and shape behavior around the formula", "It would reveal private customer information"],
+      "answer": 1
+    },
+    {
+      "q": "What does B suggest using instead of a single rank?",
+      "options": ["A dashboard with several signals", "Only customer ratings", "An informal vote by managers"],
+      "answer": 0
+    },
+    {
+      "q": "What limits will the proposed pilot include?",
+      "options": ["It will cover only one week of data", "It will rank employees but not departments", "It will include context and avoid employee ranking"],
+      "answer": 2
+    }
+  ]
+}

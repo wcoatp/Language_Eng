@@ -51,6 +51,7 @@ export async function allLessons() {
     count: l.sentences.length,
     summaryZh: l.summaryZh || "",
     realAudio: !!l.realAudio,
+    preGeneratedAudio: l.preGeneratedAudio ?? !!l.realAudio,
     custom: true,
     at: l.at || 0,
   }));

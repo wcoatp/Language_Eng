@@ -1,0 +1,109 @@
+{
+  "id": "l5-05",
+  "title": "The Argument for Traveling More Slowly",
+  "titleZh": "慢速旅行的理由",
+  "level": 5,
+  "type": "article",
+  "topic": "travel",
+  "summaryZh": "作者反思把旅行當成景點清單的習慣，主張用較少移動與較長停留換取更深的理解，同時承認慢遊並非人人可行。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "I used to plan trips by opening a map and asking how many famous places I could connect in the fewest days.",
+      "zh": "我以前規劃旅行時，會打開地圖，問自己能在最少天數內串起多少知名景點。"
+    },
+    {
+      "id": "s2",
+      "text": "The resulting schedules looked efficient, which is another way of saying they left no room for reality.",
+      "zh": "排出的行程看似有效率，換個方式說，就是完全沒有替現實留下空間。"
+    },
+    {
+      "id": "s3",
+      "text": "A delayed train felt like a stolen museum, and an unexpected conversation became an obstacle to the next reservation.",
+      "zh": "火車誤點像是偷走了一間博物館，一場意外的談話則成了趕往下一個預約的障礙。"
+    },
+    {
+      "id": "s4",
+      "text": "I was collecting evidence that I had traveled while repeatedly refusing the conditions that make travel interesting.",
+      "zh": "我不斷收集自己旅行過的證據，卻一再拒絕那些讓旅行變有趣的條件。"
+    },
+    {
+      "id": "s5",
+      "text": "My habits changed after I spent ten days in a coastal town because a regional rail strike canceled my onward journey.",
+      "zh": "一次區域鐵路罷工取消了後續行程，迫使我在海邊小鎮待上十天，也改變了我的習慣。"
+    },
+    {
+      "id": "s6",
+      "text": "At first, the extra days seemed empty because I had already visited everything the guidebook considered important.",
+      "zh": "起初，多出的日子顯得空洞，因為旅遊書認為重要的地方我都去過了。"
+    },
+    {
+      "id": "s7",
+      "text": "Then repetition began doing what novelty could not: it made small differences visible.",
+      "zh": "接著，重複開始做到新奇做不到的事：讓細微差異變得可見。"
+    },
+    {
+      "id": "s8",
+      "text": "I noticed which bakery sold out before noon, when fishing boats returned, and how the main square changed after commuters left.",
+      "zh": "我注意到哪間麵包店中午前就售罄、漁船何時回港，以及通勤者離開後主廣場如何改變。"
+    },
+    {
+      "id": "s9",
+      "text": "None of those observations qualified as attractions, yet together they gave the town a shape I could remember.",
+      "zh": "這些觀察沒有一項算得上景點，但合在一起，卻讓小鎮有了我能記住的輪廓。"
+    },
+    {
+      "id": "s10",
+      "text": "Slow travel is often advertised as morally superior, but that claim deserves some resistance.",
+      "zh": "慢速旅行常被宣傳成道德上更優越的選擇，但這種說法值得質疑。"
+    },
+    {
+      "id": "s11",
+      "text": "Long stays can require flexible work, money, and secure documents, all of which are distributed unevenly.",
+      "zh": "長期停留可能需要彈性工作、金錢與穩定的旅行證件，而這些條件的分配並不均等。"
+    },
+    {
+      "id": "s12",
+      "text": "Someone with five vacation days is not shallow for wanting to see more than one place.",
+      "zh": "只有五天假期的人想多看一個地方，並不代表他很膚淺。"
+    },
+    {
+      "id": "s13",
+      "text": "The useful principle is not that every journey must be long, but that constant movement has a cost worth noticing.",
+      "zh": "有用的原則不是每趟旅程都必須很長，而是持續移動有一種值得注意的代價。"
+    },
+    {
+      "id": "s14",
+      "text": "Each transfer consumes attention, creates another chance for delay, and keeps part of the mind focused on departure.",
+      "zh": "每次轉乘都會消耗注意力、增加延誤的機會，並讓部分心思始終放在離開上。"
+    },
+    {
+      "id": "s15",
+      "text": "Now I remove one destination from nearly every first draft and give the remaining places the recovered time.",
+      "zh": "如今，幾乎每份初版行程我都會刪掉一個目的地，把省下的時間留給其他地方。"
+    },
+    {
+      "id": "s16",
+      "text": "I return with fewer photographs, but the places in them feel less like backgrounds and more like places where life occurred.",
+      "zh": "我帶回的照片變少了，但照片中的地方不再只是背景，而更像是真有生活發生過的所在。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What changed the writer's approach to travel?",
+      "options": ["A rail strike forced a longer stay in one town", "A guidebook recommended fewer attractions", "A friend refused to follow the original schedule"],
+      "answer": 0
+    },
+    {
+      "q": "Why does the writer resist calling slow travel morally superior?",
+      "options": ["Slow travel always produces more pollution", "The ability to stay longer depends on privileges not everyone has", "Local residents generally dislike long term visitors"],
+      "answer": 1
+    },
+    {
+      "q": "What practical rule does the writer now follow?",
+      "options": ["Visit every major attraction before relaxing", "Avoid all trains and airports", "Remove one destination and spend longer in the others"],
+      "answer": 2
+    }
+  ]
+}

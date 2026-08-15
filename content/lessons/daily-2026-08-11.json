@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-11",
+  "title": "Lunch Above the Traffic",
+  "titleZh": "車流上方的午餐時間",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "Sofia 想把辦公室閒置屋頂改成午休花園，但承重、預算與維護問題讓完整計畫無法立即獲准，團隊只能在一週內做出可移動的示範區。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-11",
+    "seriesId": "roof-with-a-purpose",
+    "seriesTitle": "A Roof with a Purpose",
+    "seriesTitleZh": "讓屋頂有新用途",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "At noon, Sofia looked across the accounting office and counted eleven people eating at their desks.",
+      "zh": "中午時，Sofia 環顧會計辦公室，數到十一個人正在自己的座位上吃飯。"
+    },
+    {
+      "id": "s2",
+      "text": "Some answered messages between bites, while others stared silently at the same screens they had watched all morning.",
+      "zh": "有些人邊吃邊回訊息，另一些人則沉默盯著已經看了一整個早上的螢幕。"
+    },
+    {
+      "id": "s3",
+      "text": "The break room had only four chairs, and traffic noise filled the narrow sidewalk outside.",
+      "zh": "休息室只有四張椅子，外頭狹窄的人行道又充滿車流噪音。"
+    },
+    {
+      "id": "s4",
+      "text": "Sofia remembered a roof door she had passed during a safety exercise the previous month.",
+      "zh": "Sofia 想起上個月安全演練時曾經走過的一扇屋頂門。"
+    },
+    {
+      "id": "s5",
+      "text": "Facilities manager Ravi unlocked it and led her up a short concrete staircase.",
+      "zh": "設施經理 Ravi 打開門，帶她走上一小段水泥樓梯。"
+    },
+    {
+      "id": "s6",
+      "text": "Above them was an empty roof with old chairs, shipping boxes, and a wide view of the city.",
+      "zh": "上方是一處空蕩的屋頂，放著舊椅子和貨運紙箱，還能看見寬廣的城市景色。"
+    },
+    {
+      "id": "s7",
+      "text": "Although the street remained busy below, the air on the roof felt cooler and surprisingly calm.",
+      "zh": "雖然下方街道仍然繁忙，屋頂上的空氣卻更涼爽，也出乎意料地平靜。"
+    },
+    {
+      "id": "s8",
+      "text": "Sofia pictured tables, herbs, and coworkers returning downstairs after a genuine rest.",
+      "zh": "Sofia 想像著桌子、香草植物，以及真正休息過後再回到樓下的同事。"
+    },
+    {
+      "id": "s9",
+      "text": "She proposed turning one corner into a small garden where employees could eat lunch.",
+      "zh": "她提議把其中一個角落改成小花園，讓員工可以在那裡吃午餐。"
+    },
+    {
+      "id": "s10",
+      "text": "Ravi liked the purpose behind the idea, but he warned that an attractive idea was not automatically a practical one.",
+      "zh": "Ravi 喜歡這個構想背後的目的，但提醒她，吸引人的點子不一定自動就是可行的方案。"
+    },
+    {
+      "id": "s11",
+      "text": "Heavy planters could exceed the roof's safe load, especially after wet soil absorbed rain.",
+      "zh": "沉重的花盆可能超過屋頂的安全承重，尤其是土壤吸收雨水之後。"
+    },
+    {
+      "id": "s12",
+      "text": "Water could also block drains or leak through a surface that had never supported a garden.",
+      "zh": "水也可能堵住排水孔，或滲過從未承載過花園的屋頂表面。"
+    },
+    {
+      "id": "s13",
+      "text": "Then there were wind, insurance, cleaning, and the question of who would care for everything.",
+      "zh": "此外還有強風、保險、清潔，以及究竟該由誰照顧一切的問題。"
+    },
+    {
+      "id": "s14",
+      "text": "Instead of abandoning the idea, Sofia asked Ravi to help her list every condition for approval.",
+      "zh": "Sofia 沒有放棄，而是請 Ravi 幫忙列出獲得批准所需的每一項條件。"
+    },
+    {
+      "id": "s15",
+      "text": "Their coworker June surveyed the staff and found that thirty people would use the space weekly.",
+      "zh": "同事 June 調查員工後發現，每週會有三十人願意使用這個空間。"
+    },
+    {
+      "id": "s16",
+      "text": "The three prepared a simple budget and requested a meeting with their department director.",
+      "zh": "三人準備了一份簡單預算，並向部門主管要求開會討論。"
+    },
+    {
+      "id": "s17",
+      "text": "Director Chen listened carefully, then declined to approve permanent construction without an engineering review.",
+      "zh": "Chen 主管仔細聽完後，表示沒有工程審查就不能批准永久施工。"
+    },
+    {
+      "id": "s18",
+      "text": "That review would take months and cost more than Sofia's entire proposed garden.",
+      "zh": "那項審查會花上數月，而且費用比 Sofia 提議的整座花園還高。"
+    },
+    {
+      "id": "s19",
+      "text": "However, the director offered them one week and a limited budget for a movable demonstration area.",
+      "zh": "不過，主管給他們一週時間和有限預算，製作一個可移動的示範區。"
+    },
+    {
+      "id": "s20",
+      "text": "Nothing could be attached to the roof, and every object had to be carried away quickly.",
+      "zh": "任何物品都不能固定在屋頂上，而且每樣東西都必須能迅速搬走。"
+    },
+    {
+      "id": "s21",
+      "text": "Sofia worried that such strict limits would make the demonstration look temporary and unconvincing.",
+      "zh": "Sofia 擔心這些嚴格限制會讓示範區顯得臨時又缺乏說服力。"
+    },
+    {
+      "id": "s22",
+      "text": "Ravi argued that the limits could guide them toward a safer design rather than a weaker one.",
+      "zh": "Ravi 認為，這些限制能引導他們做出更安全的設計，而不是更差的設計。"
+    },
+    {
+      "id": "s23",
+      "text": "June suggested starting with six seats, lightweight containers, and plants donated by employees.",
+      "zh": "June 建議先準備六個座位、輕量容器，以及由員工捐出的植物。"
+    },
+    {
+      "id": "s24",
+      "text": "By the meeting's end, disappointment had become a short list of tasks.",
+      "zh": "會議結束時，原本的失望已經變成一張簡短的工作清單。"
+    },
+    {
+      "id": "s25",
+      "text": "Ravi measured the demonstration corner and marked a clear path to every drain and emergency exit.",
+      "zh": "Ravi 測量示範區的角落，並標出通往每個排水孔和緊急出口的暢通路線。"
+    },
+    {
+      "id": "s26",
+      "text": "June collected folding chairs, mint plants, and shallow wooden boxes from willing coworkers.",
+      "zh": "June 從願意幫忙的同事那裡收集折疊椅、薄荷盆栽和淺木箱。"
+    },
+    {
+      "id": "s27",
+      "text": "Sofia created a watering schedule and persuaded the cafeteria to lend them two small tables.",
+      "zh": "Sofia 製作澆水輪值表，並說服員工餐廳借給他們兩張小桌子。"
+    },
+    {
+      "id": "s28",
+      "text": "On Friday afternoon, the empty corner became a modest place to sit, talk, and breathe with a view of downtown.",
+      "zh": "星期五下午，空蕩的角落變成一處可以坐下、交談、喘口氣並眺望市中心的樸素空間。"
+    },
+    {
+      "id": "s29",
+      "text": "Nothing was permanent, yet each piece could be moved by one person in less than a minute.",
+      "zh": "沒有任何東西是永久設置的，但每件物品都能由一個人在一分鐘內搬動。"
+    },
+    {
+      "id": "s30",
+      "text": "The team took photographs and planned to invite Director Chen for lunch on Monday.",
+      "zh": "團隊拍下照片，打算星期一邀請 Chen 主管上來吃午餐。"
+    },
+    {
+      "id": "s31",
+      "text": "Before leaving on Friday, Ravi's weather application warned of unusually strong winds over the weekend.",
+      "zh": "星期五離開前，Ravi 的天氣應用程式警告，週末將出現異常強風。"
+    },
+    {
+      "id": "s32",
+      "text": "Nobody was scheduled to visit the roof over the weekend, so their gentle idea would face the strong winds alone.",
+      "zh": "週末沒有人預定前往屋頂，因此他們溫和的構想將獨自面對強風。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Sofia want to create a rooftop lunch area?",
+      "options": [
+        "Coworkers had few comfortable places to take a real break",
+        "The company needed more space for accounting records",
+        "The cafeteria planned to close for several months"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Which concern did Ravi raise about heavy planters?",
+      "options": [
+        "They might block the view from nearby offices",
+        "They could exceed the roof's safe load when wet",
+        "They would attract too many employees at lunch"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What did Director Chen approve?",
+      "options": [
+        "A permanent garden with an unlimited budget",
+        "An immediate engineering review of the whole building",
+        "A movable demonstration area with one week to prepare it"
+      ],
+      "answer": 2
+    }
+  ]
+}

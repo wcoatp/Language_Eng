@@ -1,0 +1,122 @@
+{
+  "id": "l2-05",
+  "title": "Moving Up a Project Deadline",
+  "titleZh": "專案期限提前",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "work",
+  "summaryZh": "客戶臨時將展示日期提前，團隊討論工作進度、分工和可交付範圍。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Did you see the client's email this morning?",
+      "zh": "你看到客戶今天早上的電子郵件了嗎？"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Yes. They want to move the demo from Friday to Wednesday.",
+      "zh": "看到了。他們想把展示從星期五提前到星期三。",
+      "note": "move something up 表示把日期或時間提前。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "Can we get the new dashboard ready by then?",
+      "zh": "我們能在那之前把新版儀表板準備好嗎？"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "The desktop screens are done, but the mobile layout needs another day.",
+      "zh": "桌面版畫面完成了，但手機版版面還需要一天。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Let's focus on the desktop demo and finish the mobile version later.",
+      "zh": "我們先專注在桌面版展示，之後再完成手機版。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "That would help, but the charts still need the final sales numbers.",
+      "zh": "那會有幫助，但圖表仍需要最終銷售數字。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "I'll ask the finance team to send them by noon today.",
+      "zh": "我會請財務團隊在今天中午前把數字傳來。"
+    },
+    {
+      "id": "s8",
+      "speaker": "A",
+      "text": "If the numbers arrive today, can you finish the charts tomorrow?",
+      "zh": "如果數字今天到，你能在明天完成圖表嗎？"
+    },
+    {
+      "id": "s9",
+      "speaker": "B",
+      "text": "Yes, but I need someone else to check the labels and copy.",
+      "zh": "可以，但我需要別人幫忙檢查標籤和文案。",
+      "note": "copy 在設計和行銷工作中常指畫面上的文案。"
+    },
+    {
+      "id": "s10",
+      "speaker": "A",
+      "text": "Nina can review the copy while you build the charts.",
+      "zh": "你製作圖表時，Nina 可以同時檢查文案。"
+    },
+    {
+      "id": "s11",
+      "speaker": "B",
+      "text": "Good. I can send a complete draft by three on Tuesday.",
+      "zh": "好。我可以在星期二三點前送出完整草稿。"
+    },
+    {
+      "id": "s12",
+      "speaker": "A",
+      "text": "Let's review it together at four and list any final changes.",
+      "zh": "我們四點一起檢查，並列出最後需要修改的地方。"
+    },
+    {
+      "id": "s13",
+      "speaker": "B",
+      "text": "Should I tell the client the mobile version will follow on Friday?",
+      "zh": "我要告訴客戶手機版會在星期五補上嗎？"
+    },
+    {
+      "id": "s14",
+      "speaker": "A",
+      "text": "Yes. Make it clear that Wednesday's demo will be desktop only.",
+      "zh": "要。請清楚說明星期三只展示桌面版。",
+      "note": "make it clear that 表示把某件事說清楚。"
+    },
+    {
+      "id": "s15",
+      "speaker": "B",
+      "text": "Understood. I'll update the project plan after this meeting.",
+      "zh": "了解。我會在會議後更新專案計畫。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why does the team need a new plan?",
+      "options": ["The client moved the demo to Wednesday", "The designer is taking Friday off", "The sales numbers were incorrect"],
+      "answer": 0
+    },
+    {
+      "q": "Who will review the labels and copy?",
+      "options": ["The client", "The finance team", "Nina"],
+      "answer": 2
+    },
+    {
+      "q": "What will the team show on Wednesday?",
+      "options": ["Only the mobile version", "Only the desktop version", "Both finished versions"],
+      "answer": 1
+    }
+  ]
+}

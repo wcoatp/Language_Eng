@@ -1,0 +1,104 @@
+{
+  "id": "l4-04",
+  "title": "Before You Share That Photograph",
+  "titleZh": "分享照片之前先查證",
+  "level": 4,
+  "type": "article",
+  "topic": "media",
+  "summaryZh": "一張看似即時的災難照片可能來自多年以前，文章示範如何在分享前查找原始脈絡。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Last summer, a dramatic photograph appeared in my neighborhood message group during a severe storm.",
+      "zh": "去年夏天，一場強烈暴風雨期間，我的社區群組裡出現了一張驚人的照片。"
+    },
+    {
+      "id": "s2",
+      "text": "It showed a bridge almost completely underwater, and the caption warned drivers to stay home.",
+      "zh": "照片裡一座橋幾乎完全淹沒，說明文字警告駕駛人待在家裡。"
+    },
+    {
+      "id": "s3",
+      "text": "Several people shared it immediately because the sky outside looked dark enough to make the claim believable.",
+      "zh": "好幾個人立刻轉傳，因為外頭的天空夠陰暗，讓這個說法顯得可信。"
+    },
+    {
+      "id": "s4",
+      "text": "However, the bridge in the picture did not look familiar, even though I had crossed ours hundreds of times.",
+      "zh": "然而，照片裡的橋看起來並不熟悉，儘管我已走過本地那座橋數百次。"
+    },
+    {
+      "id": "s5",
+      "text": "I saved the image and used a reverse image search to find earlier copies online.",
+      "zh": "我把圖片存下來，用以圖搜圖尋找網路上更早的版本。"
+    },
+    {
+      "id": "s6",
+      "text": "Within a minute, I found the same photograph in a news report published six years earlier.",
+      "zh": "不到一分鐘，我就在一篇六年前刊登的新聞報導中找到同一張照片。"
+    },
+    {
+      "id": "s7",
+      "text": "The flooding had happened in another country, and the original bridge was more than a thousand kilometers away.",
+      "zh": "那場洪水發生在另一個國家，原本的橋距離我們超過一千公里。"
+    },
+    {
+      "id": "s8",
+      "text": "The photograph was genuine, but the new caption had removed the facts that gave it meaning.",
+      "zh": "照片本身是真的，但新的說明文字拿掉了賦予它意義的事實。"
+    },
+    {
+      "id": "s9",
+      "text": "This kind of error is effective because people often treat an image as evidence before asking what it actually proves.",
+      "zh": "這種錯誤很有迷惑力，因為人們常先把影像當成證據，卻沒有追問它究竟證明了什麼。"
+    },
+    {
+      "id": "s10",
+      "text": "A cropped picture may hide a street sign, a date, or another detail that would expose the mistake.",
+      "zh": "經過裁切的圖片可能藏起路牌、日期，或其他足以揭穿錯誤的細節。"
+    },
+    {
+      "id": "s11",
+      "text": "Even image metadata can be useful, although it can also be changed and should not be trusted alone.",
+      "zh": "即使圖片的中繼資料也可能有用，不過它同樣可以被修改，不能單獨信任。"
+    },
+    {
+      "id": "s12",
+      "text": "The strongest check is usually to locate the earliest reliable source and read what it says about the image.",
+      "zh": "最有力的查證通常是找出最早的可靠來源，並閱讀它對圖片的說明。"
+    },
+    {
+      "id": "s13",
+      "text": "I posted the old article in the group, and the person who shared the warning quickly corrected it.",
+      "zh": "我在群組貼出舊報導，原本分享警告的人很快就更正了內容。"
+    },
+    {
+      "id": "s14",
+      "text": "By then, though, the false version had already reached several other groups that never saw the correction.",
+      "zh": "但到了那時，錯誤版本已傳進好幾個永遠看不到更正的群組。"
+    },
+    {
+      "id": "s15",
+      "text": "That is why a quiet minute of checking before you share can matter more than a loud correction afterward.",
+      "zh": "所以分享前安靜查證一分鐘，可能比事後大聲更正更有用。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What first made the writer doubt the photograph?",
+      "options": ["The bridge did not look like the local bridge", "The storm had already ended", "The photograph was too blurry to understand"],
+      "answer": 0
+    },
+    {
+      "q": "What did the reverse image search reveal?",
+      "options": ["The photograph had been created by software", "The same flood happened every summer", "The photograph came from another country six years earlier"],
+      "answer": 2
+    },
+    {
+      "q": "What does the writer consider the strongest way to check an image?",
+      "options": ["Reading the comments below it", "Finding the earliest reliable source", "Checking whether friends have shared it"],
+      "answer": 1
+    }
+  ]
+}

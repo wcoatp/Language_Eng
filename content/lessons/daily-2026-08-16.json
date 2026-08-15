@@ -1,0 +1,93 @@
+{
+  "id": "daily-2026-08-16",
+  "title": "Who Else Was Waiting?",
+  "titleZh": "還有誰在等?",
+  "level": 3,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "哈金開著自己的車來到那棟綠色房子前。他以為這趟是為了道別,結果調度員在刷卡紀錄裡找到了另一件他完全不知道的事。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-16",
+    "seriesId": "two-minutes-north-road",
+    "seriesTitle": "Two Minutes on the North Road",
+    "seriesTitleZh": "北路上的兩分鐘",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s10",
+    "turn": "s19",
+    "resolution": "s28"
+  },
+  "sentences": [
+    { "id": "s1", "text": "On Saturday morning, Hakim drove his own car out to the north road.", "zh": "星期六早上,哈金開著自己的車來到北路。" },
+    { "id": "s2", "text": "The green house looked much smaller than it did from the driver's seat of a bus.", "zh": "從公車駕駛座上看過去的那棟綠色房子,現在看起來小多了。" },
+    { "id": "s3", "text": "He knocked twice on the iron gate and then waited on the pavement.", "zh": "他在鐵門上敲了兩下,然後站在人行道上等。" },
+    { "id": "s4", "text": "A young woman opened an upstairs window and looked down at him.", "zh": "一位年輕女子打開樓上的窗戶,低頭看著他。" },
+    { "id": "s5", "text": "\"You are the bus driver,\" she said. \"My mother talked about you.\"", "zh": "「你就是那位公車司機,」她說。「我媽提過你。」" },
+    { "id": "s6", "text": "Her name was Bisi, and she had come to empty the house.", "zh": "她叫比西,是回來把房子清空的。" },
+    { "id": "s7", "text": "Mrs. Oyelaran had moved to her daughter's town in the south three weeks before.", "zh": "歐耶拉蘭太太三個星期前搬到南邊女兒住的鎮上了。" },
+    { "id": "s8", "text": "She was well, Bisi said, and she was already complaining about the buses there.", "zh": "比西說她很好,而且已經開始抱怨那裡的公車了。" },
+    { "id": "s9", "text": "Hakim laughed, and then he felt the laugh stop somewhere in his chest.", "zh": "哈金笑了,接著又覺得那個笑卡在胸口某個地方。" },
+    { "id": "s10", "text": "On Monday the dispatcher was waiting for him in the yard.", "zh": "星期一,調度員在車場等他。" },
+    { "id": "s11", "text": "He told her that the old woman was safe, and that the house was empty now.", "zh": "他告訴她,那位老太太平安,房子現在也空了。" },
+    { "id": "s12", "text": "\"Then the two minutes are finished,\" he said, and he heard how flat it sounded.", "zh": "「那兩分鐘就到此為止了,」他說,自己也聽見那句話有多平淡。" },
+    { "id": "s13", "text": "The dispatcher did not answer him straight away.", "zh": "調度員沒有立刻回答他。" },
+    { "id": "s14", "text": "She had spent the whole weekend reading the card data for stop three.", "zh": "她整個週末都在看第三站的刷卡紀錄。" },
+    { "id": "s15", "text": "Somebody else was tapping a card there at almost exactly the same time.", "zh": "有另一個人幾乎在同一個時間也在那裡刷卡。" },
+    { "id": "s16", "text": "The same card, five mornings a week, for the last two years.", "zh": "同一張卡片,一週五個早上,已經持續兩年了。" },
+    { "id": "s17", "text": "It belonged to a man named Tomas, who Hakim had never once spoken to.", "zh": "那張卡的主人叫托瑪斯,哈金從來沒有跟他說過話。" },
+    { "id": "s18", "text": "He was quiet, he sat near the back, and he always looked tired.", "zh": "他很安靜,總是坐在後面,而且看起來永遠很累。" },
+    { "id": "s19", "text": "Tomas worked the night shift at the packing plant behind the third stop.", "zh": "托瑪斯在第三站後面那間包裝廠上夜班。" },
+    { "id": "s20", "text": "His shift ended at six fifty-eight, and the bus was due to leave at seven.", "zh": "他的班六點五十八分結束,公車預定七點開走。" },
+    { "id": "s21", "text": "For two years he had run out of that gate and caught the bus by seconds.", "zh": "兩年來,他每天衝出廠門,總是差幾秒鐘趕上車。" },
+    { "id": "s22", "text": "He had never once known that the bus was not really waiting for him.", "zh": "他從來不知道,那班公車其實不是在等他。" },
+    { "id": "s23", "text": "He had always believed that he was simply fast enough.", "zh": "他一直以為,是自己跑得夠快。" },
+    { "id": "s24", "text": "\"If you had left on time,\" the dispatcher said, \"he would have missed it every day.\"", "zh": "「如果你每天都準時開走,」調度員說,「他每天都會錯過。」" },
+    { "id": "s25", "text": "Hakim thought about two years of mornings that he had not noticed at all.", "zh": "哈金想著那兩年來,自己完全沒有察覺的每一個早晨。" },
+    { "id": "s26", "text": "He had been waiting for one person and quietly carrying another.", "zh": "他等的是一個人,卻在不知不覺中載著另一個人。" },
+    { "id": "s27", "text": "Two minutes had been holding up a life he knew nothing about.", "zh": "那兩分鐘一直撐著一段他一無所知的人生。" },
+    { "id": "s28", "text": "The dispatcher took the timetable to the planning office that afternoon.", "zh": "那天下午,調度員把時刻表帶到規劃辦公室。" },
+    { "id": "s29", "text": "She did not ask them to forgive the two minutes.", "zh": "她沒有請他們原諒那兩分鐘。" },
+    { "id": "s30", "text": "She asked them to print the two minutes into the schedule itself.", "zh": "她請他們把那兩分鐘直接印進時刻表裡。" },
+    { "id": "s31", "text": "It took four weeks, and in the end they agreed to try it for a season.", "zh": "這件事花了四個星期,最後他們同意先試行一季。" },
+    { "id": "s32", "text": "Stop three is now written down as a two-minute stop on the north road.", "zh": "現在第三站在北路的時刻表上,正式寫成一個兩分鐘的停靠站。" },
+    { "id": "s33", "text": "Hakim's screen is green every morning, and it tells him nothing he needs.", "zh": "哈金的螢幕每天早上都是綠的,而那上面沒有任何他需要的東西。" },
+    { "id": "s34", "text": "He still opens the door and counts, exactly as he did before.", "zh": "他還是打開車門開始數,跟以前一模一樣。" },
+    { "id": "s35", "text": "One morning Tomas came to the front of the bus before getting off.", "zh": "有天早上,托瑪斯下車前走到了車頭。" },
+    { "id": "s36", "text": "\"Somebody told me about the counting,\" he said. \"I never knew.\"", "zh": "「有人跟我說了數數的事,」他說。「我一直都不知道。」" },
+    { "id": "s37", "text": "\"Neither did I,\" Hakim said. \"Not really.\"", "zh": "「我也不知道,」哈金說。「其實我也不知道。」" },
+    { "id": "s38", "text": "Then he closed the door and drove on toward the hills.", "zh": "然後他關上車門,繼續往山的方向開去。" }
+  ],
+  "questions": [
+    {
+      "q": "Why had Mrs. Oyelaran stopped taking the number nine bus?",
+      "options": [
+        "She had moved south to live in her daughter's town",
+        "She had decided the bus was too often late",
+        "She had started walking to the town square instead"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What did the card data from stop three reveal?",
+      "options": [
+        "Another passenger had depended on the two minutes for two years",
+        "Nobody had used stop three since Mrs. Oyelaran left",
+        "Tomas had been paying for the wrong kind of ticket"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What does the dispatcher's request to the planning office show about her?",
+      "options": [
+        "She wanted the schedule to match what the route really needed",
+        "She wanted to prove that Hakim had broken the rules",
+        "She wanted the punctuality screens taken out of the buses"
+      ],
+      "answer": 0
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "l1-06",
+  "title": "Finding the Right Platform",
+  "titleZh": "找到正確月台",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "travel",
+  "summaryZh": "旅客在火車站詢問往台中的列車月台、行走方向和驗票方式。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Excuse me, which platform is for the train to Taichung?",
+      "zh": "不好意思，往台中的火車在哪個月台？"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "What time is your train?",
+      "zh": "您的火車是幾點的？"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "It leaves at ten thirty-five, and it is an express train.",
+      "zh": "十點三十五分發車，是一班快車。",
+      "note": "express train 指停靠站較少的快車。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "That train leaves from platform six.",
+      "zh": "那班車從第六月台發車。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Is platform six on this side?",
+      "zh": "第六月台在這一側嗎？"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "No. Take the escalator up and cross the bridge.",
+      "zh": "不是。請搭手扶梯上樓，再走過天橋。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "How long does it take to walk there?",
+      "zh": "走到那裡要多久？"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "About five minutes, so you have plenty of time.",
+      "zh": "大約五分鐘，所以您的時間很充裕。",
+      "note": "plenty of time 表示時間很充裕。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Great. Does the train stop at Hsinchu?",
+      "zh": "太好了。這班車有停新竹嗎？"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "Yes, it stops there before Taichung.",
+      "zh": "有，它會先停新竹，再到台中。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "Do I need to show my ticket at the platform?",
+      "zh": "我需要在月台出示車票嗎？"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Keep it with you. The conductor may check it on the train.",
+      "zh": "請把票帶在身上。列車長可能會在車上驗票。",
+      "note": "conductor 在此指列車長或驗票人員。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Thanks for your help.",
+      "zh": "謝謝你的幫忙。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "You're welcome. Have a safe trip!",
+      "zh": "不客氣。祝您旅途平安！"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Which platform does the traveler need?",
+      "options": ["Platform four", "Platform six", "Platform ten"],
+      "answer": 1
+    },
+    {
+      "q": "How does the traveler get to the platform?",
+      "options": ["Take the escalator and cross the bridge", "Walk through the ticket office", "Take a bus outside"],
+      "answer": 0
+    },
+    {
+      "q": "Where might the ticket be checked?",
+      "options": ["At a restaurant", "At the hotel", "On the train"],
+      "answer": 2
+    }
+  ]
+}

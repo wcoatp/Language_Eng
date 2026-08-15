@@ -5,6 +5,13 @@
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, dirname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+  dailyLessonProblems,
+  dailySeriesProblems,
+  dailyTitleProblems,
+  englishWordCount,
+} from '../js/daily.js';
+import { REFERENCE_TITLES } from './daily-reference-titles.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'content', 'lessons');
@@ -66,7 +73,10 @@ for (const file of files) {
     check(Number.isInteger(q.answer) && q.answer >= 0 && q.answer <= 2, id, `question ${i + 1} answer out of range`);
   });
 
-  lessons.push({
+  for (const problem of dailyLessonProblems(lesson)) problems.push(`${id}: ${problem}`);
+  for (const problem of dailyTitleProblems(lesson, REFERENCE_TITLES)) problems.push(`${id}: ${problem}`);
+
+  const item = {
     id: lesson.id,
     title: lesson.title,
     titleZh: lesson.titleZh || '',
@@ -77,10 +87,17 @@ for (const file of files) {
     count: lesson.sentences.length,
     questions: (lesson.questions || []).length,
     realAudio: !!lesson.realAudio,
+    preGeneratedAudio: lesson.preGeneratedAudio !== false,
     source: lesson.source || '',
-  });
+  };
+  if (lesson.daily) {
+    item.daily = lesson.daily;
+    item.wordCount = englishWordCount(lesson.sentences);
+  }
+  lessons.push(item);
 }
 
+problems.push(...dailySeriesProblems(lessons));
 lessons.sort((a, b) => a.level - b.level || a.id.localeCompare(b.id));
 
 if (problems.length) {

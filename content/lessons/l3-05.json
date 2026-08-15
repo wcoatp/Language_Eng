@@ -1,0 +1,102 @@
+{
+  "id": "l3-05",
+  "title": "Creating an End to the Workday",
+  "titleZh": "為工作日畫下句點",
+  "level": 3,
+  "type": "article",
+  "topic": "work",
+  "summaryZh": "一位混合辦公的上班族發現工作侵入晚間生活，於是建立簡單的下班儀式和溝通界線。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "When my company introduced hybrid work, I expected my days at home to feel easier.",
+      "zh": "公司開始混合辦公時，我原以為在家工作的日子會比較輕鬆。"
+    },
+    {
+      "id": "s2",
+      "text": "My commute disappeared, and I could make lunch in my own kitchen.",
+      "zh": "我不必通勤，也可以在自己的廚房做午餐。"
+    },
+    {
+      "id": "s3",
+      "text": "Within a month, however, it felt as if my desk never really closed.",
+      "zh": "然而不到一個月，我就覺得辦公桌好像從來沒有真正關閉過。"
+    },
+    {
+      "id": "s4",
+      "text": "I answered messages during dinner simply because my laptop was still in sight.",
+      "zh": "我會在晚餐時回覆訊息，只因為筆電還在視線之內。",
+      "note": "in sight 表示在看得到的範圍內。"
+    },
+    {
+      "id": "s5",
+      "text": "The problem was not only the amount of work, but also the lack of a clear ending.",
+      "zh": "問題不只是工作量，也在於一天的工作沒有明確終點。"
+    },
+    {
+      "id": "s6",
+      "text": "I decided to create a short routine that would tell my brain the workday was over.",
+      "zh": "我決定建立一套簡短流程，提醒大腦工作日已經結束。"
+    },
+    {
+      "id": "s7",
+      "text": "At six thirty, I wrote down the first task for tomorrow and closed every work app.",
+      "zh": "六點半時，我會寫下明天的第一項任務，然後關閉所有工作應用程式。"
+    },
+    {
+      "id": "s8",
+      "text": "I put the laptop in a drawer and folded the small desk in the corner of my apartment.",
+      "zh": "我把筆電收進抽屜，再把公寓角落的小桌子折起來。"
+    },
+    {
+      "id": "s9",
+      "text": "Then I took a fifteen-minute walk around the block before starting dinner.",
+      "zh": "接著我會在準備晚餐前，繞著街區走十五分鐘。"
+    },
+    {
+      "id": "s10",
+      "text": "The walk became a replacement for the commute that used to separate work from home.",
+      "zh": "這段散步取代了過去用來分隔工作與家庭生活的通勤。"
+    },
+    {
+      "id": "s11",
+      "text": "I also told my team when I would be offline and how to reach me in a real emergency.",
+      "zh": "我也告訴團隊我的離線時間，以及真正緊急時該如何聯絡我。"
+    },
+    {
+      "id": "s12",
+      "text": "I worried that I would seem unresponsive, but urgent evening requests were actually rare.",
+      "zh": "我曾擔心自己看起來回應不夠積極，但晚間的緊急要求其實很少。",
+      "note": "unresponsive 在職場中可指沒有及時回應。"
+    },
+    {
+      "id": "s13",
+      "text": "Quarter-end deadlines still keep me late sometimes, so the routine is not a perfect rule.",
+      "zh": "季末期限有時仍讓我加班，所以這套流程並不是絕對規則。"
+    },
+    {
+      "id": "s14",
+      "text": "The difference is that working late is now a conscious choice instead of my daily default.",
+      "zh": "不同的是，現在晚點工作是有意識的選擇，而不是每天的預設狀態。",
+      "note": "a conscious choice 指經過思考後主動做出的選擇。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What first showed the writer that work had entered personal time?",
+      "options": ["The commute became longer", "Messages were answered during dinner", "The team scheduled morning meetings"],
+      "answer": 1
+    },
+    {
+      "q": "Why does the writer walk before dinner?",
+      "options": ["To replace the separation once provided by commuting", "To meet coworkers who live nearby", "To make urgent phone calls"],
+      "answer": 0
+    },
+    {
+      "q": "What does the writer admit about the routine?",
+      "options": ["It made all deadlines disappear", "It only works in a large home", "It sometimes changes during busy periods"],
+      "answer": 2
+    }
+  ]
+}

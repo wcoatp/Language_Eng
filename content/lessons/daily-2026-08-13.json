@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-13",
+  "title": "A Voice from a Silent Phone",
+  "titleZh": "沉默手機裡的聲音",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "Noah 幫外祖母整理搬家物品時找到外祖父的舊手機，意外救回一段未完成的食譜錄音，並從背景聲音發現下一條線索。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-13",
+    "seriesId": "recipe-in-the-recording",
+    "seriesTitle": "The Recipe in the Recording",
+    "seriesTitleZh": "錄音裡的食譜",
+    "day": 1,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "On Saturday morning, Noah helped his grandmother Elena pack for a move to a smaller apartment.",
+      "zh": "星期六早上，Noah 幫外祖母 Elena 打包，準備搬到一間較小的公寓。"
+    },
+    {
+      "id": "s2",
+      "text": "At the bottom of a kitchen drawer, he found an old phone wrapped in a faded dish towel.",
+      "zh": "他在廚房抽屜底部找到一支用褪色廚房巾包著的舊手機。"
+    },
+    {
+      "id": "s3",
+      "text": "The phone had belonged to his grandfather Mateo, who had died six years earlier.",
+      "zh": "這支手機原本屬於他的外祖父 Mateo，而 Mateo 已在六年前過世。"
+    },
+    {
+      "id": "s4",
+      "text": "Its screen was black, and Elena said it had not turned on for at least five years.",
+      "zh": "手機螢幕一片漆黑，Elena 說它至少已經五年無法開機。"
+    },
+    {
+      "id": "s5",
+      "text": "She asked Noah to put it with the electronics that would be recycled after the move.",
+      "zh": "她請 Noah 把它和搬家後要回收的電子產品放在一起。"
+    },
+    {
+      "id": "s6",
+      "text": "Before doing that, he noticed a small label on the case that said, \"Recipe Ideas.\"",
+      "zh": "在那之前，他注意到手機殼上有一張小標籤，寫著「食譜點子」。"
+    },
+    {
+      "id": "s7",
+      "text": "Mateo had loved testing soups and stews, and he often recorded thoughts while he cooked.",
+      "zh": "Mateo 生前喜歡試做湯和燉菜，也常在烹調時錄下自己的想法。"
+    },
+    {
+      "id": "s8",
+      "text": "Noah wondered whether the silent phone still carried a piece of his grandfather's voice.",
+      "zh": "Noah 想知道，這支沉默的手機裡是否還留著外祖父的一小段聲音。"
+    },
+    {
+      "id": "s9",
+      "text": "They tried three chargers, cleaned the port carefully, and held the power button, but nothing changed.",
+      "zh": "他們試了三個充電器、仔細清理連接埠，也長按電源鍵，但手機仍毫無反應。"
+    },
+    {
+      "id": "s10",
+      "text": "That afternoon, they carried the phone to Priya, who repaired old devices at a neighborhood shop.",
+      "zh": "當天下午，他們把手機帶去找 Priya，她在附近的店裡維修老舊裝置。"
+    },
+    {
+      "id": "s11",
+      "text": "Priya explained that the battery was unsafe, although the memory chip might still contain readable files.",
+      "zh": "Priya 解釋，這顆電池已不安全，不過記憶晶片裡或許仍有可以讀取的檔案。"
+    },
+    {
+      "id": "s12",
+      "text": "She could remove the chip and copy its data, but she warned them that success was uncertain.",
+      "zh": "她可以取出晶片並複製資料，但也提醒他們不一定能成功。"
+    },
+    {
+      "id": "s13",
+      "text": "Elena hesitated because the work would cost money and might recover nothing except ordinary lists.",
+      "zh": "Elena 有些猶豫，因為這項處理要花錢，最後也可能只救回一些普通清單。"
+    },
+    {
+      "id": "s14",
+      "text": "Noah offered to pay from his weekend job, so she agreed to let Priya try.",
+      "zh": "Noah 表示願意用週末打工的收入支付，因此她同意讓 Priya 試試看。"
+    },
+    {
+      "id": "s15",
+      "text": "Priya placed the phone under a bright lamp and connected the memory chip to a special reader.",
+      "zh": "Priya 把手機放在明亮的燈下，並將記憶晶片接上一台特殊讀取器。"
+    },
+    {
+      "id": "s16",
+      "text": "For several minutes, the progress bar did not move; then a folder of audio files appeared.",
+      "zh": "好幾分鐘裡，進度條一動也不動；接著，一個裝有音訊檔案的資料夾出現了。"
+    },
+    {
+      "id": "s17",
+      "text": "Most recordings contained grocery reminders, accidental pocket noises, or Mateo humming without any clear melody.",
+      "zh": "大部分錄音都是採買提醒、口袋裡意外錄到的雜音，或 Mateo 沒有明確旋律的哼唱。"
+    },
+    {
+      "id": "s18",
+      "text": "Then one file opened with his cheerful announcement: \"This is Elena's Sunday stew, version seven.\"",
+      "zh": "接著有一個檔案以他開朗的宣告開頭：「這是 Elena 的星期日燉菜，第七版。」"
+    },
+    {
+      "id": "s19",
+      "text": "His warm voice filled the shop, and Elena gripped the edge of her chair without speaking.",
+      "zh": "他溫暖的聲音充滿店內，Elena 默默地緊握著椅子邊緣。"
+    },
+    {
+      "id": "s20",
+      "text": "Mateo named tomatoes, white beans, rosemary, and lemon peel, then described how slowly he stirred them.",
+      "zh": "Mateo 說出番茄、白豆、迷迭香和檸檬皮，接著描述自己如何慢慢攪拌。"
+    },
+    {
+      "id": "s21",
+      "text": "Elena leaned closer because she remembered that version seven had tasted better than every earlier attempt.",
+      "zh": "Elena 靠得更近，因為她記得第七版比先前每一次嘗試都更好吃。"
+    },
+    {
+      "id": "s22",
+      "text": "Just as Mateo began to explain the final thing to remember, the recording cracked and stopped.",
+      "zh": "就在 Mateo 開始解釋最後必須記得的一件事時，錄音發出爆裂聲並停止了。"
+    },
+    {
+      "id": "s23",
+      "text": "Priya searched the chip again, but no second file or recoverable ending could be found.",
+      "zh": "Priya 再次搜尋晶片，但找不到第二個檔案，也無法救回結尾。"
+    },
+    {
+      "id": "s24",
+      "text": "Elena was certain he had been about to reveal one unusual ingredient that nobody else knew.",
+      "zh": "Elena 確信，他當時正要說出一種其他人都不知道的特殊材料。"
+    },
+    {
+      "id": "s25",
+      "text": "Noah replayed the final seconds through headphones, listening past the hiss instead of focusing on the words.",
+      "zh": "Noah 戴著耳機重播最後幾秒，不再只注意話語，而是越過嘶嘶雜音，仔細聽背景聲。"
+    },
+    {
+      "id": "s26",
+      "text": "Behind Mateo's voice, he heard twelve slow bells followed by a group of children singing.",
+      "zh": "在 Mateo 的聲音後方，他聽見十二下緩慢鐘聲，接著是一群孩子唱歌的聲音。"
+    },
+    {
+      "id": "s27",
+      "text": "Those sounds did not belong in Elena's quiet kitchen, and the clue changed their search.",
+      "zh": "那些聲音不可能來自 Elena 安靜的廚房，而這條線索改變了他們的搜尋方向。"
+    },
+    {
+      "id": "s28",
+      "text": "Noah remembered that Mateo once volunteered on Tuesdays at the community center's teaching kitchen.",
+      "zh": "Noah 想起 Mateo 過去每逢星期二都會到社區中心的教學廚房當志工。"
+    },
+    {
+      "id": "s29",
+      "text": "Priya checked the file's hidden timestamp and confirmed that it had been created on a Tuesday at noon.",
+      "zh": "Priya 查看檔案隱藏的時間戳記，確認它是在某個星期二中午建立的。"
+    },
+    {
+      "id": "s30",
+      "text": "Elena called the center, where a retired cooking teacher promised to meet them and search the old cupboards.",
+      "zh": "Elena 打電話到中心，一位退休烹飪老師答應和他們見面，並搜尋舊櫥櫃。"
+    },
+    {
+      "id": "s31",
+      "text": "Before they left, Priya saved every recovered recording on two drives and in a shared cloud folder.",
+      "zh": "他們離開前，Priya 將所有救回的錄音存進兩個硬碟與一個共享雲端資料夾。"
+    },
+    {
+      "id": "s32",
+      "text": "The phone remained dark, but Noah now knew where to look for the recipe's missing last line.",
+      "zh": "手機依然一片漆黑，但 Noah 現在知道該去哪裡尋找食譜遺失的最後一句。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Noah take the old phone to Priya?",
+      "options": [
+        "He hoped to recover Mateo's recordings",
+        "He wanted to sell the phone to her",
+        "He needed a phone for his weekend job"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "What happened at the most important point in the stew recording?",
+      "options": [
+        "Mateo changed to another recipe",
+        "The audio cracked and stopped",
+        "Elena began speaking over Mateo"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What led Noah to the community center?",
+      "options": [
+        "A label with the center's address",
+        "A calendar saved on the phone",
+        "Bells and children singing in the background"
+      ],
+      "answer": 2
+    }
+  ]
+}

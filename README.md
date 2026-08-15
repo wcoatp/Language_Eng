@@ -27,9 +27,11 @@
 
 | | 說明 | 需要 API? |
 |---|---|---|
-| **聽力訓練** | 上面的七步循環,78 課 1050 句 | 否 |
+| **聽力訓練** | 上面的七步循環,101 課 1585 句 | 否 |
+| **每日課程** | 每日約 500 字原創故事,同一主題可連載 1–3 日 | 否 |
+| **連續播放** | 完整課文或自訂任意多句,可調速度與句間停頓 | 否 |
 | **真人錄音課程** | 60 課取自 VOA 公有領域錄音,附中文與逐句時間軸 | 否 |
-| **多口音朗讀** | 美/英/澳/印/愛爾蘭/南非,可變速 | 否 |
+| **多口音朗讀** | 美/英/澳/印/愛爾蘭/南非/加拿大/紐西蘭,可變速 | 否 |
 | **跟讀評分** | 瀏覽器內建語音辨識,逐字標出漏掉的詞 | 否 |
 | **間隔複習** | 聽力優先:先播再顯示答案 | 否 |
 | **角色扮演對話** | app 唸一角,你唸另一角,辨識比對 | 否 |
@@ -42,9 +44,10 @@
 
 ## 課程內容
 
-78 課、1050 句,難度 L1 到 L5 遞增。分成兩類:
+101 課、1585 句,難度 L1 到 L5 遞增。分成兩類:
 
-**合成語音課程(18 課)** — 我們自己寫的情境對話與短文,美/英/澳三種口音的預生成音檔,適合打基礎。
+**原創課程(39 課)** — 我們自己寫的情境對話、短文與每日故事。其中 18 課內建 11 組預生成語音、涵蓋 8 種口音;
+其餘 21 課使用裝置內建英語語音,不增加大型音檔也能立即朗讀與離線使用。
 
 **真人錄音課程(60 課)** — 取自 [VOA Learning English](https://learningenglish.voanews.com)。
 VOA 是美國政府作品,**明確屬於公有領域**,可作教育與商業用途重製,註明來源即可 —— 這是唯一能合法內建在
@@ -53,6 +56,25 @@ Everyday Grammar、Health & Lifestyle、Science & Technology、America's Nationa
 As It Is、American Stories(愛倫坡小說朗讀)與 What It Takes(真人訪談,母語語速)。
 
 每句都有中文翻譯、精確到 0.01 秒的時間軸,以及實測語速(WPM)。
+
+### 每日課程
+
+首頁會依裝置日期顯示當日課程;當天沒有新課時顯示最近一期。`課程 → 日 每日` 可查看完整課表,
+每個主題以 1–3 日為一組,每一天有獨立標題、約 500 個英文單字、繁中逐句翻譯、三題理解題,
+而且單篇本身都明確分成起、承、轉、合。完整播放一次會標記今日完成,多日故事完成後可直接前往下一日。
+
+首批是 2026-08-06 到 2026-08-14 的 4 個原創主題、共 9 日:
+
+- **The Blue Umbrella Plan / 藍傘共享計畫** — 3 日,從臨時借傘發展成社區互信計畫。
+- **A Detour to Remember / 難忘的繞路旅行** — 2 日,兄妹在錯過轉車後設法趕到燈塔。
+- **A Roof with a Purpose / 讓屋頂有新用途** — 2 日,辦公室團隊把強風造成的失敗變成更可靠的設計。
+- **The Recipe in the Recording / 錄音裡的食譜** — 2 日,家人從舊手機聲音追查一份未完成的食譜。
+
+課名只參考《大家說英語》公開目錄常見的短、具體、生活化節奏,不使用它的文章、情節或原標題。
+研究來源包括 [2026 年 5 月](https://shop.studioclassroom.com/km/news/2881)、
+[6 月](https://shop.studioclassroom.com/km/news/2889)、[7 月](https://shop.studioclassroom.com/km/news/2897)及
+[8 月官方目錄](https://lt.studioclassroom.com/default.php)。完整原創規範、JSON schema 與發布流程見
+[每日課程編輯規範](docs/daily-curriculum.md)。
 
 ### 難度怎麼判定
 
@@ -115,6 +137,23 @@ open http://localhost:8000
 
 Service worker 需要 `http://localhost` 或 HTTPS,用 `file://` 開會少掉離線功能。
 
+### 測試與內容驗證
+
+測試使用 Node 內建的 test runner,不需要安裝相依套件:
+
+```bash
+npm run syntax       # 解析全部 JS 模組,不執行瀏覽器程式碼
+npm test             # 純函式單元測試
+npm run validate     # 課程、索引、音訊 manifest 與 MP3 完整性
+npm run check        # 依序執行上面三項;CI 也跑這個命令
+```
+
+`validate` 是唯讀檢查。它會確認課程格式與 `content/index.json` 一致、每個真人課都有完整原音、
+預生成語音課都有全部 11 組語音,並檢查 manifest 中每一段音檔都存在、磁碟上也沒有未登記的 MP3。
+標記為 `preGeneratedAudio: false` 的裝置語音課則不應出現在音訊 manifest。每日課另會檢查真實日期、
+450–550 字、24–40 句、逐句中文、起承轉合、三題理解題、系列日序與連續日期,並拒絕直接重用參考課名。
+推送與 pull request 會透過 GitHub Actions 自動執行 `npm run check`。
+
 ### 從真人素材建立課程
 
 `tools/align-media.mjs` 是共用引擎:吃任何影音檔或網址,用 whisper.cpp 產生**逐字時間戳**,
@@ -165,6 +204,7 @@ node tools/build-index.mjs
   "level": 1,
   "type": "dialogue",
   "topic": "daily",
+  "preGeneratedAudio": false,
   "summaryZh": "情境說明",
   "sentences": [
     { "id": "s1", "speaker": "A", "text": "Hi, I'm Ben.", "zh": "嗨,我是 Ben。", "note": "選填的連讀提示" }
@@ -176,25 +216,43 @@ node tools/build-index.mjs
 ```
 
 `type: "article"` 時省略 `speaker`。`note` 只在真的有連讀/弱讀特徵時才寫。
+新課若尚未生成 11 組音檔,請保留 `preGeneratedAudio: false`,App 會自動使用裝置語音。
+
+每日故事還要加入 `daily` 與 `storyArc` metadata,並遵守約 500 字與 1–3 日系列規則。完整格式與編輯檢查表見
+[docs/daily-curriculum.md](docs/daily-curriculum.md)。
 
 ### 預生成高音質語音
 
-內建語音品質因裝置而異,手機上尤其明顯。專案已經預先產好**美式、英式、澳洲**三種口音的音檔並一起版控,
-所以手機平板打開就是一致的高音質 — 不需要自己跑任何東西。
+內建語音品質因裝置而異,手機上尤其明顯。專案已經預先產好 11 組音檔並一起版控:
 
-要新增課程或其他口音時再跑產生器。第一次需要建一個 venv:
+- **edge-tts 8 組** — 美、英、澳、印、愛爾蘭、南非、加拿大、紐西蘭;清晰教學語速
+- **Kokoro 2 組** — 美式、英式;自然對話語速
+- **Chatterbox 1 組** — 美式;語氣起伏較大、語速較快
+
+所以手機平板打開就是一致的高音質 — 不需要自己跑任何東西。真人錄音課固定播放原音,
+不會套用合成語音。
+
+要新增課程或其他口音時再跑產生器。edge-tts 使用輕量的專案 venv:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install edge-tts
 ```
 
-之後直接跑就好,腳本會自動找到 `.venv/bin/edge-tts`:
+需要重新生成 Kokoro 或 Chatterbox 時,另外建立神經語音環境(套件較大):
 
 ```bash
-npm run audio                                        # 美式 + 英式
-node tools/generate-audio.mjs --accent au,in,ie,za   # 其他口音
-node tools/generate-audio.mjs --lesson l1-01 --force # 重做單一課
+python3.11 -m venv .venv-tts
+.venv-tts/bin/pip install kokoro chatterbox-tts
+```
+
+之後直接執行需要的語音集即可:
+
+```bash
+npm run audio                                             # edge 美式 + 英式
+node tools/generate-voices.mjs --list                     # 列出 11 組語音
+node tools/generate-voices.mjs --voice edge-au,edge-in    # 產生指定語音
+node tools/generate-voices.mjs --voice kokoro-us --force  # 強制重做一組
 ```
 
 已存在的檔案會跳過,所以加新課時只會產生缺的部分。對話課的 A/B 角色會自動用不同性別的聲音,
@@ -212,7 +270,16 @@ node tools/make-icons.mjs
 
 ## 部署
 
-推上 `main` 之後,GitHub Pages 選 `main` / `root` 即可。全部路徑都是相對路徑,子目錄部署不會壞。
+專案目前設定部署到 Firebase Hosting 專案 `echo-english-20260814`:
+
+```bash
+npm run deploy
+```
+
+部署前會自動執行完整測試與內容驗證。`firebase.json` 只發布 PWA 執行需要的靜態檔案;
+本機模型、Python 環境、測試與開發工具不會上傳。
+
+也可以推上 GitHub Pages:選 `main` / `root` 即可。全部路徑都是相對路徑,子目錄部署不會壞。
 
 ## YouTube 精聽
 

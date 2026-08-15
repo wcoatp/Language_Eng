@@ -17,6 +17,7 @@ export const ACCENTS = [
 let voices = [];
 let voicesReady = null;
 let unlocked = false;
+let speechEpoch = 0;
 
 /* macOS/iOS ship novelty voices (singing, robots, sound effects) alongside the
    real ones. They are useless for language practice and clutter the picker. */
@@ -141,6 +142,11 @@ export function unlock() {
 }
 
 export function cancel() {
+  speechEpoch++;
+  stopCurrent();
+}
+
+function stopCurrent() {
   try {
     synth?.cancel();
   } catch {
@@ -153,7 +159,7 @@ export function cancel() {
 
 let manifest = null;
 let manifestTried = false;
-let current = null; // active HTMLAudioElement
+let current = null; // { audio: HTMLAudioElement, finish: () => void }
 
 async function getManifest() {
   if (manifestTried) return manifest;
@@ -202,31 +208,33 @@ export async function clipUrls(lessonId, voiceId, realAudio = false) {
 }
 
 function stopAudio() {
-  if (current) {
-    current.pause();
-    current.onended = current.onerror = null;
-    current = null;
-  }
+  if (!current) return;
+  const active = current;
+  active.audio.pause();
+  active.finish();
 }
 
 function playFile(url, rate) {
   return new Promise((resolve, reject) => {
     stopAudio();
     const a = new Audio(url);
+    let settled = false;
+    const finish = (error = null) => {
+      if (settled) return;
+      settled = true;
+      a.onended = a.onerror = null;
+      if (current?.audio === a) current = null;
+      if (error) reject(error);
+      else resolve();
+    };
     a.playbackRate = rate;
     a.preservesPitch = true; // keep the voice natural when slowed
     a.mozPreservesPitch = true;
     a.webkitPreservesPitch = true;
-    current = a;
-    a.onended = () => {
-      current = null;
-      resolve();
-    };
-    a.onerror = () => {
-      current = null;
-      reject(new Error("audio failed"));
-    };
-    a.play().catch(reject);
+    current = { audio: a, finish };
+    a.onended = () => finish();
+    a.onerror = () => finish(new Error("audio failed"));
+    a.play().catch(finish);
   });
 }
 
@@ -279,6 +287,10 @@ function speakTTS(text, { rate = 1, langCode = "en-US", voiceURI = "" } = {}) {
  * falling back to browser TTS (so user-imported articles work immediately).
  */
 export async function say(text, opts = {}) {
+  const epoch = ++speechEpoch;
+  // A new request always supersedes the previous sentence, including requests
+  // still waiting for the audio manifest to load.
+  stopCurrent();
   const {
     lessonId,
     sentenceId,
@@ -295,23 +307,29 @@ export async function say(text, opts = {}) {
     try {
       return await playBlobUrl(blob, rate);
     } catch {
+      if (epoch !== speechEpoch) return;
       /* fall through */
     }
   }
 
+  if (epoch !== speechEpoch) return;
   if (
     lessonId &&
     sentenceId &&
     (await hasAudio(lessonId, sentenceId, voiceId, realAudio))
   ) {
+    if (epoch !== speechEpoch) return;
     const folder = folderFor(voiceId, realAudio);
     const url = `./content/audio/${folder}/${lessonId}/${sentenceId}.mp3`;
     try {
       return await playFile(url, rate);
     } catch {
+      if (epoch !== speechEpoch) return;
       /* fall through to TTS */
     }
   }
+
+  if (epoch !== speechEpoch) return;
 
   // A real recording has no synthetic stand-in worth substituting: reading a
   // transcript aloud in a robot voice is not the lesson the learner chose.

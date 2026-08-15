@@ -5,9 +5,11 @@ import { loadVoices, unlock, cancel as cancelSpeech } from './tts.js';
 
 const ROUTES = [
   { re: /^\/$/,                 load: () => import('./views/home.js'),     tab: '/' },
+  { re: /^\/daily$/,            load: () => import('./views/daily.js'),    tab: '/' },
   { re: /^\/library$/,          load: () => import('./views/library.js'),  tab: '/library' },
   { re: /^\/lesson\/(.+)$/,     load: () => import('./views/lesson.js'),   tab: '/library' },
   { re: /^\/listen\/(.+)$/,     load: () => import('./views/listen.js'),   tab: '/library', full: true },
+  { re: /^\/play\/(.+)$/,       load: () => import('./views/player.js'),   tab: '/library', full: true },
   { re: /^\/review$/,           load: () => import('./views/review.js'),   tab: '/review' },
   { re: /^\/talk$/,             load: () => import('./views/talk.js'),     tab: '/talk' },
   { re: /^\/talk\/(.+)$/,       load: () => import('./views/talk.js'),     tab: '/talk', full: true },
@@ -47,7 +49,7 @@ async function route() {
 
   setActiveTab(match.tab);
   document.getElementById('tabbar').style.display = match.full ? 'none' : '';
-  view.style.paddingBottom = match.full ? '32px' : '';
+  view.style.paddingBottom = match.full ? 'calc(32px + var(--safe-b))' : '';
 
   const params = (p.match(match.re) || []).slice(1).map(decodeURIComponent);
 

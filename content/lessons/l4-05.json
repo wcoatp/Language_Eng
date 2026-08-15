@@ -1,0 +1,119 @@
+{
+  "id": "l4-05",
+  "title": "The Train We Did Not Catch",
+  "titleZh": "我們沒趕上的那班火車",
+  "level": 4,
+  "type": "dialogue",
+  "topic": "travel",
+  "summaryZh": "兩名旅客錯過山區末班火車後冷靜重排行程，意外找到結合公車與渡輪的替代路線。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "The doors closed while I was still coming down the stairs, so that was definitely our train.",
+      "zh": "我還在下樓梯時車門就關了，所以那肯定是我們的火車。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "And according to this board, it was also the last direct service to Harbor Town tonight.",
+      "zh": "而且按照這塊看板，那也是今晚前往港灣鎮的最後一班直達車。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "I am sorry; I should not have gone back to the cafe for my charger.",
+      "zh": "對不起，我不該為了充電器回咖啡館。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "We can argue about the charger later, but right now we need somewhere to sleep or another route.",
+      "zh": "我們之後再為充電器爭論，現在得先找住宿或另一條路。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "The ticket office is closed, and the journey planner keeps showing an error.",
+      "zh": "售票處關了，行程規劃程式又一直顯示錯誤。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "There is a station map over here, and it shows a bus connection on the other side of the valley.",
+      "zh": "這裡有張車站地圖，上面顯示山谷另一側有接駁公車。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "That bus goes to Lake Pier, not Harbor Town, so how does that help us?",
+      "zh": "那班公車是去湖畔碼頭，不是港灣鎮，這能怎麼幫上忙？"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "The map shows an evening ferry from the pier, and its final stop is exactly where we are going.",
+      "zh": "地圖上顯示碼頭有晚間渡輪，終點正是我們要去的地方。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "The connection is only twelve minutes, which feels risky when we have luggage.",
+      "zh": "轉乘時間只有十二分鐘，帶著行李感覺很冒險。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "True, but the bus company says the driver can radio the ferry if the bus is slightly late.",
+      "zh": "沒錯，但公車公司說如果稍微誤點，司機可以用無線電通知渡輪。"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "Let me call our hotel before we buy anything, since the front desk may not stay open.",
+      "zh": "買票前讓我先打電話給飯店，因為櫃檯可能不會一直開著。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Good idea, and I will ask the bus driver to confirm that the ferry is actually running.",
+      "zh": "好主意，我會請公車司機確認渡輪今晚確實有開。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "The hotel will leave our key in a lockbox, so at least we do not have to rush after we arrive.",
+      "zh": "飯店會把鑰匙放在密碼盒裡，所以至少抵達後不用趕時間。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "The driver confirmed the ferry, and the combined ticket costs less than the train did.",
+      "zh": "司機確認渡輪有開，而且聯票比火車票還便宜。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "We may have missed the easy route, but crossing the lake at sunset sounds like a decent second choice.",
+      "zh": "我們也許錯過了最簡單的路線，但在日落時渡湖聽起來是個不錯的第二選擇。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did the travelers miss their train?",
+      "options": ["They waited at the wrong platform", "A went back for a charger", "Their first train arrived late"],
+      "answer": 1
+    },
+    {
+      "q": "How can they still reach Harbor Town that evening?",
+      "options": ["By taking a bus and then a ferry", "By renting a car at the station", "By taking a direct overnight bus"],
+      "answer": 0
+    },
+    {
+      "q": "How will they get into the hotel if they arrive late?",
+      "options": ["A guard will meet them", "Another guest will let them in", "Their key will be left in a lockbox"],
+      "answer": 2
+    }
+  ]
+}

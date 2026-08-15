@@ -1,0 +1,121 @@
+{
+  "id": "l2-06",
+  "title": "A Suitcase That Did Not Arrive",
+  "titleZh": "行李沒有抵達",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "travel",
+  "summaryZh": "旅客抵達機場後找不到行李，在服務櫃台描述行李並安排送到飯店。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Good evening. How can I help you?",
+      "zh": "晚安。請問需要什麼協助？"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "My suitcase did not arrive on my flight from Seoul.",
+      "zh": "我從首爾搭機過來，但我的行李箱沒有抵達。"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "I'm sorry to hear that. May I see your baggage tag?",
+      "zh": "很抱歉發生這種事。可以讓我看您的行李牌嗎？"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "Here it is. The tag number ends in four seven two.",
+      "zh": "在這裡。行李牌號碼最後三碼是四七二。"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Thank you. Could you describe the suitcase?",
+      "zh": "謝謝。您可以描述一下行李箱嗎？"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "It is a medium black case with a red ribbon on the handle.",
+      "zh": "它是一個中型黑色行李箱，把手上綁著紅色緞帶。"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "Does it have any other marks or labels?",
+      "zh": "還有其他記號或標籤嗎？"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "Yes, there is a silver name tag on the side.",
+      "zh": "有，側面有一個銀色姓名牌。"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "Our system shows that it stayed behind in Seoul.",
+      "zh": "我們的系統顯示它留在首爾了。",
+      "note": "stay behind 表示其他人或物離開後仍留在原地。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "When do you expect it to arrive?",
+      "zh": "你們預計它什麼時候會抵達？"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "It should arrive on the next flight tomorrow morning.",
+      "zh": "它應該會搭明天早上的下一班飛機抵達。"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "Can you deliver it to my hotel?",
+      "zh": "你們可以把它送到我的飯店嗎？"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Certainly. Please write down the hotel address and your phone number.",
+      "zh": "當然可以。請寫下飯店地址和您的電話號碼。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "I'm staying at the Grand Harbor Hotel for two nights.",
+      "zh": "我會在 Grand Harbor Hotel 住兩晚。"
+    },
+    {
+      "id": "s15",
+      "speaker": "A",
+      "text": "If you buy essential items tonight, please keep your receipts.",
+      "zh": "如果您今晚購買必需品，請保留收據。",
+      "note": "essential items 指盥洗用品或換洗衣物等必要物品。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "How does the traveler describe the suitcase?",
+      "options": ["A large blue case", "A medium black case", "A small silver case"],
+      "answer": 1
+    },
+    {
+      "q": "Where is the suitcase now?",
+      "options": ["At the hotel", "On the baggage belt", "In Seoul"],
+      "answer": 2
+    },
+    {
+      "q": "What should the traveler keep after buying essential items?",
+      "options": ["The receipts", "The shopping bags", "The price tags"],
+      "answer": 0
+    }
+  ]
+}

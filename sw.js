@@ -1,7 +1,8 @@
 /* Service worker — offline-first app shell, network-first content.
    Bump CACHE when shipping a release so clients pick up new files. */
 
-const CACHE = 'echo-v4';
+const CACHE = 'echo-v6';
+const OFFLINE_CACHE = 'echo-offline';
 
 const SHELL = [
   './',
@@ -23,10 +24,14 @@ const SHELL = [
   './js/youtube.js',
   './js/voices.js',
   './js/llm.js',
+  './js/playback.js',
+  './js/daily.js',
   './js/views/home.js',
+  './js/views/daily.js',
   './js/views/library.js',
   './js/views/lesson.js',
   './js/views/listen.js',
+  './js/views/player.js',
   './js/views/review.js',
   './js/views/talk.js',
   './js/views/import.js',
@@ -37,11 +42,26 @@ const SHELL = [
   './icons/icon-512.png',
 ];
 
+async function cacheDailyLessons(cache) {
+  try {
+    const response = await fetch('./content/index.json', { cache: 'no-store' });
+    if (!response.ok) return;
+    const data = await response.clone().json();
+    await cache.put('./content/index.json', response);
+    const urls = (data.lessons || [])
+      .filter((lesson) => lesson.daily)
+      .map((lesson) => `./content/lessons/${encodeURIComponent(lesson.id)}.json`);
+    await Promise.all(urls.map((url) => cache.add(url).catch(() => {})));
+  } catch { /* daily lessons remain network-available if precaching fails */ }
+}
+
 self.addEventListener('install', e => {
   e.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     // Fetch individually so one missing file cannot fail the whole install.
     await Promise.all(SHELL.map(u => cache.add(u).catch(() => {})));
+    // Daily stories are small and should open offline before their first read.
+    await cacheDailyLessons(cache);
     self.skipWaiting();
   })());
 });
@@ -49,7 +69,10 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil((async () => {
     const keys = await caches.keys();
-    await Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)));
+    // Keep lessons the learner explicitly pinned; only retire old app shells.
+    await Promise.all(keys
+      .filter(k => k !== CACHE && k !== OFFLINE_CACHE)
+      .map(k => caches.delete(k)));
     await self.clients.claim();
   })());
 });

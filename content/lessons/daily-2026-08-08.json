@@ -1,0 +1,193 @@
+{
+  "id": "daily-2026-08-08",
+  "title": "The Storm Tested Our Plan",
+  "titleZh": "暴風雨考驗了我們的計畫",
+  "level": 2,
+  "type": "article",
+  "topic": "daily",
+  "summaryZh": "年度最強暴風雨即將來襲，有人主張把共享傘鎖起來；Maya 和鄰居必須在保護物資與維持開放之間，找出真正能照顧社區的方法。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-08",
+    "seriesId": "blue-umbrella-plan",
+    "seriesTitle": "The Blue Umbrella Plan",
+    "seriesTitleZh": "藍傘共享計畫",
+    "day": 3,
+    "totalDays": 3
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s8",
+    "turn": "s18",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "On Monday evening, the weather service warned that the strongest summer storm of the year would arrive before morning, bringing heavy rain and dangerous winds.",
+      "zh": "星期一晚上，氣象單位警告今年最強的夏季暴風雨將在早晨前抵達，並帶來豪雨和危險強風。"
+    },
+    {
+      "id": "s2",
+      "text": "Maya checked the three return points and counted eighteen blue umbrellas across the neighborhood before locking the cafe for the night.",
+      "zh": "Maya 在咖啡店夜間上鎖前，檢查了三個歸還點，清點出社區裡共有十八把藍傘。"
+    },
+    {
+      "id": "s3",
+      "text": "That number sounded large, but hundreds of people used the bus station and library each day, especially during the busy morning hours.",
+      "zh": "這個數字聽起來很多，但每天有數百人使用公車站和圖書館，尤其是在繁忙的早晨時段。"
+    },
+    {
+      "id": "s4",
+      "text": "Several neighbors gathered under the cafe's yellow lights and discussed how to protect the umbrellas during the coming storm.",
+      "zh": "幾位鄰居聚集在咖啡店的黃色燈光下，討論該如何在即將到來的風暴中保護雨傘。"
+    },
+    {
+      "id": "s5",
+      "text": "One man suggested locking every umbrella and asking borrowers to leave a cash deposit.",
+      "zh": "一名男子建議把每把傘都鎖起來，並要求借用者留下現金押金。"
+    },
+    {
+      "id": "s6",
+      "text": "Another wanted to close the boxes until the dangerous weather passed.",
+      "zh": "另一個人則想關閉所有歸還箱，直到危險天氣過去。"
+    },
+    {
+      "id": "s7",
+      "text": "Maya understood their fear, but she worried those rules would block people who needed help most during a public emergency.",
+      "zh": "Maya 理解他們的恐懼，但她擔心那些規定會讓最需要幫助的人無法借到傘。"
+    },
+    {
+      "id": "s8",
+      "text": "Ms. Lin asked the group to design a storm plan that kept both people and umbrellas safe before the first heavy rain began.",
+      "zh": "林女士請大家在第一場豪雨開始前，設計一套能同時保護人和雨傘的風暴計畫。"
+    },
+    {
+      "id": "s9",
+      "text": "Noah made a list of volunteers who could check each return box without traveling far.",
+      "zh": "Noah 列出一份志工名單，讓每個人不必走太遠就能檢查附近的歸還箱。"
+    },
+    {
+      "id": "s10",
+      "text": "Mr. Chen brought a repair kit, strong tape, and two umbrellas from his apartment, and he offered to stay all night.",
+      "zh": "陳先生從公寓帶來修理工具、強力膠帶和兩把傘，還主動表示願意整夜留下來。"
+    },
+    {
+      "id": "s11",
+      "text": "Maya posted a message through the library and cafe pages, asking residents to borrow only what they needed and return umbrellas indoors.",
+      "zh": "Maya 透過圖書館和咖啡店的頁面發布訊息，請居民只借需要的數量，並把傘歸還到室內。"
+    },
+    {
+      "id": "s12",
+      "text": "The team moved the bus station box behind a wall and tied its wooden cover down.",
+      "zh": "團隊把公車站的歸還箱移到牆後，並把木製遮蓋牢牢綁住。"
+    },
+    {
+      "id": "s13",
+      "text": "They also placed towels and a repair table inside the cafe for wet or damaged umbrellas.",
+      "zh": "他們還在咖啡店裡放置毛巾和修理桌，供濕掉或損壞的雨傘使用。"
+    },
+    {
+      "id": "s14",
+      "text": "Before midnight, hard rain struck the windows, and strong wind shook every street sign.",
+      "zh": "午夜前，大雨敲打著窗戶，強風搖動每一面街道標誌。"
+    },
+    {
+      "id": "s15",
+      "text": "Commuters rushed from late buses, while volunteers guided them toward the nearest blue umbrellas.",
+      "zh": "通勤者匆忙走下晚班公車，志工則引導他們前往最近的藍傘放置處。"
+    },
+    {
+      "id": "s16",
+      "text": "Soon all eighteen original blue umbrellas were in use, and the paper chart became impossible to follow.",
+      "zh": "很快地，原有的十八把藍傘全都被借走，紙本表格也變得難以追蹤。"
+    },
+    {
+      "id": "s17",
+      "text": "Maya worried that the open system was failing exactly when the neighborhood depended on it.",
+      "zh": "Maya 擔心，這套開放制度偏偏在社區最依賴它的時刻失靈了。"
+    },
+    {
+      "id": "s18",
+      "text": "Then a woman arrived carrying three wet umbrellas, although she had borrowed only one.",
+      "zh": "這時，一名女子帶著三把濕傘抵達，儘管她原本只借了一把。"
+    },
+    {
+      "id": "s19",
+      "text": "She had collected two that were blowing across the sidewalk and brought them to safety.",
+      "zh": "她撿起兩把在人行道上被風吹動的傘，並把它們帶到安全的地方。"
+    },
+    {
+      "id": "s20",
+      "text": "Other residents came with old umbrellas from closets, cars, and office drawers.",
+      "zh": "其他居民也帶著從衣櫃、汽車和辦公室抽屜找出的舊傘前來。"
+    },
+    {
+      "id": "s21",
+      "text": "Mr. Chen and Noah repaired bent frames while Ms. Lin served hot tea to waiting travelers.",
+      "zh": "陳先生和 Noah 修理彎曲的傘架，林女士則端熱茶給等待中的旅客。"
+    },
+    {
+      "id": "s22",
+      "text": "When a bus was delayed, four strangers shared two large umbrellas and walked home together.",
+      "zh": "一班公車誤點時，四位陌生人共撐兩把大傘，一起走路回家。"
+    },
+    {
+      "id": "s23",
+      "text": "The storm did not make people selfish; instead, it gave them a reason to help one another.",
+      "zh": "暴風雨沒有使人變得自私，反而給了大家互相幫助的理由。"
+    },
+    {
+      "id": "s24",
+      "text": "By dawn, the cafe held twenty-five umbrellas, but one original blue umbrella was still missing.",
+      "zh": "到了黎明，咖啡店裡已有二十五把傘，但仍有一把最初的藍傘沒有回來。"
+    },
+    {
+      "id": "s25",
+      "text": "Maya was tired and disappointed, although the plan had helped more people than she could count.",
+      "zh": "Maya 又累又失望，儘管這項計畫幫助的人已多到她數不清。"
+    },
+    {
+      "id": "s26",
+      "text": "As the rain became lighter, someone returned the missing original blue umbrella beside the door.",
+      "zh": "雨勢變小時，有人把那把不見的原始藍傘歸還到門邊。"
+    },
+    {
+      "id": "s27",
+      "text": "Its broken handle had been replaced with a smooth wooden one, and a note hung from the ribbon.",
+      "zh": "它原本壞掉的握把已換成光滑的木製握把，絲帶上還掛著一張字條。"
+    },
+    {
+      "id": "s28",
+      "text": "The note said, \"It helped me last week, so I fixed it for the next person.\"",
+      "zh": "字條寫著：「它上週幫了我，所以我把它修好，留給下一個人。」"
+    },
+    {
+      "id": "s29",
+      "text": "The team decided against locks and deposits, but they added safety warnings and regular repair nights.",
+      "zh": "團隊決定不使用鎖和押金，但增加了安全提醒與固定的夜間修傘活動。"
+    },
+    {
+      "id": "s30",
+      "text": "Maya wrote the final storm count on the chart: no umbrellas missing, eight added, and a neighborhood connected.",
+      "zh": "Maya 在表格上寫下風暴後的最終統計：沒有傘遺失、多了八把傘，以及一個連結起來的社區。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did some neighbors want locks and cash deposits?",
+      "options": ["They feared umbrellas would be lost or damaged", "They wanted to sell tickets to the cafe", "They needed money for the library"],
+      "answer": 0
+    },
+    {
+      "q": "What happened after all eighteen umbrellas were borrowed?",
+      "options": ["The volunteers closed every return point", "Residents returned found umbrellas and brought extra ones", "Maya canceled the plan immediately"],
+      "answer": 1
+    },
+    {
+      "q": "What did the team decide after the storm?",
+      "options": ["To require membership cards", "To keep every umbrella indoors", "To stay open while adding safety warnings and repair nights"],
+      "answer": 2
+    }
+  ]
+}

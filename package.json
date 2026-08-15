@@ -6,8 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "python3 -m http.server 8817",
+    "syntax": "node tools/check-syntax.mjs",
+    "test": "node --test",
+    "validate": "node tools/validate-content.mjs",
+    "check": "npm run syntax && npm test && npm run validate",
+    "deploy": "npm run check && firebase deploy --only hosting",
     "index": "node tools/build-index.mjs",
-    "audio": "node tools/generate-audio.mjs",
+    "audio": "node tools/generate-voices.mjs --voice edge-us,edge-gb",
     "icons": "node tools/make-icons.mjs"
   },
   "license": "MIT"

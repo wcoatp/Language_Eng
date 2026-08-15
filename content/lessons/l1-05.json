@@ -1,0 +1,117 @@
+{
+  "id": "l1-05",
+  "title": "Ordering Lunch to Go",
+  "titleZh": "外帶午餐",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "上班族到餐廳點外帶午餐，選擇配菜、飲料和付款方式。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "speaker": "A",
+      "text": "Hi, can I order lunch to go?",
+      "zh": "你好，我可以點外帶午餐嗎？",
+      "note": "to go 表示外帶，在餐廳點餐時很常用。"
+    },
+    {
+      "id": "s2",
+      "speaker": "B",
+      "text": "Of course. What would you like?",
+      "zh": "當然可以。您想點什麼？"
+    },
+    {
+      "id": "s3",
+      "speaker": "A",
+      "text": "I'd like the chicken rice, please.",
+      "zh": "我想要雞肉飯，謝謝。",
+      "note": "I'd like 是 I would like 的縮寫，比 I want 更客氣。"
+    },
+    {
+      "id": "s4",
+      "speaker": "B",
+      "text": "Would you like soup or salad with that?",
+      "zh": "您想搭配湯還是沙拉？"
+    },
+    {
+      "id": "s5",
+      "speaker": "A",
+      "text": "Salad, please. Can I have the dressing on the side?",
+      "zh": "沙拉，謝謝。沙拉醬可以另外放嗎？",
+      "note": "on the side 表示另外盛裝，不要直接淋上去。"
+    },
+    {
+      "id": "s6",
+      "speaker": "B",
+      "text": "Sure. Would you like a drink?",
+      "zh": "可以。您要飲料嗎？"
+    },
+    {
+      "id": "s7",
+      "speaker": "A",
+      "text": "Yes, one iced tea with no sugar.",
+      "zh": "要，一杯無糖冰茶。"
+    },
+    {
+      "id": "s8",
+      "speaker": "B",
+      "text": "Would you like a small or a large one?",
+      "zh": "您要小杯還是大杯？"
+    },
+    {
+      "id": "s9",
+      "speaker": "A",
+      "text": "A small one is fine.",
+      "zh": "小杯就可以了。"
+    },
+    {
+      "id": "s10",
+      "speaker": "B",
+      "text": "Anything else for you today?",
+      "zh": "今天還需要別的嗎？"
+    },
+    {
+      "id": "s11",
+      "speaker": "A",
+      "text": "That's all, thanks. How much is it?",
+      "zh": "就這些，謝謝。總共多少錢？"
+    },
+    {
+      "id": "s12",
+      "speaker": "B",
+      "text": "It is two hundred and twenty dollars.",
+      "zh": "總共是兩百二十元。"
+    },
+    {
+      "id": "s13",
+      "speaker": "A",
+      "text": "Can I pay by card?",
+      "zh": "我可以刷卡嗎？",
+      "note": "pay by card 表示用信用卡或金融卡付款。"
+    },
+    {
+      "id": "s14",
+      "speaker": "B",
+      "text": "Yes. Your order will be ready in ten minutes.",
+      "zh": "可以。您的餐點會在十分鐘後準備好。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "What main dish does the customer order?",
+      "options": ["Chicken rice", "Beef noodles", "A salad only"],
+      "answer": 0
+    },
+    {
+      "q": "How does the customer want the iced tea?",
+      "options": ["With extra ice", "With no sugar", "With milk"],
+      "answer": 1
+    },
+    {
+      "q": "When will the order be ready?",
+      "options": ["In five minutes", "In twenty minutes", "In ten minutes"],
+      "answer": 2
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T12:02:52.603Z",
+  "generatedAt": "2026-08-15T02:43:27.635Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -12,6 +12,7 @@
       "count": 13,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -25,6 +26,7 @@
       "count": 14,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -38,6 +40,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -51,7 +54,128 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
+    },
+    {
+      "id": "l1-05",
+      "title": "Ordering Lunch to Go",
+      "titleZh": "外帶午餐",
+      "summaryZh": "上班族到餐廳點外帶午餐，選擇配菜、飲料和付款方式。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 14,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l1-06",
+      "title": "Finding the Right Platform",
+      "titleZh": "找到正確月台",
+      "summaryZh": "旅客在火車站詢問往台中的列車月台、行走方向和驗票方式。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 14,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "daily-2026-08-06",
+      "title": "The Umbrella by the Cafe Door",
+      "titleZh": "咖啡店門邊的那把傘",
+      "summaryZh": "一場大雨讓 Maya 看見鄰居借傘的需要；當三把藍傘遲遲沒有回來時，一張感謝字條讓她和林女士決定把善意變成共享計畫。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 30,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-06",
+        "seriesId": "blue-umbrella-plan",
+        "seriesTitle": "The Blue Umbrella Plan",
+        "seriesTitleZh": "藍傘共享計畫",
+        "day": 1,
+        "totalDays": 3
+      },
+      "wordCount": 492
+    },
+    {
+      "id": "daily-2026-08-07",
+      "title": "Where Did the Blue Umbrellas Go?",
+      "titleZh": "藍傘都去了哪裡？",
+      "summaryZh": "五把藍傘同時不見，鄰居立刻懷疑有人偷走它們；Maya 追查借用線索後，發現共享計畫真正缺少的是更清楚的溝通方式。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 30,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-07",
+        "seriesId": "blue-umbrella-plan",
+        "seriesTitle": "The Blue Umbrella Plan",
+        "seriesTitleZh": "藍傘共享計畫",
+        "day": 2,
+        "totalDays": 3
+      },
+      "wordCount": 499
+    },
+    {
+      "id": "daily-2026-08-08",
+      "title": "The Storm Tested Our Plan",
+      "titleZh": "暴風雨考驗了我們的計畫",
+      "summaryZh": "年度最強暴風雨即將來襲，有人主張把共享傘鎖起來；Maya 和鄰居必須在保護物資與維持開放之間，找出真正能照顧社區的方法。",
+      "level": 2,
+      "type": "article",
+      "topic": "daily",
+      "count": 30,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-08",
+        "seriesId": "blue-umbrella-plan",
+        "seriesTitle": "The Blue Umbrella Plan",
+        "seriesTitleZh": "藍傘共享計畫",
+        "day": 3,
+        "totalDays": 3
+      },
+      "wordCount": 509
+    },
+    {
+      "id": "daily-2026-08-09",
+      "title": "Beyond the Last Stop",
+      "titleZh": "時刻表最後一站之外",
+      "summaryZh": "Ava 和弟弟 Ben 為了學校節目搭火車前往燈塔，卻因誤聽轉車廣播來到錯誤的終點，只能在有限時間內尋找替代交通方式。",
+      "level": 2,
+      "type": "article",
+      "topic": "travel",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-09",
+        "seriesId": "detour-to-remember",
+        "seriesTitle": "A Detour to Remember",
+        "seriesTitleZh": "難忘的繞路旅行",
+        "day": 1,
+        "totalDays": 2
+      },
+      "wordCount": 487
     },
     {
       "id": "l2-01",
@@ -64,6 +188,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -77,6 +202,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -90,6 +216,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -103,6 +230,35 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l2-05",
+      "title": "Moving Up a Project Deadline",
+      "titleZh": "專案期限提前",
+      "summaryZh": "客戶臨時將展示日期提前，團隊討論工作進度、分工和可交付範圍。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l2-06",
+      "title": "A Suitcase That Did Not Arrive",
+      "titleZh": "行李沒有抵達",
+      "summaryZh": "旅客抵達機場後找不到行李，在服務櫃台描述行李並安排送到飯店。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
       "source": ""
     },
     {
@@ -116,6 +272,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -129,6 +286,7 @@
       "count": 9,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -142,6 +300,7 @@
       "count": 6,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -155,6 +314,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -168,6 +328,7 @@
       "count": 5,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -181,6 +342,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -194,6 +356,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -207,6 +370,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -220,6 +384,7 @@
       "count": 14,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -233,6 +398,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -246,6 +412,7 @@
       "count": 4,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — America's National Parks"
     },
     {
@@ -259,6 +426,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -272,6 +440,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -285,6 +454,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -298,6 +468,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -311,6 +482,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -324,6 +496,7 @@
       "count": 9,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -337,6 +510,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — As It Is"
     },
     {
@@ -350,6 +524,7 @@
       "count": 8,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — As It Is"
     },
     {
@@ -363,6 +538,7 @@
       "count": 7,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -376,6 +552,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -389,6 +566,7 @@
       "count": 14,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -402,6 +580,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -415,6 +594,7 @@
       "count": 6,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -428,6 +608,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -441,6 +622,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — America's National Parks"
     },
     {
@@ -454,7 +636,169 @@
       "count": 14,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — America's National Parks"
+    },
+    {
+      "id": "daily-2026-08-10",
+      "title": "Before the Lighthouse Closed",
+      "titleZh": "燈塔關門以前",
+      "summaryZh": "Ava 和 Ben 騎著借來的腳踏車趕往燈塔，接連遇到鏈條脫落與橋梁封閉，必須學會求助、溝通並調整原本的採訪計畫。",
+      "level": 3,
+      "type": "article",
+      "topic": "travel",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-10",
+        "seriesId": "detour-to-remember",
+        "seriesTitle": "A Detour to Remember",
+        "seriesTitleZh": "難忘的繞路旅行",
+        "day": 2,
+        "totalDays": 2
+      },
+      "wordCount": 489
+    },
+    {
+      "id": "daily-2026-08-11",
+      "title": "Lunch Above the Traffic",
+      "titleZh": "車流上方的午餐時間",
+      "summaryZh": "Sofia 想把辦公室閒置屋頂改成午休花園，但承重、預算與維護問題讓完整計畫無法立即獲准，團隊只能在一週內做出可移動的示範區。",
+      "level": 3,
+      "type": "article",
+      "topic": "work",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-11",
+        "seriesId": "roof-with-a-purpose",
+        "seriesTitle": "A Roof with a Purpose",
+        "seriesTitleZh": "讓屋頂有新用途",
+        "day": 1,
+        "totalDays": 2
+      },
+      "wordCount": 493
+    },
+    {
+      "id": "daily-2026-08-12",
+      "title": "The Wind Changed the Design",
+      "titleZh": "風改變了設計",
+      "summaryZh": "強風破壞了屋頂示範區，團隊在主管視察前選擇誠實面對失敗，並把現場損害轉化成改善安全、維護與責任分工的設計資料。",
+      "level": 3,
+      "type": "article",
+      "topic": "work",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-12",
+        "seriesId": "roof-with-a-purpose",
+        "seriesTitle": "A Roof with a Purpose",
+        "seriesTitleZh": "讓屋頂有新用途",
+        "day": 2,
+        "totalDays": 2
+      },
+      "wordCount": 499
+    },
+    {
+      "id": "daily-2026-08-13",
+      "title": "A Voice from a Silent Phone",
+      "titleZh": "沉默手機裡的聲音",
+      "summaryZh": "Noah 幫外祖母整理搬家物品時找到外祖父的舊手機，意外救回一段未完成的食譜錄音，並從背景聲音發現下一條線索。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-13",
+        "seriesId": "recipe-in-the-recording",
+        "seriesTitle": "The Recipe in the Recording",
+        "seriesTitleZh": "錄音裡的食譜",
+        "day": 1,
+        "totalDays": 2
+      },
+      "wordCount": 509
+    },
+    {
+      "id": "daily-2026-08-14",
+      "title": "The Recipe's Last Line",
+      "titleZh": "食譜的最後一句",
+      "summaryZh": "Noah 和外祖母循著錄音中的鐘聲來到社區廚房，在舊計時器與櫥櫃間找出食譜最後一步，也重新理解 Mateo 留下的真正祕訣。",
+      "level": 3,
+      "type": "article",
+      "topic": "science",
+      "count": 32,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-14",
+        "seriesId": "recipe-in-the-recording",
+        "seriesTitle": "The Recipe in the Recording",
+        "seriesTitleZh": "錄音裡的食譜",
+        "day": 2,
+        "totalDays": 2
+      },
+      "wordCount": 511
+    },
+    {
+      "id": "daily-2026-08-15",
+      "title": "The Bus That Waited",
+      "titleZh": "等人的公車",
+      "summaryZh": "哈金開了十一年的九號公車,每天早上都會在第三站多等兩分鐘。公司裝上準點計分螢幕之後,他被叫進了辦公室。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 37,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-15",
+        "seriesId": "two-minutes-north-road",
+        "seriesTitle": "Two Minutes on the North Road",
+        "seriesTitleZh": "北路上的兩分鐘",
+        "day": 1,
+        "totalDays": 2
+      },
+      "wordCount": 489
+    },
+    {
+      "id": "daily-2026-08-16",
+      "title": "Who Else Was Waiting?",
+      "titleZh": "還有誰在等?",
+      "summaryZh": "哈金開著自己的車來到那棟綠色房子前。他以為這趟是為了道別,結果調度員在刷卡紀錄裡找到了另一件他完全不知道的事。",
+      "level": 3,
+      "type": "article",
+      "topic": "daily",
+      "count": 38,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "",
+      "daily": {
+        "date": "2026-08-16",
+        "seriesId": "two-minutes-north-road",
+        "seriesTitle": "Two Minutes on the North Road",
+        "seriesTitleZh": "北路上的兩分鐘",
+        "day": 2,
+        "totalDays": 2
+      },
+      "wordCount": 487
     },
     {
       "id": "l3-01",
@@ -467,6 +811,7 @@
       "count": 14,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -480,6 +825,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -493,6 +839,7 @@
       "count": 14,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -506,6 +853,49 @@
       "count": 14,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l3-05",
+      "title": "Creating an End to the Workday",
+      "titleZh": "為工作日畫下句點",
+      "summaryZh": "一位混合辦公的上班族發現工作侵入晚間生活，於是建立簡單的下班儀式和溝通界線。",
+      "level": 3,
+      "type": "article",
+      "topic": "work",
+      "count": 14,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l3-06",
+      "title": "Negotiating a Lease Renewal",
+      "titleZh": "協商租約續簽",
+      "summaryZh": "租客與房東討論續約、租金調幅和老舊冷氣，最後以兩年租期達成共識。",
+      "level": 3,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l3-07",
+      "title": "A Better Way to Run the Weekly Meeting",
+      "titleZh": "讓每週會議更有效率",
+      "summaryZh": "兩位同事討論如何把冗長的每週例會，改成書面更新加上短時間解決問題。",
+      "level": 3,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 14,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
       "source": ""
     },
     {
@@ -519,6 +909,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -532,6 +923,7 @@
       "count": 8,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -545,6 +937,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -558,6 +951,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -571,6 +965,7 @@
       "count": 18,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -584,6 +979,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -597,6 +993,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -610,6 +1007,7 @@
       "count": 8,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Science & Technology"
     },
     {
@@ -623,6 +1021,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — As It Is"
     },
     {
@@ -636,6 +1035,7 @@
       "count": 9,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — As It Is"
     },
     {
@@ -649,6 +1049,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -662,6 +1063,7 @@
       "count": 11,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -675,6 +1077,7 @@
       "count": 10,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Ask a Teacher"
     },
     {
@@ -688,6 +1091,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -701,6 +1105,7 @@
       "count": 14,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -714,6 +1119,7 @@
       "count": 18,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -727,6 +1133,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — America's National Parks"
     },
     {
@@ -740,6 +1147,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -753,6 +1161,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -766,6 +1175,7 @@
       "count": 10,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Words and Their Stories"
     },
     {
@@ -779,6 +1189,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -792,6 +1203,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -805,6 +1217,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -818,6 +1231,7 @@
       "count": 5,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Everyday Grammar"
     },
     {
@@ -831,6 +1245,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -844,6 +1259,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -857,6 +1273,49 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l4-04",
+      "title": "Before You Share That Photograph",
+      "titleZh": "分享照片之前先查證",
+      "summaryZh": "一張看似即時的災難照片可能來自多年以前，文章示範如何在分享前查找原始脈絡。",
+      "level": 4,
+      "type": "article",
+      "topic": "media",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l4-05",
+      "title": "The Train We Did Not Catch",
+      "titleZh": "我們沒趕上的那班火車",
+      "summaryZh": "兩名旅客錯過山區末班火車後冷靜重排行程，意外找到結合公車與渡輪的替代路線。",
+      "level": 4,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l4-06",
+      "title": "Why Cities Stay Hot After Sunset",
+      "titleZh": "城市為何在日落後仍然炎熱",
+      "summaryZh": "城市材料會在白天吸熱並於夜間釋放，加上樹蔭不足與人為熱源，形成夜間熱島效應。",
+      "level": 4,
+      "type": "article",
+      "topic": "science",
+      "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
       "source": ""
     },
     {
@@ -870,6 +1329,7 @@
       "count": 9,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — Health & Lifestyle"
     },
     {
@@ -883,6 +1343,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — American Stories"
     },
     {
@@ -896,6 +1357,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -909,6 +1371,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -922,6 +1385,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -935,6 +1399,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -948,6 +1413,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -961,6 +1427,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -974,6 +1441,7 @@
       "count": 15,
       "questions": 0,
       "realAudio": true,
+      "preGeneratedAudio": true,
       "source": "VOA Learning English (public domain) — What It Takes"
     },
     {
@@ -987,6 +1455,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -1000,6 +1469,7 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
       "source": ""
     },
     {
@@ -1013,6 +1483,35 @@
       "count": 15,
       "questions": 3,
       "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l5-04",
+      "title": "Can Productivity Be Reduced to a Score?",
+      "titleZh": "生產力能化成一個分數嗎？",
+      "summaryZh": "經理與資料分析師討論員工生產力分數的盲點，並設計兼顧決策用途與人性風險的評估方式。",
+      "level": 5,
+      "type": "dialogue",
+      "topic": "work",
+      "count": 16,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": ""
+    },
+    {
+      "id": "l5-05",
+      "title": "The Argument for Traveling More Slowly",
+      "titleZh": "慢速旅行的理由",
+      "summaryZh": "作者反思把旅行當成景點清單的習慣，主張用較少移動與較長停留換取更深的理解，同時承認慢遊並非人人可行。",
+      "level": 5,
+      "type": "article",
+      "topic": "travel",
+      "count": 16,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
       "source": ""
     }
   ]

@@ -1,0 +1,215 @@
+{
+  "id": "daily-2026-08-14",
+  "title": "The Recipe's Last Line",
+  "titleZh": "食譜的最後一句",
+  "level": 3,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "Noah 和外祖母循著錄音中的鐘聲來到社區廚房，在舊計時器與櫥櫃間找出食譜最後一步，也重新理解 Mateo 留下的真正祕訣。",
+  "preGeneratedAudio": false,
+  "daily": {
+    "date": "2026-08-14",
+    "seriesId": "recipe-in-the-recording",
+    "seriesTitle": "The Recipe in the Recording",
+    "seriesTitleZh": "錄音裡的食譜",
+    "day": 2,
+    "totalDays": 2
+  },
+  "storyArc": {
+    "setup": "s1",
+    "development": "s9",
+    "turn": "s17",
+    "resolution": "s25"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "The next morning, Noah and Elena arrived at the community center before its first class began.",
+      "zh": "隔天早上，Noah 和 Elena 在第一堂課開始前抵達社區中心。"
+    },
+    {
+      "id": "s2",
+      "text": "The building had been renovated, but the same twelve bells rang from the tower across the street.",
+      "zh": "建築物已經整修過，但街對面塔樓仍響起同樣的十二下鐘聲。"
+    },
+    {
+      "id": "s3",
+      "text": "Mrs. Park, a retired cooking teacher, welcomed them with a dusty binder and a ring of keys.",
+      "zh": "退休烹飪老師 Park 太太帶著一本積灰塵的資料夾和一串鑰匙歡迎他們。"
+    },
+    {
+      "id": "s4",
+      "text": "She remembered Mateo clearly because he told jokes whenever students became nervous about making mistakes.",
+      "zh": "她清楚記得 Mateo，因為每當學生因害怕犯錯而緊張時，他就會說笑話。"
+    },
+    {
+      "id": "s5",
+      "text": "Unfortunately, the binder held attendance sheets and shopping receipts, but none of his stew recipes.",
+      "zh": "可惜資料夾裡只有點名表和購物收據，沒有任何一份他的燉菜食譜。"
+    },
+    {
+      "id": "s6",
+      "text": "Several boxes of lesson cards had been moved or discarded when the kitchen was remodeled.",
+      "zh": "廚房改建時，有好幾箱教學卡片被移走或丟棄了。"
+    },
+    {
+      "id": "s7",
+      "text": "Elena tried to hide her disappointment, saying that hearing Mateo's voice once was already a gift.",
+      "zh": "Elena 試著隱藏失望，說能再聽見 Mateo 的聲音一次就已經是禮物。"
+    },
+    {
+      "id": "s8",
+      "text": "Noah asked to play the recording inside the kitchen before they ended their search.",
+      "zh": "Noah 請求先在廚房裡播放錄音，再結束搜尋。"
+    },
+    {
+      "id": "s9",
+      "text": "As the file played, children's singing drifted through an open window from the center's small yard.",
+      "zh": "檔案播放時，孩子們的歌聲從中心的小庭院飄進敞開的窗戶。"
+    },
+    {
+      "id": "s10",
+      "text": "The noon bells sounded next, exactly as they had behind Mateo's unfinished sentence.",
+      "zh": "接著中午的鐘聲響起，和 Mateo 未完成句子後方的聲音完全相同。"
+    },
+    {
+      "id": "s11",
+      "text": "Both noises were loudest beside an old pantry at the back of the teaching kitchen.",
+      "zh": "這兩種聲音在教學廚房後方的一間舊食品儲藏室旁最為清楚。"
+    },
+    {
+      "id": "s12",
+      "text": "Mrs. Park suddenly recalled that Mateo kept recipe notes near a red timer on the pantry shelf.",
+      "zh": "Park 太太忽然想起，Mateo 以前會把食譜筆記放在儲藏室架上的紅色計時器旁。"
+    },
+    {
+      "id": "s13",
+      "text": "The timer had been placed in storage, so the three of them began opening labeled boxes.",
+      "zh": "那個計時器已被放進倉庫，所以三個人開始打開貼有標籤的箱子。"
+    },
+    {
+      "id": "s14",
+      "text": "They found it beneath a stack of aprons, yet there was no recipe card beside it.",
+      "zh": "他們在一疊圍裙下找到計時器，但旁邊並沒有食譜卡。"
+    },
+    {
+      "id": "s15",
+      "text": "Noah removed its loose battery cover and discovered a narrow strip of paper folded underneath.",
+      "zh": "Noah 取下鬆動的電池蓋，發現底下摺著一張窄紙條。"
+    },
+    {
+      "id": "s16",
+      "text": "The strip listed the familiar ingredients, with one puzzling note written across the bottom.",
+      "zh": "紙條列出他們熟悉的材料，底部還橫寫著一句令人不解的註記。"
+    },
+    {
+      "id": "s17",
+      "text": "In Mateo's handwriting, the note said, \"The last line is where every pot waits.\"",
+      "zh": "紙條上以 Mateo 的字跡寫著：「最後一句就在每一口鍋等待的地方。」"
+    },
+    {
+      "id": "s18",
+      "text": "Elena thought it was another joke, but Mrs. Park looked toward a low wooden shelf near the sink.",
+      "zh": "Elena 以為那又是一個玩笑，Park 太太卻望向水槽旁的一個低矮木架。"
+    },
+    {
+      "id": "s19",
+      "text": "After cooking lessons, students had always placed their covered pots there before serving the food.",
+      "zh": "烹飪課結束後，學生總會先把蓋好的鍋子放在那裡，再端菜上桌。"
+    },
+    {
+      "id": "s20",
+      "text": "The wooden shelf had been removed during renovation, but the old cabinet that had supported it remained in place.",
+      "zh": "木架在整修時已被移除，但原本支撐它的舊櫥櫃仍留在原位。"
+    },
+    {
+      "id": "s21",
+      "text": "When they opened the cabinet, they found faded writing beneath a removable safety notice inside the door.",
+      "zh": "他們打開櫥櫃，在櫃門內側一張可撕下的安全告示底下發現褪色字跡。"
+    },
+    {
+      "id": "s22",
+      "text": "It read, \"Turn off the heat, keep the lid closed, and wait ten full minutes.\"",
+      "zh": "上面寫著：「關火、保持鍋蓋緊閉，然後等足整整十分鐘。」"
+    },
+    {
+      "id": "s23",
+      "text": "There was no rare spice or secret sauce, only a patient pause after the cooking ended.",
+      "zh": "那裡沒有稀有香料或祕密醬汁，只有烹調結束後一段耐心的等待。"
+    },
+    {
+      "id": "s24",
+      "text": "Elena laughed as she realized why her own version had always seemed thinner and less fragrant.",
+      "zh": "Elena 笑了，因為她終於明白自己的版本為何總是比較稀，也沒有那麼香。"
+    },
+    {
+      "id": "s25",
+      "text": "Mrs. Park let them use the kitchen, and together they prepared the stew from the recovered instructions.",
+      "zh": "Park 太太讓他們使用廚房，三人便按照找回的步驟一起準備燉菜。"
+    },
+    {
+      "id": "s26",
+      "text": "Noah chopped vegetables, Elena measured herbs, and Mrs. Park watched the beans soften over low heat.",
+      "zh": "Noah 切蔬菜，Elena 測量香草用量，Park 太太則看著豆子以小火慢慢變軟。"
+    },
+    {
+      "id": "s27",
+      "text": "When the burner was turned off, Noah wanted to lift the lid after only five minutes.",
+      "zh": "爐火關掉後才過五分鐘，Noah 就想掀開鍋蓋。"
+    },
+    {
+      "id": "s28",
+      "text": "Elena stopped his hand, and they waited while the room slowly filled with rosemary and lemon.",
+      "zh": "Elena 阻止了他的手，他們耐心等待，房間也漸漸充滿迷迭香與檸檬的氣味。"
+    },
+    {
+      "id": "s29",
+      "text": "At ten minutes, the stew had become richer, and its separate flavors finally tasted like one dish.",
+      "zh": "十分鐘後，燉菜變得更濃郁，原本各自分明的味道終於融合成一道完整料理。"
+    },
+    {
+      "id": "s30",
+      "text": "Noah photographed the hidden sentence, typed the complete recipe, and attached Mateo's recording with a transcript.",
+      "zh": "Noah 拍下那句隱藏文字、打出完整食譜，並附上 Mateo 的錄音與逐字稿。"
+    },
+    {
+      "id": "s31",
+      "text": "He saved copies online, on a drive, and on paper so one broken device could never erase them.",
+      "zh": "他將副本存在線上、硬碟和紙張上，讓一台故障裝置再也無法抹去它們。"
+    },
+    {
+      "id": "s32",
+      "text": "At dinner, Elena said Mateo's final lesson was not about an ingredient, but about giving good things time.",
+      "zh": "晚餐時，Elena 說 Mateo 最後留下的課程不是關於某種材料，而是要給美好的事物足夠時間。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why did Noah play the recording in the teaching kitchen?",
+      "options": [
+        "He wanted to compare its background sounds with the room",
+        "He needed music for the first cooking class",
+        "He wanted Mrs. Park to repair the audio file"
+      ],
+      "answer": 0
+    },
+    {
+      "q": "Where did they find Mateo's final cooking instruction?",
+      "options": [
+        "Inside the dusty binder",
+        "Under a safety notice in an old cabinet",
+        "On the back of an attendance sheet"
+      ],
+      "answer": 1
+    },
+    {
+      "q": "What was Mateo's real secret for the stew?",
+      "options": [
+        "Adding a rare spice before serving",
+        "Cooking the beans over high heat",
+        "Letting the covered pot rest for ten minutes"
+      ],
+      "answer": 2
+    }
+  ]
+}

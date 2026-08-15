@@ -73,7 +73,11 @@ const SCENARIOS = [
 
 async function menu(root) {
   const [cfg, lessons] = await Promise.all([settings(), allLessons()]);
-  const dialogues = lessons.filter((l) => l.type === "dialogue").slice(0, 8);
+  // Every dialogue, easiest first. This was capped at the first eight, which
+  // hid the L3-L5 conversations — the only roleplay material worth reaching.
+  const dialogues = lessons
+    .filter((l) => l.type === "dialogue")
+    .sort((a, b) => a.level - b.level);
   const ready = !!cfg.apiKey;
 
   mount(
@@ -354,7 +358,7 @@ function paintRP() {
                   sentenceId: s.id,
                   langCode: ctx.cfg.accentLang,
                   voiceURI: ctx.cfg.accent,
-        voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
+                  voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
                   rate: ctx.cfg.slowRate,
                 });
               } catch {
@@ -566,7 +570,7 @@ async function speakAI(text) {
     await say(text, {
       langCode: ctx.cfg.accentLang,
       voiceURI: ctx.cfg.accent,
-        voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
+      voiceId: voiceIdForLesson(ctx.cfg, ctx.lesson),
       rate: ctx.cfg.normalRate,
     });
   } catch {

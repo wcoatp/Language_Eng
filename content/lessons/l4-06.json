@@ -1,0 +1,104 @@
+{
+  "id": "l4-06",
+  "title": "Why Cities Stay Hot After Sunset",
+  "titleZh": "城市為何在日落後仍然炎熱",
+  "level": 4,
+  "type": "article",
+  "topic": "science",
+  "summaryZh": "城市材料會在白天吸熱並於夜間釋放，加上樹蔭不足與人為熱源，形成夜間熱島效應。",
+  "preGeneratedAudio": false,
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "On a summer afternoon, a city and the countryside around it may both feel dangerously hot.",
+      "zh": "夏日午後，一座城市與周圍鄉間可能都熱得危險。"
+    },
+    {
+      "id": "s2",
+      "text": "After sunset, however, fields often cool quickly while city streets continue to release heat for hours.",
+      "zh": "然而日落之後，田野通常迅速降溫，城市街道卻會持續數小時釋放熱量。"
+    },
+    {
+      "id": "s3",
+      "text": "This difference is part of what scientists call the urban heat island effect.",
+      "zh": "這種差異是科學家所稱都市熱島效應的一部分。"
+    },
+    {
+      "id": "s4",
+      "text": "Dark roofs and asphalt absorb a large share of the sun's energy during the day.",
+      "zh": "深色屋頂和柏油路面在白天吸收大量太陽能量。"
+    },
+    {
+      "id": "s5",
+      "text": "Because these materials store heat well, they act like slow batteries once the air begins to cool.",
+      "zh": "由於這些材料很會儲熱，空氣開始降溫後，它們就像緩慢放電的電池。"
+    },
+    {
+      "id": "s6",
+      "text": "Tall buildings can also reduce airflow and trap warm air between narrow streets.",
+      "zh": "高樓也會減少空氣流動，讓暖空氣困在狹窄街道之間。"
+    },
+    {
+      "id": "s7",
+      "text": "Cars, air conditioners, kitchens, and industrial equipment add waste heat to the same space.",
+      "zh": "汽車、空調、廚房與工業設備又把廢熱排入同一空間。"
+    },
+    {
+      "id": "s8",
+      "text": "Rural areas usually have more plants, which cool their surroundings as water evaporates from leaves and soil.",
+      "zh": "鄉間通常有更多植物，水分從葉片與土壤蒸發時會冷卻周遭環境。"
+    },
+    {
+      "id": "s9",
+      "text": "A neighborhood with few trees loses both that cooling process and the immediate protection of shade.",
+      "zh": "樹木稀少的社區，同時失去這種降溫過程與樹蔭的直接保護。"
+    },
+    {
+      "id": "s10",
+      "text": "The effect is not equal across a city, because building density and access to green space vary greatly.",
+      "zh": "熱島效應在城市中並不平均，因為建築密度與綠地取得程度差異很大。"
+    },
+    {
+      "id": "s11",
+      "text": "In many places, lower income districts have fewer trees and more exposed pavement than wealthier districts.",
+      "zh": "在許多地方，低收入地區的樹木比富裕地區少，裸露路面則更多。"
+    },
+    {
+      "id": "s12",
+      "text": "Hot nights are especially harmful because the human body gets less time to recover from daytime heat.",
+      "zh": "炎熱夜晚尤其有害，因為人體從白天高溫中恢復的時間更少。"
+    },
+    {
+      "id": "s13",
+      "text": "Planting trees can help, but young trees need years of care before they provide a broad canopy.",
+      "zh": "種樹能有所幫助，但幼樹需要多年照顧才能形成寬廣樹冠。"
+    },
+    {
+      "id": "s14",
+      "text": "Cities can also use lighter roofs, shaded walkways, and surfaces that allow water to enter the ground.",
+      "zh": "城市也能採用淺色屋頂、有遮蔭的步道，以及能讓水滲入土壤的鋪面。"
+    },
+    {
+      "id": "s15",
+      "text": "No single change removes urban heat, but many small design choices can make summer nights safer.",
+      "zh": "沒有任何單一改變能消除都市高溫，但許多小型設計選擇能讓夏夜更安全。"
+    }
+  ],
+  "questions": [
+    {
+      "q": "Why do city streets often stay warm after sunset?",
+      "options": ["Urban materials slowly release heat stored during the day", "City streets receive sunlight for more hours", "Nighttime winds always move toward the countryside"],
+      "answer": 0
+    },
+    {
+      "q": "How do plants help cool an area?",
+      "options": ["They block all movement of warm air", "They cool the surroundings as water evaporates", "They turn heat directly into light"],
+      "answer": 1
+    },
+    {
+      "q": "Why are hot nights particularly dangerous?",
+      "options": ["Most air conditioners stop working after dark", "Roads become harder to see in the heat", "The body has less time to recover from daytime heat"],
+      "answer": 2
+    }
+  ]
+}

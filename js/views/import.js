@@ -192,6 +192,7 @@ export async function render(root) {
             topic: state.topic,
             summaryZh: '',
             custom: true,
+            preGeneratedAudio: false,
             sentences,
             questions,
             at: Date.now(),

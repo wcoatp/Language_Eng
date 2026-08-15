@@ -24,3 +24,7 @@ bakeoff/
 .venv-dia/
 
 __pycache__/
+
+# Firebase Hosting's local deployment cache and debug logs.
+.firebase/
+firebase-debug.log*

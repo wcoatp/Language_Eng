@@ -1,35 +1,53 @@
 /* Lesson detail — preview the sentences, then start the trainer. */
 
 import { el, backButton, toast, confirmBox, mount } from "../ui.js";
-import { getLesson, TOPICS, deleteUserLesson } from '../content.js';
+import { getLesson, loadIndex, TOPICS, deleteUserLesson } from '../content.js';
 import { lessonProgress } from '../srs.js';
 import { settings } from '../store.js';
 import { say, cancel as cancelSpeech, unlock } from '../tts.js';
-import { kvSet } from '../db.js';
+import { kvGet, kvSet } from '../db.js';
 import { downloadLesson, removeLesson, isLessonOffline, cacheSupported } from '../storage.js';
 import { voiceIdForLesson, voiceForLesson } from '../voices.js';
+import { englishWordCount, formatDailyDate, isDailyComplete, STORY_BEATS } from '../daily.js';
 
 export function destroy() { cancelSpeech(); }
 
 export async function render(root, id) {
-  const [lesson, prog, cfg] = await Promise.all([getLesson(id), lessonProgress(id), settings()]);
+  const [lesson, prog, cfg, index, dailyCompletions] = await Promise.all([
+    getLesson(id), lessonProgress(id), settings(), loadIndex(), kvGet('dailyCompletions', {}),
+  ]);
   await kvSet('lastLesson', id);
+  const dailySeries = lesson.daily
+    ? index.filter((item) => item.daily?.seriesId === lesson.daily.seriesId)
+      .sort((a, b) => a.daily.day - b.daily.day)
+    : [];
+  const dailyDone = isDailyComplete(lesson, prog, dailyCompletions);
+  const deviceVoiceOnly = lesson.preGeneratedAudio === false ||
+    (lesson.custom && !lesson.realAudio && !lesson.sentences.some((sentence) => sentence.audio));
 
   const pct = lesson.sentences.length
     ? Math.round((prog.learned / lesson.sentences.length) * 100) : 0;
 
   mount(root, 
-    backButton('課程', '#/library'),
+    backButton(lesson.daily ? '每日課程' : '課程', lesson.daily ? '#/daily' : '#/library'),
 
     el('div', { class: 'lesson-head', style: 'margin-top:12px' }, [
       el('span', { class: `badge badge-l${lesson.level}`, text: `L${lesson.level}` }),
       el('span', { class: 'badge', text: lesson.type === 'dialogue' ? '對話' : '短文' }),
       el('span', { class: 'badge', text: TOPICS[lesson.topic] || '' }),
+      lesson.daily ? el('span', {
+        class: 'badge badge-daily',
+        text: `${formatDailyDate(lesson.daily.date)} · 第 ${lesson.daily.day}/${lesson.daily.totalDays} 日`,
+      }) : null,
+      dailyDone ? el('span', { class: 'badge badge-done', text: '今日完成' }) : null,
       lesson.realAudio ? el('span', { class: 'badge badge-real', text: '真人錄音' }) : null,
+      deviceVoiceOnly
+        ? el('span', { class: 'badge', text: '裝置語音' }) : null,
     ]),
     el('h1', { style: 'margin-top:8px', text: lesson.title }),
     el('p', { class: 'sub', text: lesson.titleZh || '' }),
     lesson.summaryZh ? el('p', { text: lesson.summaryZh }) : null,
+    lesson.daily ? dailySeriesStrip(lesson, dailySeries) : null,
 
     prog.seen ? el('div', { class: 'card' }, [
       el('div', { style: 'display:flex;justify-content:space-between' }, [
@@ -39,13 +57,35 @@ export async function render(root, id) {
       el('div', { class: 'bar' }, [el('i', { style: `width:${pct}%` })]),
     ]) : null,
 
-    el('a', {
-      class: 'btn btn-primary btn-lg btn-block',
-      style: 'margin:6px 0 10px',
-      href: `#/listen/${encodeURIComponent(lesson.id)}`,
-    }, [prog.seen ? '繼續練習' : '開始練習']),
+    ...(lesson.daily
+      ? [
+          el('a', {
+            class: 'btn btn-primary btn-lg btn-block',
+            style: 'margin:6px 0 10px',
+            href: `#/play/${encodeURIComponent(lesson.id)}`,
+          }, ['▶ 閱讀並連續播放']),
+          el('a', {
+            class: 'btn btn-block',
+            style: 'margin-bottom:10px',
+            href: `#/listen/${encodeURIComponent(lesson.id)}`,
+          }, [prog.seen ? '繼續逐句精聽' : '逐句精聽練習']),
+        ]
+      : [
+          el('a', {
+            class: 'btn btn-primary btn-lg btn-block',
+            style: 'margin:6px 0 10px',
+            href: `#/listen/${encodeURIComponent(lesson.id)}`,
+          }, [prog.seen ? '繼續練習' : '開始練習']),
+          el('a', {
+            class: 'btn btn-block',
+            style: 'margin-bottom:10px',
+            href: `#/play/${encodeURIComponent(lesson.id)}`,
+          }, ['▶ 連續播放 · 完整課文或自選句子']),
+        ]),
 
-    offlineButton(lesson, cfg),
+    deviceVoiceOnly
+      ? el('p', { class: 'hint', text: '本課使用裝置內建英語語音,不需下載音檔。' })
+      : offlineButton(lesson, cfg),
 
     lesson.source ? el('p', { class: 'hint', style: 'margin:14px 0 0' }, [
       '素材來源:',
@@ -55,10 +95,10 @@ export async function render(root, id) {
         : lesson.source,
     ]) : null,
 
-    el('h2', { text: '句子預覽' }),
+    el('h2', { text: lesson.daily ? `故事全文 · ${englishWordCount(lesson.sentences)} 字` : '句子預覽' }),
     el('p', { class: 'muted', style: 'margin-top:-4px;margin-bottom:12px' },
       ['點任一句可以先聽聽看。正式練習時會先蓋住文字。']),
-    ...lesson.sentences.map(s => row(s, lesson, cfg)),
+    ...storyRows(lesson, cfg),
 
     lesson.questions?.length
       ? el('p', { class: 'muted center', style: 'margin-top:18px' },
@@ -78,6 +118,40 @@ export async function render(root, id) {
       }, ['刪除這篇文章']),
     ]) : null,
   );
+}
+
+function dailySeriesStrip(lesson, series) {
+  return el('section', { class: 'daily-series-strip' }, [
+    el('div', { class: 'daily-series-strip-head' }, [
+      el('div', {}, [
+        el('b', { text: lesson.daily.seriesTitle }),
+        el('div', { class: 'lesson-zh', text: lesson.daily.seriesTitleZh }),
+      ]),
+      el('span', { class: 'muted', text: `約 ${englishWordCount(lesson.sentences)} 字` }),
+    ]),
+    el('div', { class: 'daily-series-links' }, series.map((item) =>
+      el('a', {
+        class: `chip ${item.id === lesson.id ? 'is-on' : ''}`,
+        href: `#/lesson/${encodeURIComponent(item.id)}`,
+      }, [`第 ${item.daily.day} 日`]))),
+  ]);
+}
+
+function storyRows(lesson, cfg) {
+  if (!lesson.storyArc) return lesson.sentences.map((sentence) => row(sentence, lesson, cfg));
+  const starts = new Map(STORY_BEATS.map((beat) => [lesson.storyArc[beat.id], beat]));
+  const out = [];
+  for (const sentence of lesson.sentences) {
+    const beat = starts.get(sentence.id);
+    if (beat) {
+      out.push(el('div', { class: `story-beat story-beat-${beat.id}` }, [
+        el('span', { text: beat.label }),
+        el('b', { text: beat.description }),
+      ]));
+    }
+    out.push(row(sentence, lesson, cfg));
+  }
+  return out;
 }
 
 /* Real recordings are heavy, so pinning one for offline use is a deliberate
