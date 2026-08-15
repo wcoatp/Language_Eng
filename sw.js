@@ -7,7 +7,7 @@
    wiped every clip the learner had already played, and a phone had to fetch
    them again over mobile data. */
 
-const CACHE = "echo-v8";
+const CACHE = "echo-v9";
 const CONTENT_CACHE = "echo-content";
 const OFFLINE_CACHE = "echo-offline";
 const KEEP = [CACHE, CONTENT_CACHE, OFFLINE_CACHE];
@@ -64,9 +64,24 @@ async function cacheDailyLessons(cache) {
       .map(
         (lesson) => `./content/lessons/${encodeURIComponent(lesson.id)}.json`,
       );
-    await Promise.all(urls.map((url) => cache.add(url).catch(() => {})));
+    await Promise.all(urls.map((url) => precache(cache, url)));
   } catch {
     /* daily lessons remain network-available if precaching fails */
+  }
+}
+
+/* cache.add() fetches through the HTTP cache, and hosting serves the app's
+   JavaScript with max-age=3600. That quietly defeated the whole versioning
+   scheme: bumping CACHE built the new cache out of the previous release's
+   files, so a deploy took an hour to reach anyone and could leave a client
+   running a mix of old and new modules until the version was bumped again.
+   Going around the HTTP cache on install is what makes a bump mean something. */
+async function precache(cache, url) {
+  try {
+    const res = await fetch(url, { cache: "reload" });
+    if (res.ok) await cache.put(url, res);
+  } catch {
+    /* one missing file must not fail the whole install */
   }
 }
 
@@ -74,8 +89,7 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE);
-      // Fetch individually so one missing file cannot fail the whole install.
-      await Promise.all(SHELL.map((u) => cache.add(u).catch(() => {})));
+      await Promise.all(SHELL.map((u) => precache(cache, u)));
       // Daily stories are small and should open offline before their first read.
       await cacheDailyLessons(await caches.open(CONTENT_CACHE));
       self.skipWaiting();
