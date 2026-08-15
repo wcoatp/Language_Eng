@@ -12,9 +12,9 @@ import {
   words,
 } from '../js/difficulty.js';
 import { parseTurn, tutorSystem } from '../js/llm.js';
-import { AUTO, VOICES, forLang, pickVoice } from '../js/voices.js';
+import { AUTO, CORE_VOICES, VOICES, fallbackChain, forLang, pickVoice } from '../js/voices.js';
 import { cuesToSegments, parseTranscript, parseVideoId } from '../js/youtube.js';
-import { MIN_SLOW_WPM, playbackSequence, speechRates } from '../js/playback.js';
+import { MIN_SLOW_WPM, nextLessonFor, playbackSequence, speechRates } from '../js/playback.js';
 import { describeInterval, newCard, schedule } from '../js/srs.js';
 import {
   dailyLessonForDate,
@@ -405,3 +405,48 @@ function fakeCaches() {
     },
   };
 }
+
+test('every accent falls back through the core sets, never to the device voice', () => {
+  // Core sets ship with every lesson; the accent packs may not exist yet.
+  assert.deepEqual(CORE_VOICES, ['kokoro-us', 'kokoro-gb', 'edge-us', 'edge-gb']);
+  for (const voice of VOICES) assert.ok(fallbackChain(voice.id, voice.lang).length > 1);
+
+  const nz = fallbackChain('edge-nz', 'en-NZ');
+  assert.equal(nz[0], 'edge-nz', 'the chosen voice is tried first');
+  assert.ok(CORE_VOICES.includes(nz[1]), 'then a core set, not the device voice');
+  assert.equal(new Set(nz).size, nz.length, 'no voice is tried twice');
+
+  // An accent that has core sets of its own keeps the accent before leaving it.
+  const gb = fallbackChain('kokoro-gb', 'en-GB');
+  assert.equal(gb[1], 'edge-gb', 'stay in the accent while a core set has it');
+  assert.ok(gb.includes('edge-us'));
+});
+
+test('hands-free follows the story before it follows the library', () => {
+  const index = [
+    { id: 'daily-2026-08-17', level: 3, type: 'article',
+      daily: { seriesId: 'market', day: 1, date: '2026-08-17' } },
+    { id: 'daily-2026-08-18', level: 3, type: 'article',
+      daily: { seriesId: 'market', day: 2, date: '2026-08-18' } },
+    { id: 'daily-2026-08-20', level: 3, type: 'article',
+      daily: { seriesId: 'swim', day: 1, date: '2026-08-20' } },
+    { id: 'l2-01', level: 2, type: 'dialogue' },
+    { id: 'l3-01', level: 3, type: 'dialogue' },
+    { id: 'l3-02', level: 3, type: 'dialogue' },
+    { id: 'l5-01', level: 5, type: 'dialogue' },
+  ];
+  const byId = (id) => index.find((l) => l.id === id);
+
+  // Day 2 of the same story wins over anything else.
+  assert.equal(nextLessonFor(index, byId('daily-2026-08-17')).id, 'daily-2026-08-18');
+  // Series over: the next published day, even in another series.
+  assert.equal(nextLessonFor(index, byId('daily-2026-08-18')).id, 'daily-2026-08-20');
+  // Nothing later than the last story.
+  assert.equal(nextLessonFor(index, byId('daily-2026-08-20')), null);
+
+  // Library lessons advance in order and never jump more than one level.
+  assert.equal(nextLessonFor(index, byId('l3-01')).id, 'l3-02');
+  assert.equal(nextLessonFor(index, byId('l3-02')), null, 'L5 is out of reach from L3');
+  assert.equal(nextLessonFor(index, byId('l2-01')).id, 'l3-01');
+  assert.equal(nextLessonFor(index, null), null);
+});

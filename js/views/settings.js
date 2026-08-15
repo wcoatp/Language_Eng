@@ -11,6 +11,7 @@ import {
   cancel as cancelSpeech,
   unlock,
   ttsSupported,
+  voiceCoverage,
 } from "../tts.js";
 import { forLang, pickVoice, describeAuto, AUTO } from "../voices.js";
 import { asrSupported } from "../asr.js";
@@ -52,7 +53,7 @@ export async function render(root) {
     el("h1", { text: "設定" }),
 
     el("h2", { text: "語音" }),
-    accentSection(cfg),
+    await accentSection(cfg),
 
     el("h2", { text: "訓練" }),
     trainingSection(cfg),
@@ -77,7 +78,7 @@ export async function render(root) {
 
 /* ---------- voice ---------- */
 
-function accentSection(cfg) {
+async function accentSection(cfg) {
   const box = el("div", { class: "card" });
 
   /* A voice set only exists for a lesson if it was pre-generated, so the picker
@@ -123,6 +124,7 @@ function accentSection(cfg) {
   );
 
   const sets = forLang(cfg.accentLang);
+  const { total, counts } = await voiceCoverage();
   const deviceVoices = voicesFor(cfg.accentLang);
 
   const picker = el(
@@ -144,7 +146,7 @@ function accentSection(cfg) {
             value: v.id,
             selected: cfg.voice === v.id,
           },
-          [`${v.label} — ${v.engine} · ${v.wpm} wpm`],
+          [`${v.label} — ${v.engine} · ${v.wpm} wpm${packNote(v.id, counts, total)}`],
         ),
       ),
     ],
@@ -637,4 +639,14 @@ function dataSection() {
       `預設每日目標 ${DEFAULTS.dailyGoalMin} 分鐘。學習紀錄存在瀏覽器的 IndexedDB;清除瀏覽器資料會一併刪除,建議偶爾匯出備份。`,
     ]),
   ]);
+}
+
+/* An accent pack is generated on demand, so it can be absent or cover only the
+   lessons that existed when it was last run. Saying so beats letting the
+   learner pick an accent and hear a different one. */
+function packNote(voiceId, counts, total) {
+  const have = counts.get(voiceId) || 0;
+  if (!total || have >= total) return "";
+  if (!have) return " · 尚未產生";
+  return ` · 只有 ${have}/${total} 課`;
 }

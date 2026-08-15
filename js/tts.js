@@ -1,6 +1,8 @@
 /* Speech output. Hybrid: pre-generated audio when available, browser TTS otherwise.
    Both paths are free and work offline once cached. */
 
+import { fallbackChain } from "./voices.js";
+
 const synth = window.speechSynthesis;
 
 export const ACCENTS = [
@@ -146,6 +148,41 @@ export function cancel() {
   stopCurrent();
 }
 
+/* Pause holds the current clip where it is, unlike cancel, which abandons it.
+   Hands-free needs this: a lock-screen or headphone pause has to resume the
+   same sentence rather than restart the lesson. */
+export function pause() {
+  if (current) {
+    current.audio.pause();
+    return true;
+  }
+  try {
+    if (synth?.speaking && !synth.paused) {
+      synth.pause();
+      return true;
+    }
+  } catch {
+    /* ignore */
+  }
+  return false;
+}
+
+export function resume() {
+  if (current) {
+    current.audio.play().catch(() => {});
+    return true;
+  }
+  try {
+    if (synth?.paused) {
+      synth.resume();
+      return true;
+    }
+  } catch {
+    /* ignore */
+  }
+  return false;
+}
+
 function stopCurrent() {
   try {
     synth?.cancel();
@@ -191,11 +228,35 @@ function folderFor(voiceId, realAudio) {
 }
 
 /** Does a stored clip exist for this sentence? */
-export async function hasAudio(lessonId, sentenceId, voiceId, realAudio = false) {
+export async function hasAudio(
+  lessonId,
+  sentenceId,
+  voiceId,
+  realAudio = false,
+) {
   const m = await getManifest();
   if (!m) return false;
   const list = m.lessons?.[lessonId]?.[folderFor(voiceId, realAudio)];
   return Array.isArray(list) && list.includes(sentenceId);
+}
+
+/**
+ * How many lessons each voice set actually covers.
+ * The accent packs are generated on demand, so the picker has to say which of
+ * them are complete instead of offering eleven and quietly substituting.
+ * @returns {Promise<{total:number, counts:Map<string,number>}>}
+ */
+export async function voiceCoverage() {
+  const m = await getManifest();
+  const counts = new Map();
+  let total = 0;
+  for (const byVoice of Object.values(m?.lessons || {})) {
+    const ids = Object.keys(byVoice);
+    if (ids.includes(REAL)) continue; // human recordings have no voice choice
+    total++;
+    for (const id of ids) counts.set(id, (counts.get(id) || 0) + 1);
+  }
+  return { total, counts };
 }
 
 /** Where a lesson's clips live, for offline download and cache checks. */
@@ -313,19 +374,25 @@ export async function say(text, opts = {}) {
   }
 
   if (epoch !== speechEpoch) return;
-  if (
-    lessonId &&
-    sentenceId &&
-    (await hasAudio(lessonId, sentenceId, voiceId, realAudio))
-  ) {
-    if (epoch !== speechEpoch) return;
-    const folder = folderFor(voiceId, realAudio);
-    const url = `./content/audio/${folder}/${lessonId}/${sentenceId}.mp3`;
-    try {
-      return await playFile(url, rate);
-    } catch {
+  if (lessonId && sentenceId) {
+    // Accent packs are generated on demand, so the chosen voice may have no
+    // clip for this lesson. Another accent is a much smaller loss than
+    // dropping to the device's robot voice, so try the core sets first.
+    const chain = realAudio ? [voiceId] : fallbackChain(voiceId, langCode);
+    for (const id of chain) {
       if (epoch !== speechEpoch) return;
-      /* fall through to TTS */
+      if (!(await hasAudio(lessonId, sentenceId, id, realAudio))) continue;
+      if (epoch !== speechEpoch) return;
+      const folder = folderFor(id, realAudio);
+      try {
+        return await playFile(
+          `./content/audio/${folder}/${lessonId}/${sentenceId}.mp3`,
+          rate,
+        );
+      } catch {
+        if (epoch !== speechEpoch) return;
+        /* try the next voice, then fall through to TTS */
+      }
     }
   }
 

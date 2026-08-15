@@ -7,7 +7,7 @@
    wiped every clip the learner had already played, and a phone had to fetch
    them again over mobile data. */
 
-const CACHE = "echo-v7";
+const CACHE = "echo-v8";
 const CONTENT_CACHE = "echo-content";
 const OFFLINE_CACHE = "echo-offline";
 const KEEP = [CACHE, CONTENT_CACHE, OFFLINE_CACHE];
@@ -35,6 +35,7 @@ const SHELL = [
   "./js/voices.js",
   "./js/llm.js",
   "./js/playback.js",
+  "./js/handsfree.js",
   "./js/daily.js",
   "./js/views/home.js",
   "./js/views/daily.js",

@@ -8,6 +8,7 @@ import { el, toast, backButton, sleep, mount } from "../ui.js";
 import { getLesson, wpmFor } from "../content.js";
 import { voiceIdForLesson, byId } from "../voices.js";
 import { speechRates } from "../playback.js";
+import { keepAwake, releaseAwake } from "../handsfree.js";
 import { say, cancel as cancelSpeech, unlock } from "../tts.js";
 import { settings } from "../store.js";
 import { stopwatch } from "../store.js";
@@ -30,6 +31,7 @@ export function destroy() {
   releaseMic();
   ctx.rec?.cancel();
   ctx.asr?.abort();
+  releaseAwake();
   document.removeEventListener("keydown", ctx.onKey);
   ctx.watch?.stop();
   ctx = null;
@@ -72,6 +74,8 @@ export async function render(root, lessonId) {
     }
   };
   document.addEventListener("keydown", ctx.onKey);
+  // A lesson is minutes of listening with no taps; the screen must not sleep.
+  keepAwake();
 
   mount(root, el("div", { class: "trainer", id: "trainer" }));
   paint();

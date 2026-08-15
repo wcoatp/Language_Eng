@@ -1,13 +1,37 @@
 /* Continuous listening: play a whole lesson or any individually selected lines. */
 
-import { getLesson, loadIndex } from '../content.js';
-import { settings, logTime } from '../store.js';
-import { voiceIdForLesson } from '../voices.js';
-import { say, cancel as cancelSpeech, unlock } from '../tts.js';
-import { PLAYBACK_GAPS, PLAYBACK_RATES, playbackSequence } from '../playback.js';
-import { el, toast, backButton, sleep, mount } from '../ui.js';
-import { kvGet, kvSet } from '../db.js';
-import { completesDailyPlayback, isDailyComplete, STORY_BEATS } from '../daily.js';
+import { getLesson, loadIndex } from "../content.js";
+import { settings, setSetting, logTime } from "../store.js";
+import { voiceIdForLesson } from "../voices.js";
+import {
+  say,
+  cancel as cancelSpeech,
+  unlock,
+  pause as pauseSpeech,
+  resume as resumeSpeech,
+} from "../tts.js";
+import {
+  PLAYBACK_GAPS,
+  PLAYBACK_RATES,
+  playbackSequence,
+  nextLessonFor,
+} from "../playback.js";
+import {
+  setNowPlaying,
+  setHandlers,
+  setPlaybackState,
+  clearNowPlaying,
+  keepAwake,
+  releaseAwake,
+  mediaSessionSupported,
+} from "../handsfree.js";
+import { el, toast, backButton, sleep, mount } from "../ui.js";
+import { kvGet, kvSet } from "../db.js";
+import {
+  completesDailyPlayback,
+  isDailyComplete,
+  STORY_BEATS,
+} from "../daily.js";
 
 let ctx = null;
 
@@ -16,22 +40,30 @@ export function destroy() {
   ctx.run++;
   cancelSpeech();
   logElapsed(ctx);
+  clearNowPlaying();
+  releaseAwake();
   ctx = null;
 }
 
 export async function render(root, lessonId) {
   const [lesson, cfg, index, completions] = await Promise.all([
-    getLesson(lessonId), settings(), loadIndex(), kvGet('dailyCompletions', {}),
+    getLesson(lessonId),
+    settings(),
+    loadIndex(),
+    kvGet("dailyCompletions", {}),
   ]);
   const nextDaily = lesson.daily
-    ? index.find((item) => item.daily?.seriesId === lesson.daily.seriesId &&
-      item.daily.day === lesson.daily.day + 1)
+    ? index.find(
+        (item) =>
+          item.daily?.seriesId === lesson.daily.seriesId &&
+          item.daily.day === lesson.daily.day + 1,
+      )
     : null;
   ctx = {
     root,
     lesson,
     cfg,
-    mode: 'all',
+    mode: "all",
     selected: new Set(lesson.sentences.map((sentence) => sentence.id)),
     rate: cfg.normalRate || 1,
     gap: 500,
@@ -41,8 +73,73 @@ export async function render(root, lessonId) {
     startedAt: 0,
     completed: isDailyComplete(lesson, null, completions),
     nextDaily,
+    index,
+    handsFree: cfg.autoAdvance !== false,
+    paused: false,
+    autoQueued: 0,
   };
+  wireRemoteControls();
   paint();
+}
+
+/* ---------- hands-free ---------- */
+
+/* An unattended queue should not run all night. Twelve lessons is roughly two
+   hours of listening, which is longer than any commute and short of a
+   forgotten phone playing until the battery dies. */
+const MAX_AUTO_LESSONS = 12;
+
+function wireRemoteControls() {
+  setHandlers({
+    play: () => {
+      if (ctx?.paused) togglePause();
+      else if (!ctx?.playing) play();
+    },
+    pause: () => {
+      if (ctx?.playing && !ctx.paused) togglePause();
+    },
+    stop: () => stop(),
+    previoustrack: () => jump(-1),
+    nexttrack: () => jump(1),
+  });
+}
+
+/* Skip within the lesson. The loop is awaiting say(), so cancelling it lets
+   the current iteration fall through, and the index moves under it. */
+function jump(delta) {
+  const state = ctx;
+  if (!state?.playing) return;
+  const sequence = chosen(state);
+  const at = sequence.findIndex((s) => s.id === state.currentId);
+  const to = at + delta;
+  if (to < 0 || to >= sequence.length) return;
+  state.seekTo = to;
+  cancelSpeech();
+}
+
+function togglePause() {
+  const state = ctx;
+  if (!state?.playing) return;
+  if (state.paused) {
+    state.paused = false;
+    resumeSpeech();
+    state.startedAt = performance.now();
+    setPlaybackState("playing");
+  } else {
+    state.paused = true;
+    pauseSpeech();
+    logElapsed(state); // bank the time; a pause may last all afternoon
+    setPlaybackState("paused");
+  }
+  paint();
+}
+
+function announce(state, sentence, position, total) {
+  setNowPlaying({
+    title: sentence.text,
+    lesson: state.lesson.title,
+    detail: `${position} / ${total} · ${state.lesson.titleZh || ""}`.trim(),
+  });
 }
 
 function chosen(state = ctx) {
@@ -53,40 +150,56 @@ function logElapsed(state) {
   if (!state.startedAt) return;
   const seconds = (performance.now() - state.startedAt) / 1000;
   state.startedAt = 0;
-  logTime(seconds, 'listen', state.lesson.id).catch(() => {});
+  logTime(seconds, "listen", state.lesson.id).catch(() => {});
 }
 
 function stop() {
   if (!ctx) return;
   ctx.run++;
   ctx.playing = false;
+  ctx.paused = false;
   ctx.currentId = null;
+  ctx.seekTo = null;
+  ctx.autoQueued = 0;
   cancelSpeech();
   logElapsed(ctx);
+  setPlaybackState("none");
+  releaseAwake();
   paint();
 }
 
 async function play() {
   const state = ctx;
   if (!state) return;
-  if (state.playing) { stop(); return; }
+  if (state.playing) {
+    stop();
+    return;
+  }
 
   const sequence = chosen(state);
   if (!sequence.length) {
-    toast('請至少選一句');
+    toast("請至少選一句");
     return;
   }
 
   unlock();
   state.playing = true;
+  state.paused = false;
+  state.seekTo = null;
   state.startedAt = performance.now();
   const token = ++state.run;
   let failed = false;
+  setPlaybackState("playing");
+  // Only while the learner is watching. In a pocket the screen should sleep —
+  // the audio keeps going either way, and the lock is refused when hidden.
+  if (!document.hidden) keepAwake();
   paint();
 
-  for (const [i, sentence] of sequence.entries()) {
+  for (let i = 0; i < sequence.length; i++) {
     if (ctx !== state || state.run !== token) return;
+    const sentence = sequence[i];
     state.currentId = sentence.id;
+    announce(state, sentence, i + 1, sequence.length);
     paint(true);
     try {
       await say(sentence.text, {
@@ -100,10 +213,23 @@ async function play() {
         blob: sentence.audio || null,
       });
     } catch (error) {
-      if (ctx === state && state.run === token) toast(error.message || '播放失敗');
+      if (ctx === state && state.run === token)
+        toast(error.message || "播放失敗");
       failed = true;
       break;
     }
+    if (ctx !== state || state.run !== token) return;
+
+    // A skip cancels the clip above, which lands here rather than throwing.
+    if (state.seekTo != null) {
+      i = state.seekTo - 1;
+      state.seekTo = null;
+      continue;
+    }
+    // Pause holds the loop here instead of unwinding it, so resuming carries
+    // on with the same sentence list rather than restarting the lesson.
+    while (state.paused && ctx === state && state.run === token)
+      await sleep(200);
     if (ctx !== state || state.run !== token) return;
     if (state.gap && i < sequence.length - 1) await sleep(state.gap);
   }
@@ -112,16 +238,61 @@ async function play() {
   state.playing = false;
   state.currentId = null;
   logElapsed(state);
-  const dailyComplete = !failed && completesDailyPlayback(state.lesson, sequence);
+  const dailyComplete =
+    !failed && completesDailyPlayback(state.lesson, sequence);
   if (dailyComplete) {
-    const completions = await kvGet('dailyCompletions', {});
+    const completions = await kvGet("dailyCompletions", {});
     completions[state.lesson.id] = Date.now();
-    await kvSet('dailyCompletions', completions);
+    await kvSet("dailyCompletions", completions);
     state.completed = true;
   }
   if (ctx !== state || state.run !== token) return;
+
+  if (!failed && state.handsFree && state.mode === "all") {
+    if (await advance(state, token)) return;
+  }
+  setPlaybackState("none");
+  releaseAwake();
   paint();
-  if (!failed) toast(dailyComplete ? '今日課程完成' : '播放完成');
+  if (!failed) toast(dailyComplete ? "今日課程完成" : "播放完成");
+}
+
+/* Roll on to the next lesson without a tap. Everything is reloaded rather than
+   navigated to, because a hash change would tear down the view and with it the
+   audio — which is exactly what hands-free is trying to avoid. */
+async function advance(state, token) {
+  if (state.autoQueued >= MAX_AUTO_LESSONS) {
+    toast(`已連續播放 ${MAX_AUTO_LESSONS} 課,先停下來`);
+    return false;
+  }
+  const next = nextLessonFor(state.index, state.lesson);
+  if (!next) return false;
+
+  let lesson;
+  try {
+    lesson = await getLesson(next.id);
+  } catch {
+    return false;
+  }
+  if (ctx !== state || state.run !== token) return true;
+
+  state.lesson = lesson;
+  state.selected = new Set(lesson.sentences.map((s) => s.id));
+  state.completed = false;
+  state.autoQueued++;
+  state.playing = false;
+  state.nextDaily = lesson.daily
+    ? state.index.find(
+        (item) =>
+          item.daily?.seriesId === lesson.daily.seriesId &&
+          item.daily.day === lesson.daily.day + 1,
+      )
+    : null;
+  // Keep the address bar honest so a reload lands on what is actually playing.
+  history.replaceState(null, "", `#/play/${encodeURIComponent(lesson.id)}`);
+  toast(`接著播放「${lesson.title}」`);
+  play();
+  return true;
 }
 
 function setMode(mode) {
@@ -139,7 +310,9 @@ function toggle(id, checked) {
 
 function setAll(selected) {
   if (!ctx || ctx.playing) return;
-  ctx.selected = new Set(selected ? ctx.lesson.sentences.map((sentence) => sentence.id) : []);
+  ctx.selected = new Set(
+    selected ? ctx.lesson.sentences.map((sentence) => sentence.id) : [],
+  );
   paint();
 }
 
@@ -150,78 +323,169 @@ function paint(scrollCurrent = false) {
   const currentIndex = state.currentId
     ? sequence.findIndex((sentence) => sentence.id === state.currentId)
     : -1;
-  const rates = [...new Set([state.cfg.normalRate || 1, ...PLAYBACK_RATES])]
-    .sort((a, b) => a - b);
+  const rates = [
+    ...new Set([state.cfg.normalRate || 1, ...PLAYBACK_RATES]),
+  ].sort((a, b) => a - b);
 
-  mount(state.root,
-    el('div', { class: 'trainer-top' }, [
-      backButton('課程', `#/lesson/${encodeURIComponent(state.lesson.id)}`),
-      el('span', { class: 'muted', text: state.playing
-        ? `${currentIndex + 1} / ${sequence.length}`
-        : `${sequence.length} 句` }),
+  mount(
+    state.root,
+    el("div", { class: "trainer-top" }, [
+      backButton("課程", `#/lesson/${encodeURIComponent(state.lesson.id)}`),
+      el("span", {
+        class: "muted",
+        text: state.playing
+          ? `${currentIndex + 1} / ${sequence.length}`
+          : `${sequence.length} 句`,
+      }),
     ]),
-    el('h1', { text: state.lesson.daily ? '每日課程閱讀' : '連續播放' }),
-    el('p', { class: 'sub', text: `${state.lesson.title} · ${state.lesson.titleZh || ''}` }),
+    el("h1", { text: state.lesson.daily ? "每日課程閱讀" : "連續播放" }),
+    el("p", {
+      class: "sub",
+      text: `${state.lesson.title} · ${state.lesson.titleZh || ""}`,
+    }),
 
-    el('div', { class: `player-controls card ${state.playing ? 'is-playing' : ''}` }, [
-      el('div', { class: 'chips player-mode-row', style: 'margin-bottom:12px' }, [
-        chip('完整課文', state.mode === 'all', () => setMode('all'), state.playing),
-        chip('自訂選擇', state.mode === 'custom', () => setMode('custom'), state.playing),
-      ]),
-      el('div', { class: 'player-setting' }, [
-        el('span', { class: 'muted', text: '速度' }),
-        ...rates.map((rate) => chip(`${rate}x`, state.rate === rate, () => {
-          if (state.playing) return;
-          state.rate = rate;
-          paint();
-        }, state.playing)),
-      ]),
-      el('div', { class: 'player-setting' }, [
-        el('span', { class: 'muted', text: '句間' }),
-        ...PLAYBACK_GAPS.map((gap) => chip(gap ? `${gap / 1000} 秒` : '不停頓',
-          state.gap === gap, () => {
-            if (state.playing) return;
-            state.gap = gap;
-            paint();
-          }, state.playing)),
-      ]),
-      el('button', {
-        class: `btn ${state.playing ? 'btn-danger' : 'btn-primary'} btn-lg btn-block`,
-        disabled: !state.playing && !sequence.length,
-        onclick: state.playing ? stop : play,
-      }, [state.playing ? '■ 停止播放'
-        : sequence.length ? `▶ 播放 ${sequence.length} 句` : '請先選擇句子']),
-    ]),
+    el(
+      "div",
+      { class: `player-controls card ${state.playing ? "is-playing" : ""}` },
+      [
+        el(
+          "div",
+          { class: "chips player-mode-row", style: "margin-bottom:12px" },
+          [
+            chip(
+              "完整課文",
+              state.mode === "all",
+              () => setMode("all"),
+              state.playing,
+            ),
+            chip(
+              "自訂選擇",
+              state.mode === "custom",
+              () => setMode("custom"),
+              state.playing,
+            ),
+          ],
+        ),
+        el("div", { class: "player-setting" }, [
+          el("span", { class: "muted", text: "速度" }),
+          ...rates.map((rate) =>
+            chip(
+              `${rate}x`,
+              state.rate === rate,
+              () => {
+                if (state.playing) return;
+                state.rate = rate;
+                paint();
+              },
+              state.playing,
+            ),
+          ),
+        ]),
+        el("div", { class: "player-setting" }, [
+          el("span", { class: "muted", text: "句間" }),
+          ...PLAYBACK_GAPS.map((gap) =>
+            chip(
+              gap ? `${gap / 1000} 秒` : "不停頓",
+              state.gap === gap,
+              () => {
+                if (state.playing) return;
+                state.gap = gap;
+                paint();
+              },
+              state.playing,
+            ),
+          ),
+        ]),
+        handsFreeRow(state),
+        state.playing
+          ? el("div", { class: "btn-row" }, [
+              el(
+                "button",
+                { class: "btn btn-primary btn-lg", onclick: togglePause },
+                [state.paused ? "▶ 繼續" : "❚❚ 暫停"],
+              ),
+              el("button", { class: "btn btn-danger btn-lg", onclick: stop }, [
+                "■ 停止",
+              ]),
+            ])
+          : el(
+              "button",
+              {
+                class: "btn btn-primary btn-lg btn-block",
+                disabled: !sequence.length,
+                onclick: play,
+              },
+              [
+                sequence.length
+                  ? `▶ 播放 ${sequence.length} 句`
+                  : "請先選擇句子",
+              ],
+            ),
+      ],
+    ),
 
-    state.completed && !state.playing ? el('section', { class: 'card daily-player-complete' }, [
-      el('div', { class: 'badge badge-done', text: '今日完成' }),
-      el('h2', { text: '故事已完整聽完' }),
-      el('p', { text: state.nextDaily
-        ? `接著閱讀「${state.nextDaily.title}」,看看故事如何發展。`
-        : '你已完成這個主題的最後一日。' }),
-      state.nextDaily ? el('a', {
-        class: 'btn btn-primary btn-block',
-        href: `#/lesson/${encodeURIComponent(state.nextDaily.id)}`,
-      }, [`前往第 ${state.nextDaily.daily.day} 日`])
-        : el('a', { class: 'btn btn-block', href: '#/daily' }, ['回到每日課表']),
-    ]) : null,
+    state.completed && !state.playing
+      ? el("section", { class: "card daily-player-complete" }, [
+          el("div", { class: "badge badge-done", text: "今日完成" }),
+          el("h2", { text: "故事已完整聽完" }),
+          el("p", {
+            text: state.nextDaily
+              ? `接著閱讀「${state.nextDaily.title}」,看看故事如何發展。`
+              : "你已完成這個主題的最後一日。",
+          }),
+          state.nextDaily
+            ? el(
+                "a",
+                {
+                  class: "btn btn-primary btn-block",
+                  href: `#/lesson/${encodeURIComponent(state.nextDaily.id)}`,
+                },
+                [`前往第 ${state.nextDaily.daily.day} 日`],
+              )
+            : el("a", { class: "btn btn-block", href: "#/daily" }, [
+                "回到每日課表",
+              ]),
+        ])
+      : null,
 
-    state.mode === 'custom' ? el('div', { class: 'player-selection-bar' }, [
-      el('span', { class: 'muted', text: `已選 ${state.selected.size} / ${state.lesson.sentences.length}` }),
-      el('div', { style: 'display:flex;gap:8px' }, [
-        el('button', { class: 'btn btn-ghost player-small-btn', disabled: state.playing,
-          onclick: () => setAll(true) }, ['全選']),
-        el('button', { class: 'btn btn-ghost player-small-btn', disabled: state.playing,
-          onclick: () => setAll(false) }, ['清除']),
-      ]),
-    ]) : null,
+    state.mode === "custom"
+      ? el("div", { class: "player-selection-bar" }, [
+          el("span", {
+            class: "muted",
+            text: `已選 ${state.selected.size} / ${state.lesson.sentences.length}`,
+          }),
+          el("div", { style: "display:flex;gap:8px" }, [
+            el(
+              "button",
+              {
+                class: "btn btn-ghost player-small-btn",
+                disabled: state.playing,
+                onclick: () => setAll(true),
+              },
+              ["全選"],
+            ),
+            el(
+              "button",
+              {
+                class: "btn btn-ghost player-small-btn",
+                disabled: state.playing,
+                onclick: () => setAll(false),
+              },
+              ["清除"],
+            ),
+          ]),
+        ])
+      : null,
 
-    el('div', { class: 'player-list' }, playerRows(state)),
+    el("div", { class: "player-list" }, playerRows(state)),
   );
 
   if (scrollCurrent && state.currentId) {
-    requestAnimationFrame(() => document.getElementById(`player-${state.currentId}`)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
+    requestAnimationFrame(() =>
+      document
+        .getElementById(`player-${state.currentId}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" }),
+    );
   }
 }
 
@@ -233,40 +497,89 @@ function playerRows(state) {
   state.lesson.sentences.forEach((sentence, index) => {
     const beat = starts.get(sentence.id);
     if (beat) {
-      out.push(el('div', { class: 'story-beat player-story-beat' }, [
-        el('span', { text: beat.label }),
-        el('b', { text: beat.description }),
-      ]));
-    }
-    const selected = state.mode === 'all' || state.selected.has(sentence.id);
-    const current = state.currentId === sentence.id;
-    out.push(el('label', {
-      id: `player-${sentence.id}`,
-      class: `player-row card${current ? ' is-playing' : ''}${selected ? '' : ' is-muted'}`,
-    }, [
-      state.mode === 'custom' ? el('input', {
-        type: 'checkbox',
-        checked: state.selected.has(sentence.id),
-        disabled: state.playing,
-        onchange: (event) => toggle(sentence.id, event.target.checked),
-      }) : el('span', { class: 'player-number', text: String(index + 1) }),
-      el('div', { class: 'player-copy' }, [
-        el('div', { style: 'display:flex;gap:8px;align-items:baseline' }, [
-          sentence.speaker ? el('span', { class: 'badge', text: sentence.speaker }) : null,
-          el('span', { text: sentence.text }),
+      out.push(
+        el("div", { class: "story-beat player-story-beat" }, [
+          el("span", { text: beat.label }),
+          el("b", { text: beat.description }),
         ]),
-        state.cfg.showZh && sentence.zh
-          ? el('div', { class: 'muted', style: 'margin-top:4px', text: sentence.zh }) : null,
-      ]),
-    ]));
+      );
+    }
+    const selected = state.mode === "all" || state.selected.has(sentence.id);
+    const current = state.currentId === sentence.id;
+    out.push(
+      el(
+        "label",
+        {
+          id: `player-${sentence.id}`,
+          class: `player-row card${current ? " is-playing" : ""}${selected ? "" : " is-muted"}`,
+        },
+        [
+          state.mode === "custom"
+            ? el("input", {
+                type: "checkbox",
+                checked: state.selected.has(sentence.id),
+                disabled: state.playing,
+                onchange: (event) => toggle(sentence.id, event.target.checked),
+              })
+            : el("span", { class: "player-number", text: String(index + 1) }),
+          el("div", { class: "player-copy" }, [
+            el("div", { style: "display:flex;gap:8px;align-items:baseline" }, [
+              sentence.speaker
+                ? el("span", { class: "badge", text: sentence.speaker })
+                : null,
+              el("span", { text: sentence.text }),
+            ]),
+            state.cfg.showZh && sentence.zh
+              ? el("div", {
+                  class: "muted",
+                  style: "margin-top:4px",
+                  text: sentence.zh,
+                })
+              : null,
+          ]),
+        ],
+      ),
+    );
   });
   return out;
 }
 
+/* The one control that turns this from a player into something you can use on
+   a walk: keep going into the next lesson, and answer the headphone button. */
+function handsFreeRow(state) {
+  const input = el("input", {
+    type: "checkbox",
+    checked: state.handsFree,
+    onchange: async (e) => {
+      state.handsFree = e.target.checked;
+      state.autoQueued = 0;
+      await setSetting({ autoAdvance: state.handsFree });
+      paint();
+    },
+  });
+  return el("div", { class: "switch-row", style: "margin:4px 0 12px" }, [
+    el("div", { class: "lbl" }, [
+      "免持模式",
+      el("small", {
+        text: state.handsFree
+          ? mediaSessionSupported()
+            ? "播完自動接下一課,可用耳機和鎖定畫面控制"
+            : "播完自動接下一課(這個瀏覽器沒有鎖定畫面控制)"
+          : "播完就停在這一課",
+      }),
+    ]),
+    el("label", { class: "switch" }, [input, el("span")]),
+  ]);
+}
+
 function chip(label, active, onclick, disabled = false) {
-  return el('button', {
-    class: `chip ${active ? 'is-on' : ''}`,
-    disabled,
-    onclick,
-  }, [label]);
+  return el(
+    "button",
+    {
+      class: `chip ${active ? "is-on" : ""}`,
+      disabled,
+      onclick,
+    },
+    [label],
+  );
 }

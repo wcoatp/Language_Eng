@@ -32,6 +32,7 @@
 | **連續播放** | 完整課文或自訂任意多句,可調速度與句間停頓 | 否 |
 | **真人錄音課程** | 60 課取自 VOA 公有領域錄音,附中文與逐句時間軸 | 否 |
 | **多口音朗讀** | 美/英/澳/印/愛爾蘭/南非/加拿大/紐西蘭,可變速 | 否 |
+| **免持模式** | 連續播放接續下一課,支援耳機與鎖定畫面控制、螢幕不休眠 | 否 |
 | **跟讀評分** | 瀏覽器內建語音辨識,逐字標出漏掉的詞 | 否 |
 | **間隔複習** | 聽力優先:先播再顯示答案 | 否 |
 | **角色扮演對話** | app 唸一角,你唸另一角,辨識比對 | 否 |
@@ -149,7 +150,9 @@ npm run check        # 依序執行上面三項;CI 也跑這個命令
 ```
 
 `validate` 是唯讀檢查。它會確認課程格式與 `content/index.json` 一致、每個真人課都有完整原音、
-預生成語音課都有全部 11 組語音,並檢查 manifest 中每一段音檔都存在、磁碟上也沒有未登記的 MP3。
+預生成語音課都有四組**核心語音**(美/英 × Kokoro/edge-tts),並檢查 manifest 中每一段音檔都存在、
+磁碟上也沒有未登記的 MP3。其餘六個口音與 Chatterbox 是**隨選語音包**,可以整組缺席 —— 但不能只做一半。
+缺少的口音不會掉回裝置語音,而是改用同口音或核心語音播放,設定裡的挑選器會標示「只有 N/M 課」。
 標記為 `preGeneratedAudio: false` 的裝置語音課則不應出現在音訊 manifest。每日課另會檢查真實日期、
 450–550 字、24–40 句、逐句中文、起承轉合、三題理解題、系列日序與連續日期,並拒絕直接重用參考課名。
 推送與 pull request 會透過 GitHub Actions 自動執行 `npm run check`。
@@ -216,7 +219,8 @@ node tools/build-index.mjs
 ```
 
 `type: "article"` 時省略 `speaker`。`note` 只在真的有連讀/弱讀特徵時才寫。
-新課若尚未生成 11 組音檔,請保留 `preGeneratedAudio: false`,App 會自動使用裝置語音。
+新課請跑 `npm run audio` 產生四組核心音檔;隨選口音之後再補。
+`preGeneratedAudio: false` 現在只留給使用者自己匯入的文章。
 
 每日故事還要加入 `daily` 與 `storyArc` metadata,並遵守約 500 字與 1–3 日系列規則。完整格式與編輯檢查表見
 [docs/daily-curriculum.md](docs/daily-curriculum.md)。
@@ -249,7 +253,9 @@ python3.11 -m venv .venv-tts
 之後直接執行需要的語音集即可:
 
 ```bash
-npm run audio                                             # edge 美式 + 英式
+npm run audio                                             # 四組核心語音(約兩分鐘)
+npm run audio:accents                                     # 六個隨選口音
+npm run audio:all                                         # 全部 11 組(含 Chatterbox,很慢)
 node tools/generate-voices.mjs --list                     # 列出 11 組語音
 node tools/generate-voices.mjs --voice edge-au,edge-in    # 產生指定語音
 node tools/generate-voices.mjs --voice kokoro-us --force  # 強制重做一組

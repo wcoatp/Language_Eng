@@ -8,7 +8,7 @@
 import { readdir, readFile, access } from 'node:fs/promises';
 import { basename, dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { VOICES } from '../js/voices.js';
+import { VOICES, CORE_VOICES } from '../js/voices.js';
 import {
   dailyLessonProblems,
   dailySeriesProblems,
@@ -145,6 +145,7 @@ export async function validateContent(root = defaultRoot) {
   const manifestPath = join(audioDir, 'manifest.json');
   const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
   const voiceIds = VOICES.map((voice) => voice.id);
+  const coreIds = CORE_VOICES;
   check(new Set(voiceIds).size === voiceIds.length, 'voice catalogue ids must be unique');
   check(Number.isFinite(Date.parse(manifest.generatedAt)), 'audio manifest has no valid generatedAt');
   const expectedPaths = new Set();
@@ -162,13 +163,18 @@ export async function validateContent(root = defaultRoot) {
     check(!!byVoice, `${lesson.id}: missing from audio manifest`);
     if (!byVoice) continue;
 
-    const expectedVoices = lesson.realAudio ? ['real'] : voiceIds;
+    // Core sets ship with every lesson; the accent packs are generated on
+    // demand, so a lesson may legitimately have none of them. What is not
+    // allowed is a half-generated pack — a lesson that plays four sentences in
+    // an accent and then switches is worse than never offering it.
+    const requiredVoices = lesson.realAudio ? ['real'] : coreIds;
+    const allowedVoices = lesson.realAudio ? ['real'] : voiceIds;
     const actualVoices = Object.keys(byVoice);
-    for (const voiceId of expectedVoices) {
-      check(actualVoices.includes(voiceId), `${lesson.id}: missing voice set ${voiceId}`);
+    for (const voiceId of requiredVoices) {
+      check(actualVoices.includes(voiceId), `${lesson.id}: missing core voice set ${voiceId}`);
     }
     for (const voiceId of actualVoices) {
-      check(expectedVoices.includes(voiceId), `${lesson.id}: unexpected voice set ${voiceId}`);
+      check(allowedVoices.includes(voiceId), `${lesson.id}: unexpected voice set ${voiceId}`);
     }
 
     const sentenceIds = (Array.isArray(lesson.sentences) ? lesson.sentences : [])

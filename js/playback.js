@@ -12,6 +12,51 @@ export function playbackSequence(sentences, mode, selectedIds = []) {
   return rows.filter((sentence) => selected.has(sentence.id));
 }
 
+/**
+ * The lesson hands-free should roll on to when this one ends.
+ *
+ * A story series is the strongest thread — finishing day 1 and stopping is a
+ * worse outcome than any library ordering. After that, the next published day,
+ * and only then the next lesson of the same kind at a level the learner is
+ * already working at, so an unattended queue cannot wander into L5.
+ *
+ * @param {object[]} index    lesson summaries, as content/index.json holds them
+ * @param {object}   lesson   the one that just finished
+ * @returns {object|null}
+ */
+export function nextLessonFor(index = [], lesson = null) {
+  if (!lesson) return null;
+  const rows = Array.isArray(index) ? index : [];
+  const others = rows.filter((l) => l.id !== lesson.id);
+
+  const meta = lesson.daily;
+  if (meta) {
+    const sameSeries = others.find(
+      (l) =>
+        l.daily?.seriesId === meta.seriesId && l.daily.day === meta.day + 1,
+    );
+    if (sameSeries) return sameSeries;
+
+    const later = others
+      .filter((l) => l.daily?.date && l.daily.date > meta.date)
+      .sort((a, b) => a.daily.date.localeCompare(b.daily.date));
+    return later[0] || null;
+  }
+
+  // Never step up more than one level unattended.
+  const reachable = others
+    .filter(
+      (l) => !l.daily && l.type === lesson.type && l.level <= lesson.level + 1,
+    )
+    .sort(
+      (a, b) => a.level - b.level || String(a.id).localeCompare(String(b.id)),
+    );
+  const after = reachable.filter(
+    (l) => l.level > lesson.level || String(l.id) > String(lesson.id),
+  );
+  return after[0] || null;
+}
+
 /* ---------- training speeds ---------- */
 
 /* Slowing speech down helps only up to a point. Past roughly this pace the

@@ -12,8 +12,10 @@
     "check": "npm run syntax && npm test && npm run validate",
     "deploy": "npm run check && firebase deploy --only hosting",
     "index": "node tools/build-index.mjs",
-    "audio": "node tools/generate-voices.mjs --voice kokoro-us,kokoro-gb,edge-us,edge-gb,edge-au,edge-in,edge-ie,edge-za,edge-ca,edge-nz,chatterbox-us",
-    "icons": "node tools/make-icons.mjs"
+    "audio": "node tools/generate-voices.mjs --voice kokoro-us,kokoro-gb,edge-us,edge-gb",
+    "icons": "node tools/make-icons.mjs",
+    "audio:accents": "node tools/generate-voices.mjs --voice edge-au,edge-in,edge-ie,edge-za,edge-ca,edge-nz",
+    "audio:all": "npm run audio && npm run audio:accents && node tools/generate-voices.mjs --voice chatterbox-us"
   },
   "license": "MIT"
 }
