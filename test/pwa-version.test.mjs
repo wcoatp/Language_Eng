@@ -278,7 +278,7 @@ test("the Service Worker and page manager share the version message protocol", a
 
 test("deployment headers do not let HTTP cache hide a release", async () => {
   const firebase = JSON.parse(await read("firebase.json"));
-  for (const source of ["/", "/sw.js", "/js/version.js"]) {
+  for (const source of ["/", "/sw.js", "/js/version.js", "/manifest.webmanifest"]) {
     const rule = firebase.hosting.headers.find((entry) => entry.source === source);
     assert.ok(rule, `${source} has an explicit cache rule`);
     assert.ok(
