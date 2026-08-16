@@ -324,13 +324,20 @@ test('every routed view is available in the offline app shell', async () => {
 
   const { caches, stores } = fakeCaches();
   const handlers = {};
-  runInNewContext(serviceWorker, {
-    self: {
-      addEventListener: (name, handler) => { handlers[name] = handler; },
-      skipWaiting: () => {},
-      clients: { claim: async () => {} },
-      location: { origin: 'https://example.test' },
+  let skippedWaiting = 0;
+  const workerSelf = {
+    ECHO_VERSION: { app: '2026.08.16.1', cache: 'v202608161' },
+    addEventListener: (name, handler) => { handlers[name] = handler; },
+    skipWaiting: () => { skippedWaiting += 1; },
+    clients: {
+      claim: async () => {},
+      matchAll: async () => [],
     },
+    location: { origin: 'https://example.test' },
+  };
+  runInNewContext(serviceWorker, {
+    self: workerSelf,
+    importScripts: () => {},
     caches,
     fetch: async () => ({
       ok: true,
@@ -355,11 +362,27 @@ test('every routed view is available in the offline app shell', async () => {
   };
 
   await run('install');
+  assert.equal(skippedWaiting, 0,
+    'an upgrade stays waiting until the learner accepts it');
   const content = [...(stores.get('echo-content')?.keys() || [])];
   assert.ok(content.includes('./content/lessons/daily-2026-08-14.json'),
     'daily stories precache into the content cache');
   assert.ok(!content.includes('./content/lessons/regular-lesson.json'));
   assert.ok([...stores.keys()].some((k) => /^echo-v\d+$/.test(k)), 'shell has its own versioned cache');
+
+  const activeShell = stores.get('echo-v202608161');
+  const appRequest = {
+    method: 'GET',
+    mode: 'same-origin',
+    url: 'https://example.test/js/app.js',
+  };
+  activeShell.set(appRequest.url, 'the active release');
+  let fetched;
+  handlers.fetch({ request: appRequest, respondWith: (promise) => { fetched = promise; } });
+  assert.equal(await fetched, 'the active release');
+  await Promise.resolve();
+  assert.equal(activeShell.get(appRequest.url), 'the active release',
+    'background network traffic cannot mutate the running shell generation');
 
   /* Shipping a release must not cost the learner their audio. Content used to
      live in the versioned bucket, so bumping the version deleted every clip
@@ -377,6 +400,103 @@ test('every routed view is available in the offline app shell', async () => {
     'a clip already played', 'played audio is carried over, not deleted');
   assert.ok(!stores.get('echo-content').has('https://example.test/js/app.js'),
     'only content is carried over');
+
+  let reply;
+  handlers.message({
+    data: { type: 'ECHO_GET_VERSION' },
+    ports: [{ postMessage: (message) => { reply = message; } }],
+  });
+  assert.deepEqual(JSON.parse(JSON.stringify(reply)), {
+    type: 'ECHO_VERSION',
+    version: '2026.08.16.1',
+    cache: 'v202608161',
+  });
+  handlers.message({ data: { type: 'ECHO_SKIP_WAITING' }, ports: [] });
+  assert.equal(skippedWaiting, 1,
+    'the waiting worker activates only after an explicit update action');
+});
+
+test('an incomplete app shell cannot become an installable release', async () => {
+  const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
+  const handlers = {};
+  const { caches } = fakeCaches();
+  runInNewContext(serviceWorker, {
+    self: {
+      ECHO_VERSION: { app: '2026.08.16.1', cache: 'v202608161' },
+      addEventListener: (name, handler) => { handlers[name] = handler; },
+      skipWaiting: () => {},
+      clients: { claim: async () => {}, matchAll: async () => [] },
+      location: { origin: 'https://example.test' },
+    },
+    importScripts: () => {},
+    caches,
+    fetch: async (url) => ({
+      ok: url !== './js/app.js',
+      status: url === './js/app.js' ? 404 : 200,
+      clone() { return this; },
+      json: async () => ({ lessons: [] }),
+    }),
+    encodeURIComponent,
+    URL,
+    Response,
+    Error,
+  });
+
+  let install;
+  handlers.install({ waitUntil: (promise) => { install = promise; } });
+  await assert.rejects(install, /precache failed: \.\/js\/app\.js \(404\)/);
+});
+
+test('legacy v10 clients cross the one-time waiting-worker bridge safely', async () => {
+  const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
+  const handlers = {};
+  const { caches, stores } = fakeCaches();
+  stores.set('echo-v10', new Map());
+  let skippedWaiting = 0;
+  let navigatedTo = null;
+  let posted = 0;
+  runInNewContext(serviceWorker, {
+    self: {
+      ECHO_VERSION: { app: '2026.08.16.1', cache: 'v202608161' },
+      addEventListener: (name, handler) => { handlers[name] = handler; },
+      skipWaiting: () => { skippedWaiting += 1; },
+      clients: {
+        claim: async () => {},
+        matchAll: async () => [{
+          url: 'https://example.test/#/settings',
+          navigate: async (url) => { navigatedTo = url; },
+          postMessage: () => { posted += 1; },
+        }],
+      },
+      location: { origin: 'https://example.test' },
+    },
+    importScripts: () => {},
+    caches,
+    fetch: async () => ({
+      ok: true,
+      status: 200,
+      clone() { return this; },
+      json: async () => ({ lessons: [] }),
+    }),
+    encodeURIComponent,
+    URL,
+    Response,
+    Error,
+  });
+
+  const run = async (name) => {
+    let pending;
+    handlers[name]({ waitUntil: (promise) => { pending = promise; } });
+    await pending;
+  };
+  await run('install');
+  assert.equal(skippedWaiting, 1,
+    'only the legacy release activates without the new page button');
+  await run('activate');
+  assert.equal(navigatedTo, 'https://example.test/#/settings',
+    'legacy pages immediately reload under the complete new shell');
+  assert.equal(posted, 0, 'the legacy page cannot consume the new message protocol');
+  assert.ok(!stores.has('echo-v10'));
 });
 
 /** Minimal in-memory CacheStorage, enough to drive the service worker. */

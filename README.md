@@ -291,7 +291,25 @@ npm run deploy
 部署前會自動執行完整測試與內容驗證。`firebase.json` 只發布 PWA 執行需要的靜態檔案;
 本機模型、Python 環境、測試與開發工具不會上傳。
 
-也可以推上 GitHub Pages:選 `main` / `root` 即可。全部路徑都是相對路徑,子目錄部署不會壞。
+### 版本與更新提示
+
+`js/version.js` 是 App 與 Service Worker 共用的唯一 PWA 版號來源:
+
+- `app` 使用 `YYYY.MM.DD.N`,顯示在「設定 → App 與更新」和新版提示。
+- `cache` 直接由 `app` 產生,所以不可能漏升快取代號或覆寫仍在使用的舊版 Shell。
+
+每次正式發布前先執行 `npm run version:bump -- YYYY.MM.DD.N`;它會一起更新 App 版號與 `package.json` 的日期版號。
+再執行 `npm run check` 與 `npm run deploy`。新版 Shell 會先在背景完整下載;既有 App 顯示「新版已就緒」後,
+由使用者按「重新載入更新」才切換版本。按「稍後」只會收起提示,仍可到設定頁重新開啟。
+只有從舊的 `echo-v10` 第一次升級例外:舊頁面還沒有更新按鈕,所以完整下載後會自動重載一次;
+往後所有版本都走上述由使用者確認的流程,同時開著的其他分頁也會一起安全重載,避免新舊模組混用。
+
+Firebase 對 `sw.js` 與 `js/version.js` 使用 `no-cache, no-store`,避免 Hosting 的 HTTP 快取擋住版號偵測。
+發布後應各驗一次全新安裝、舊版升級和離線重開;學習紀錄、已播放音檔與主動下載的離線課程不會因 Shell 升版被刪除。
+
+也可以推上 GitHub Pages:選 `main` / `root` 即可。全部路徑都是相對路徑,子目錄部署不會壞;
+但 Pages 無法套用這份 `firebase.json` 的 HTTP headers,更新偵測只能算 best-effort。若使用其他主機,
+要有和 Firebase 相同的 `/`、`/index.html`、`/sw.js`、`/js/version.js` 快取規則,才能得到同等可靠的更新行為。
 
 ## YouTube 精聽
 

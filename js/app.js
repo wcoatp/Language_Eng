@@ -1,6 +1,5 @@
 /* Router + app shell. */
 
-import { toast } from './ui.js';
 import { loadVoices, unlock, cancel as cancelSpeech } from './tts.js';
 
 const ROUTES = [
@@ -86,21 +85,3 @@ window.addEventListener('beforeunload', () => cancelSpeech());
 
 loadVoices();
 route();
-
-/* ---------- service worker ---------- */
-
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  window.addEventListener('load', async () => {
-    try {
-      const reg = await navigator.serviceWorker.register('./sw.js');
-      reg.addEventListener('updatefound', () => {
-        const sw = reg.installing;
-        sw?.addEventListener('statechange', () => {
-          if (sw.state === 'installed' && navigator.serviceWorker.controller) {
-            toast('已更新到新版本,重開即可套用');
-          }
-        });
-      });
-    } catch { /* offline support is optional */ }
-  });
-}

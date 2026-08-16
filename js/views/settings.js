@@ -37,14 +37,24 @@ import {
   cacheSupported,
 } from "../storage.js";
 
+let updateStatusListener = null;
+
+function detachUpdateStatusListener() {
+  if (!updateStatusListener) return;
+  window.removeEventListener("echo:update-status", updateStatusListener);
+  updateStatusListener = null;
+}
+
 export function destroy() {
   cancelSpeech();
+  detachUpdateStatusListener();
 }
 
 const SAMPLE = "The quick brown fox jumps over the lazy dog.";
 const SAMPLE_LESSON_TEXT = "Hi there, I'm Ben. Are you new here?";
 
 export async function render(root) {
+  detachUpdateStatusListener();
   const cfg = await settings();
   await loadVoices();
 
@@ -61,6 +71,9 @@ export async function render(root) {
     el("h2", { text: "自由對話" }),
     apiSection(cfg),
 
+    el("h2", { text: "App 與更新" }),
+    versionSection(),
+
     el("h2", { text: "裝置支援" }),
     supportSection(),
 
@@ -74,6 +87,71 @@ export async function render(root) {
       "Echo · 所有紀錄與 API key 只存在這台裝置",
     ]),
   );
+}
+
+/* ---------- app version ---------- */
+
+function versionSection() {
+  const box = el("div", { class: "card" });
+  const status = el("p", { style: "margin:0" });
+  const detail = el("p", {
+    class: "hint",
+    style: "margin:6px 0 0",
+    text: "連上網路時會自動檢查;新版下載完成後由你決定何時重新載入。",
+  });
+  const action = el("button", {
+    class: "btn btn-block",
+    style: "margin-top:14px",
+  });
+
+  function paint() {
+    const version = window.ECHO_VERSION || { app: "unknown" };
+    const manager = window.EchoUpdate;
+    const info = manager?.getStatus();
+    const online = navigator.onLine !== false;
+    let text = `v${version.app}`;
+
+    if (!info || ["idle", "checking"].includes(info.phase)) {
+      text += " · 檢查更新中";
+    } else if (info.phase === "current") {
+      text += " · 已是最新版";
+    } else if (info.phase === "ready") {
+      text += info.availableVersion
+        ? ` · 新版 v${info.availableVersion} 已就緒`
+        : " · 新版已就緒";
+    } else if (info.phase === "applying") {
+      text += " · 正在套用新版";
+    } else if (info.phase === "installing") {
+      text += " · 離線功能安裝中";
+    } else if (info.phase === "unsupported") {
+      text += " · 此瀏覽器不支援自動更新";
+    } else if (info.phase === "error") {
+      text += online ? " · 暫時無法檢查更新" : " · 離線,稍後檢查";
+    } else {
+      text += " · 版號待確認";
+    }
+
+    status.textContent = text;
+    const ready = Boolean(info?.updateReady);
+    if (info?.phase === "applying") action.textContent = "更新中…";
+    else if (info?.phase === "installing") action.textContent = "安裝中…";
+    else if (info?.phase === "unsupported") {
+      action.textContent = "此環境無法自動更新";
+    } else action.textContent = ready ? "顯示更新提示" : "檢查更新";
+    action.disabled =
+      ["applying", "installing", "unsupported"].includes(info?.phase) ||
+      !manager;
+    action.onclick = () => {
+      if (manager.getStatus().updateReady) manager.showPrompt();
+      else manager.checkNow();
+    };
+  }
+
+  updateStatusListener = paint;
+  window.addEventListener("echo:update-status", updateStatusListener);
+  box.append(status, detail, action);
+  paint();
+  return box;
 }
 
 /* ---------- voice ---------- */

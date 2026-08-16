@@ -1,5 +1,5 @@
 /* Service worker — offline-first app shell, network-first content.
-   Bump CACHE when shipping a release so clients pick up new files.
+   Bump the shared version file when shipping a release.
 
    Only the app shell is versioned. Lesson JSON and audio go in their own
    unversioned cache, because activate() deletes every cache it does not
@@ -7,7 +7,11 @@
    wiped every clip the learner had already played, and a phone had to fetch
    them again over mobile data. */
 
-const CACHE = "echo-v10";
+importScripts("./js/version.js");
+
+const VERSION = self.ECHO_VERSION.cache;
+const APP_VERSION = self.ECHO_VERSION.app;
+const CACHE = `echo-${VERSION}`;
 const CONTENT_CACHE = "echo-content";
 const OFFLINE_CACHE = "echo-offline";
 const KEEP = [CACHE, CONTENT_CACHE, OFFLINE_CACHE];
@@ -19,6 +23,8 @@ const SHELL = [
   "./index.html",
   "./manifest.webmanifest",
   "./css/style.css",
+  "./js/version.js",
+  "./js/pwa-update.js",
   "./js/app.js",
   "./js/ui.js",
   "./js/db.js",
@@ -54,6 +60,20 @@ const SHELL = [
   "./icons/icon-512.png",
 ];
 
+function versionMessage(type = "ECHO_VERSION") {
+  return { type, version: APP_VERSION, cache: VERSION };
+}
+
+self.addEventListener("message", (event) => {
+  const data = event.data || {};
+  if (data.type === "ECHO_GET_VERSION") {
+    const target = event.ports && event.ports[0];
+    if (target) target.postMessage(versionMessage());
+    else if (event.source) event.source.postMessage(versionMessage());
+  }
+  if (data.type === "ECHO_SKIP_WAITING") self.skipWaiting();
+});
+
 async function cacheDailyLessons(cache) {
   try {
     const response = await fetch("./content/index.json", { cache: "no-store" });
@@ -77,12 +97,14 @@ async function cacheDailyLessons(cache) {
    files, so a deploy took an hour to reach anyone and could leave a client
    running a mix of old and new modules until the version was bumped again.
    Going around the HTTP cache on install is what makes a bump mean something. */
-async function precache(cache, url) {
+async function precache(cache, url, required = false) {
   try {
     const res = await fetch(url, { cache: "reload" });
-    if (res.ok) await cache.put(url, res);
-  } catch {
-    /* one missing file must not fail the whole install */
+    if (!res.ok) throw new Error(`precache failed: ${url} (${res.status})`);
+    await cache.put(url, res);
+  } catch (error) {
+    if (required) throw error;
+    /* A missing optional daily lesson must not fail the app shell install. */
   }
 }
 
@@ -90,10 +112,16 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE);
-      await Promise.all(SHELL.map((u) => precache(cache, u)));
+      // Do not activate a partial release: every shell file is required.
+      await Promise.all(SHELL.map((u) => precache(cache, u, true)));
       // Daily stories are small and should open offline before their first read.
       await cacheDailyLessons(await caches.open(CONTENT_CACHE));
-      self.skipWaiting();
+
+      // v10 predates the actionable update manager. Without this one-time
+      // bridge it can leave the new worker waiting forever because the old
+      // page has no ECHO_SKIP_WAITING button. activate() immediately reloads
+      // those legacy clients after the complete shell is ready.
+      if ((await caches.keys()).includes("echo-v10")) self.skipWaiting();
     })(),
   );
 });
@@ -102,6 +130,7 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(
     (async () => {
       const stale = (await caches.keys()).filter((k) => !KEEP.includes(k));
+      const legacyUpgrade = stale.includes("echo-v10");
 
       // Earlier versions kept lesson audio in the versioned bucket. Rescue it
       // on the way past, so this is the last release that costs a re-download.
@@ -119,6 +148,24 @@ self.addEventListener("activate", (e) => {
       // Keep pinned lessons and cached content; only retire old app shells.
       await Promise.all(stale.map((k) => caches.delete(k)));
       await self.clients.claim();
+
+      const clients = await self.clients.matchAll({
+        type: "window",
+        includeUncontrolled: true,
+      });
+      if (legacyUpgrade) {
+        await Promise.all(
+          clients.map((client) =>
+            typeof client.navigate === "function"
+              ? client.navigate(client.url).catch(() => null)
+              : null,
+          ),
+        );
+      } else {
+        clients.forEach((client) =>
+          client.postMessage(versionMessage("ECHO_UPDATE_READY")),
+        );
+      }
     })(),
   );
 });
@@ -149,23 +196,26 @@ self.addEventListener("fetch", (e) => {
     return;
   }
 
-  // App shell: serve from cache, refresh in the background.
+  // App shell generations are immutable. Only a newly installed worker may
+  // populate a new versioned cache; the active worker never mixes network
+  // files from a later release into the page that is currently running.
   e.respondWith(
     (async () => {
-      const hit = await caches.match(req);
-      const net = fetch(req)
-        .then((res) => {
-          if (res.ok) caches.open(CACHE).then((c) => c.put(req, res.clone()));
-          return res;
-        })
-        .catch(() => null);
-
+      // Match this worker's exact shell generation. A newer worker may already
+      // be waiting with its own cache, but it must not leak modules into the
+      // still-running page until the learner accepts the update.
+      const cache = await caches.open(CACHE);
+      const hit = await cache.match(req);
       if (hit) return hit;
-      const res = await net;
-      if (res) return res;
+      try {
+        const res = await fetch(req, { cache: "no-cache" });
+        if (res) return res;
+      } catch {
+        /* fall through to the offline navigation shell */
+      }
       // A navigation with nothing cached still needs a document.
       if (req.mode === "navigate") {
-        const shell = await caches.match("./index.html");
+        const shell = await cache.match("./index.html");
         if (shell) return shell;
       }
       return new Response("offline", { status: 503, statusText: "offline" });

@@ -1,6 +1,6 @@
 {
   "name": "echo-english",
-  "version": "1.0.0",
+  "version": "2026.8.16",
   "description": "英語聽說訓練 PWA — 變速精聽、跟讀比對、間隔複習、AI 對話",
   "private": true,
   "type": "module",
@@ -10,6 +10,7 @@
     "test": "node --test",
     "validate": "node tools/validate-content.mjs",
     "check": "npm run syntax && npm test && npm run validate",
+    "version:bump": "node tools/bump-version.mjs",
     "deploy": "npm run check && firebase deploy --only hosting",
     "index": "node tools/build-index.mjs",
     "audio": "node tools/generate-voices.mjs --voice kokoro-us,kokoro-gb,edge-us,edge-gb",

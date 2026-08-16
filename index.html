@@ -41,6 +41,16 @@
   </nav>
 </div>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
+<aside id="update-banner" class="update-banner" role="status" aria-live="polite" hidden>
+  <div class="update-copy">
+    <b id="update-title">新版已就緒</b>
+    <span id="update-detail"></span>
+  </div>
+  <button type="button" class="update-reload" id="update-reload">重新載入更新</button>
+  <button type="button" class="update-dismiss" id="update-dismiss" aria-label="稍後再更新">稍後</button>
+</aside>
+<script src="./js/version.js"></script>
 <script type="module" src="./js/app.js"></script>
+<script src="./js/pwa-update.js"></script>
 </body>
 </html>
