@@ -10,7 +10,8 @@ import { dueCards, grade, gradePreview } from "../srs.js";
 import { getLesson } from "../content.js";
 import { voiceIdForLesson } from "../voices.js";
 import { settings, setSetting, stopwatch } from "../store.js";
-import { say, cancel as cancelSpeech, unlock } from "../tts.js";
+import { say, cancel as cancelSpeech, unlock, voicesForLesson } from "../tts.js";
+import { rotateVoice, byId } from "../voices.js";
 import { keepAwake, releaseAwake } from "../handsfree.js";
 import {
   record,
@@ -57,9 +58,11 @@ export async function render(root) {
   // Cards store their own text, so a review never needs the lesson file —
   // but load what we can so audio clips and speaker context still work.
   const lessons = new Map();
+  const voices = new Map();
   for (const id of new Set(cards.map((c) => c.lessonId))) {
     try {
       lessons.set(id, await getLesson(id));
+      voices.set(id, await voicesForLesson(id));
     } catch {
       /* imported lesson deleted */
     }
@@ -69,6 +72,7 @@ export async function render(root) {
     cards: cfg.recallMode ? orderForRecall(cards) : cards,
     cfg,
     lessons,
+    voices,
     i: 0,
     stage: "cue",
     done: 0,
@@ -132,6 +136,21 @@ async function countdown() {
   }
 }
 
+/* Which voice this repetition should use.
+
+   Spaced repetition brings the same sentence back over weeks, and every one of
+   those meetings currently sounds like the same person. Varying the speaker
+   across repetitions is the cheap half of high-variability training, and the
+   clips are already on disk. Falls back to the learner's own choice whenever
+   the lesson has no alternatives or the setting is off. */
+function voiceForCard(c, lesson) {
+  const chosen = voiceIdForLesson(ctx.cfg, lesson);
+  if (!ctx.cfg.accentRotation || lesson?.realAudio) return chosen;
+  const pool = ctx.voices.get(c.lessonId) || [];
+  if (pool.length < 2) return chosen;
+  return rotateVoice(pool, c.reps || 0) || chosen;
+}
+
 async function play() {
   const c = card();
   if (!c) return;
@@ -148,7 +167,7 @@ async function play() {
       langCode: ctx.cfg.accentLang,
       voiceURI: ctx.cfg.accent,
       rate: ctx.cfg.normalRate,
-      voiceId: voiceIdForLesson(ctx.cfg, lesson),
+      voiceId: voiceForCard(c, lesson),
       realAudio: !!lesson?.realAudio,
       blob: s.audio || null,
     });
@@ -310,7 +329,7 @@ function paint() {
         ? el("div", {
             class: "muted center",
             style: "margin-top:10px",
-            text: lesson.title,
+            text: rotationNote(c, lesson),
           })
         : null,
     ]),
@@ -336,6 +355,14 @@ function cueBlock(s) {
         ])
       : null,
   ]);
+}
+
+/* Say who just spoke when it is not who the learner picked, so a sentence
+   sounding different from last week reads as deliberate rather than broken. */
+function rotationNote(c, lesson) {
+  const id = voiceForCard(c, lesson);
+  if (lesson.realAudio || id === voiceIdForLesson(ctx.cfg, lesson)) return lesson.title;
+  return `${lesson.title} · ${byId(id)?.label || id}`;
 }
 
 function scoreBar(a) {

@@ -331,6 +331,12 @@ function trainingSection(cfg) {
     toggle("顯示中文翻譯", "對答案時一起顯示中文", cfg.showZh, (v) =>
       setSetting({ showZh: v }),
     ),
+    toggle(
+      "複習時輪換口音",
+      "同一句每次複習換一個聲音 —— 聽得懂一個人不等於聽得懂所有人",
+      cfg.accentRotation !== false,
+      (v) => setSetting({ accentRotation: v }),
+    ),
   );
   return box;
 }

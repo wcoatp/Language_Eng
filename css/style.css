@@ -783,3 +783,76 @@ body.update-ready .app {
   background: var(--accent);
   transition: width 0.1s linear;
 }
+
+/* ---------- listening controls (口音 / 聲音 / 語速 / 中文) ---------- */
+
+.voice-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 11px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface);
+  color: var(--text); font-size: 12.5px; font-weight: 600;
+  white-space: nowrap; cursor: pointer;
+}
+.voice-chip:active { transform: scale(0.97); }
+.voice-chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); flex: none;
+}
+
+/* The player's card, while playing: everything that only matters before you
+   start is gone, so what is left fits one row and stays out of the way. */
+.live-row { display: flex; align-items: center; gap: 8px; }
+.live-row .live-play { flex: none; min-width: 56px; min-height: 44px; font-size: 15px; }
+.live-row .live-stop { flex: none; min-width: 46px; min-height: 44px; }
+.live-row .live-voice { flex: 1 1 auto; justify-content: center; min-height: 44px; overflow: hidden; }
+.live-row .live-rate { flex: none; min-height: 44px; }
+
+.sheet-wrap { position: fixed; inset: 0; z-index: 60; }
+.sheet-backdrop {
+  position: absolute; inset: 0;
+  background: color-mix(in srgb, var(--bg) 62%, transparent);
+  opacity: 0; transition: opacity 0.18s ease;
+}
+.sheet-wrap.is-on .sheet-backdrop { opacity: 1; }
+
+.sheet {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  max-height: 82vh; overflow-y: auto;
+  padding: 8px 16px calc(20px + var(--safe-b));
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -12px 40px color-mix(in srgb, var(--bg) 70%, transparent);
+  transform: translateY(100%); transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.sheet-wrap.is-on .sheet { transform: translateY(0); }
+
+.sheet-grip {
+  width: 38px; height: 4px; margin: 0 auto 14px;
+  border-radius: 2px; background: var(--line);
+}
+.sheet-section { margin-bottom: 16px; }
+.sheet-label {
+  font-size: 12px; font-weight: 600; color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.sheet-note {
+  padding: 12px; border-radius: 12px; margin-bottom: 16px;
+  background: color-mix(in srgb, var(--warn) 10%, transparent);
+  display: flex; flex-direction: column; gap: 4px; font-size: 13.5px;
+}
+
+.sheet-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  width: 100%; padding: 11px 12px; margin-bottom: 6px;
+  border: 1px solid var(--line); border-radius: 12px;
+  background: transparent; color: var(--text); text-align: left; cursor: pointer;
+}
+.sheet-row.is-on {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+.sheet-row-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.sheet-row-main b { font-size: 14.5px; }
+.sheet-row-main small { font-size: 12px; color: var(--text-dim); }
+.sheet-tick { color: var(--accent); font-weight: 700; flex: none; }

@@ -43,6 +43,7 @@ const SHELL = [
   "./js/playback.js",
   "./js/handsfree.js",
   "./js/recall.js",
+  "./js/controls.js",
   "./js/daily.js",
   "./js/views/home.js",
   "./js/views/daily.js",

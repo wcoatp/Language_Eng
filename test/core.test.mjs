@@ -12,7 +12,9 @@ import {
   words,
 } from '../js/difficulty.js';
 import { parseTurn, tutorSystem } from '../js/llm.js';
-import { AUTO, CORE_VOICES, VOICES, fallbackChain, forLang, pickVoice } from '../js/voices.js';
+import {
+  AUTO, CORE_VOICES, VOICES, fallbackChain, forLang, orderVoices, pickVoice, rotateVoice,
+} from '../js/voices.js';
 import { cuesToSegments, parseTranscript, parseVideoId } from '../js/youtube.js';
 import { MIN_SLOW_WPM, nextLessonFor, playbackSequence, speechRates } from '../js/playback.js';
 import { describeInterval, newCard, schedule } from '../js/srs.js';
@@ -638,4 +640,25 @@ test('retrieval is gated on having recognised the sentence first', () => {
   // The harder, more valuable rep goes first so a short session gets it.
   assert.deepEqual(orderForRecall(queue).map((c) => c.id), ['ready', 'new', 'lapsed']);
   assert.equal(orderForRecall(queue).length, queue.length, 'nothing is dropped');
+});
+
+test('accent rotation is deterministic and covers every available voice', () => {
+  const pool = ['edge-gb', 'kokoro-us', 'edge-us'];
+  // Catalogue order, not manifest order, so a reshuffled queue cannot change
+  // which voice a given repetition hears.
+  assert.deepEqual(orderVoices(pool), ['kokoro-us', 'edge-us', 'edge-gb']);
+  assert.deepEqual(orderVoices(['edge-us', 'edge-us', 'nope']), ['edge-us']);
+
+  const heard = [0, 1, 2, 3, 4, 5].map((n) => rotateVoice(pool, n));
+  assert.deepEqual(heard, [
+    'kokoro-us', 'edge-us', 'edge-gb',
+    'kokoro-us', 'edge-us', 'edge-gb',
+  ], 'cycles through all of them rather than favouring one');
+  assert.equal(rotateVoice(pool, 7), rotateVoice(pool, 1), 'same rep, same voice');
+
+  // A card that has never been graded, and a lesson with nothing to rotate.
+  assert.equal(rotateVoice(pool, 0), 'kokoro-us');
+  assert.equal(rotateVoice([], 3), '');
+  assert.equal(rotateVoice(['edge-us'], 9), 'edge-us');
+  assert.equal(rotateVoice(pool, -1), rotateVoice(pool, 2), 'negative reps do not throw');
 });

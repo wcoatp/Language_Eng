@@ -13,6 +13,10 @@ export const DEFAULTS = {
   // Retrieval practice in review: produce the sentence before hearing it.
   recallMode: true,
   recallScaffold: 2,   // English opening words given as a run-up
+  // Vary the speaker across repetitions of the same sentence. Spaced
+  // repetition already brings a sentence back days apart; hearing it from one
+  // voice every time wastes the variety those meetings could carry.
+  accentRotation: true,
   dailyGoalMin: 20,
   // Conversation (Phase 3) — key never leaves this device.
   provider: "anthropic",

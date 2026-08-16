@@ -9,6 +9,9 @@ import { getLesson, wpmFor } from "../content.js";
 import { voiceIdForLesson, byId } from "../voices.js";
 import { speechRates } from "../playback.js";
 import { keepAwake, releaseAwake } from "../handsfree.js";
+import { openControls, closeControls, currentVoiceLabel } from "../controls.js";
+import { rotateVoice } from "../voices.js";
+import { voicesForLesson } from "../tts.js";
 import { say, cancel as cancelSpeech, unlock } from "../tts.js";
 import { settings } from "../store.js";
 import { stopwatch } from "../store.js";
@@ -32,6 +35,7 @@ export function destroy() {
   ctx.rec?.cancel();
   ctx.asr?.abort();
   releaseAwake();
+  closeControls();
   document.removeEventListener("keydown", ctx.onKey);
   ctx.watch?.stop();
   ctx = null;
@@ -53,10 +57,9 @@ export async function render(root, lessonId) {
     watch: stopwatch("listen", lesson.id),
     quiz: null,
     onKey: null,
-    // The pace the clips were actually recorded at, so the speed ladder can be
-    // built from the real thing rather than from a fixed assumption.
-    voiceWpm: byId(voiceIdForLesson(cfg, lesson))?.wpm || 0,
     lessonWpm: medianWpm(lesson.sentences),
+    voices: [],        // voice sets this lesson actually has, for 三種口音
+    compareAt: 0,      // where the accent tour has got to
   };
 
   ctx.onKey = (e) => {
@@ -74,6 +77,7 @@ export async function render(root, lessonId) {
     }
   };
   document.addEventListener("keydown", ctx.onKey);
+  voicesForLesson(lesson.id).then((v) => { if (ctx) { ctx.voices = v; paint(); } });
   // A lesson is minutes of listening with no taps; the screen must not sleep.
   keepAwake();
 
@@ -110,7 +114,12 @@ function rates() {
   const real = !!ctx.lesson.realAudio;
   return speechRates({
     targetWpm: wpmFor(ctx.lesson.level),
-    sourceWpm: (real ? s?.wpm || ctx.lessonWpm : ctx.voiceWpm) || 150,
+    // Looked up per call: the learner can change voice mid-lesson, and a
+    // snapshot taken at render would keep scaling to the previous engine's
+    // pace — a Kokoro rate applied to edge-tts plays 22% slow.
+    sourceWpm:
+      (real ? s?.wpm || ctx.lessonWpm : byId(voiceIdForLesson(ctx.cfg, ctx.lesson))?.wpm) ||
+      150,
     normalRate: ctx.cfg.normalRate,
     slowRate: ctx.cfg.slowRate,
     rescale: !real,
@@ -156,6 +165,86 @@ function setWave(on) {
 
 function replay() {
   if (ctx && !ctx.busy) play();
+}
+
+/* ---------- listening controls ---------- */
+
+function openSheet() {
+  openControls({
+    cfg: ctx.cfg,
+    lesson: ctx.lesson,
+    onChange: (next, changed) => {
+      // setSetting returns a fresh object; keeping the old reference is how a
+      // control ends up looking like it did nothing.
+      ctx.cfg = next;
+      paint();
+      // Switching voice mid-sentence is only useful if you hear it on the
+      // sentence you are on — waiting for the next one makes comparison
+      // impossible, which is the whole point of switching.
+      if (changed === "voice" && !ctx.busy && ctx.stage !== "compare") play();
+    },
+  });
+}
+
+function voiceChip() {
+  return el("button", {
+    class: "voice-chip",
+    onclick: openSheet,
+    title: "口音 · 聲音 · 語速",
+  }, [
+    el("span", { class: "voice-chip-dot" }),
+    currentVoiceLabel(ctx.cfg, ctx.lesson),
+  ]);
+}
+
+/* Play the same sentence through several voice sets, back to back.
+
+   Placed after the answer is revealed on purpose: before that the job is to
+   decode it once, and hearing three versions would just make the first pass
+   easier rather than harder. Afterwards it is a stress test of the
+   representation the learner has just built. Rotates through the sets this
+   lesson actually has, so over weeks all eight accents get heard rather than
+   the same three. Does not touch the learner's setting. */
+async function accentTour() {
+  if (!ctx || ctx.busy) return;
+  const pool = ctx.voices;
+  if (ctx.lesson.realAudio || pool.length < 2) {
+    toast("這課只有一種聲音");
+    return;
+  }
+  const s = cur();
+  const token = s;
+  ctx.busy = true;
+  paint();
+  for (let n = 0; n < 3; n++) {
+    if (!ctx || cur() !== token) break;
+    const id = rotateVoice(pool, ctx.compareAt + n);
+    ctx.tourVoice = byId(id)?.label || id;
+    paint();
+    setWave(true);
+    try {
+      await say(s.text, {
+        lessonId: ctx.lesson.id,
+        sentenceId: s.id,
+        langCode: ctx.cfg.accentLang,
+        voiceURI: ctx.cfg.accent,
+        voiceId: id,
+        rate: rates().normal,
+        realAudio: false,
+        blob: s.audio || null,
+      });
+    } catch {
+      break;
+    }
+    setWave(false);
+    if (!ctx || cur() !== token) break;
+    if (n < 2) await sleep(450);
+  }
+  if (!ctx) return;
+  ctx.compareAt += 3;
+  ctx.tourVoice = null;
+  ctx.busy = false;
+  paint();
 }
 
 /* ---------- stage transitions ---------- */
@@ -340,10 +429,13 @@ function header() {
       el("i", { class: n < ctx.i ? "done" : n === ctx.i ? "now" : "" }),
     );
   }
-  return el("div", { class: "trainer-top" }, [
-    backButton("結束", `#/lesson/${encodeURIComponent(ctx.lesson.id)}`),
-    el("div", { class: "muted", style: "font-variant-numeric:tabular-nums" }, [
-      `${Math.min(ctx.i + 1, total)} / ${total}`,
+  return el("div", {}, [
+    el("div", { class: "trainer-top" }, [
+      backButton("結束", `#/lesson/${encodeURIComponent(ctx.lesson.id)}`),
+      el("div", { class: "muted", style: "font-variant-numeric:tabular-nums" }, [
+        `${Math.min(ctx.i + 1, total)} / ${total}`,
+      ]),
+      voiceChip(),
     ]),
     dots,
   ]);
@@ -494,8 +586,11 @@ function actions() {
         }),
         el("div", { class: "btn-row" }, [
           btn("再聽一次", "", replay),
-          btn("跳過 · 不計入複習", "btn-ghost", skip),
+          ctx.voices.length > 1 && !ctx.lesson.realAudio
+            ? btn(ctx.busy ? `🌍 ${ctx.tourVoice || "…"}` : "🌍 三種口音", "", accentTour)
+            : null,
         ]),
+        btn("跳過 · 不計入複習", "btn-ghost", skip),
       );
       break;
 

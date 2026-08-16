@@ -25,6 +25,7 @@ import {
   releaseAwake,
   mediaSessionSupported,
 } from "../handsfree.js";
+import { openControls, closeControls, currentVoiceLabel } from "../controls.js";
 import { el, toast, backButton, sleep, mount } from "../ui.js";
 import { kvGet, kvSet } from "../db.js";
 import {
@@ -42,6 +43,7 @@ export function destroy() {
   logElapsed(ctx);
   clearNowPlaying();
   releaseAwake();
+  closeControls();
   ctx = null;
 }
 
@@ -347,81 +349,7 @@ function paint(scrollCurrent = false) {
     el(
       "div",
       { class: `player-controls card ${state.playing ? "is-playing" : ""}` },
-      [
-        el(
-          "div",
-          { class: "chips player-mode-row", style: "margin-bottom:12px" },
-          [
-            chip(
-              "完整課文",
-              state.mode === "all",
-              () => setMode("all"),
-              state.playing,
-            ),
-            chip(
-              "自訂選擇",
-              state.mode === "custom",
-              () => setMode("custom"),
-              state.playing,
-            ),
-          ],
-        ),
-        el("div", { class: "player-setting" }, [
-          el("span", { class: "muted", text: "速度" }),
-          ...rates.map((rate) =>
-            chip(
-              `${rate}x`,
-              state.rate === rate,
-              () => {
-                if (state.playing) return;
-                state.rate = rate;
-                paint();
-              },
-              state.playing,
-            ),
-          ),
-        ]),
-        el("div", { class: "player-setting" }, [
-          el("span", { class: "muted", text: "句間" }),
-          ...PLAYBACK_GAPS.map((gap) =>
-            chip(
-              gap ? `${gap / 1000} 秒` : "不停頓",
-              state.gap === gap,
-              () => {
-                if (state.playing) return;
-                state.gap = gap;
-                paint();
-              },
-              state.playing,
-            ),
-          ),
-        ]),
-        handsFreeRow(state),
-        state.playing
-          ? el("div", { class: "btn-row" }, [
-              el(
-                "button",
-                { class: "btn btn-primary btn-lg", onclick: togglePause },
-                [state.paused ? "▶ 繼續" : "❚❚ 暫停"],
-              ),
-              el("button", { class: "btn btn-danger btn-lg", onclick: stop }, [
-                "■ 停止",
-              ]),
-            ])
-          : el(
-              "button",
-              {
-                class: "btn btn-primary btn-lg btn-block",
-                disabled: !sequence.length,
-                onclick: play,
-              },
-              [
-                sequence.length
-                  ? `▶ 播放 ${sequence.length} 句`
-                  : "請先選擇句子",
-              ],
-            ),
-      ],
+      state.playing ? livePanel(state) : idlePanel(state, sequence, rates),
     ),
 
     state.completed && !state.playing
@@ -570,6 +498,81 @@ function handsFreeRow(state) {
     ]),
     el("label", { class: "switch" }, [input, el("span")]),
   ]);
+}
+
+/* Playing: the card is sticky, so this is what stays on screen for the whole
+   lesson. Mode and selection are meaningless once started and would only be
+   dead weight up there; speed and voice are exactly what gets reached for. */
+function livePanel(state) {
+  return [
+    el("div", { class: "live-row" }, [
+      el("button", { class: "btn btn-primary live-play", onclick: togglePause }, [
+        state.paused ? "▶" : "❚❚",
+      ]),
+      el("button", { class: "btn live-stop", onclick: stop }, ["■"]),
+      el("button", { class: "voice-chip live-voice", onclick: () => openSheet(state) }, [
+        el("span", { class: "voice-chip-dot" }),
+        currentVoiceLabel(state.cfg, state.lesson),
+      ]),
+      el("button", { class: "chip live-rate", onclick: () => openSheet(state) }, [
+        `${state.cfg.normalRate}x`,
+      ]),
+    ]),
+    handsFreeRow(state),
+  ];
+}
+
+function idlePanel(state, sequence, rates) {
+  return [
+    el("div", { class: "chips player-mode-row", style: "margin-bottom:12px" }, [
+      chip("完整課文", state.mode === "all", () => setMode("all")),
+      chip("自訂選擇", state.mode === "custom", () => setMode("custom")),
+    ]),
+    el("div", { class: "player-setting" }, [
+      el("span", { class: "muted", text: "速度" }),
+      ...rates.map((rate) =>
+        chip(`${rate}x`, Math.abs(state.rate - rate) < 0.001, () => {
+          state.rate = rate;
+          paint();
+        }),
+      ),
+    ]),
+    el("div", { class: "player-setting" }, [
+      el("span", { class: "muted", text: "句間" }),
+      ...PLAYBACK_GAPS.map((gap) =>
+        chip(gap ? `${gap / 1000} 秒` : "不停頓", state.gap === gap, () => {
+          state.gap = gap;
+          paint();
+        }),
+      ),
+    ]),
+    handsFreeRow(state),
+    el(
+      "button",
+      {
+        class: "btn btn-primary btn-lg btn-block",
+        disabled: !sequence.length,
+        onclick: play,
+      },
+      [sequence.length ? `▶ 播放 ${sequence.length} 句` : "請先選擇句子"],
+    ),
+  ];
+}
+
+function openSheet(state) {
+  openControls({
+    cfg: state.cfg,
+    lesson: state.lesson,
+    onChange: (next, changed) => {
+      // setSetting hands back a new object; holding the old one is how a
+      // control ends up looking like it did nothing.
+      state.cfg = next;
+      // The player carries its own rate, so keep it in step rather than
+      // letting two speeds disagree about what is playing.
+      if (changed === "rate") state.rate = next.normalRate;
+      paint();
+    },
+  });
 }
 
 function chip(label, active, onclick, disabled = false) {

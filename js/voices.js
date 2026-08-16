@@ -150,6 +150,31 @@ export function fallbackChain(voiceId, lang) {
   );
 }
 
+/** Catalogue order, so a rotation is reproducible rather than manifest-order. */
+export function orderVoices(ids = []) {
+  const rank = new Map(VOICES.map((v, i) => [v.id, i]));
+  return [...new Set(ids)]
+    .filter((id) => rank.has(id))
+    .sort((a, b) => rank.get(a) - rank.get(b));
+}
+
+/**
+ * Which voice to hear on the nth review of a sentence.
+ *
+ * Spaced repetition already brings the same sentence back days apart, and
+ * every one of those meetings currently sounds identical. Hearing it from a
+ * different speaker each time is the cheap half of high-variability training:
+ * varied talkers generalise to unheard talkers better than one voice repeated,
+ * and the clips are already on disk. Deterministic, so a card does not jump
+ * accent just because the queue was reshuffled.
+ */
+export function rotateVoice(available = [], reps = 0) {
+  const pool = orderVoices(available);
+  if (!pool.length) return "";
+  const n = Number.isFinite(reps) ? Math.trunc(reps) : 0;
+  return pool[((n % pool.length) + pool.length) % pool.length];
+}
+
 /** Resolve the voice a lesson should play in, from the learner's settings. */
 export function voiceForLesson(cfg, lesson) {
   return pickVoice(cfg.voice, cfg.accentLang, lesson?.level ?? 3);

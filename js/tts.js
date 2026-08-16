@@ -1,7 +1,7 @@
 /* Speech output. Hybrid: pre-generated audio when available, browser TTS otherwise.
    Both paths are free and work offline once cached. */
 
-import { fallbackChain } from "./voices.js";
+import { fallbackChain, orderVoices } from "./voices.js";
 
 const synth = window.speechSynthesis;
 
@@ -167,6 +167,25 @@ export function pause() {
   return false;
 }
 
+/**
+ * Nudge the speed of the clip already playing.
+ *
+ * A factor rather than an absolute rate, because callers hold a speed
+ * *preference* while the element holds the playback rate that was computed
+ * from it and from the voice's own pace — passing the preference straight
+ * through would throw that calculation away.
+ *
+ * Only the pre-generated path can do this: a SpeechSynthesisUtterance fixes
+ * its rate when it starts, so the device voice changes on the next sentence.
+ * Returns whether the change was immediate.
+ */
+export function scaleRate(factor) {
+  if (!current || !(factor > 0) || factor === 1) return false;
+  const next = current.audio.playbackRate * factor;
+  current.audio.playbackRate = Math.min(2, Math.max(0.5, next));
+  return true;
+}
+
 export function resume() {
   if (current) {
     current.audio.play().catch(() => {});
@@ -257,6 +276,15 @@ export async function voiceCoverage() {
     for (const id of ids) counts.set(id, (counts.get(id) || 0) + 1);
   }
   return { total, counts };
+}
+
+/** Which voice sets actually have clips for this lesson, catalogue order. */
+export async function voicesForLesson(lessonId) {
+  const m = await getManifest();
+  const ids = Object.keys(m?.lessons?.[lessonId] || {}).filter(
+    (id) => id !== REAL,
+  );
+  return orderVoices(ids);
 }
 
 /** Where a lesson's clips live, for offline download and cache checks. */
