@@ -268,7 +268,12 @@ test("the Service Worker and page manager share the version message protocol", a
     assert.match(manager, new RegExp(message));
   }
 
-  assert.match(worker, /includes\("echo-v10"\)\) self\.skipWaiting\(\)/);
+  const installBlock = worker.slice(
+    worker.indexOf('self.addEventListener("install"'),
+    worker.indexOf('self.addEventListener("activate"'),
+  );
+  assert.doesNotMatch(installBlock, /skipWaiting/);
+  assert.doesNotMatch(worker, /BOOTSTRAP_RELEASE|client\.navigate/);
 });
 
 test("deployment headers do not let HTTP cache hide a release", async () => {

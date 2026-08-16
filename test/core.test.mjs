@@ -325,13 +325,21 @@ test('every routed view is available in the offline app shell', async () => {
   const { caches, stores } = fakeCaches();
   const handlers = {};
   let skippedWaiting = 0;
+  let claimedClients = 0;
+  let navigatedClients = 0;
+  const updateMessages = [];
   const workerSelf = {
-    ECHO_VERSION: { app: '2026.08.16.1', cache: 'v202608161' },
+    ECHO_VERSION: { app: '2026.08.17.1', cache: 'v202608171' },
     addEventListener: (name, handler) => { handlers[name] = handler; },
     skipWaiting: () => { skippedWaiting += 1; },
+    registration: { active: {} },
     clients: {
-      claim: async () => {},
-      matchAll: async () => [],
+      claim: async () => { claimedClients += 1; },
+      matchAll: async () => [{
+        url: 'https://example.test/#/settings',
+        navigate: async () => { navigatedClients += 1; return {}; },
+        postMessage: (message) => { updateMessages.push(message); },
+      }],
     },
     location: { origin: 'https://example.test' },
   };
@@ -370,7 +378,7 @@ test('every routed view is available in the offline app shell', async () => {
   assert.ok(!content.includes('./content/lessons/regular-lesson.json'));
   assert.ok([...stores.keys()].some((k) => /^echo-v\d+$/.test(k)), 'shell has its own versioned cache');
 
-  const activeShell = stores.get('echo-v202608161');
+  const activeShell = stores.get('echo-v202608171');
   const appRequest = {
     method: 'GET',
     mode: 'same-origin',
@@ -400,6 +408,14 @@ test('every routed view is available in the offline app shell', async () => {
     'a clip already played', 'played audio is carried over, not deleted');
   assert.ok(!stores.get('echo-content').has('https://example.test/js/app.js'),
     'only content is carried over');
+  assert.equal(claimedClients, 1, 'an accepted future release claims its clients');
+  assert.equal(navigatedClients, 0,
+    'a future release never uses the one-time bootstrap navigation');
+  assert.deepEqual(JSON.parse(JSON.stringify(updateMessages)), [{
+    type: 'ECHO_UPDATE_READY',
+    version: '2026.08.17.1',
+    cache: 'v202608171',
+  }]);
 
   let reply;
   handlers.message({
@@ -408,8 +424,8 @@ test('every routed view is available in the offline app shell', async () => {
   });
   assert.deepEqual(JSON.parse(JSON.stringify(reply)), {
     type: 'ECHO_VERSION',
-    version: '2026.08.16.1',
-    cache: 'v202608161',
+    version: '2026.08.17.1',
+    cache: 'v202608171',
   });
   handlers.message({ data: { type: 'ECHO_SKIP_WAITING' }, ports: [] });
   assert.equal(skippedWaiting, 1,
@@ -447,26 +463,26 @@ test('an incomplete app shell cannot become an installable release', async () =>
   await assert.rejects(install, /precache failed: \.\/js\/app\.js \(404\)/);
 });
 
-test('legacy v10 clients cross the one-time waiting-worker bridge safely', async () => {
+test('legacy v10 waits safely until all old pages close', async () => {
   const serviceWorker = await readFile(new URL('../sw.js', import.meta.url), 'utf8');
   const handlers = {};
   const { caches, stores } = fakeCaches();
-  stores.set('echo-v10', new Map());
+  stores.set('echo-v10', new Map([
+    ['https://example.test/js/app.js', 'legacy app shell'],
+  ]));
   let skippedWaiting = 0;
-  let navigatedTo = null;
+  let claimedClients = 0;
+  let navigatedClients = 0;
   let posted = 0;
   runInNewContext(serviceWorker, {
     self: {
       ECHO_VERSION: { app: '2026.08.16.1', cache: 'v202608161' },
       addEventListener: (name, handler) => { handlers[name] = handler; },
-      skipWaiting: () => { skippedWaiting += 1; },
+      skipWaiting: async () => { skippedWaiting += 1; },
+      registration: { active: {} },
       clients: {
-        claim: async () => {},
-        matchAll: async () => [{
-          url: 'https://example.test/#/settings',
-          navigate: async (url) => { navigatedTo = url; },
-          postMessage: () => { posted += 1; },
-        }],
+        claim: async () => { claimedClients += 1; },
+        matchAll: async () => [],
       },
       location: { origin: 'https://example.test' },
     },
@@ -489,16 +505,23 @@ test('legacy v10 clients cross the one-time waiting-worker bridge safely', async
     handlers[name]({ waitUntil: (promise) => { pending = promise; } });
     await pending;
   };
-  await run('install');
-  assert.equal(skippedWaiting, 1,
-    'only the legacy release activates without the new page button');
-  await run('activate');
-  assert.equal(navigatedTo, 'https://example.test/#/settings',
-    'legacy pages immediately reload under the complete new shell');
-  assert.equal(posted, 0, 'the legacy page cannot consume the new message protocol');
-  assert.ok(!stores.has('echo-v10'));
-});
 
+  await run('install');
+  assert.equal(skippedWaiting, 0,
+    'the pre-manager release is never force-claimed by a new shell');
+  assert.ok(stores.has('echo-v10'),
+    'the old shell remains while a legacy page may still be open');
+
+  // The browser dispatches activate only after every v10 page has closed.
+  await run('activate');
+  assert.equal(claimedClients, 1,
+    'the managed worker claims only after the legacy clients are gone');
+  assert.equal(navigatedClients, 0);
+  assert.equal(posted, 0);
+  assert.ok(!stores.has('echo-v10'),
+    'the retired shell is deleted only after safe activation');
+  assert.ok(stores.has('echo-v202608161'));
+});
 /** Minimal in-memory CacheStorage, enough to drive the service worker. */
 function fakeCaches() {
   const stores = new Map();
@@ -510,6 +533,7 @@ function fakeCaches() {
       add: async (url) => { store.set(String(url), 'added'); },
       put: async (req, res) => { store.set(key(req), res); },
       match: async (req) => store.get(key(req)) ?? null,
+      delete: async (req) => store.delete(key(req)),
       keys: async () => [...store.keys()].map((url) => ({ url })),
     };
   };

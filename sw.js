@@ -117,11 +117,9 @@ self.addEventListener("install", (e) => {
       // Daily stories are small and should open offline before their first read.
       await cacheDailyLessons(await caches.open(CONTENT_CACHE));
 
-      // v10 predates the actionable update manager. Without this one-time
-      // bridge it can leave the new worker waiting forever because the old
-      // page has no ECHO_SKIP_WAITING button. activate() immediately reloads
-      // those legacy clients after the complete shell is ready.
-      if ((await caches.keys()).includes("echo-v10")) self.skipWaiting();
+      // Upgrades stay waiting until a managed page explicitly requests them.
+      // The one pre-manager release (echo-v10) activates after all of its old
+      // pages close; this avoids ever claiming old JavaScript with a new shell.
     })(),
   );
 });
@@ -130,7 +128,6 @@ self.addEventListener("activate", (e) => {
   e.waitUntil(
     (async () => {
       const stale = (await caches.keys()).filter((k) => !KEEP.includes(k));
-      const legacyUpgrade = stale.includes("echo-v10");
 
       // Earlier versions kept lesson audio in the versioned bucket. Rescue it
       // on the way past, so this is the last release that costs a re-download.
@@ -153,19 +150,9 @@ self.addEventListener("activate", (e) => {
         type: "window",
         includeUncontrolled: true,
       });
-      if (legacyUpgrade) {
-        await Promise.all(
-          clients.map((client) =>
-            typeof client.navigate === "function"
-              ? client.navigate(client.url).catch(() => null)
-              : null,
-          ),
-        );
-      } else {
-        clients.forEach((client) =>
-          client.postMessage(versionMessage("ECHO_UPDATE_READY")),
-        );
-      }
+      clients.forEach((client) =>
+        client.postMessage(versionMessage("ECHO_UPDATE_READY")),
+      );
     })(),
   );
 });
