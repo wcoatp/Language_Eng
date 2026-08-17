@@ -1,6 +1,6 @@
 {
   "name": "echo-english",
-  "version": "2026.8.16",
+  "version": "2026.8.17",
   "description": "英語聽說訓練 PWA — 變速精聽、跟讀比對、間隔複習、AI 對話",
   "private": true,
   "type": "module",

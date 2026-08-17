@@ -79,6 +79,7 @@ export async function render(root, lessonId) {
     handsFree: cfg.autoAdvance !== false,
     paused: false,
     autoQueued: 0,
+    preview: 0,
   };
   wireRemoteControls();
   paint();
@@ -297,6 +298,51 @@ async function advance(state, token) {
   return true;
 }
 
+/* Play one line on demand.
+
+   Two different jobs depending on what is happening. Mid-lesson it is a seek:
+   the loop is already awaiting say(), so moving its cursor and cancelling the
+   clip lands it on the tapped sentence and carries on from there. Idle it is a
+   one-off preview, which must not flip the card into its playing state — you
+   tapped a line, you did not start the lesson. */
+async function playSentence(sentence) {
+  const state = ctx;
+  if (!state) return;
+
+  if (state.playing) {
+    const at = chosen(state).findIndex((s) => s.id === sentence.id);
+    if (at >= 0) {
+      state.seekTo = at;
+      cancelSpeech();
+      return;
+    }
+    // Not in the current selection: fall through and preview it instead.
+  }
+
+  const token = ++state.preview;
+  unlock();
+  cancelSpeech();
+  state.currentId = sentence.id;
+  paint();
+  try {
+    await say(sentence.text, {
+      lessonId: state.lesson.id,
+      sentenceId: sentence.id,
+      langCode: state.cfg.accentLang,
+      voiceURI: state.cfg.accent,
+      voiceId: voiceIdForLesson(state.cfg, state.lesson),
+      rate: state.rate,
+      realAudio: !!state.lesson.realAudio,
+      blob: sentence.audio || null,
+    });
+  } catch (error) {
+    if (ctx === state && state.preview === token) toast(error.message || "播放失敗");
+  }
+  if (ctx !== state || state.preview !== token || state.playing) return;
+  state.currentId = null;
+  paint();
+}
+
 function setMode(mode) {
   if (!ctx || ctx.playing) return;
   ctx.mode = mode;
@@ -304,14 +350,14 @@ function setMode(mode) {
 }
 
 function toggle(id, checked) {
-  if (!ctx || ctx.playing) return;
+  if (!ctx) return;
   if (checked) ctx.selected.add(id);
   else ctx.selected.delete(id);
   paint();
 }
 
 function setAll(selected) {
-  if (!ctx || ctx.playing) return;
+  if (!ctx) return;
   ctx.selected = new Set(
     selected ? ctx.lesson.sentences.map((sentence) => sentence.id) : [],
   );
@@ -436,19 +482,33 @@ function playerRows(state) {
     const current = state.currentId === sentence.id;
     out.push(
       el(
-        "label",
+        "div",
         {
           id: `player-${sentence.id}`,
-          class: `player-row card${current ? " is-playing" : ""}${selected ? "" : " is-muted"}`,
+          class: `player-row card is-tappable${current ? " is-playing" : ""}${selected ? "" : " is-muted"}`,
+          // Tapping a line plays it. While the lesson is running this seeks
+          // rather than interrupting, because a reading you are following is
+          // the one time you most want to jump back a sentence.
+          onclick: () => playSentence(sentence),
         },
         [
           state.mode === "custom"
-            ? el("input", {
-                type: "checkbox",
-                checked: state.selected.has(sentence.id),
-                disabled: state.playing,
-                onchange: (event) => toggle(sentence.id, event.target.checked),
-              })
+            ? el(
+                "label",
+                {
+                  class: "player-pick",
+                  // The checkbox owns its own tap target; everything else on
+                  // the row plays, so selecting and hearing never fight.
+                  onclick: (event) => event.stopPropagation(),
+                },
+                [
+                  el("input", {
+                    type: "checkbox",
+                    checked: state.selected.has(sentence.id),
+                    onchange: (event) => toggle(sentence.id, event.target.checked),
+                  }),
+                ],
+              )
             : el("span", { class: "player-number", text: String(index + 1) }),
           el("div", { class: "player-copy" }, [
             el("div", { style: "display:flex;gap:8px;align-items:baseline" }, [
@@ -527,6 +587,16 @@ function idlePanel(state, sequence, rates) {
     el("div", { class: "chips player-mode-row", style: "margin-bottom:12px" }, [
       chip("完整課文", state.mode === "all", () => setMode("all")),
       chip("自訂選擇", state.mode === "custom", () => setMode("custom")),
+    ]),
+    // The sheet has to be reachable before playback too: this screen spends
+    // most of its life idle, and choosing the accent is something you do
+    // before you press play, not after.
+    el("div", { class: "player-setting" }, [
+      el("span", { class: "muted", text: "聲音" }),
+      el("button", { class: "voice-chip", onclick: () => openSheet(state) }, [
+        el("span", { class: "voice-chip-dot" }),
+        currentVoiceLabel(state.cfg, state.lesson),
+      ]),
     ]),
     el("div", { class: "player-setting" }, [
       el("span", { class: "muted", text: "速度" }),
