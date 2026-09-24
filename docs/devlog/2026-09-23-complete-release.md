@@ -48,11 +48,16 @@
 - 第一次伺服器中斷測試發現「下載離線使用」只有音檔、沒有課程 JSON，重開顯示 `Failed to fetch`。在 `v2026.09.23.3` 改成同時固定課程 JSON 與共用索引後重測：伺服器停止時可重開 `l2-08`、進入精聽並播放已下載音檔；這次結果才列為通過。
 - 真實 iPhone／Android 硬體、Safari 與實際飛航模式未執行；不可把 viewport 與本機斷線證據改寫成真機通過。
 
-## N7 commit／push／deploy（準備開始）
+## N7 commit／push／deploy（完成）
 
-- 兩課 Edge 核心聲音與完整 `npm run check` 已通過；接下來 stage 清單仍會明確排除附件 PDF，再依序 commit、push、Firebase Hosting deploy。
-- commit SHA、遠端 SHA 與 Firebase 部署結果在實際完成後填寫。
+- 兩課 Edge 核心聲音與完整 `npm run check` 已通過；staged 清單核對沒有 PDF，附件仍留在工作區未追蹤狀態。
+- commit：`e04bd5fb577198bc2eea2e7c3b40d870be12dc60`（`feat: complete curriculum learning prep and backups`）。
+- push：`origin/main` 已核對同一 SHA。
+- deploy：Firebase project `echo-english-20260814`，Hosting URL `https://echo-english-20260814.web.app`，上傳與 release 均成功。
 
-## N8 部署後 smoke test（尚未開始）
+## N8 部署後 smoke test（完成）
 
-- 部署 URL、正式站版號與核心路徑結果在實際完成後填寫，不預填成功。
+- 正式站設定頁由舊版 `v2026.08.17.1` 顯示新版已就緒，按「重新載入更新」後確認 `v2026.09.23.3 · 已是最新版`。
+- `#/lesson/l2-07` 顯示課名、課前字詞、換條件任務、`l1-04` 前置課與下載入口；`#/lesson/l2-08` 同樣顯示課名、課前字詞、換條件任務與 `l2-01` 前置課。
+- 正式站兩頁瀏覽器主控台沒有 error／warning；直接頁面載入證實課程 JSON 路徑可用，內容驗證已證實四組新課音檔與 manifest 對齊。
+- 未宣稱真實 iPhone／Android、Safari 或飛航模式通過；本地 390×844 與伺服器中斷快取驗收已完成。商用授權總稽核仍明確不在本工程。

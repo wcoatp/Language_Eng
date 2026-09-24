@@ -326,6 +326,8 @@ node tools/make-icons.mjs
 
 專案目前設定部署到 Firebase Hosting 專案 `echo-english-20260814`:
 
+目前已部署版本：`v2026.09.23.3` · [正式站](https://echo-english-20260814.web.app)
+
 ```bash
 npm run deploy
 ```

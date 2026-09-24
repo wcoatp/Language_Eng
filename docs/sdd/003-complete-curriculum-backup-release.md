@@ -1,6 +1,6 @@
 # SDD-003：課程補齊、全課預習、備份還原與發布
 
-工程 ENG-003；2026-09-23；狀態：本地功能與完整 check 完成，準備 commit、push、deploy；商用稽核排除。使用者已明確同意本次 Edge 產音資料傳送。
+工程 ENG-003；2026-09-23；狀態：已完成 commit、push、Firebase Hosting 部署與部署後 smoke test；商用稽核排除。使用者已明確同意本次 Edge 產音資料傳送。
 
 ## 範圍與非目標
 
