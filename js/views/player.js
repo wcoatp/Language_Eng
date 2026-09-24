@@ -28,6 +28,7 @@ import {
 import { openControls, closeControls, currentVoiceLabel } from "../controls.js";
 import { el, toast, backButton, sleep, mount } from "../ui.js";
 import { kvGet, kvSet } from "../db.js";
+import { lookupText } from "../word-lookup.js";
 import {
   completesDailyPlayback,
   isDailyComplete,
@@ -137,6 +138,21 @@ function togglePause() {
   paint();
 }
 
+// Hold the playback loop; shared dictionary speech must not advance the lesson.
+function pauseForLookup() {
+  const state = ctx;
+  if (!state) return;
+  if (state.playing) {
+    state.repeatAfterLookup = state.currentId;
+    state.paused = true;
+    logElapsed(state);
+    setPlaybackState('paused');
+  }
+  state.preview++;
+  cancelSpeech();
+  paint();
+}
+
 function announce(state, sentence, position, total) {
   setNowPlaying({
     title: sentence.text,
@@ -163,6 +179,7 @@ function stop() {
   ctx.paused = false;
   ctx.currentId = null;
   ctx.seekTo = null;
+  ctx.repeatAfterLookup = null;
   ctx.autoQueued = 0;
   cancelSpeech();
   logElapsed(ctx);
@@ -189,6 +206,7 @@ async function play() {
   state.playing = true;
   state.paused = false;
   state.seekTo = null;
+  state.repeatAfterLookup = null;
   state.startedAt = performance.now();
   const token = ++state.run;
   let failed = false;
@@ -199,6 +217,7 @@ async function play() {
   paint();
 
   for (let i = 0; i < sequence.length; i++) {
+    while (state.paused && ctx === state && state.run === token) await sleep(200);
     if (ctx !== state || state.run !== token) return;
     const sentence = sequence[i];
     state.currentId = sentence.id;
@@ -229,12 +248,25 @@ async function play() {
       state.seekTo = null;
       continue;
     }
+    if (state.gap && i < sequence.length - 1) await sleep(state.gap);
+    // Hold even when lookup opens during the silent gap. Resuming replays the
+    // interrupted/current sentence, never silently advances under the dialog.
     // Pause holds the loop here instead of unwinding it, so resuming carries
     // on with the same sentence list rather than restarting the lesson.
     while (state.paused && ctx === state && state.run === token)
       await sleep(200);
     if (ctx !== state || state.run !== token) return;
-    if (state.gap && i < sequence.length - 1) await sleep(state.gap);
+    if (state.seekTo != null) {
+      i = state.seekTo - 1;
+      state.seekTo = null;
+      state.repeatAfterLookup = null;
+      continue;
+    }
+    if (state.repeatAfterLookup === sentence.id) {
+      state.repeatAfterLookup = null;
+      i--;
+      continue;
+    }
   }
 
   if (ctx !== state || state.run !== token) return;
@@ -486,10 +518,6 @@ function playerRows(state) {
         {
           id: `player-${sentence.id}`,
           class: `player-row card is-tappable${current ? " is-playing" : ""}${selected ? "" : " is-muted"}`,
-          // Tapping a line plays it. While the lesson is running this seeks
-          // rather than interrupting, because a reading you are following is
-          // the one time you most want to jump back a sentence.
-          onclick: () => playSentence(sentence),
         },
         [
           state.mode === "custom"
@@ -515,7 +543,8 @@ function playerRows(state) {
               sentence.speaker
                 ? el("span", { class: "badge", text: sentence.speaker })
                 : null,
-              el("span", { text: sentence.text }),
+              lookupText(sentence.text, { lessonId: state.lesson.id, sentenceId: sentence.id,
+                lessonTitle: state.lesson.title, zh: sentence.zh }, { onOpen: pauseForLookup }),
             ]),
             state.cfg.showZh && sentence.zh
               ? el("div", {
@@ -525,6 +554,8 @@ function playerRows(state) {
                 })
               : null,
           ]),
+          el('button', { type: 'button', class: 'sentence-play chip',
+            'aria-label': `播放句子 ${sentence.id}`, onclick: () => playSentence(sentence) }, ['▶']),
         ],
       ),
     );

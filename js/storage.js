@@ -1,4 +1,4 @@
-/* Offline audio and storage budget.
+/* Offline lessons, audio and storage budget.
 
    Real-recording lessons are much heavier than synthetic ones, so the app never
    pre-downloads everything. Clips arrive as you play them, and you can pin a
@@ -51,12 +51,26 @@ async function urlsFor(lesson, langCode) {
   return clipUrls(lesson.id, langCode, !!lesson.realAudio);
 }
 
+function lessonUrl(lesson) {
+  if (lesson.custom) return null;
+  return `./content/lessons/${encodeURIComponent(lesson.id)}.json`;
+}
+
+async function cacheDocument(cache, url) {
+  if (!url || await cache.match(url)) return;
+  const res = await fetch(url, { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`下載失敗 (${res.status})`);
+  await cache.put(url, res);
+}
+
 /** Are all of this lesson's clips already stored? */
 export async function isLessonOffline(lesson, langCode) {
   if (!cacheSupported()) return false;
   const urls = await urlsFor(lesson, langCode);
   if (!urls.length) return false;
   const cache = await caches.open(OFFLINE_CACHE);
+  const documentUrl = lessonUrl(lesson);
+  if (documentUrl && !(await cache.match(documentUrl))) return false;
   // Checking every clip is slow for long lessons; the ends are enough to tell
   // a completed download from an interrupted one.
   const probes = urls.length <= 4 ? urls : [urls[0], urls[urls.length >> 1], urls.at(-1)];
@@ -77,6 +91,13 @@ export async function downloadLesson(lesson, langCode, onProgress) {
 
   const cache = await caches.open(OFFLINE_CACHE);
   let done = 0;
+
+  // A first visit can render before the newly installed service worker takes
+  // control. Pin the lesson document explicitly; audio alone cannot reopen the
+  // detail/listen routes after the server disappears. The shared index keeps
+  // library navigation useful too, but is not counted as a downloaded clip.
+  await cacheDocument(cache, lessonUrl(lesson));
+  await cacheDocument(cache, './content/index.json');
 
   // A few at a time: enough to be quick, not so many that a phone on mobile
   // data stalls every other request in the app.
@@ -104,6 +125,8 @@ export async function removeLesson(lesson, langCode) {
   const cache = await caches.open(OFFLINE_CACHE);
   let n = 0;
   for (const u of urls) if (await cache.delete(u)) n++;
+  const documentUrl = lessonUrl(lesson);
+  if (documentUrl) await cache.delete(documentUrl);
   return n;
 }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T10:27:23.323Z",
+  "generatedAt": "2026-09-23T14:22:37.967Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -80,6 +80,20 @@
       "type": "dialogue",
       "topic": "travel",
       "count": 14,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l1-07",
+      "title": "A Different Sandwich",
+      "titleZh": "想買的餐點沒有了",
+      "summaryZh": "L1 延伸：在美國咖啡店，想買的材料售完了。練習聽出否定、問替代餐點，再完成點餐。建議先學「外帶午餐」。金額為美元。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 12,
       "questions": 3,
       "realAudio": false,
       "preGeneratedAudio": true,
@@ -256,6 +270,34 @@
       "type": "dialogue",
       "topic": "travel",
       "count": 15,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l2-07",
+      "title": "The Room Is Not Ready",
+      "titleZh": "房間還沒準備好",
+      "summaryZh": "銜接「飯店入住登記」：房間尚未準備好時，聽清楚等待時間、再次確認，並決定何時回來。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 12,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": ""
+    },
+    {
+      "id": "l2-08",
+      "title": "Can We Choose Another Day?",
+      "titleZh": "這天不行，換一天好嗎？",
+      "summaryZh": "銜接「討論週末計畫」：婉拒原本的時段、提出另一個日期與時間，最後確認雙方相同的約定。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
       "questions": 3,
       "realAudio": false,
       "preGeneratedAudio": true,

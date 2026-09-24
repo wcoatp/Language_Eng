@@ -9,6 +9,7 @@ import { readdir, readFile, access } from 'node:fs/promises';
 import { basename, dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { VOICES, CORE_VOICES } from '../js/voices.js';
+import { learningProblems, withAutomaticLearning } from '../js/learning.js';
 import {
   dailyLessonProblems,
   dailySeriesProblems,
@@ -118,6 +119,7 @@ export async function validateContent(root = defaultRoot) {
     for (const problem of dailyLessonProblems(lesson)) {
       problems.push(`${fileId}: ${problem}`);
     }
+    for (const problem of learningProblems(withAutomaticLearning(lesson))) problems.push(`${fileId}: ${problem}`);
     for (const problem of dailyTitleProblems(lesson, REFERENCE_TITLES)) {
       problems.push(`${fileId}: ${problem}`);
     }
@@ -128,6 +130,15 @@ export async function validateContent(root = defaultRoot) {
   problems.push(...dailySeriesProblems(lessons));
   const byId = new Map(lessons.map((lesson) => [lesson.id, lesson]));
   check(byId.size === lessons.length, 'lesson ids must be unique');
+  for (const lesson of lessons) {
+    const learning = withAutomaticLearning(lesson).learning;
+    for (const [key, relation] of [['prerequisite', learning?.prerequisite], ['next', learning?.next]]) {
+      if (!relation) continue;
+      check(typeof relation.id === 'string' && byId.has(relation.id), `${lesson.id}: ${key} lesson does not exist`);
+      check(relation.id !== lesson.id, `${lesson.id}: ${key} cannot point to itself`);
+      check(typeof relation.labelZh === 'string' && !!relation.labelZh.trim(), `${lesson.id}: ${key} needs labelZh`);
+    }
+  }
 
   const index = JSON.parse(await readFile(join(root, 'content', 'index.json'), 'utf8'));
   check(Number.isFinite(Date.parse(index.generatedAt)), 'content/index.json has no valid generatedAt');

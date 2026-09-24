@@ -1,0 +1,53 @@
+{
+  "id": "l1-07",
+  "title": "A Different Sandwich",
+  "titleZh": "想買的餐點沒有了",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "L1 延伸：在美國咖啡店，想買的材料售完了。練習聽出否定、問替代餐點，再完成點餐。建議先學「外帶午餐」。金額為美元。",
+  "learning": {
+    "version": 1,
+    "objectiveZh": "聽出原本的餐點沒有了，詢問替代餐點並確認選擇。外帶與付款是複習。",
+    "prerequisite": {"id":"l1-05","labelZh":"外帶午餐"},
+    "vocabulary": [
+      {"id":"sandwich","term":"sandwich","surface":"sandwich","sentenceIds":["s1"],"zh":"三明治","en":"Food made with a filling between pieces of bread.","example":"a small sandwich","exampleZh":"一份小三明治"},
+      {"id":"cheese","term":"cheese","surface":"cheese","sentenceIds":["s1","s2"],"zh":"起司","en":"A food made from milk.","example":"some cheese","exampleZh":"一些起司"},
+      {"id":"egg","term":"egg","surface":"egg","sentenceIds":["s3"],"zh":"蛋","en":"An oval object laid by a bird, often eaten as food.","example":"an egg sandwich","exampleZh":"一份蛋三明治"},
+      {"id":"sauce","term":"sauce","surface":"sauce","sentenceIds":["s5"],"zh":"醬料","en":"A liquid added to food for flavor.","example":"some sauce","exampleZh":"一點醬料"},
+      {"id":"water","term":"water","surface":"water","sentenceIds":["s7"],"zh":"水","en":"The clear liquid people drink.","example":"a glass of water","exampleZh":"一杯水"},
+      {"id":"to-go","term":"to go","surface":"to go","sentenceIds":["s8","s9"],"zh":"外帶","en":"To take food away and eat it elsewhere.","example":"a tea to go","exampleZh":"一杯外帶茶"}
+    ],
+    "task": {
+      "id": "change-order",
+      "titleZh": "換個條件：蛋沒有了",
+      "roleZh": "你是顧客",
+      "setupZh": "這次你原本想買蛋三明治，但蛋沒有了。試著改點起司三明治，不要醬、外帶。先完成改點，再練其餘需求。",
+      "steps": [
+        {"partner":"Sorry, we don't have any eggs today.","promptZh":"問店員有沒有起司三明治。","keywords":"cheese sandwich","frame":"Do you have ...?","sample":"Do you have cheese sandwiches?"},
+        {"partner":"Yes, we do. Would you like one?","promptZh":"確認要一份，而且不要加醬。","keywords":"yes / no sauce","frame":"Yes, please. No ..., please.","sample":"Yes, please. No sauce, please."},
+        {"partner":"Of course. For here or to go?","promptZh":"告訴店員你要外帶。","keywords":"to go","frame":"..., please.","sample":"To go, please."}
+      ],
+      "success": ["我有聽出蛋沒有了。", "我有詢問另一種餐點，並確認改點起司。", "我有說清楚不要醬與外帶。"]
+    }
+  },
+  "sentences": [
+    {"id":"s1","speaker":"A","text":"I'd like a cheese sandwich, please.","zh":"我想要一份起司三明治，謝謝。"},
+    {"id":"s2","speaker":"B","text":"Sorry, we don't have any cheese today.","zh":"抱歉，我們今天沒有起司了。","note":"留意 don't：店員說沒有，不是有。"},
+    {"id":"s3","speaker":"A","text":"Do you have egg sandwiches?","zh":"你們有蛋三明治嗎？"},
+    {"id":"s4","speaker":"B","text":"Yes. Would you like one?","zh":"有，要一份嗎？"},
+    {"id":"s5","speaker":"A","text":"Yes, please. No sauce, please.","zh":"好，謝謝。不要加醬。"},
+    {"id":"s6","speaker":"B","text":"Of course. Anything to drink?","zh":"沒問題。要喝點什麼嗎？"},
+    {"id":"s7","speaker":"A","text":"Just water, please.","zh":"水就好，謝謝。"},
+    {"id":"s8","speaker":"B","text":"For here or to go?","zh":"內用還是外帶？"},
+    {"id":"s9","speaker":"A","text":"To go. How much is it?","zh":"外帶。多少錢？"},
+    {"id":"s10","speaker":"B","text":"Six dollars.","zh":"六美元。"},
+    {"id":"s11","speaker":"A","text":"Can I pay by card?","zh":"可以刷卡嗎？"},
+    {"id":"s12","speaker":"B","text":"Yes. Please tap your card here.","zh":"可以，請把卡靠近這裡感應。"}
+  ],
+  "questions": [
+    {"q":"今天沒有哪一種材料？","options":["蛋","起司","水"],"answer":1,"explanationZh":"店員說 don't have any cheese，沒有的是起司。","sentenceIds":["s2"]},
+    {"q":"顧客不要加什麼？","options":["醬料","麵包","水"],"answer":0,"explanationZh":"No sauce, please. 表示不要加醬。","sentenceIds":["s5"]},
+    {"q":"顧客選擇哪種付款方式？","options":["現金","手機","卡片"],"answer":2,"explanationZh":"顧客問能否刷卡，店員請他感應卡片。","sentenceIds":["s11","s12"]}
+  ]
+}

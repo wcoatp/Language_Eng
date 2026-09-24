@@ -1,0 +1,53 @@
+{
+  "id": "l2-07",
+  "title": "The Room Is Not Ready",
+  "titleZh": "房間還沒準備好",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "travel",
+  "summaryZh": "銜接「飯店入住登記」：房間尚未準備好時，聽清楚等待時間、再次確認，並決定何時回來。",
+  "learning": {
+    "version": 1,
+    "objectiveZh": "聽出房間還沒準備好，問清楚可入住時間，並確認自己何時回來。",
+    "prerequisite": {"id":"l1-04","labelZh":"飯店入住登記"},
+    "vocabulary": [
+      {"id":"booking-under","term":"a booking under","surface":"a booking under","sentenceIds":["s1"],"zh":"以……的名字訂房","en":"A reservation recorded under a person's name.","example":"a booking under Chen","exampleZh":"以 Chen 的名字訂房"},
+      {"id":"check-in","term":"check in","surface":"check in","sentenceIds":["s3"],"zh":"辦理入住","en":"To report your arrival and receive your hotel room.","example":"check in at the hotel","exampleZh":"在飯店辦理入住"},
+      {"id":"ready","term":"ready","surface":"ready","sentenceIds":["s4","s5"],"zh":"準備好了","en":"Prepared and able to be used.","example":"The table is ready.","exampleZh":"桌位準備好了。"},
+      {"id":"leave-bags","term":"leave your bags here","surface":"leave your bags here","sentenceIds":["s8"],"zh":"把行李寄放在這裡","en":"To let your bags stay here while you go elsewhere.","example":"leave your bags at the desk","exampleZh":"把行李寄放在櫃檯"},
+      {"id":"nearby","term":"nearby","surface":"nearby","sentenceIds":["s9"],"zh":"在附近","en":"Not far away.","example":"a nearby shop","exampleZh":"附近的商店"},
+      {"id":"across-street","term":"across the street","surface":"across the street","sentenceIds":["s10"],"zh":"街對面","en":"On the other side of the street.","example":"the bank across the street","exampleZh":"街對面的銀行"}
+    ],
+    "task": {
+      "id": "confirm-check-in-time",
+      "titleZh": "換個條件：四點才能入住",
+      "roleZh": "你是旅客",
+      "setupZh": "你姓 Chen，住一晚。房間現在還沒好；請問清楚時間，沒聽清楚就再確認，最後說你幾點回來。",
+      "steps": [
+        {"partner":"I'm sorry. Your room isn't ready yet.","promptZh":"詢問房間幾點會準備好。","keywords":"what time / ready","frame":"What time will ...?","sample":"What time will it be ready?"},
+        {"partner":"It will be ready at four this afternoon.","promptZh":"你沒有聽清楚。確認是三點還是四點。","keywords":"three or four","frame":"Did you say ... or ...?","sample":"Did you say three or four?"},
+        {"partner":"Four. You can leave your bags here.","promptZh":"表示知道了，並說你四點回來。","keywords":"come back / four","frame":"I'll come back at ...","sample":"Thanks. I'll come back at four."}
+      ],
+      "success": ["我有聽出現在還不能入住。", "我有再次確認正確時間是四點。", "我有說清楚自己四點回來。"]
+    }
+  },
+  "sentences": [
+    {"id":"s1","speaker":"A","text":"Hi, I have a booking under Lin.","zh":"你好，我有訂房，姓林。"},
+    {"id":"s2","speaker":"B","text":"Welcome. You're staying for two nights, right?","zh":"歡迎。您要住兩晚，對嗎？"},
+    {"id":"s3","speaker":"A","text":"Yes. Can I check in now?","zh":"對。現在可以辦理入住嗎？"},
+    {"id":"s4","speaker":"B","text":"I'm sorry. Your room isn't ready yet.","zh":"抱歉，您的房間還沒準備好。","note":"留意 isn't ready yet：目前還沒準備好。"},
+    {"id":"s5","speaker":"A","text":"What time will it be ready?","zh":"幾點會準備好呢？"},
+    {"id":"s6","speaker":"B","text":"At three this afternoon.","zh":"今天下午三點。"},
+    {"id":"s7","speaker":"A","text":"Did you say two or three?","zh":"你剛才說兩點還是三點？"},
+    {"id":"s8","speaker":"B","text":"Three. You can leave your bags here.","zh":"三點。您可以把行李寄放在這裡。"},
+    {"id":"s9","speaker":"A","text":"Great. Is there a cafe nearby?","zh":"太好了。附近有咖啡店嗎？"},
+    {"id":"s10","speaker":"B","text":"Yes, just across the street.","zh":"有，就在街對面。"},
+    {"id":"s11","speaker":"A","text":"Thanks. I'll come back at three.","zh":"謝謝，我三點再回來。"},
+    {"id":"s12","speaker":"B","text":"You're welcome. See you then.","zh":"不客氣，到時候見。"}
+  ],
+  "questions": [
+    {"q":"為什麼現在不能入住？","options":["沒有訂房","房間還沒準備好","找不到行李"],"answer":1,"explanationZh":"櫃檯說 Your room isn't ready yet，表示房間還沒準備好。","sentenceIds":["s4"]},
+    {"q":"櫃檯最後確認的入住時間是？","options":["三點","兩點","四點"],"answer":0,"explanationZh":"旅客問 two or three，櫃檯再次確認 Three。","sentenceIds":["s6","s7","s8"]},
+    {"q":"咖啡店在哪裡？","options":["飯店房間旁","車站裡","街對面"],"answer":2,"explanationZh":"櫃檯回答 just across the street，也就是街對面。","sentenceIds":["s9","s10"]}
+  ]
+}

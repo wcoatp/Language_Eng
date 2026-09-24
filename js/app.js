@@ -1,12 +1,15 @@
 /* Router + app shell. */
 
 import { loadVoices, unlock, cancel as cancelSpeech } from './tts.js';
+import { closeLookup } from './word-lookup.js';
 
 const ROUTES = [
   { re: /^\/$/,                 load: () => import('./views/home.js'),     tab: '/' },
   { re: /^\/daily$/,            load: () => import('./views/daily.js'),    tab: '/' },
   { re: /^\/library$/,          load: () => import('./views/library.js'),  tab: '/library' },
   { re: /^\/lesson\/(.+)$/,     load: () => import('./views/lesson.js'),   tab: '/library' },
+  { re: /^\/prepare\/(.+)$/,    load: () => import('./views/prepare.js'),  tab: '/library' },
+  { re: /^\/task\/(.+)$/,       load: () => import('./views/task.js'),     tab: '/library' },
   { re: /^\/listen\/(.+)$/,     load: () => import('./views/listen.js'),   tab: '/library', full: true },
   { re: /^\/play\/(.+)$/,       load: () => import('./views/player.js'),   tab: '/library', full: true },
   { re: /^\/review$/,           load: () => import('./views/review.js'),   tab: '/review' },
@@ -37,6 +40,7 @@ function setActiveTab(tab) {
 async function route() {
   const p = path();
   const token = ++renderToken;
+  closeLookup({ restoreFocus: false });
 
   // Let the outgoing view release timers, mics and audio.
   try { currentModule?.destroy?.(); } catch { /* ignore */ }

@@ -23,7 +23,9 @@ import {
   testKey,
   LlmError,
 } from "../llm.js";
-import { kvGet, wipeAll } from "../db.js";
+import { db, kvGet, wipeAll, replaceAllStores } from "../db.js";
+import { createBackupText, parseBackupText, preserveApiKey, backupSummary, backupFilename } from "../backup.js";
+import { vocabularySection } from "../word-lookup.js";
 import {
   estimate,
   offlineSize,
@@ -82,6 +84,9 @@ export async function render(root) {
 
     el("h2", { text: "資料" }),
     dataSection(),
+
+    el("h2", { text: "生字收藏" }),
+    await vocabularySection(),
 
     el("p", { class: "muted center", style: "margin-top:28px" }, [
       "Echo · 所有紀錄與 API key 只存在這台裝置",
@@ -663,38 +668,56 @@ function storageSection() {
 /* ---------- data ---------- */
 
 function dataSection() {
+  const file = el('input', { type: 'file', accept: 'application/json,.json', hidden: true });
+  const exportButton = el(
+    "button",
+    {
+      class: "btn btn-block",
+      onclick: async (e) => {
+        const button = e.currentTarget;
+        button.disabled = true; button.textContent = '正在建立備份…';
+        try {
+          const text = await createBackupText(db, { appVersion: window.ECHO_VERSION?.app || 'unknown' });
+          const blob = new Blob([text], { type: "application/json" });
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = backupFilename();
+          a.click();
+          setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+          toast("已匯出完整資料備份（不含 API key 與離線音檔）");
+        } catch (error) { toast(error.message || '備份建立失敗'); }
+        finally { button.disabled = false; button.textContent = '匯出完整資料備份'; }
+      },
+    },
+    ["匯出完整資料備份"],
+  );
+  file.onchange = async () => {
+    const selected = file.files?.[0];
+    file.value = '';
+    if (!selected) return;
+    try {
+      const backup = parseBackupText(await selected.text());
+      const info = backupSummary(backup);
+      const date = new Date(info.exportedAt).toLocaleString('zh-TW');
+      const ok = await confirmBox(`還原 ${date} 的備份？共 ${info.total} 筆資料、${info.lessons} 篇自訂課程、${info.recordings} 段錄音。這會取代目前裝置上的學習資料；目前 API key 會保留。`, '確認還原');
+      if (!ok) return;
+      const current = await settings();
+      await replaceAllStores(preserveApiKey(backup, current.apiKey));
+      toast('備份已還原，正在重新載入');
+      location.reload();
+    } catch (error) { toast(error.message || '備份還原失敗'); }
+  };
   return el("div", { class: "card" }, [
+    exportButton,
+    file,
     el(
       "button",
       {
         class: "btn btn-block",
-        onclick: async () => {
-          const { db } = await import("../db.js");
-          // settings() hands back the live module cache, so deleting the key off
-          // the dump used to delete it off the running app too — the next setting
-          // you touched wrote the key-less object back to IndexedDB, and exporting
-          // a backup silently destroyed the very key it was protecting.
-          const { apiKey, ...safeSettings } = await settings();
-          const dump = {
-            exportedAt: new Date().toISOString(),
-            settings: safeSettings, // never write the key into a shareable file
-            cards: await db.all("cards"),
-            sessions: await db.all("sessions"),
-            lessons: await db.all("lessons"),
-            dailyCompletions: await kvGet("dailyCompletions", {}),
-          };
-          const blob = new Blob([JSON.stringify(dump, null, 2)], {
-            type: "application/json",
-          });
-          const a = document.createElement("a");
-          a.href = URL.createObjectURL(blob);
-          a.download = `echo-backup-${new Date().toISOString().slice(0, 10)}.json`;
-          a.click();
-          setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-          toast("已匯出(不含 API key)");
-        },
+        style: "margin-top:10px",
+        onclick: () => file.click(),
       },
-      ["匯出學習紀錄"],
+      ["從備份還原"],
     ),
 
     el(
@@ -720,7 +743,7 @@ function dataSection() {
     ),
 
     el("p", { class: "hint", style: "margin-top:12px" }, [
-      `預設每日目標 ${DEFAULTS.dailyGoalMin} 分鐘。學習紀錄存在瀏覽器的 IndexedDB;清除瀏覽器資料會一併刪除,建議偶爾匯出備份。`,
+      `預設每日目標 ${DEFAULTS.dailyGoalMin} 分鐘。備份包含所有 IndexedDB 學習資料與自訂內容，但不含 API key、已下載離線音檔；舊版學習紀錄匯出也可還原。`,
     ]),
   ]);
 }

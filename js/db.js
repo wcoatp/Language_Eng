@@ -2,6 +2,7 @@
 
 const DB_NAME = 'echo';
 const DB_VERSION = 2;
+export const DATA_STORES = ['kv', 'cards', 'sessions', 'lessons', 'recordings', 'chats', 'videos'];
 
 /** @type {Promise<IDBDatabase>|null} */
 let dbp = null;
@@ -82,6 +83,27 @@ export const db = {
   },
 };
 
+/** Replace every learner-data store atomically. Any failed put aborts all clears/writes. */
+export function replaceStoresInDatabase(dbi, stores) {
+  return new Promise((resolve, reject) => {
+    const transaction = dbi.transaction(DATA_STORES, 'readwrite');
+    let cause;
+    try {
+      for (const name of DATA_STORES) {
+        const store = transaction.objectStore(name);
+        store.clear();
+        for (const value of stores[name] || []) store.put(value);
+      }
+    } catch (error) { cause = error; transaction.abort(); }
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = transaction.onabort = () => reject(cause || transaction.error || Error('備份還原失敗'));
+  });
+}
+
+export function replaceAllStores(stores) {
+  return open().then(dbi => replaceStoresInDatabase(dbi, stores));
+}
+
 /* ---- kv helpers ---- */
 
 export async function kvGet(k, fallback = null) {
@@ -93,9 +115,28 @@ export function kvSet(k, v) {
   return db.put('kv', { k, v });
 }
 
+/** Synchronous read/modify/write in one transaction, including across tabs. */
+export function kvUpdate(k, fallback, update) {
+  return open().then(dbi => new Promise((resolve, reject) => {
+    const transaction = dbi.transaction('kv', 'readwrite');
+    const store = transaction.objectStore('kv');
+    const request = store.get(k);
+    let next;
+    let cause;
+    request.onsuccess = () => {
+      try {
+        next = update(request.result ? request.result.v : fallback);
+        store.put({ k, v: next });
+      } catch (error) { cause = error; transaction.abort(); }
+    };
+    transaction.oncomplete = () => resolve(next);
+    transaction.onerror = transaction.onabort = () => reject(cause || transaction.error || Error('資料未儲存'));
+  }));
+}
+
 /** Wipe every store. Used by Settings → reset. */
 export async function wipeAll() {
-  for (const s of ['kv', 'cards', 'sessions', 'lessons', 'recordings', 'chats', 'videos']) {
+  for (const s of DATA_STORES) {
     await db.clear(s);
   }
 }

@@ -2,7 +2,7 @@
 (function exposeEchoVersion(root) {
   "use strict";
 
-  const app = "2026.08.17.1";
+  const app = "2026.09.23.3";
   const version = Object.freeze({
     app,
     // Derive the shell generation from the visible release. It is impossible

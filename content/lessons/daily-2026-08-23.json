@@ -1,5 +1,19 @@
 {
   "id": "daily-2026-08-23",
+  "learning": {
+    "version": 1,
+    "objectiveZh": "先熟悉雨量研究的關鍵詞，再聽懂資料為何被質疑。這仍是 L3 故事，預習不代表降為初級。",
+    "vocabulary": [
+      {"id":"flood","term":"flood","surface":"flood","sentenceIds":["s5","s21"],"zh":"洪水；水災","en":"Water covering land that is normally dry.","example":"a serious flood","exampleZh":"一場嚴重水災"},
+      {"id":"gauge","term":"gauge","surface":"gauge","sentenceIds":["s10","s13"],"zh":"本課指雨量筒","en":"A tool used to measure an amount, such as rain.","example":"a rain gauge","exampleZh":"一個雨量筒"},
+      {"id":"certified","term":"certified","surface":"certified","sentenceIds":["s13","s23"],"zh":"經認證的","en":"Officially checked and accepted as meeting a standard.","example":"a certified tool","exampleZh":"經認證的工具"},
+      {"id":"record","term":"record","surface":"record","sentenceIds":["s30"],"zh":"紀錄（名詞）","en":"Information kept so people can use it later.","example":"a written record","exampleZh":"一份書面紀錄"},
+      {"id":"work-out","term":"work out","surface":"work out","sentenceIds":["s7"],"zh":"推算；弄清楚，不是健身","en":"To find an answer by thinking or calculating.","example":"work out the cost","exampleZh":"算出費用"},
+      {"id":"a-great-deal","term":"a great deal","surface":"a great deal","sentenceIds":["s14","s17"],"zh":"非常；程度很大","en":"A large amount or to a large degree.","example":"help a great deal","exampleZh":"幫上很大的忙"},
+      {"id":"inspect","term":"inspect","surface":"inspected","sentenceIds":["s13"],"zh":"檢查；課文 inspected 表示檢查過","en":"To look carefully to check the condition of something.","example":"inspect a building","exampleZh":"檢查一棟建築物","optional":true},
+      {"id":"measurement","term":"measurement","surface":"measurement","sentenceIds":["s31"],"zh":"測量結果；測量資料","en":"A size or amount found by measuring.","example":"a careful measurement","exampleZh":"一次仔細的測量","optional":true}
+    ]
+  },
   "title": "The Notebook They Needed",
   "titleZh": "他們需要的那本筆記",
   "level": 3,

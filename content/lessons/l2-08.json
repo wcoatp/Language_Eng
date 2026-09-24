@@ -1,0 +1,51 @@
+{
+  "id": "l2-08",
+  "title": "Can We Choose Another Day?",
+  "titleZh": "這天不行，換一天好嗎？",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "daily",
+  "summaryZh": "銜接「討論週末計畫」：婉拒原本的時段、提出另一個日期與時間，最後確認雙方相同的約定。",
+  "learning": {
+    "version": 1,
+    "objectiveZh": "聽懂婉拒與時間變更，提出可行的替代方案，並確認最後的日期、時間與地點。",
+    "prerequisite": {"id":"l2-01","labelZh":"討論週末計畫"},
+    "vocabulary": [
+      {"id":"have-lunch","term":"have lunch","surface":"have lunch","sentenceIds":["s1"],"zh":"吃午餐","en":"To eat the meal in the middle of the day.","example":"have lunch together","exampleZh":"一起吃午餐"},
+      {"id":"have-to-work","term":"have to work","surface":"have to work","sentenceIds":["s2"],"zh":"必須工作","en":"To need to work because it is necessary.","example":"have to work late","exampleZh":"必須工作到很晚"},
+      {"id":"how-about-sunday","term":"How about Sunday","surface":"How about Sunday","sentenceIds":["s3"],"zh":"星期天怎麼樣？","en":"A suggestion to choose Sunday instead.","example":"How about Monday?","exampleZh":"星期一怎麼樣？"},
+      {"id":"sunday-works","term":"Sunday works","surface":"Sunday works","sentenceIds":["s4"],"zh":"星期天可以","en":"Sunday is a suitable choice.","example":"Tuesday works for me.","exampleZh":"星期二我可以。"},
+      {"id":"make-it","term":"make it","surface":"make it","sentenceIds":["s6"],"zh":"把時間改成；約在","en":"To arrange an agreed time in this context.","example":"Could we make it one thirty?","exampleZh":"可以改成一點半嗎？"},
+      {"id":"meet-there-instead","term":"meet there instead","surface":"meet there instead","sentenceIds":["s8"],"zh":"改在那裡碰面","en":"To meet at that place rather than the first place.","example":"meet outside instead","exampleZh":"改在外面碰面"}
+    ],
+    "task": {
+      "id": "reschedule-invitation",
+      "titleZh": "換個條件：星期日下午喝咖啡",
+      "roleZh": "你是受邀的朋友",
+      "setupZh": "朋友邀你星期六下午三點去同一間咖啡店，但你星期六要工作。你星期日下午三點半可以；請婉拒、提出調整並確認約定。",
+      "steps": [
+        {"partner":"Would you like to have coffee on Saturday at three?","promptZh":"婉拒星期六，說明你必須工作。","keywords":"love to / have to work","frame":"I'd love to, but ...","sample":"I'd love to, but I have to work on Saturday."},
+        {"partner":"How about Sunday?","promptZh":"表示星期天可以，並提出下午三點半。","keywords":"Sunday works / three thirty","frame":"Sunday works. Could we ...?","sample":"Sunday works. Could we make it three thirty?"},
+        {"partner":"Sure. Let's meet at the cafe.","promptZh":"確認星期日三點半在咖啡店碰面。","keywords":"Sunday / three thirty / cafe","frame":"So, ... at ...","sample":"Great. Sunday at three thirty, at the cafe."}
+      ],
+      "success": ["我有婉拒原時段並說明原因。", "我有提出星期日下午三點半。", "我有確認日期、時間與地點。"]
+    }
+  },
+  "sentences": [
+    {"id":"s1","speaker":"A","text":"Would you like to have lunch on Saturday?","zh":"你星期六想一起吃午餐嗎？"},
+    {"id":"s2","speaker":"B","text":"I'd love to, but I have to work.","zh":"我很想去，但我得工作。","note":"I'd love to, but ... 先表達願意，再說明這次不行。"},
+    {"id":"s3","speaker":"A","text":"How about Sunday?","zh":"那星期天呢？"},
+    {"id":"s4","speaker":"B","text":"Sunday works. What time?","zh":"星期天可以。幾點？"},
+    {"id":"s5","speaker":"A","text":"Let's meet at twelve outside the station.","zh":"我們十二點在車站外碰面吧。"},
+    {"id":"s6","speaker":"B","text":"Could we make it twelve thirty?","zh":"可以改成十二點半嗎？"},
+    {"id":"s7","speaker":"A","text":"Sure. Do you know the cafe across the street?","zh":"可以。你知道街對面那間咖啡店嗎？"},
+    {"id":"s8","speaker":"B","text":"Yes. Could we meet there instead?","zh":"知道。我們可以改在那裡碰面嗎？"},
+    {"id":"s9","speaker":"A","text":"Good idea. Sunday at twelve thirty, at the cafe.","zh":"好主意。星期天十二點半，在咖啡店。"},
+    {"id":"s10","speaker":"B","text":"Perfect. See you there.","zh":"太好了，到時見。"}
+  ],
+  "questions": [
+    {"q":"為什麼星期六不行？","options":["咖啡店休息","必須工作","要搭飛機"],"answer":1,"explanationZh":"朋友說 I have to work，星期六必須工作。","sentenceIds":["s2"]},
+    {"q":"最後約幾點？","options":["十二點半","十二點","十一點半"],"answer":0,"explanationZh":"原本是十二點，後來改成 twelve thirty，最後再次確認十二點半。","sentenceIds":["s5","s6","s9"]},
+    {"q":"最後在哪裡碰面？","options":["車站裡","辦公室","咖啡店"],"answer":2,"explanationZh":"雙方把地點改到咖啡店，最後在第 9 回合確認。","sentenceIds":["s7","s8","s9"]}
+  ]
+}

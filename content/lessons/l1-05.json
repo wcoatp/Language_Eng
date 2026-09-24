@@ -6,6 +6,19 @@
   "type": "dialogue",
   "topic": "daily",
   "summaryZh": "上班族到餐廳點外帶午餐，選擇配菜、飲料和付款方式。",
+  "learning": {
+    "version": 1,
+    "objectiveZh": "說清楚主餐、飲料與外帶需求；想加挑戰時，再練餐點售完如何改點。",
+    "next": {"id":"l1-07","labelZh":"餐點售完時改點"},
+    "vocabulary": [
+      {"id":"to-go","term":"to go","surface":"to go","sentenceIds":["s1"],"zh":"外帶","en":"To take food away and eat it elsewhere.","example":"a coffee to go","exampleZh":"一杯外帶咖啡"},
+      {"id":"chicken","term":"chicken","surface":"chicken","sentenceIds":["s3"],"zh":"雞肉","en":"Meat from a chicken, used as food.","example":"some chicken","exampleZh":"一些雞肉"},
+      {"id":"salad","term":"salad","surface":"salad","sentenceIds":["s4","s5"],"zh":"沙拉","en":"A dish often made with vegetables.","example":"a fresh salad","exampleZh":"一份新鮮沙拉"},
+      {"id":"dressing","term":"dressing","surface":"dressing","sentenceIds":["s5"],"zh":"沙拉醬","en":"A sauce you put on a salad.","example":"some dressing","exampleZh":"一些沙拉醬"},
+      {"id":"on-the-side","term":"on the side","surface":"on the side","sentenceIds":["s5"],"zh":"另外分開放","en":"Served separately from the main food.","example":"sauce on the side","exampleZh":"另外盛裝的醬料"},
+      {"id":"pay","term":"pay","surface":"pay","sentenceIds":["s13"],"zh":"付款","en":"To give money for something.","example":"pay for lunch","exampleZh":"付午餐錢"}
+    ]
+  },
   "sentences": [
     {
       "id": "s1",

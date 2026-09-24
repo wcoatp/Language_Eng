@@ -6,6 +6,7 @@
   "type": "dialogue",
   "topic": "travel",
   "summaryZh": "旅客到飯店辦理入住，確認房間位置、早餐時間和無線網路密碼。",
+  "learningPath": {"next":{"id":"l2-07","labelZh":"房間還沒準備好"}},
   "sentences": [
     {
       "id": "s1",

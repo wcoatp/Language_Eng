@@ -2,6 +2,7 @@
 
 import { db } from "./db.js";
 import { scoreDifficulty, wpmFor, rateFor } from "./difficulty.js";
+import { withAutomaticLearning } from "./learning.js";
 
 // Re-exported so views can keep importing these from content.js.
 export { scoreDifficulty, wpmFor, rateFor };
@@ -64,15 +65,16 @@ export async function getLesson(id) {
 
   const mine = await db.get("lessons", id);
   if (mine) {
-    lessonCache.set(id, mine);
-    return mine;
+    const lesson = withAutomaticLearning(mine);
+    lessonCache.set(id, lesson);
+    return lesson;
   }
 
   const res = await fetch(`./content/lessons/${encodeURIComponent(id)}.json`, {
     cache: "no-cache",
   });
   if (!res.ok) throw new Error(`找不到課程 ${id}`);
-  const lesson = await res.json();
+  const lesson = withAutomaticLearning(await res.json());
   lessonCache.set(id, lesson);
   return lesson;
 }

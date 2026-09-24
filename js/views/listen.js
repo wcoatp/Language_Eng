@@ -24,6 +24,9 @@ import {
   recorderSupported,
 } from "../recorder.js";
 import { listen as listenASR, asrSupported, scoreAttempt } from "../asr.js";
+import { lookupText } from "../word-lookup.js";
+import { shuffleOptions } from "../learning.js";
+import { saveLearning } from "../learning-store.js";
 
 let ctx = null;
 
@@ -64,7 +67,7 @@ export async function render(root, lessonId) {
 
   ctx.onKey = (e) => {
     // A target without matches() throws here and takes every shortcut with it.
-    if (e.target?.matches?.("input, textarea")) return;
+    if (e.target?.closest?.('input, textarea, select, button, a, summary, [role="button"]')) return;
     if (e.code === "Space") {
       e.preventDefault();
       replay();
@@ -286,7 +289,8 @@ async function next() {
   if (ctx.i >= sentences().length - 1) {
     if (ctx.lesson.questions?.length) {
       ctx.stage = "quiz";
-      ctx.quiz = { at: 0, picked: null, right: 0 };
+      ctx.quiz = { at: 0, picked: null, right: 0, answers: [],
+        options: ctx.lesson.questions.map(q => shuffleOptions(q)) };
       paint();
     } else finish();
     return;
@@ -313,10 +317,17 @@ function skip() {
 }
 
 async function finish() {
-  const secs = await ctx.watch?.stop();
-  ctx.watch = null;
-  ctx.stage = "done";
-  ctx.doneSeconds = secs || 0;
+  const state = ctx;
+  const secs = await state.watch?.stop();
+  if (ctx !== state) return;
+  state.watch = null;
+  state.stage = "done";
+  state.doneSeconds = secs || 0;
+  if (state.lesson.learning && state.quiz) {
+    try { await saveLearning(state.lesson, 'quiz', '', { answers: state.quiz.answers }); }
+    catch { state.learningSaveError = '本次理解測驗未儲存；目前畫面結果仍可查看。'; }
+    if (ctx !== state) return;
+  }
   paint();
 }
 
@@ -399,8 +410,11 @@ async function playMine() {
 }
 
 async function playBoth() {
+  const state = ctx;
+  const run = state.compareRun = (state.compareRun || 0) + 1;
   await playOriginal();
   await sleep(350);
+  if (ctx !== state || state.compareRun !== run) return;
   await playMine();
 }
 
@@ -463,7 +477,14 @@ function stage() {
   return el("div", { class: "stage" }, [
     el("div", { class: "stage-hint", text: HINTS[ctx.stage] || "" }),
     s.speaker ? el("div", { class: "speaker-tag", text: s.speaker }) : null,
-    el("p", { class: `sentence ${hidden ? "is-hidden" : ""}`, text: s.text }),
+    !hidden && !ctx.busy
+      ? lookupText(s.text, { lessonId: ctx.lesson.id, sentenceId: s.id,
+        lessonTitle: ctx.lesson.title, zh: s.zh }, { tag: 'p', className: 'sentence', onOpen: () => {
+          ctx.compareRun = (ctx.compareRun || 0) + 1;
+          cancelSpeech(); stopPlayback(); setWave(false);
+        } })
+      : el("p", { class: `sentence ${hidden ? "is-hidden" : ""}`,
+        'aria-hidden': hidden ? 'true' : null, text: s.text }),
     showZh ? el("p", { class: "sentence-zh", text: s.zh || "" }) : null,
     !hidden && s.note
       ? el("div", { class: "sentence-note", text: s.note })
@@ -633,14 +654,16 @@ function quizStage() {
   const q = qs[ctx.quiz.at];
   const picked = ctx.quiz.picked;
 
-  const opts = q.options.map((text, idx) =>
+  const opts = ctx.quiz.options[ctx.quiz.at].map(({ text, originalIndex: idx }) =>
     el(
       "button",
       {
         class: `q-opt ${picked == null ? "" : idx === q.answer ? "is-right" : idx === picked ? "is-wrong" : ""}`,
         disabled: picked != null,
         onclick: () => {
+          if (ctx.quiz.picked != null) return;
           ctx.quiz.picked = idx;
+          ctx.quiz.answers[ctx.quiz.at] = idx;
           if (idx === q.answer) ctx.quiz.right++;
           paint();
         },
@@ -658,6 +681,14 @@ function quizStage() {
       }),
       el("h3", { style: "font-size:17px;margin:6px 0 14px", text: q.q }),
       ...opts,
+      picked != null ? el('div', { class: 'learning-feedback', role: 'status' }, [
+        el('b', { text: picked === q.answer ? '答對了' : `正確答案：${q.options[q.answer]}` }),
+        q.explanationZh ? el('p', { text: q.explanationZh }) : null,
+        ...(q.sentenceIds || []).map(id => {
+          const sentence = ctx.lesson.sentences.find(s => s.id === id);
+          return sentence ? el('p', { class: 'hint', text: `${sentence.text} ${sentence.zh || ''}` }) : null;
+        }),
+      ]) : null,
       picked != null
         ? el(
             "button",
@@ -686,15 +717,18 @@ function doneStage() {
   return el("div", {}, [
     el("div", { class: "hero", style: "text-align:center" }, [
       el("div", { style: "font-size:40px" }, ["🎧"]),
-      el("h1", { style: "margin-top:6px", text: "這課完成了" }),
+      el("h1", { style: "margin-top:6px", text: "本輪練習結束" }),
       el("p", { style: "margin-bottom:0" }, [
         `練習 ${mins} 分鐘${q ? ` · 理解測驗答對 ${q.right}/${ctx.lesson.questions.length}` : ""}`,
       ]),
     ]),
     el("p", { class: "muted center", style: "margin-bottom:18px" }, [
-      "沒掌握的句子已經排進複習,明天會再出現。",
+      "只有做過句子自評的項目會更新複習安排；跳過或答完理解題，不代表整課已掌握。",
     ]),
     el("div", { class: "actions" }, [
+      ctx.learningSaveError ? el('p', { role: 'alert', text: ctx.learningSaveError }) : null,
+      ctx.lesson.learning?.task ? el('a', { class: 'btn btn-primary btn-block', href: `#/task/${encodeURIComponent(ctx.lesson.id)}` }, ['下一步 · 換條件任務']) : null,
+      ctx.lesson.learning ? el('a', { class: 'btn btn-block', href: `#/prepare/${encodeURIComponent(ctx.lesson.id)}` }, ['回想本課還不熟的字詞']) : null,
       el(
         "a",
         { class: "btn btn-primary btn-lg btn-block", href: "#/library" },

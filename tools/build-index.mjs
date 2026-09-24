@@ -12,6 +12,7 @@ import {
   englishWordCount,
 } from '../js/daily.js';
 import { REFERENCE_TITLES } from './daily-reference-titles.mjs';
+import { learningProblems } from '../js/learning.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dir = join(root, 'content', 'lessons');
@@ -74,6 +75,7 @@ for (const file of files) {
   });
 
   for (const problem of dailyLessonProblems(lesson)) problems.push(`${id}: ${problem}`);
+  for (const problem of learningProblems(lesson)) problems.push(`${id}: ${problem}`);
   for (const problem of dailyTitleProblems(lesson, REFERENCE_TITLES)) problems.push(`${id}: ${problem}`);
 
   const item = {

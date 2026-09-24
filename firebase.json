@@ -13,6 +13,8 @@
       ".venv-tts/**",
       "**/node_modules/**",
       "README.md",
+      "AGENTS.md",
+      "**/*.pdf",
       "package.json",
       "tools/**",
       "test/**",

@@ -6,6 +6,7 @@
   "type": "dialogue",
   "topic": "daily",
   "summaryZh": "兩個朋友聊上週末的活動，並約好這個週末一起去爬山、吃晚餐。",
+  "learningPath": {"next":{"id":"l2-08","labelZh":"婉拒並改約時間"}},
   "sentences": [
     {
       "id": "s1",

@@ -9,13 +9,19 @@ import { kvGet, kvSet } from '../db.js';
 import { downloadLesson, removeLesson, isLessonOffline, cacheSupported } from '../storage.js';
 import { voiceIdForLesson, voiceForLesson } from '../voices.js';
 import { englishWordCount, formatDailyDate, isDailyComplete, STORY_BEATS } from '../daily.js';
+import { lookupText } from '../word-lookup.js';
+import { getLearningProgress } from '../learning-store.js';
+import { wordStatus } from '../learning.js';
 
-export function destroy() { cancelSpeech(); }
+let epoch = 0;
+export function destroy() { epoch++; cancelSpeech(); }
 
 export async function render(root, id) {
+  const token = ++epoch;
   const [lesson, prog, cfg, index, dailyCompletions] = await Promise.all([
     getLesson(id), lessonProgress(id), settings(), loadIndex(), kvGet('dailyCompletions', {}),
   ]);
+  if (token !== epoch) return;
   await kvSet('lastLesson', id);
   const dailySeries = lesson.daily
     ? index.filter((item) => item.daily?.seriesId === lesson.daily.seriesId)
@@ -24,6 +30,8 @@ export async function render(root, id) {
   const dailyDone = isDailyComplete(lesson, prog, dailyCompletions);
   const deviceVoiceOnly = lesson.preGeneratedAudio === false ||
     (lesson.custom && !lesson.realAudio && !lesson.sentences.some((sentence) => sentence.audio));
+  const learning = lesson.learning ? await getLearningProgress(lesson).catch(() => null) : null;
+  if (token !== epoch) return;
 
   const pct = lesson.sentences.length
     ? Math.round((prog.learned / lesson.sentences.length) * 100) : 0;
@@ -48,6 +56,7 @@ export async function render(root, id) {
     el('p', { class: 'sub', text: lesson.titleZh || '' }),
     lesson.summaryZh ? el('p', { text: lesson.summaryZh }) : null,
     lesson.daily ? dailySeriesStrip(lesson, dailySeries) : null,
+    lesson.learning ? learningPanel(lesson, learning) : null,
 
     prog.seen ? el('div', { class: 'card' }, [
       el('div', { style: 'display:flex;justify-content:space-between' }, [
@@ -95,10 +104,10 @@ export async function render(root, id) {
         : lesson.source,
     ]) : null,
 
-    el('h2', { text: lesson.daily ? `故事全文 · ${englishWordCount(lesson.sentences)} 字` : '句子預覽' }),
-    el('p', { class: 'muted', style: 'margin-top:-4px;margin-bottom:12px' },
-      ['點任一句可以先聽聽看。正式練習時會先蓋住文字。']),
-    ...storyRows(lesson, cfg),
+    ...(lesson.learning ? [el('details', { class: 'lesson-transcript' }, [
+      el('summary', { text: '查看雙語全文 · 想先測聽力可先不打開' }),
+      ...transcript(lesson, cfg),
+    ])] : transcript(lesson, cfg)),
 
     lesson.questions?.length
       ? el('p', { class: 'muted center', style: 'margin-top:18px' },
@@ -118,6 +127,33 @@ export async function render(root, id) {
       }, ['刪除這篇文章']),
     ]) : null,
   );
+}
+
+function transcript(lesson, cfg) {
+  return [el('h2', { text: lesson.daily ? `故事全文 · ${englishWordCount(lesson.sentences)} 字` : '句子預覽' }),
+    el('p', { class: 'muted', text: '點單字查英中／英英；拖選可查片語。按句旁 ▶ 播放，正式精聽時會先蓋住文字。' }),
+    ...storyRows(lesson, cfg)];
+}
+
+function learningPanel(lesson, progress) {
+  const core = lesson.learning.vocabulary.filter(w => !w.optional);
+  const done = core.filter(w => progress?.vocabulary[w.id]).length;
+  const heard = core.filter(w => wordStatus(progress?.vocabulary[w.id]) === 'heard').length;
+  const task = lesson.learning.task;
+  const taskRating = task && progress?.tasks[task.id]?.rating;
+  const labels = { independent: '獨立完成', prompted: '看提示完成', practice: '還需練習' };
+  return el('section', { class: 'card learning-panel', 'aria-label': '本課學習路線' }, [
+    el('h2', { text: '這課練什麼' }),
+    el('p', { text: lesson.learning.objectiveZh }),
+    lesson.learning.automatic ? el('p', { class: 'hint', text: '本課尚無人工字詞表；目前顯示本機自動候選，未上傳課文。可在揭示後使用英中／英英查詞確認。' }) : null,
+    el('p', { class: 'hint', text: `核心 ${core.length} 個字詞 · 已自評 ${done}/${core.length} · 自評先聽就懂 ${heard}。可跳過，不影響原本練習。` }),
+    el('a', { class: 'btn btn-primary btn-block', href: `#/prepare/${encodeURIComponent(lesson.id)}` }, [done ? '繼續／複習課前字詞' : '先熟悉本課字詞 · 約 2–3 分鐘']),
+    progress?.quiz ? el('p', { class: 'hint', text: `最近理解測驗：${progress.quiz.right}/${progress.quiz.total}（與字詞自評分開）` }) : null,
+    task ? el('a', { class: 'btn btn-block', href: `#/task/${encodeURIComponent(lesson.id)}` }, ['換條件任務 · 可直接挑戰']) : null,
+    taskRating ? el('p', { class: 'hint', text: `最近任務自評：${labels[taskRating] || '尚未記錄'}，不是自動評分。` }) : null,
+    lesson.learning.next ? el('a', { class: 'btn btn-block', href: `#/lesson/${encodeURIComponent(lesson.learning.next.id)}` }, [`下一步 · ${lesson.learning.next.labelZh}`]) : null,
+    lesson.learning.prerequisite ? el('a', { class: 'btn btn-ghost btn-block', href: `#/lesson/${encodeURIComponent(lesson.learning.prerequisite.id)}` }, [`需要先備練習 · ${lesson.learning.prerequisite.labelZh}`]) : null,
+  ]);
 }
 
 function dailySeriesStrip(lesson, series) {
@@ -193,13 +229,9 @@ function offlineButton(lesson, cfg) {
 }
 
 function row(s, lesson, cfg) {
-  return el('div', {
-    class: 'card',
-    style: 'padding:13px 15px;cursor:pointer',
-    onclick: async e => {
+  const play = async () => {
       unlock();
       cancelSpeech();
-      e.currentTarget.style.borderColor = 'var(--accent)';
       try {
         await say(s.text, {
           lessonId: lesson.id, sentenceId: s.id,
@@ -208,16 +240,18 @@ function row(s, lesson, cfg) {
           realAudio: !!lesson.realAudio, blob: s.audio || null,
         });
       } catch { toast('播放失敗'); }
-      e.currentTarget.style.borderColor = '';
-    },
-  }, [
+  };
+  return el('div', { class: 'card', style: 'padding:13px 15px' }, [
     el('div', { style: 'display:flex;gap:10px;align-items:baseline' }, [
       s.speaker ? el('span', { class: 'badge', style: 'flex:none', text: s.speaker }) : null,
-      el('div', {}, [
-        el('div', { style: 'font-size:15.5px', text: s.text }),
+      el('div', { style: 'flex:1;min-width:0' }, [
+        lookupText(s.text, { lessonId: lesson.id, sentenceId: s.id, lessonTitle: lesson.title,
+          zh: s.zh }, { tag: 'div' }),
         cfg.showZh && s.zh
           ? el('div', { class: 'muted', style: 'margin-top:3px', text: s.zh }) : null,
       ]),
+      el('button', { type: 'button', class: 'sentence-play chip', 'aria-label': `播放句子 ${s.id}`,
+        onclick: play }, ['▶']),
     ]),
   ]);
 }
