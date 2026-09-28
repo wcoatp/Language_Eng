@@ -1,0 +1,71 @@
+{
+  "id": "l1-09",
+  "title": "Who Does What Before Dinner?",
+  "titleZh": "晚餐前把家事分工確認清楚",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": false,
+  "source": "原創基礎課程：小綠書 U02 溝通功能改寫",
+  "summaryZh": "L1 延伸：發現家事分工有誤會時，說清楚誰做什麼、什麼時候做。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U02" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "聽出分工被更正的地方，最後正確重述每個人的工作與時間。",
+    "next": { "id": "l1-10", "labelZh": "聽清楚餐點總額" },
+    "vocabulary": [
+      { "id": "set-the-table", "term": "set the table", "surface": "set the table", "sentenceIds": ["s1"], "zh": "擺餐具", "en": "To put plates and other things on a table before eating.", "example": "set the table for lunch", "exampleZh": "為午餐擺餐具" },
+      { "id": "take-out-trash", "term": "take out the trash", "surface": "take out the trash", "sentenceIds": ["s2", "s4"], "zh": "倒垃圾", "en": "To move the trash out of the home.", "example": "take out the trash tomorrow", "exampleZh": "明天倒垃圾" },
+      { "id": "dishes", "term": "dishes", "surface": "dishes", "sentenceIds": ["s5", "s6", "s8", "s10"], "zh": "碗盤；本課指待洗碗盤", "en": "Plates, bowls and cups used for food.", "example": "clean dishes", "exampleZh": "乾淨的碗盤" },
+      { "id": "mix-up", "term": "mix up", "surface": "mixed that up", "sentenceIds": ["s7"], "zh": "把那件事搞混了", "en": "To confuse one thing with another.", "example": "mix up two names", "exampleZh": "把兩個名字搞混" },
+      { "id": "wipe", "term": "wipe", "surface": "wipe", "sentenceIds": ["s9"], "zh": "擦拭", "en": "To clean a surface with a cloth.", "example": "wipe a desk", "exampleZh": "擦桌子" }
+    ],
+    "task": {
+      "id": "correct-chore-time",
+      "titleZh": "換個條件：七點不行，改成八點",
+      "roleZh": "你是準備晚餐的室友",
+      "partnerLabelZh": "室友說",
+      "setupZh": "你答應飯後洗碗，也要倒垃圾；但七點不能倒垃圾，只能八點。更正時間並互相重述分工。",
+      "steps": [
+        { "partner": "You can do the dishes and take out the trash tonight.", "promptZh": "確認自己負責洗碗和倒垃圾。", "keywords": "dishes / trash", "frame": "So I do ... and ...?", "sample": "So I do the dishes and the trash?" },
+        { "partner": "Right. Can you take out the trash at seven?", "promptZh": "說七點不行，改成八點。", "keywords": "not seven / at eight", "frame": "I can't ... at seven. I can ...", "sample": "I can't do it at seven. I can take out the trash at eight." },
+        { "partner": "So you do the dishes after dinner and the trash at eight. Right?", "promptZh": "確認最後的兩件工作與時間。", "keywords": "yes / after dinner / eight", "frame": "Yes. ... after dinner, and ... at eight.", "sample": "Yes. Dishes after dinner, and trash at eight." }
+      ],
+      "success": ["我有說出自己負責洗碗和倒垃圾。", "我有主動把七點更正為八點。", "最後雙方重述的工作與時間一致。"]
+    },
+    "spokenPractice": {
+      "titleZh": "更自然地修復分工誤會",
+      "noteZh": "先學會清楚承認誤會與重述分工；較隨意的說法只作選修。",
+      "alternatives": [
+        { "clear": "Wait, I thought I was washing the dishes.", "natural": "Hang on, I thought I was doing the dishes.", "mode": "recognition", "guidanceZh": "Hang on 表示先停一下釐清，先聽懂語氣。" },
+        { "clear": "You're right. I mixed that up.", "natural": "You're right. My mistake.", "mode": "active", "guidanceZh": "中性自然的認錯，可主動練用。" },
+        { "clear": "I mixed that up.", "natural": "My bad.", "mode": "recognition", "guidanceZh": "偏美式熟人間的隨意說法，不用在正式場合。" }
+      ],
+      "drill": {
+        "setupZh": "先承認誤會，再正確重述最後分工。",
+        "turns": [
+          { "speaker": "室友", "text": "Hang on, I thought I was doing the dishes." },
+          { "speaker": "你", "text": "You're right. My mistake. You do the dishes; I'll wipe the counter." }
+        ],
+        "successZh": "回應要先承認誤會，再說清楚最後誰洗碗、誰擦檯面；不要求使用 My bad。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Dinner is almost ready. Can you set the table?", "zh": "晚餐快好了。你可以擺餐具嗎？" },
+    { "id": "s2", "speaker": "B", "text": "Sure. Do we need to take out the trash too?", "zh": "好。垃圾也要倒嗎？" },
+    { "id": "s3", "speaker": "A", "text": "Yes, but dinner comes first.", "zh": "要，但先吃晚餐。" },
+    { "id": "s4", "speaker": "B", "text": "I can take out the trash at seven.", "zh": "我七點可以倒垃圾。" },
+    { "id": "s5", "speaker": "A", "text": "Okay. I'll wash the dishes after dinner.", "zh": "好。飯後我來洗碗。" },
+    { "id": "s6", "speaker": "B", "text": "Wait, I thought I was washing the dishes.", "zh": "等一下，我以為是我要洗碗。" },
+    { "id": "s7", "speaker": "A", "text": "You're right. I mixed that up.", "zh": "你說得對。我搞混了。" },
+    { "id": "s8", "speaker": "B", "text": "So I do the dishes and the trash?", "zh": "所以我洗碗，也倒垃圾？" },
+    { "id": "s9", "speaker": "A", "text": "Yes. I'll cook and wipe the counter.", "zh": "對。我煮飯，也擦檯面。" },
+    { "id": "s10", "speaker": "B", "text": "Got it. Trash at seven, dishes after dinner.", "zh": "了解。七點倒垃圾，飯後洗碗。" }
+  ],
+  "questions": [
+    { "q": "最後誰洗碗？", "options": ["A", "兩人一起", "B"], "answer": 2, "explanationZh": "第 5 回合先出現舊分工，之後更正為 B 洗碗。", "sentenceIds": ["s5", "s6", "s7", "s10"] },
+    { "q": "垃圾何時倒？", "options": ["七點", "六點", "飯後才決定"], "answer": 0, "explanationZh": "B 在第 4 與第 10 回合都確認七點倒垃圾。", "sentenceIds": ["s4", "s10"] },
+    { "q": "A 說自己搞混了什麼？", "options": ["晚餐時間", "家事分工", "要不要買菜"], "answer": 1, "explanationZh": "A 把誰洗碗的分工搞混了，之後重新確認。", "sentenceIds": ["s5", "s6", "s7", "s8", "s9"] }
+  ]
+}

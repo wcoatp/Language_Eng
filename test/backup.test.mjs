@@ -48,7 +48,7 @@ test('RC-05: malformed, unknown, unsafe and oversized backups are rejected', () 
 test('RC-03: every built-in lesson gets 4-6 stable local preparation candidates', async () => {
   const dir = new URL('../content/lessons/', import.meta.url);
   const files = (await readdir(dir)).filter(name => name.endsWith('.json'));
-  assert.equal(files.length, 111);
+  assert.equal(files.length, 115);
   for (const file of files) {
     const raw = JSON.parse(await readFile(new URL(file, dir), 'utf8'));
     const first = withAutomaticLearning(raw);

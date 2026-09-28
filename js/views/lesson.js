@@ -11,7 +11,7 @@ import { voiceIdForLesson, voiceForLesson } from '../voices.js';
 import { englishWordCount, formatDailyDate, isDailyComplete, STORY_BEATS } from '../daily.js';
 import { lookupText } from '../word-lookup.js';
 import { getLearningProgress } from '../learning-store.js';
-import { wordStatus } from '../learning.js';
+import { buildLessonPlan, wordStatus } from '../learning.js';
 
 let epoch = 0;
 export function destroy() { epoch++; cancelSpeech(); }
@@ -31,6 +31,7 @@ export async function render(root, id) {
   const deviceVoiceOnly = lesson.preGeneratedAudio === false ||
     (lesson.custom && !lesson.realAudio && !lesson.sentences.some((sentence) => sentence.audio));
   const learning = lesson.learning ? await getLearningProgress(lesson).catch(() => null) : null;
+  const plan = buildLessonPlan(lesson);
   if (token !== epoch) return;
 
   const pct = lesson.sentences.length
@@ -56,7 +57,8 @@ export async function render(root, id) {
     el('p', { class: 'sub', text: lesson.titleZh || '' }),
     lesson.summaryZh ? el('p', { text: lesson.summaryZh }) : null,
     lesson.daily ? dailySeriesStrip(lesson, dailySeries) : null,
-    lesson.learning ? learningPanel(lesson, learning) : null,
+    lesson.learning ? coursePlanPanel(lesson, learning, plan) : null,
+    lesson.learning?.spokenPractice ? spokenPracticePanel(lesson.learning.spokenPractice, cfg) : null,
 
     prog.seen ? el('div', { class: 'card' }, [
       el('div', { style: 'display:flex;justify-content:space-between' }, [
@@ -65,32 +67,6 @@ export async function render(root, id) {
       ]),
       el('div', { class: 'bar' }, [el('i', { style: `width:${pct}%` })]),
     ]) : null,
-
-    ...(lesson.daily
-      ? [
-          el('a', {
-            class: 'btn btn-primary btn-lg btn-block',
-            style: 'margin:6px 0 10px',
-            href: `#/play/${encodeURIComponent(lesson.id)}`,
-          }, ['▶ 閱讀並連續播放']),
-          el('a', {
-            class: 'btn btn-block',
-            style: 'margin-bottom:10px',
-            href: `#/listen/${encodeURIComponent(lesson.id)}`,
-          }, [prog.seen ? '繼續逐句精聽' : '逐句精聽練習']),
-        ]
-      : [
-          el('a', {
-            class: 'btn btn-primary btn-lg btn-block',
-            style: 'margin:6px 0 10px',
-            href: `#/listen/${encodeURIComponent(lesson.id)}`,
-          }, [prog.seen ? '繼續練習' : '開始練習']),
-          el('a', {
-            class: 'btn btn-block',
-            style: 'margin-bottom:10px',
-            href: `#/play/${encodeURIComponent(lesson.id)}`,
-          }, ['▶ 連續播放 · 完整課文或自選句子']),
-        ]),
 
     deviceVoiceOnly
       ? el('p', { class: 'hint', text: '本課使用裝置內建英語語音,不需下載音檔。' })
@@ -106,8 +82,8 @@ export async function render(root, id) {
 
     ...(lesson.learning ? [el('details', { class: 'lesson-transcript' }, [
       el('summary', { text: '查看雙語全文 · 想先測聽力可先不打開' }),
-      ...transcript(lesson, cfg),
-    ])] : transcript(lesson, cfg)),
+      ...transcript(lesson, cfg, plan),
+    ])] : transcript(lesson, cfg, plan)),
 
     lesson.questions?.length
       ? el('p', { class: 'muted center', style: 'margin-top:18px' },
@@ -129,30 +105,116 @@ export async function render(root, id) {
   );
 }
 
-function transcript(lesson, cfg) {
+function transcript(lesson, cfg, plan) {
   return [el('h2', { text: lesson.daily ? `故事全文 · ${englishWordCount(lesson.sentences)} 字` : '句子預覽' }),
-    el('p', { class: 'muted', text: '點單字查英中／英英；拖選可查片語。按句旁 ▶ 播放，正式精聽時會先蓋住文字。' }),
-    ...storyRows(lesson, cfg)];
+    el('p', { class: 'muted', text: '點單字查英中／英英；拖選可查片語。標示「核心」的句子是本堂精聽重點，完整內容仍全部保留。' }),
+    ...storyRows(lesson, cfg, new Set(plan.coreSentenceIds))];
 }
 
-function learningPanel(lesson, progress) {
+function coursePlanPanel(lesson, progress, plan) {
   const core = lesson.learning.vocabulary.filter(w => !w.optional);
   const done = core.filter(w => progress?.vocabulary[w.id]).length;
   const heard = core.filter(w => wordStatus(progress?.vocabulary[w.id]) === 'heard').length;
   const task = lesson.learning.task;
   const taskRating = task && progress?.tasks[task.id]?.rating;
   const labels = { independent: '獨立完成', prompted: '看提示完成', practice: '還需練習' };
-  return el('section', { class: 'card learning-panel', 'aria-label': '本課學習路線' }, [
-    el('h2', { text: '這課練什麼' }),
+  const lessonDetail = plan.isExcerpt
+    ? `全文 ${plan.wordCount} 字、${plan.totalSentenceCount} 句；本堂聚焦 ${plan.coreSentenceCount} 句。`
+    : `全文 ${plan.wordCount} 字、${plan.totalSentenceCount} 句；篇幅適中，全部納入核心課。`;
+  return el('section', { class: 'card learning-panel course-plan', 'aria-label': '30 分鐘核心課路線' }, [
+    el('div', { class: 'course-plan-head' }, [
+      el('div', {}, [
+        el('span', { class: 'badge badge-done', text: `約 ${plan.targetMinutes} 分鐘` }),
+        el('h2', { text: '本課核心路線' }),
+      ]),
+      el('span', { class: 'course-plan-count', text: `${plan.coreSentenceCount}/${plan.totalSentenceCount} 句` }),
+    ]),
     el('p', { text: lesson.learning.objectiveZh }),
+    el('p', { class: 'hint', text: lessonDetail }),
+    el('ol', { class: 'course-phases', 'aria-label': '30 分鐘六階段' }, plan.phases.map((phase, index) =>
+      el('li', {}, [
+        el('span', { class: 'course-phase-number', text: String(index + 1) }),
+        el('span', { text: phase.labelZh }),
+        el('b', { text: `${phase.minutes} 分` }),
+      ]))),
     lesson.learning.automatic ? el('p', { class: 'hint', text: '本課尚無人工字詞表；目前顯示本機自動候選，未上傳課文。可在揭示後使用英中／英英查詞確認。' }) : null,
-    el('p', { class: 'hint', text: `核心 ${core.length} 個字詞 · 已自評 ${done}/${core.length} · 自評先聽就懂 ${heard}。可跳過，不影響原本練習。` }),
-    el('a', { class: 'btn btn-primary btn-block', href: `#/prepare/${encodeURIComponent(lesson.id)}` }, [done ? '繼續／複習課前字詞' : '先熟悉本課字詞 · 約 2–3 分鐘']),
+    el('p', { class: 'hint', text: `字詞已自評 ${done}/${core.length} · 先聽就懂 ${heard}；可以跳過，不會誤算句子熟練度。` }),
+    el('div', { class: 'course-route' }, [
+      el('a', { class: 'btn', href: `#/prepare/${encodeURIComponent(lesson.id)}` }, [done ? '1 · 複習課前字詞' : '1 · 先熟悉課前字詞']),
+      el('a', { class: 'btn', href: `#/play/${encodeURIComponent(lesson.id)}` }, ['2 · 完整首聽']),
+      el('a', { class: 'btn btn-primary', href: `#/listen/${encodeURIComponent(lesson.id)}/core` }, [progLabel(progress, plan)]),
+      task ? el('a', { class: 'btn', href: `#/task/${encodeURIComponent(lesson.id)}` }, ['4 · 換條件開口任務'])
+        : lesson.type === 'dialogue'
+          ? el('a', { class: 'btn', href: `#/talk/rp:${encodeURIComponent(lesson.id)}` }, ['4 · 角色扮演開口'])
+          : null,
+    ]),
     progress?.quiz ? el('p', { class: 'hint', text: `最近理解測驗：${progress.quiz.right}/${progress.quiz.total}（與字詞自評分開）` }) : null,
-    task ? el('a', { class: 'btn btn-block', href: `#/task/${encodeURIComponent(lesson.id)}` }, ['換條件任務 · 可直接挑戰']) : null,
     taskRating ? el('p', { class: 'hint', text: `最近任務自評：${labels[taskRating] || '尚未記錄'}，不是自動評分。` }) : null,
+    el('details', { class: 'course-extension' }, [
+      el('summary', { text: '加強練習（不計入 30 分鐘核心）' }),
+      plan.isExcerpt ? el('a', { class: 'btn btn-block', href: `#/listen/${encodeURIComponent(lesson.id)}` }, ['全文逐句精聽']) : el('p', { class: 'hint', text: '本課已把全文納入核心精聽。' }),
+      el('a', { class: 'btn btn-block', href: `#/play/${encodeURIComponent(lesson.id)}` }, ['再次連播或自選句子']),
+    ]),
     lesson.learning.next ? el('a', { class: 'btn btn-block', href: `#/lesson/${encodeURIComponent(lesson.learning.next.id)}` }, [`下一步 · ${lesson.learning.next.labelZh}`]) : null,
     lesson.learning.prerequisite ? el('a', { class: 'btn btn-ghost btn-block', href: `#/lesson/${encodeURIComponent(lesson.learning.prerequisite.id)}` }, [`需要先備練習 · ${lesson.learning.prerequisite.labelZh}`]) : null,
+  ]);
+}
+
+function progLabel(progress, plan) {
+  return progress?.quiz
+    ? `3 · 再練 ${plan.coreSentenceCount} 句核心精聽`
+    : `3 · 開始 ${plan.coreSentenceCount} 句核心精聽`;
+}
+
+function spokenPracticePanel(spoken, cfg) {
+  const playButton = (text, label) => el('button', {
+    class: 'btn btn-ghost spoken-play',
+    'aria-label': `${label}：${text}`,
+    onclick: async event => {
+      const button = event.currentTarget;
+      const original = button.textContent;
+      button.disabled = true;
+      button.textContent = '播放中…';
+      unlock(); cancelSpeech();
+      try {
+        await say(text, { langCode: cfg.accentLang, voiceURI: cfg.accent, rate: 0.88 });
+      } catch {
+        toast('裝置語音暫時無法播放');
+      } finally {
+        if (button.isConnected) { button.disabled = false; button.textContent = original; }
+      }
+    },
+  }, [`▶ ${label}`]);
+  return el('details', { class: 'card spoken-practice' }, [
+    el('summary', {}, [
+      el('span', {}, [el('b', { text: '口語加強' }), el('small', { text: '核心課後再開 · 選修' })]),
+      el('span', { 'aria-hidden': 'true', text: '＋' }),
+    ]),
+    el('h2', { text: spoken.titleZh }),
+    el('p', { class: 'hint', text: `${spoken.noteZh} 點播使用裝置語音，尚未經真人聽評。` }),
+    el('div', { class: 'spoken-alternatives' }, spoken.alternatives.map(item =>
+      el('article', { class: 'spoken-alt' }, [
+        el('div', { class: 'spoken-mode' }, [
+          el('span', { class: 'badge', text: item.mode === 'active' ? '可練用' : '先聽懂' }),
+          el('span', { class: 'hint', text: item.guidanceZh }),
+        ]),
+        el('div', { class: 'spoken-line' }, [
+          el('span', { text: '清楚說法' }), el('b', { text: item.clear }), playButton(item.clear, '聽清楚說法'),
+        ]),
+        el('div', { class: 'spoken-line is-natural' }, [
+          el('span', { text: '日常說法' }), el('b', { text: item.natural }), playButton(item.natural, '聽日常說法'),
+        ]),
+      ]))),
+    el('section', { class: 'spoken-drill' }, [
+      el('h3', { text: '短回應練習' }),
+      el('p', { text: spoken.drill.setupZh }),
+      ...spoken.drill.turns.map(turn => el('div', { class: 'spoken-turn' }, [
+        el('span', { class: 'badge', text: turn.speaker }),
+        el('span', { text: turn.text }),
+        playButton(turn.text, '聽這句'),
+      ])),
+      el('p', { class: 'hint', text: `完成條件：${spoken.drill.successZh}` }),
+    ]),
   ]);
 }
 
@@ -173,8 +235,8 @@ function dailySeriesStrip(lesson, series) {
   ]);
 }
 
-function storyRows(lesson, cfg) {
-  if (!lesson.storyArc) return lesson.sentences.map((sentence) => row(sentence, lesson, cfg));
+function storyRows(lesson, cfg, coreIds) {
+  if (!lesson.storyArc) return lesson.sentences.map((sentence) => row(sentence, lesson, cfg, coreIds.has(sentence.id)));
   const starts = new Map(STORY_BEATS.map((beat) => [lesson.storyArc[beat.id], beat]));
   const out = [];
   for (const sentence of lesson.sentences) {
@@ -185,7 +247,7 @@ function storyRows(lesson, cfg) {
         el('b', { text: beat.description }),
       ]));
     }
-    out.push(row(sentence, lesson, cfg));
+    out.push(row(sentence, lesson, cfg, coreIds.has(sentence.id)));
   }
   return out;
 }
@@ -228,7 +290,7 @@ function offlineButton(lesson, cfg) {
   return btn;
 }
 
-function row(s, lesson, cfg) {
+function row(s, lesson, cfg, isCore = false) {
   const play = async () => {
       unlock();
       cancelSpeech();
@@ -244,6 +306,7 @@ function row(s, lesson, cfg) {
   return el('div', { class: 'card', style: 'padding:13px 15px' }, [
     el('div', { style: 'display:flex;gap:10px;align-items:baseline' }, [
       s.speaker ? el('span', { class: 'badge', style: 'flex:none', text: s.speaker }) : null,
+      isCore ? el('span', { class: 'badge course-core-badge', text: '核心' }) : null,
       el('div', { style: 'flex:1;min-width:0' }, [
         lookupText(s.text, { lessonId: lesson.id, sentenceId: s.id, lessonTitle: lesson.title,
           zh: s.zh }, { tag: 'div' }),

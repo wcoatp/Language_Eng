@@ -25,7 +25,7 @@ import {
 } from "../recorder.js";
 import { listen as listenASR, asrSupported, scoreAttempt } from "../asr.js";
 import { lookupText } from "../word-lookup.js";
-import { shuffleOptions } from "../learning.js";
+import { buildLessonPlan, shuffleOptions } from "../learning.js";
 import { saveLearning } from "../learning-store.js";
 
 let ctx = null;
@@ -44,11 +44,19 @@ export function destroy() {
   ctx = null;
 }
 
-export async function render(root, lessonId) {
+export async function render(root, lessonId, mode) {
   const [lesson, cfg] = await Promise.all([getLesson(lessonId), settings()]);
+  const plan = buildLessonPlan(lesson);
+  const wanted = new Set(plan.coreSentenceIds);
+  const practiceSentences = mode === 'core'
+    ? lesson.sentences.filter(sentence => wanted.has(sentence.id))
+    : lesson.sentences;
 
   ctx = {
     lesson,
+    plan,
+    mode: mode === 'core' ? 'core' : 'full',
+    practiceSentences,
     cfg,
     i: 0,
     stage: "blind",
@@ -60,7 +68,7 @@ export async function render(root, lessonId) {
     watch: stopwatch("listen", lesson.id),
     quiz: null,
     onKey: null,
-    lessonWpm: medianWpm(lesson.sentences),
+    lessonWpm: medianWpm(practiceSentences),
     voices: [],        // voice sets this lesson actually has, for 三種口音
     compareAt: 0,      // where the accent tour has got to
   };
@@ -93,7 +101,7 @@ export async function render(root, lessonId) {
 
 /* ---------- helpers ---------- */
 
-const sentences = () => ctx.lesson.sentences;
+const sentences = () => ctx.practiceSentences;
 const cur = () => sentences()[ctx.i];
 
 /** Middle delivery speed of the sentences that carry a measured one. */
@@ -447,7 +455,7 @@ function header() {
     el("div", { class: "trainer-top" }, [
       backButton("結束", `#/lesson/${encodeURIComponent(ctx.lesson.id)}`),
       el("div", { class: "muted", style: "font-variant-numeric:tabular-nums" }, [
-        `${Math.min(ctx.i + 1, total)} / ${total}`,
+        `${ctx.mode === 'core' ? '核心 ' : '全文 '}${Math.min(ctx.i + 1, total)} / ${total}`,
       ]),
       voiceChip(),
     ]),
@@ -723,11 +731,14 @@ function doneStage() {
       ]),
     ]),
     el("p", { class: "muted center", style: "margin-bottom:18px" }, [
-      "只有做過句子自評的項目會更新複習安排；跳過或答完理解題，不代表整課已掌握。",
+      ctx.mode === 'core' && ctx.plan.isExcerpt
+        ? `已完成本課 ${ctx.plan.coreSentenceCount} 句核心訓練；全文共 ${ctx.plan.totalSentenceCount} 句，可留到加強練習。只有做過自評的句子會更新複習安排。`
+        : "只有做過句子自評的項目會更新複習安排；跳過或答完理解題，不代表整課已掌握。",
     ]),
     el("div", { class: "actions" }, [
       ctx.learningSaveError ? el('p', { role: 'alert', text: ctx.learningSaveError }) : null,
       ctx.lesson.learning?.task ? el('a', { class: 'btn btn-primary btn-block', href: `#/task/${encodeURIComponent(ctx.lesson.id)}` }, ['下一步 · 換條件任務']) : null,
+      ctx.mode === 'core' && ctx.plan.isExcerpt ? el('a', { class: 'btn btn-block', href: `#/listen/${encodeURIComponent(ctx.lesson.id)}` }, ['加強 · 全文逐句精聽']) : null,
       ctx.lesson.learning ? el('a', { class: 'btn btn-block', href: `#/prepare/${encodeURIComponent(ctx.lesson.id)}` }, ['回想本課還不熟的字詞']) : null,
       el(
         "a",
@@ -738,10 +749,10 @@ function doneStage() {
         "a",
         {
           class: "btn btn-block",
-          href: `#/listen/${encodeURIComponent(ctx.lesson.id)}`,
+          href: `#/listen/${encodeURIComponent(ctx.lesson.id)}${ctx.mode === 'core' ? '/core' : ''}`,
           onclick: () => setTimeout(() => location.reload(), 0),
         },
-        ["再練一次這課"],
+        [ctx.mode === 'core' ? "再練一次核心句" : "再練一次這課"],
       ),
       el("a", { class: "btn btn-ghost btn-block", href: "#/" }, ["回到今天"]),
     ]),

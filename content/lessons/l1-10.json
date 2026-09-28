@@ -1,0 +1,74 @@
+{
+  "id": "l1-10",
+  "title": "Nine or Nineteen?",
+  "titleZh": "飲料另計，價格要聽清楚",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": false,
+  "source": "原創基礎課程：小綠書 U03 溝通功能改寫",
+  "summaryZh": "L1 延伸：聽出飲料是否另計，在價格聽不清時要求重說並確認總額。建議先學「外帶午餐」。金額為美元。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U03" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "確認飲料是否包含在餐點內，分辨 nine 與 nineteen，並重述總額和品項。",
+    "prerequisite": { "id": "l1-05", "labelZh": "外帶午餐" },
+    "next": { "id": "l1-11", "labelZh": "試穿衣服並作決定" },
+    "vocabulary": [
+      { "id": "ready", "term": "ready", "surface": "ready", "sentenceIds": ["s1", "s2"], "zh": "做好了；可拿取", "en": "Available to use or eat now.", "example": "the bread is ready", "exampleZh": "麵包做好了" },
+      { "id": "bowl", "term": "bowl", "surface": "bowl", "sentenceIds": ["s2", "s5", "s10"], "zh": "碗裝餐點", "en": "Food served in a bowl in this lesson.", "example": "a rice bowl", "exampleZh": "一份碗裝飯" },
+      { "id": "cost-extra", "term": "cost extra", "surface": "cost extra", "sentenceIds": ["s4"], "zh": "需要另外付錢", "en": "To need more money in addition to the main price.", "example": "a large bag costs extra", "exampleZh": "大袋子需要另外付錢" },
+      { "id": "altogether", "term": "altogether", "surface": "altogether", "sentenceIds": ["s7"], "zh": "總共", "en": "Counting everything together.", "example": "five items altogether", "exampleZh": "總共五樣物品" },
+      { "id": "nine-or-nineteen", "term": "nine or nineteen", "surface": "nine or nineteen", "sentenceIds": ["s9"], "zh": "九還是十九", "en": "A contrast between the numbers 9 and 19.", "example": "count from nine to nineteen", "exampleZh": "從九數到十九" }
+    ],
+    "task": {
+      "id": "confirm-extra-total",
+      "titleZh": "換個價格：確認八還是十八",
+      "roleZh": "你是在小店買餐點的顧客",
+      "partnerLabelZh": "店員說",
+      "setupZh": "買一份熱餐和一杯飲料。飲料另計；店員報出的總額沒聽清楚。確認另計、請對方重說價格，再重述品項。",
+      "steps": [
+        { "partner": "The hot meal is ready, but drinks are extra.", "promptZh": "確認飲料需要另外付錢。", "keywords": "drink / extra", "frame": "So the drink is ...?", "sample": "So the drink is extra?" },
+        { "partner": "The total is eighteen dollars.", "promptZh": "請店員確認是八美元還是十八美元。", "keywords": "eight / eighteen", "frame": "Sorry, was that ... or ...?", "sample": "Sorry, was that eight or eighteen?" },
+        { "partner": "Eighteen dollars for one meal and one drink.", "promptZh": "重述正確總額與兩樣品項。", "keywords": "eighteen / meal / drink", "frame": "..., got it. One ... and one ...", "sample": "Eighteen, got it. One meal and one drink." }
+      ],
+      "success": ["我有聽出飲料另計。", "我有主動確認八和十八，而不是猜價格。", "最後確認的總額與兩樣品項一致。"]
+    },
+    "spokenPractice": {
+      "titleZh": "更自然地確認費用與價格",
+      "noteZh": "價格修復重點是禮貌要求重說，不是一次就猜對。",
+      "alternatives": [
+        { "clear": "Drinks cost extra.", "natural": "Drinks are extra.", "mode": "active", "guidanceZh": "同樣表示飲料另計，不是免費多送。" },
+        { "clear": "How much altogether?", "natural": "What's the total?", "mode": "active", "guidanceZh": "兩種都能詢問最後總額，可選一種主動使用。" },
+        { "clear": "Did you say nine or nineteen?", "natural": "Sorry, was that nine or nineteen?", "mode": "active", "guidanceZh": "Sorry 是禮貌請對方重說，不是承認做錯事。" }
+      ],
+      "drill": {
+        "setupZh": "這次答案和主對話不同，請確認最後是十九美元。",
+        "turns": [
+          { "speaker": "店員", "text": "It's nineteen dollars." },
+          { "speaker": "你", "text": "Sorry, was that nine or nineteen?" },
+          { "speaker": "店員", "text": "Nineteen, not nine." },
+          { "speaker": "你", "text": "Nineteen, got it." }
+        ],
+        "successZh": "最後確認 19 美元。正式固定音檔仍需真人聽評 nine 與 nineteen 的重音和速度。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "I have ten minutes. What's ready now?", "zh": "我只有十分鐘。現在有什麼做好了？" },
+    { "id": "s2", "speaker": "B", "text": "The vegetable bowl is ready.", "zh": "蔬菜碗裝餐點已經好了。" },
+    { "id": "s3", "speaker": "A", "text": "Does it come with a drink?", "zh": "有附飲料嗎？" },
+    { "id": "s4", "speaker": "B", "text": "No. Drinks cost extra.", "zh": "沒有。飲料要另外付錢。" },
+    { "id": "s5", "speaker": "A", "text": "Then one bowl and a small iced tea, please.", "zh": "那我要一份碗裝餐點和一杯小杯冰茶。" },
+    { "id": "s6", "speaker": "B", "text": "Sure. Is that for here or to go?", "zh": "好。內用還是外帶？" },
+    { "id": "s7", "speaker": "A", "text": "To go. How much altogether?", "zh": "外帶。總共多少？" },
+    { "id": "s8", "speaker": "B", "text": "Nine dollars.", "zh": "九美元。" },
+    { "id": "s9", "speaker": "A", "text": "Did you say nine or nineteen?", "zh": "你剛說九還是十九？" },
+    { "id": "s10", "speaker": "B", "text": "Nine. One bowl and one tea.", "zh": "九元。一份碗裝餐點、一杯茶。" }
+  ],
+  "questions": [
+    { "q": "飲料包含在餐點裡嗎？", "options": ["包含", "不包含，另計", "沒有提到"], "answer": 1, "explanationZh": "店員先回答 No，再說 Drinks cost extra。", "sentenceIds": ["s3", "s4"] },
+    { "q": "顧客要內用還是外帶？", "options": ["內用", "尚未決定", "外帶"], "answer": 2, "explanationZh": "店員詢問後，顧客回答 To go。", "sentenceIds": ["s6", "s7"] },
+    { "q": "確認後總額是多少？", "options": ["9 美元", "19 美元", "10 美元"], "answer": 0, "explanationZh": "店員最後再次說 Nine；10 是顧客可用的分鐘數，不是價格。", "sentenceIds": ["s8", "s9", "s10"] }
+  ]
+}

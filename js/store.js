@@ -17,7 +17,7 @@ export const DEFAULTS = {
   // repetition already brings a sentence back days apart; hearing it from one
   // voice every time wastes the variety those meetings could carry.
   accentRotation: true,
-  dailyGoalMin: 20,
+  dailyGoalMin: 30,
   // Conversation (Phase 3) — key never leaves this device.
   provider: "anthropic",
   apiKey: "",

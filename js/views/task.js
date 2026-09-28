@@ -51,6 +51,8 @@ function paint(focus = true) {
   const focusedText = s.root.contains(document.activeElement) ? document.activeElement.textContent : null;
   const task = s.lesson.learning.task;
   const step = task.steps[s.at];
+  const partnerLabel = task.partnerLabelZh || '搭檔說';
+  const partnerName = partnerLabel.replace(/說$/, '') || '搭檔';
   mount(s.root,
     backButton('回課程', `#/lesson/${encodeURIComponent(s.lesson.id)}`),
     el('h1', { text: task.titleZh, tabindex: '-1' }),
@@ -61,9 +63,9 @@ function paint(focus = true) {
     s.error ? el('p', { class: 'learning-error', role: 'alert', text: s.error }) : null,
     step ? el('section', { class: 'card' }, [
       el('p', { class: 'stage-hint', text: `第 ${s.at + 1} / ${task.steps.length} 回合` }),
-      el('h2', { text: '店員說' }),
+      el('h2', { text: partnerLabel }),
       el('p', { class: 'task-partner', text: step.partner }),
-      el('button', { class: 'btn', disabled: s.speaking, onclick: () => play(step.partner) }, ['▶ 聽店員']),
+      el('button', { class: 'btn', disabled: s.speaking, onclick: () => play(step.partner) }, [`▶ 聽${partnerName}`]),
       el('h2', { text: '換你說' }),
       el('p', { text: step.promptZh }),
       el('div', { class: 'learning-actions', role: 'group', 'aria-label': '提示程度' },

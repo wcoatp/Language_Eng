@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T14:22:37.967Z",
+  "generatedAt": "2026-09-28T16:41:59.216Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -98,6 +98,62 @@
       "realAudio": false,
       "preGeneratedAudio": true,
       "source": ""
+    },
+    {
+      "id": "l1-08",
+      "title": "Meeting a Classmate in Art Class",
+      "titleZh": "在繪畫課認識新同學",
+      "summaryZh": "L1 延伸：不只交換姓名，還要根據對方剛說的內容追問一題。建議先學「初次見面」。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "原創基礎課程：小綠書 U01 溝通功能改寫"
+    },
+    {
+      "id": "l1-09",
+      "title": "Who Does What Before Dinner?",
+      "titleZh": "晚餐前把家事分工確認清楚",
+      "summaryZh": "L1 延伸：發現家事分工有誤會時，說清楚誰做什麼、什麼時候做。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "原創基礎課程：小綠書 U02 溝通功能改寫"
+    },
+    {
+      "id": "l1-10",
+      "title": "Nine or Nineteen?",
+      "titleZh": "飲料另計，價格要聽清楚",
+      "summaryZh": "L1 延伸：聽出飲料是否另計，在價格聽不清時要求重說並確認總額。建議先學「外帶午餐」。金額為美元。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "原創基礎課程：小綠書 U03 溝通功能改寫"
+    },
+    {
+      "id": "l1-11",
+      "title": "Trying On a Jacket",
+      "titleZh": "試穿外套後作出決定",
+      "summaryZh": "L1 延伸：說出尺寸哪裡不合，詢問另一尺寸或顏色，最後清楚決定購買或不買。",
+      "level": 1,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 12,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": false,
+      "source": "原創基礎課程：小綠書 U04 溝通功能改寫"
     },
     {
       "id": "daily-2026-08-06",

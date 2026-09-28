@@ -1,0 +1,73 @@
+{
+  "id": "l1-11",
+  "title": "Trying On a Jacket",
+  "titleZh": "試穿外套後作出決定",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": false,
+  "source": "原創基礎課程：小綠書 U04 溝通功能改寫",
+  "summaryZh": "L1 延伸：說出尺寸哪裡不合，詢問另一尺寸或顏色，最後清楚決定購買或不買。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U04" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "聽懂顏色、尺寸與不合之處，詢問替代品，最後明確表達自己的決定。",
+    "vocabulary": [
+      { "id": "light-jacket", "term": "light jacket", "surface": "light jacket", "sentenceIds": ["s1"], "zh": "薄外套", "en": "A jacket that is not heavy.", "example": "a light jacket for spring", "exampleZh": "春天穿的薄外套" },
+      { "id": "color", "term": "color", "surface": "color", "sentenceIds": ["s2"], "zh": "顏色", "en": "How something looks, such as blue or green.", "example": "a bright color", "exampleZh": "鮮明的顏色" },
+      { "id": "medium", "term": "medium", "surface": "medium", "sentenceIds": ["s4"], "zh": "中號", "en": "A size between small and large.", "example": "medium gloves", "exampleZh": "中號手套" },
+      { "id": "sleeves", "term": "sleeve", "surface": "sleeves", "sentenceIds": ["s7"], "zh": "袖子", "en": "The parts of a shirt or jacket that cover the arms.", "example": "short sleeves", "exampleZh": "短袖" },
+      { "id": "fit", "term": "fit", "surface": "fits", "sentenceIds": ["s9"], "zh": "合身", "en": "To be the right size for someone.", "example": "these shoes fit", "exampleZh": "這雙鞋很合腳" }
+    ],
+    "task": {
+      "id": "choose-jacket-alternative",
+      "titleZh": "換個條件：藍色小號缺貨",
+      "roleZh": "你是正在試外套的顧客",
+      "partnerLabelZh": "店員說",
+      "setupZh": "你想要藍色小號，但今天沒有；店裡有黑色小號。詢問替代選項，最後可以買黑色，也可以禮貌不買。",
+      "steps": [
+        { "partner": "We're out of blue in small, but we have black.", "promptZh": "確認藍色小號沒有了，並詢問黑色小號。", "keywords": "blue / small / black", "frame": "So there is no ...? Do you have ...?", "sample": "So there is no blue in small? Do you have the black one in small?" },
+        { "partner": "Yes. Would you like to try the black one on?", "promptZh": "回答是否要試穿。", "keywords": "try it on", "frame": "Yes, I'd like to ...", "sample": "Yes, I'd like to try it on." },
+        { "partner": "How does it fit?", "promptZh": "說明是否合身，並明確決定買或不買。", "keywords": "fits / take it or pass", "frame": "It ... I'll ...", "sample": "It fits, but I'll pass for now, thanks." }
+      ],
+      "success": ["我有說清楚原本要藍色小號。", "我有問到黑色小號這個替代品。", "最後我有明確決定購買或禮貌不買，兩種結果都可以。"]
+    },
+    "spokenPractice": {
+      "titleZh": "更自然地試穿與作決定",
+      "noteZh": "店員提出替代品後，購買不是唯一正確答案；重點是清楚作決定。",
+      "alternatives": [
+        { "clear": "May I try it on?", "natural": "Can I try this on?", "mode": "active", "guidanceZh": "店內日常詢問可用，兩句都禮貌。" },
+        { "clear": "I'll stay with blue.", "natural": "I'll stick with blue.", "mode": "recognition", "guidanceZh": "stick with 表示維持原選擇，先聽懂再選用。" },
+        { "clear": "I won't take it today, thanks.", "natural": "I'll pass for now, thanks.", "mode": "active", "guidanceZh": "禮貌表示這次不買，不把成交當唯一成功結果。" }
+      ],
+      "drill": {
+        "setupZh": "先聽懂藍色小號缺貨，再選擇試綠色或暫時不買。",
+        "turns": [
+          { "speaker": "店員", "text": "We're out of blue in small, but we have green." },
+          { "speaker": "你（選一）", "text": "I'll try the green one." },
+          { "speaker": "你（選一）", "text": "I'll pass for now, thanks." }
+        ],
+        "successZh": "辨識缺貨與可用顏色後明確決定；試綠色或暫時不買都算完成。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "I'm looking for a light jacket.", "zh": "我在找一件薄外套。" },
+    { "id": "s2", "speaker": "B", "text": "What color would you like?", "zh": "你想要什麼顏色？" },
+    { "id": "s3", "speaker": "A", "text": "Blue, if you have it.", "zh": "如果有的話，我想要藍色。" },
+    { "id": "s4", "speaker": "B", "text": "Here's a blue one in medium.", "zh": "這裡有一件藍色中號。" },
+    { "id": "s5", "speaker": "A", "text": "May I try it on?", "zh": "我可以試穿嗎？" },
+    { "id": "s6", "speaker": "B", "text": "Yes. The fitting room is over there.", "zh": "可以。試衣間在那邊。" },
+    { "id": "s7", "speaker": "A", "text": "The sleeves are too long.", "zh": "袖子太長了。" },
+    { "id": "s8", "speaker": "B", "text": "Would you like to try a small?", "zh": "你要試試小號嗎？" },
+    { "id": "s9", "speaker": "A", "text": "Yes, please. This one fits.", "zh": "好，謝謝。這件合身。" },
+    { "id": "s10", "speaker": "B", "text": "Great. We also have green.", "zh": "很好。我們也有綠色。" },
+    { "id": "s11", "speaker": "A", "text": "I'll stay with blue. I'll take the small.", "zh": "我還是選藍色。我要這件小號。" },
+    { "id": "s12", "speaker": "B", "text": "Okay. You can pay at the front counter.", "zh": "好。你可以在前面的櫃檯結帳。" }
+  ],
+  "questions": [
+    { "q": "最初試穿的是什麼尺寸？", "options": ["小號", "大號", "中號"], "answer": 2, "explanationZh": "店員最先拿來的是 blue one in medium。", "sentenceIds": ["s4"] },
+    { "q": "第一件哪裡不合？", "options": ["袖子太長", "顏色太深", "價格太高"], "answer": 0, "explanationZh": "顧客明說 The sleeves are too long。", "sentenceIds": ["s7"] },
+    { "q": "最後的決定是什麼？", "options": ["不買", "買藍色小號", "買綠色中號"], "answer": 1, "explanationZh": "雖然店員提到綠色，顧客最後仍選藍色小號。", "sentenceIds": ["s10", "s11"] }
+  ]
+}

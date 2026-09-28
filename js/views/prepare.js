@@ -16,7 +16,7 @@ export async function render(root, id) {
   if (token !== epoch) return;
   if (!lesson.learning) {
     mount(root, backButton('回課程', `#/lesson/${encodeURIComponent(id)}`), el('h1', { text: '這課尚未編輯字詞預習' }),
-      el('a', { class: 'btn', href: `#/listen/${encodeURIComponent(id)}` }, ['直接開始精聽']));
+      el('a', { class: 'btn', href: `#/listen/${encodeURIComponent(id)}/core` }, ['直接開始核心精聽']));
     return;
   }
   let progress;
@@ -145,7 +145,7 @@ function paint(focus = true) {
           ? el('button', { class: 'btn', onclick: () => restart('extra') }, [`加練補充 ${s.lesson.learning.vocabulary.filter(w => w.optional).length} 詞`]) : null,
       ]),
     ]),
-    el('a', { class: 'btn btn-primary btn-block', href: `#/listen/${encodeURIComponent(s.lesson.id)}` }, [word ? '跳過其餘 · 開始精聽' : '開始精聽課文']),
+    el('a', { class: 'btn btn-primary btn-block', href: `#/listen/${encodeURIComponent(s.lesson.id)}/core` }, [word ? '跳過其餘 · 開始核心精聽' : '開始核心精聽']),
   );
   if (focus || focusedText) {
     const control = !focus && [...s.root.querySelectorAll('button,a')].find(node => node.textContent === focusedText && !node.disabled);

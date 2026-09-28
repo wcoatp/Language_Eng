@@ -439,11 +439,19 @@ function paint(scrollCurrent = false) {
               ? `接著閱讀「${state.nextDaily.title}」,看看故事如何發展。`
               : "你已完成這個主題的最後一日。",
           }),
+          el(
+            "a",
+            {
+              class: "btn btn-primary btn-block",
+              href: `#/listen/${encodeURIComponent(state.lesson.id)}/core`,
+            },
+            ["下一步 · 核心句精聽"],
+          ),
           state.nextDaily
             ? el(
                 "a",
                 {
-                  class: "btn btn-primary btn-block",
+                  class: "btn btn-block",
                   href: `#/lesson/${encodeURIComponent(state.nextDaily.id)}`,
                 },
                 [`前往第 ${state.nextDaily.daily.day} 日`],

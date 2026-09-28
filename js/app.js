@@ -10,7 +10,7 @@ const ROUTES = [
   { re: /^\/lesson\/(.+)$/,     load: () => import('./views/lesson.js'),   tab: '/library' },
   { re: /^\/prepare\/(.+)$/,    load: () => import('./views/prepare.js'),  tab: '/library' },
   { re: /^\/task\/(.+)$/,       load: () => import('./views/task.js'),     tab: '/library' },
-  { re: /^\/listen\/(.+)$/,     load: () => import('./views/listen.js'),   tab: '/library', full: true },
+  { re: /^\/listen\/([^/]+)(?:\/(core))?$/, load: () => import('./views/listen.js'), tab: '/library', full: true },
   { re: /^\/play\/(.+)$/,       load: () => import('./views/player.js'),   tab: '/library', full: true },
   { re: /^\/review$/,           load: () => import('./views/review.js'),   tab: '/review' },
   { re: /^\/talk$/,             load: () => import('./views/talk.js'),     tab: '/talk' },
@@ -54,7 +54,8 @@ async function route() {
   document.getElementById('tabbar').style.display = match.full ? 'none' : '';
   view.style.paddingBottom = match.full ? 'calc(32px + var(--safe-b))' : '';
 
-  const params = (p.match(match.re) || []).slice(1).map(decodeURIComponent);
+  const params = (p.match(match.re) || []).slice(1)
+    .map(value => value == null ? undefined : decodeURIComponent(value));
 
   view.replaceChildren();
   try {

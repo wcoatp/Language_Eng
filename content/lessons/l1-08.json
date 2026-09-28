@@ -1,0 +1,72 @@
+{
+  "id": "l1-08",
+  "title": "Meeting a Classmate in Art Class",
+  "titleZh": "在繪畫課認識新同學",
+  "level": 1,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": false,
+  "source": "原創基礎課程：小綠書 U01 溝通功能改寫",
+  "summaryZh": "L1 延伸：不只交換姓名，還要根據對方剛說的內容追問一題。建議先學「初次見面」。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U01" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "完成簡短自我介紹，聽懂對方喜歡畫什麼，並根據那個回答接續追問。",
+    "prerequisite": { "id": "l1-01", "labelZh": "初次見面" },
+    "next": { "id": "l1-09", "labelZh": "釐清家事分工" },
+    "vocabulary": [
+      { "id": "first-time", "term": "first time", "surface": "first time", "sentenceIds": ["s2"], "zh": "第一次", "en": "For the first occasion.", "example": "my first time at a game", "exampleZh": "我第一次來看比賽" },
+      { "id": "draw", "term": "draw", "surface": "draw", "sentenceIds": ["s5", "s9"], "zh": "畫畫", "en": "To make a picture with a pencil or pen.", "example": "draw a small house", "exampleZh": "畫一間小房子" },
+      { "id": "streets", "term": "street", "surface": "streets", "sentenceIds": ["s6"], "zh": "街道", "en": "Roads with buildings beside them.", "example": "quiet streets", "exampleZh": "安靜的街道" },
+      { "id": "plants", "term": "plant", "surface": "Plants", "sentenceIds": ["s7"], "zh": "植物", "en": "Living things that grow in soil.", "example": "a small plant", "exampleZh": "一株小植物" },
+      { "id": "after-class", "term": "after class", "surface": "after class", "sentenceIds": ["s10"], "zh": "下課後", "en": "When a class has ended.", "example": "read after class", "exampleZh": "下課後閱讀" }
+    ],
+    "task": {
+      "id": "follow-up-question",
+      "titleZh": "換個場景：在手作課認識同學",
+      "roleZh": "你是第一次來上課的 Maya",
+      "partnerLabelZh": "同學說",
+      "setupZh": "在圖書館手作課認識同學。介紹自己；對方說喜歡畫動物後，問一個和這個回答有關的追問。",
+      "steps": [
+        { "partner": "Hi, I'm Sam. Is this your first time in this class?", "promptZh": "回答問題並介紹自己叫 Maya。", "keywords": "yes / Maya", "frame": "Yes. I'm ...", "sample": "Yes. I'm Maya." },
+        { "partner": "Nice to meet you. I like drawing animals.", "promptZh": "先回應，再追問對方喜歡畫哪一種動物。", "keywords": "nice / what animals", "frame": "Oh, nice. What ... do you draw?", "sample": "Oh, nice. What animals do you draw?" },
+        { "partner": "I usually draw dogs.", "promptZh": "問一個和畫狗有關的接續問題。", "keywords": "dogs / where or often", "frame": "Do you draw ...?", "sample": "Do you draw dogs at home?" }
+      ],
+      "success": ["雙方知道彼此的稱呼。", "我有針對對方喜歡畫動物追問。", "我的問題和對方剛才的回答有關，而不只是重複 Nice to meet you。"]
+    },
+    "spokenPractice": {
+      "titleZh": "讓追問更像日常對話",
+      "noteZh": "基礎說法已經正確；以下是核心課後可選練習，不要求第一次全部記住。",
+      "alternatives": [
+        { "clear": "I'm Nia.", "natural": "I'm Nia, by the way.", "mode": "recognition", "guidanceZh": "by the way 是順帶自介；先聽懂即可。" },
+        { "clear": "What do you like to draw?", "natural": "What do you usually draw?", "mode": "active", "guidanceZh": "詢問對方平常畫什麼；已會 usually 時可選用。" },
+        { "clear": "We can talk after class.", "natural": "We can chat after class.", "mode": "active", "guidanceZh": "chat 語氣較輕鬆，可主動練用。" }
+      ],
+      "drill": {
+        "setupZh": "聽到對方喜歡畫建築時，先簡短回應，再問一題。",
+        "turns": [
+          { "speaker": "搭檔", "text": "I usually draw buildings." },
+          { "speaker": "你", "text": "Oh, nice. Do you draw outside?" }
+        ],
+        "successZh": "追問必須和畫建築有關；只說 Nice to meet you 不算追問。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Excuse me, is this the drawing class?", "zh": "不好意思，這裡是繪畫課嗎？" },
+    { "id": "s2", "speaker": "B", "text": "Yes. Is this your first time here?", "zh": "是。你第一次來嗎？" },
+    { "id": "s3", "speaker": "A", "text": "Yes. I'm Nia.", "zh": "對，我叫 Nia。" },
+    { "id": "s4", "speaker": "B", "text": "I'm Leo. Nice to meet you.", "zh": "我叫 Leo。很高興認識你。" },
+    { "id": "s5", "speaker": "A", "text": "Nice to meet you too. What do you like to draw?", "zh": "我也很高興認識你。你喜歡畫什麼？" },
+    { "id": "s6", "speaker": "B", "text": "City streets. How about you?", "zh": "城市街景。你呢？" },
+    { "id": "s7", "speaker": "A", "text": "Plants. I moved here last month.", "zh": "植物。我上個月搬來這裡。" },
+    { "id": "s8", "speaker": "B", "text": "There's a park near this school.", "zh": "這間學校附近有座公園。" },
+    { "id": "s9", "speaker": "A", "text": "Really? Do you draw there?", "zh": "真的嗎？你會在那裡畫畫嗎？" },
+    { "id": "s10", "speaker": "B", "text": "Sometimes. We can talk about it after class.", "zh": "有時候。我們可以下課再聊。" }
+  ],
+  "questions": [
+    { "q": "Nia 是第一次來嗎？", "options": ["不是", "是", "沒有說"], "answer": 1, "explanationZh": "Leo 問是不是第一次來，Nia 回答 Yes。", "sentenceIds": ["s2", "s3"] },
+    { "q": "Leo 喜歡畫什麼？", "options": ["動物", "植物", "城市街景"], "answer": 2, "explanationZh": "Leo 回答 City streets。", "sentenceIds": ["s5", "s6"] },
+    { "q": "最後他們打算何時再聊？", "options": ["下課後", "明天", "立刻去公園"], "answer": 0, "explanationZh": "Leo 說可以 after class 再聊，不是現在去公園。", "sentenceIds": ["s10"] }
+  ]
+}

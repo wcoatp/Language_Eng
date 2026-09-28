@@ -1,5 +1,6 @@
 /* SDD-002/003: authored and deterministic local preparation rules. */
 import { normalizeTerm, wordTokens, phraseAt, lookupLocal } from './dictionary.js';
+import { englishWordCount, STORY_BEATS } from './daily.js';
 
 const AUTO_SCHEMA = 1;
 const AUTO_STOP = new Set([
@@ -85,6 +86,79 @@ export function withAutomaticLearning(lesson) {
   return { ...lesson, learning: automaticLearning(lesson) };
 }
 
+/* SDD-006: keep the complete source lesson, but make one class realistically
+   finishable. Selection is deterministic so links, tests and learner progress
+   never depend on a random sample. */
+export function buildLessonPlan(lesson) {
+  const rows = Array.isArray(lesson?.sentences) ? lesson.sentences : [];
+  const ids = rows.map(sentence => sentence.id);
+  const available = new Set(ids);
+  const wordCount = englishWordCount(rows);
+  const authored = lesson?.learning?.coreSentenceIds;
+  const authoredMinimum = lesson?.daily ? 8 : 4;
+  const authoredValid = Array.isArray(authored) && authored.length >= authoredMinimum &&
+    authored.length <= (lesson?.daily ? 12 : rows.length) &&
+    new Set(authored).size === authored.length && authored.every(id => available.has(id));
+
+  let coreSentenceIds;
+  if (authoredValid) {
+    const wanted = new Set(authored);
+    coreSentenceIds = ids.filter(id => wanted.has(id));
+  } else {
+    const useWholeLesson = !lesson?.daily && rows.length <= 16 && wordCount <= 260;
+    const target = Math.min(rows.length, lesson?.daily ? 10 : useWholeLesson ? rows.length : wordCount > 320 ? 10 : 12);
+    const picked = new Set();
+    const add = id => {
+      if (picked.size < target && available.has(id)) picked.add(id);
+    };
+
+    add(ids[0]);
+    if (lesson?.storyArc) {
+      for (const beat of STORY_BEATS) add(lesson.storyArc[beat.id]);
+    }
+    add(ids.at(-1));
+    for (const question of lesson?.questions || []) {
+      for (const id of question.sentenceIds || []) add(id);
+    }
+    if (target > 1) {
+      for (let i = 0; i < target && picked.size < target; i++) {
+        add(ids[Math.round(i * (rows.length - 1) / (target - 1))]);
+      }
+    }
+    for (const id of ids) add(id);
+    coreSentenceIds = ids.filter(id => picked.has(id));
+  }
+
+  const phases = lesson?.daily
+    ? [
+        ['prepare', '字詞暖身', 3],
+        ['first-listen', '完整首聽', 5],
+        ['core-listen', '核心句精聽', 10],
+        ['comprehension', '理解檢核', 4],
+        ['output', '開口回述', 5],
+        ['recap', '回顧收尾', 3],
+      ]
+    : [
+        ['prepare', '字詞暖身', 3],
+        ['first-listen', '完整首聽', 3],
+        ['core-listen', '核心句精聽', 10],
+        ['comprehension', '理解檢核', 4],
+        ['output', lesson?.type === 'dialogue' ? '角色開口' : '跟讀回述', 8],
+        ['recap', '回顧收尾', 2],
+      ];
+
+  return {
+    targetMinutes: phases.reduce((total, [, , minutes]) => total + minutes, 0),
+    phases: phases.map(([id, labelZh, minutes]) => ({ id, labelZh, minutes })),
+    wordCount,
+    totalSentenceCount: rows.length,
+    coreSentenceIds,
+    coreSentenceCount: coreSentenceIds.length,
+    isExcerpt: coreSentenceIds.length < rows.length,
+    selection: authoredValid ? 'authored' : 'automatic',
+  };
+}
+
 export function containsSurface(text, surface) {
   const wanted = wordTokens(surface).map(t => t.text.toLowerCase());
   const words = wordTokens(text);
@@ -161,6 +235,14 @@ export function learningProblems(lesson) {
   const words = Array.isArray(l.vocabulary) ? l.vocabulary : [];
   check(words.length >= 4 && words.length <= 8, 'learning vocabulary needs 4-8 items');
   check(new Set(words.map(w => w.id)).size === words.length, 'duplicate vocabulary id');
+  if (l.coreSentenceIds != null) {
+    const coreIds = Array.isArray(l.coreSentenceIds) ? l.coreSentenceIds : [];
+    const minimum = lesson.daily ? 8 : 4;
+    check(refsValid(coreIds), 'coreSentenceIds must reference real sentences');
+    check(new Set(coreIds).size === coreIds.length, 'coreSentenceIds must not contain duplicates');
+    check(coreIds.length >= minimum && coreIds.length <= (lesson.daily ? 12 : lesson.sentences.length),
+      `coreSentenceIds needs ${minimum}-${lesson.daily ? 12 : lesson.sentences.length} items`);
+  }
   for (const w of words) {
     check(/^[a-z][a-z0-9-]*$/.test(w.id || ''), 'invalid vocabulary id');
     check(!!normalizeTerm(w.term) && !!normalizeTerm(w.surface), `${w.id}: invalid English term/surface`);
@@ -173,10 +255,34 @@ export function learningProblems(lesson) {
   }
   if (l.task) {
     for (const key of ['id', 'titleZh', 'roleZh', 'setupZh']) check(text(l.task[key]), `task missing ${key}`);
+    if (l.task.partnerLabelZh != null) check(text(l.task.partnerLabelZh), 'task partnerLabelZh must be text');
     const steps = Array.isArray(l.task.steps) ? l.task.steps : [];
     check(steps.length >= 2 && steps.length <= 8, 'task needs 2-8 steps');
     for (const s of steps) for (const key of ['partner', 'promptZh', 'keywords', 'frame', 'sample']) check(text(s[key]), `task step missing ${key}`);
     check(Array.isArray(l.task.success) && l.task.success.length >= 2 && l.task.success.every(text), 'task needs success criteria');
+  }
+  if (l.spokenPractice) {
+    const spoken = l.spokenPractice;
+    check(text(spoken.titleZh), 'spokenPractice missing titleZh');
+    check(text(spoken.noteZh), 'spokenPractice missing noteZh');
+    const alternatives = Array.isArray(spoken.alternatives) ? spoken.alternatives : [];
+    check(alternatives.length >= 2 && alternatives.length <= 4, 'spokenPractice needs 2-4 alternatives');
+    for (const item of alternatives) {
+      for (const key of ['clear', 'natural', 'guidanceZh']) check(text(item[key]), `spokenPractice alternative missing ${key}`);
+      check(['active', 'recognition'].includes(item.mode), 'spokenPractice alternative has invalid mode');
+    }
+    const drill = spoken.drill;
+    check(!!drill && typeof drill === 'object', 'spokenPractice missing drill');
+    if (drill && typeof drill === 'object') {
+      check(text(drill.setupZh), 'spokenPractice drill missing setupZh');
+      check(text(drill.successZh), 'spokenPractice drill missing successZh');
+      const turns = Array.isArray(drill.turns) ? drill.turns : [];
+      check(turns.length >= 2 && turns.length <= 6, 'spokenPractice drill needs 2-6 turns');
+      for (const turn of turns) {
+        check(text(turn.speaker), 'spokenPractice turn missing speaker');
+        check(text(turn.text), 'spokenPractice turn missing text');
+      }
+    }
   }
   return problems;
 }
