@@ -3,8 +3,8 @@
 - 日期：2026-09-29
 - 對應規格：[SDD-007](../sdd/007-little-green-book-u01-u04-app-lessons.md)
 - 上游稿件：[U01–U04 教學審稿](../curriculum/little-green-book-u01-u04-editorial.md)
-- 結果：本地驗收完成，未 commit、未 push、未 deploy
-- 本地版本：`2026.09.29.3`
+- 結果：已 commit、push、deploy，正式站 smoke test 通過
+- 發布版本：`2026.09.29.3`
 
 ## 施工節點
 
@@ -82,7 +82,22 @@
 | A7 索引／README | 通過 | 115 課、1,916 句 |
 | A8 回歸 | 通過 | `npm run check`，73/73、content OK |
 | A9 UI | 通過 | 課程庫、課程頁、口語區、核心精聽、預習、任務與 390×844 |
-| A10 追溯與發布界線 | 通過 | 本 SDD、devlog、know-how、測試與工程索引；本地未發布 |
+| A10 追溯與發布界線 | 通過 | 本 SDD、devlog、know-how、測試與工程索引；發布證據見 N8–N9 |
+
+### N8｜commit、push、deploy
+
+- staged 清單逐項核對，附件 PDF 未加入版本控制；Firebase 的 `**/*.pdf` 排除規則亦保留。
+- 發布提交：`e4019c7`（`feat: add guided core lessons and green book units`）。
+- `origin/main` 已由 `3caf592` 推進至 `e4019c7`。
+- `npm run deploy` 執行成功；部署前再次通過 62 個 JavaScript 模組、73/73 Node 測試與 115 課／1,916 句內容驗證。
+- Firebase project `echo-english-20260814` 已完成 Hosting release：<https://echo-english-20260814.web.app>。
+
+### N9｜部署後 smoke test
+
+- 正式站 `js/version.js` 回傳 v2026.09.29.3，HTTP `Cache-Control` 為 `no-cache, no-store, must-revalidate`。
+- 正式索引為 115 課；`l1-08` 與 `l1-11` 可直接取得，分別為 10 句與 12 句。
+- 舊版 shell 顯示「新版已就緒」，由 v2026.09.23.3 升級到 v2026.09.29.3；套用更新後 U01 顯示 30 分鐘六階段、10/10 核心句、口語加強與裝置語音標示。
+- 正式站瀏覽器 console 無 error 或 warning。
 
 ## 未完成／限制
 
@@ -90,4 +105,4 @@
 - `nine / nineteen`、`eight / eighteen`、`Hang on` 與縮讀尚未做真人音檔聽評，不能把文字與本機點播當成通過。
 - 尚未做真機 Safari／Android、麥克風、全流程 30 分鐘真人試課或學習成效測試。
 - 尚未實作真正的「同課多變體」資料模型；本批用四堂獨立延伸課處理。
-- 未 commit、push 或 deploy；附件 PDF 仍排除，商用稽核仍另案。
+- 附件 PDF 仍未追蹤且未部署；商用稽核仍另案。

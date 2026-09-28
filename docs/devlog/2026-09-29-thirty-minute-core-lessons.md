@@ -2,8 +2,8 @@
 
 - 日期：2026-09-29
 - 對應規格：[SDD-006](../sdd/006-thirty-minute-core-lessons.md)
-- 結果：本地驗收完成，未 commit、未 push、未 deploy
-- 本地版本：`2026.09.29.1`
+- 結果：已隨 v2026.09.29.3 commit、push、deploy
+- 初始施工版本：`2026.09.29.1`；正式發布版本：`2026.09.29.3`
 
 ## 施工節點
 
@@ -39,7 +39,7 @@
 
 - App shell 程式與樣式有變更，將共享版本升為 `2026.09.29.1`，package 日期版號為 `2026.9.29`。
 - 沒有新增 shell 模組，既有 `sw.js` 資源清單已涵蓋 `learning.js` 與各 view；共享版本會產生新的 cache generation。
-- 本輪沒有提交、推送或部署。
+- 此節點當時沒有提交、推送或部署；完成 ENG-007 整合後再依使用者授權發布。
 
 ### N5｜自動驗證
 
@@ -72,12 +72,19 @@
 | A7 完成後動線 | 通過 | 程式路徑與 Node wiring 測試；任務／全文加強入口保留 |
 | A8 自動檢查 | 通過 | `npm run check`；68/68、content OK |
 | A9 響應式 UI | 通過 | 一般 viewport DOM 與 390×844 截圖檢查 |
-| A10 PWA 版本 | 通過 | `js/version.js` 與 `package.json` 一致；未發布 |
+| A10 PWA 版本 | 通過 | `js/version.js` 與 `package.json` 一致；最終以 v2026.09.29.3 發布 |
+
+### N7｜整合發布
+
+- 與 ENG-007 合併為提交 `e4019c7`（`feat: add guided core lessons and green book units`），已推送至 `origin/main`。
+- `npm run deploy` 再次執行完整檢查：62 個 JavaScript 模組、73/73 Node 測試、115 課／1,916 句內容驗證均通過。
+- Firebase project `echo-english-20260814` 完成 Hosting release；正式站為 <https://echo-english-20260814.web.app>。
+- 部署後正式站 U01 顯示 30 分鐘六階段與 10/10 核心句，證實本功能已進入新版 shell。
 
 ## 未完成／限制
 
 - 尚未以真人完整上完一堂課來校準是否實際落在 30 分鐘；目前是教學時間預算，不是保證時間。
-- 小綠書 U01–U04 尚未轉成 App 課程，也尚未為其人工指定 `coreSentenceIds`。
+- 小綠書 U01–U04 已由 ENG-007 轉成 App 課程；短課依規則以全文作為核心，不需要額外指定 `coreSentenceIds`。
 - 沒有做真機 Safari／Android 的觸控、麥克風與音訊驗收。
-- 沒有 commit、push 或 deploy；使用者目前 8818 的已安裝版本仍需未來發布後經更新提示升級。
+- 已發布；既有已安裝版本會透過 PWA 更新提示升級，正式站實測已由 v2026.09.23.3 提示升至 v2026.09.29.3。
 - 商用授權與整體商用稽核仍排除。
