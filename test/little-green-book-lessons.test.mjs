@@ -24,7 +24,7 @@ test('LGI-01/02: U01-U04 are four ordered L1 lessons with 42 sentences', () => {
     assert.equal(lesson.type, 'dialogue');
     assert.equal(lesson.sentences.length, count);
     assert.equal(lesson.learning.prerequisite?.id || null, prerequisite);
-    assert.equal(lesson.preGeneratedAudio, false);
+    assert.equal(lesson.preGeneratedAudio, true);
     assert.match(lesson.source, /^原創基礎課程/);
   });
 });
@@ -64,7 +64,7 @@ test('LGI-05: all four lessons fit wholly inside the 30-minute core', () => {
   }
 });
 
-test('LGI-06/07: index, audio manifest and optional UI stay honest', async () => {
+test('LGI-06/ENG-008: index and four complete fixed voice sets are wired', async () => {
   const [index, manifest, lessonView, taskView] = await Promise.all([
     read('content/index.json').then(JSON.parse),
     read('content/audio/manifest.json').then(JSON.parse),
@@ -74,8 +74,14 @@ test('LGI-06/07: index, audio manifest and optional UI stay honest', async () =>
   assert.equal(index.lessons.length, 115);
   assert.equal(index.lessons.reduce((total, lesson) => total + lesson.count, 0), 1916);
   for (const [id] of expected) {
-    assert.equal(index.lessons.find(lesson => lesson.id === id)?.preGeneratedAudio, false, id);
-    assert.equal(manifest.lessons?.[id], undefined, id);
+    assert.equal(index.lessons.find(lesson => lesson.id === id)?.preGeneratedAudio, true, id);
+    assert.deepEqual(Object.keys(manifest.lessons?.[id] || {}).sort(),
+      ['edge-gb', 'edge-us', 'kokoro-gb', 'kokoro-us'], id);
+    const lesson = lessons.find(item => item.id === id);
+    const sentenceIds = lesson.sentences.map(sentence => sentence.id);
+    for (const voiceId of ['edge-gb', 'edge-us', 'kokoro-gb', 'kokoro-us']) {
+      assert.deepEqual(manifest.lessons[id][voiceId], sentenceIds, `${id}/${voiceId}`);
+    }
   }
   assert.match(lessonView, /口語加強/);
   assert.match(lessonView, /尚未經真人聽評/);

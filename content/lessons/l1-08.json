@@ -5,7 +5,7 @@
   "level": 1,
   "type": "dialogue",
   "topic": "daily",
-  "preGeneratedAudio": false,
+  "preGeneratedAudio": true,
   "source": "原創基礎課程：小綠書 U01 溝通功能改寫",
   "summaryZh": "L1 延伸：不只交換姓名，還要根據對方剛說的內容追問一題。建議先學「初次見面」。",
   "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U01" },

@@ -5,7 +5,7 @@
   "level": 1,
   "type": "dialogue",
   "topic": "daily",
-  "preGeneratedAudio": false,
+  "preGeneratedAudio": true,
   "source": "原創基礎課程：小綠書 U03 溝通功能改寫",
   "summaryZh": "L1 延伸：聽出飲料是否另計，在價格聽不清時要求重說並確認總額。建議先學「外帶午餐」。金額為美元。",
   "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U03" },

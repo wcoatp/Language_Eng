@@ -5,7 +5,7 @@
   "level": 1,
   "type": "dialogue",
   "topic": "daily",
-  "preGeneratedAudio": false,
+  "preGeneratedAudio": true,
   "source": "原創基礎課程：小綠書 U04 溝通功能改寫",
   "summaryZh": "L1 延伸：說出尺寸哪裡不合，詢問另一尺寸或顏色，最後清楚決定購買或不買。",
   "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U04" },

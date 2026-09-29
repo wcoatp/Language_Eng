@@ -87,7 +87,7 @@
 
 115 課、1916 句,難度 L1 到 L5 遞增。分成兩類:
 
-**原創課程(51 課)** — 我們自己寫的情境對話、短文與每日故事。51 課已備齊四組核心預生成語音，部分課程另有其他口音。
+**原創課程(55 課)** — 我們自己寫的情境對話、短文與每日故事。全部已備齊四組核心預生成語音，部分課程另有其他口音。
 兩個新 L2 情境的 Kokoro 與 Edge 美／英式音檔均已完成；Edge 產音只處理這 22 句原創英文，不含附件、個資或學習紀錄。
 
 **真人錄音課程(60 課)** — 取自 [VOA Learning English](https://learningenglish.voanews.com)。
@@ -326,7 +326,7 @@ node tools/make-icons.mjs
 
 專案目前設定部署到 Firebase Hosting 專案 `echo-english-20260814`:
 
-目前已部署版本：`v2026.09.23.3` · [正式站](https://echo-english-20260814.web.app)
+目前已部署版本：`v2026.09.29.3` · [正式站](https://echo-english-20260814.web.app)
 
 ```bash
 npm run deploy

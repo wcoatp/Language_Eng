@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T16:41:59.216Z",
+  "generatedAt": "2026-09-29T06:48:39.154Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -110,7 +110,7 @@
       "count": 10,
       "questions": 3,
       "realAudio": false,
-      "preGeneratedAudio": false,
+      "preGeneratedAudio": true,
       "source": "原創基礎課程：小綠書 U01 溝通功能改寫"
     },
     {
@@ -124,7 +124,7 @@
       "count": 10,
       "questions": 3,
       "realAudio": false,
-      "preGeneratedAudio": false,
+      "preGeneratedAudio": true,
       "source": "原創基礎課程：小綠書 U02 溝通功能改寫"
     },
     {
@@ -138,7 +138,7 @@
       "count": 10,
       "questions": 3,
       "realAudio": false,
-      "preGeneratedAudio": false,
+      "preGeneratedAudio": true,
       "source": "原創基礎課程：小綠書 U03 溝通功能改寫"
     },
     {
@@ -152,7 +152,7 @@
       "count": 12,
       "questions": 3,
       "realAudio": false,
-      "preGeneratedAudio": false,
+      "preGeneratedAudio": true,
       "source": "原創基礎課程：小綠書 U04 溝通功能改寫"
     },
     {

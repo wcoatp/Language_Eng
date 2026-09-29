@@ -5,7 +5,7 @@
   "level": 1,
   "type": "dialogue",
   "topic": "daily",
-  "preGeneratedAudio": false,
+  "preGeneratedAudio": true,
   "source": "原創基礎課程：小綠書 U02 溝通功能改寫",
   "summaryZh": "L1 延伸：發現家事分工有誤會時，說清楚誰做什麼、什麼時候做。",
   "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U02" },
