@@ -2,7 +2,7 @@
 
 - 日期：2026-09-29
 - 對應規格：[SDD-008](../sdd/008-little-green-book-audio.md)
-- 結果：v2026.09.29.4 已 commit、push、部署並通過線上 smoke test；代表音檔獲使用者確認，較完整聽評與窄螢幕仍列發布後 QA
+- 結果：v2026.09.29.4 已 commit、push、部署並通過線上 smoke test；代表音檔獲使用者確認，390×844 瀏覽器模擬已補驗；完整人工聽評與真機仍待 QA
 - 預定版本：`2026.09.29.4`
 
 ## 施工節點
@@ -46,7 +46,7 @@
 - 在正式站以瀏覽器 viewport 模擬 390×844，檢查 U01–U04（`l1-08`～`l1-11`）課程頁、U01／U03 播放器及聲線選單。所有被測畫面的 `innerWidth`、`clientWidth`、`scrollWidth` 均為 390，沒有水平溢出。
 - 目視檢查 `l1-08` 課程頁、播放器、聲線選單排版；沒有發現文字與控制項重疊。此結果僅是瀏覽器尺寸模擬，不宣稱真實手機觸控／Safari／Android 已驗收。
 - 168 個正式站 manifest 音檔端點均完成 HEAD 請求：168/168 回應 200 且 `audio/mpeg`。這只確認服務端可取用，並非 168 段真人聽感測試。
-- 使用者先前確認的範圍仍僅為代表句 `Did you say nine or nineteen?` 的四種合成聲線。A/B、`eight / eighteen`、否定、縮讀等其他聽評類別仍需人工確認。
+- 使用者先前確認的範圍仍僅為代表句 `Did you say nine or nineteen?` 的四種合成聲線。固定音檔的 A/B、否定、縮讀與裝置 TTS 的 `eight / eighteen` 仍需人工確認。
 
 ### N5｜來源與人工聽評界線
 
@@ -54,7 +54,13 @@
 - 本機產音環境版本：`kokoro` 0.9.4、`edge-tts` 7.2.8。
 - Edge wrapper 授權不能代表 Microsoft 服務或語音輸出的商用權利；整體商用審查仍未做。
 - 使用者收到 `Did you say nine or nineteen?` 四種聲線版本後回覆「音檔 ok」。記錄為該代表句及四種聲線已獲使用者確認；不擴張解讀成逐一聽完全部 168 段。
-- 尚未取得 `eight / eighteen`、否定、縮讀及其他 A/B 句的人工聽評；`ffprobe` 僅證明檔案可解析，不能替代發音、角色辨識及自然度判斷。這些項目與 390×844 窄螢幕列為本次發布後待補 QA。
+- 尚未取得固定音檔的否定、縮讀及其他 A/B 句，或裝置 TTS `eight / eighteen` 的人工聽評；`ffprobe` 僅證明檔案可解析，不能替代發音、角色辨識及自然度判斷。這些項目與 390×844 窄螢幕列為本次發布後待補 QA。
+
+### N5b｜建立人工聽評表（2026-09-29）
+
+- 建立[空白人工聽評表](../research/audio-listening-review-template.md)，指定固定音檔播放器路由與四組聲線要重聽的 A/B、否定及縮讀句 ID，讓人工回報可重現。
+- 明確分開 `eight / eighteen`：該句在 `l1-10` 任務頁使用裝置 TTS，不在 168 段固定 MP3 manifest；表單要求另記裝置、瀏覽器及系統語音。
+- 表單目前未填；這是聽評工具，不是聽感驗收證據。固定音檔每組聲線有三類評估（A/B 一組含兩句），裝置 TTS 再單獨測。
 
 ## SDD 驗收狀態
 
@@ -64,7 +70,7 @@
 | A2 MP3 及 manifest 完整 | 通過 | 逐檔 ffprobe，四課清單順序相同 |
 | A3 自動驗證 | 通過 | `npm run check`，73/73、content OK |
 | A4 播放器固定聲線 | 通過 | 桌面 selector 有四種聲音；Edge GB、Kokoro GB 檔案請求 200 |
-| A5 真人音質／辨識度聽評 | 部分通過 | 使用者確認 `Did you say nine or nineteen?` 四種聲線；其他 A/B、`eight / eighteen`、否定及縮讀未取得人工聽評 |
+| A5 真人音質／辨識度聽評 | 部分通過 | 使用者確認 `Did you say nine or nineteen?` 四種聲線；固定音檔 A/B／否定／縮讀及裝置 TTS `eight / eighteen` 尚未取得人工聽評 |
 | A6 版號與響應式 UI | 部分通過 | 版號 `2026.09.29.4`；桌面與 390×844 瀏覽器模擬已驗，實體手機／Safari／Android 未測 |
 | A7 工程追溯 | 通過 | SDD、devlog、know-how、測試、索引互連 |
 | A8 推送與發布 | 通過 | `e52e666` 推送至 `main`；Firebase Hosting 正式站回報 v2026.09.29.4，課程頁／更新切換／音檔端點通過 smoke test |
@@ -78,7 +84,7 @@
 - 測試頁偵測到舊快取 v2026.09.29.3 與新版 v2026.09.29.4，觸發「重新載入更新」後切換成功；播放器顯示英／美式 Kokoro 與 Edge TTS 聲線選項。
 - 正式站 Edge GB `l1-08/s1.mp3` 與 Kokoro US `l1-11/s12.mp3` 均回應 HTTP 200、`audio/mpeg`。此為服務端可取得性，不代表逐段聽感驗證。
 - PDF 沒有加入 Git 提交；Firebase Hosting ignore 規則包含 `**/*.pdf`，部署仍保留使用者 PDF 僅在本機未追蹤的狀態。
-- 瀏覽器模擬 390×844 已驗收；真機、Safari／Android，以及 A/B、`eight / eighteen`、否定與縮讀等剩餘人工聽評未完成，保留為發布後限制。
+- 瀏覽器模擬 390×844 已驗收；真機、Safari／Android，以及 A/B、裝置 TTS `eight / eighteen`、否定與縮讀等人工聽評未完成。聽評表已建立但尚無回填，仍列發布後限制。
 
 ## 發布狀態
 
