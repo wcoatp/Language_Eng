@@ -71,8 +71,8 @@ test('LGI-06/ENG-008: index and four complete fixed voice sets are wired', async
     read('js/views/lesson.js'),
     read('js/views/task.js'),
   ]);
-  assert.equal(index.lessons.length, 115);
-  assert.equal(index.lessons.reduce((total, lesson) => total + lesson.count, 0), 1916);
+  assert.equal(index.lessons.length, 119);
+  assert.equal(index.lessons.reduce((total, lesson) => total + lesson.count, 0), 1956);
   for (const [id] of expected) {
     assert.equal(index.lessons.find(lesson => lesson.id === id)?.preGeneratedAudio, true, id);
     assert.deepEqual(Object.keys(manifest.lessons?.[id] || {}).sort(),

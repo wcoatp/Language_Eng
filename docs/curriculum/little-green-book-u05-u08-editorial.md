@@ -1,6 +1,6 @@
 # 小綠書 U05–U08｜教學審稿與原創對話設計
 
-狀態：2026-09-29 編輯設計稿，待使用者／教師審稿；**不是 App 已有四堂新課**。依 [SDD-009](../sdd/009-little-green-book-u05-u08-editorial.md) 編寫，承接 [U01–U16 第一版藍圖](little-green-book-unit-sequence.md) 與 [U01–U04 詳稿](little-green-book-u01-u04-editorial.md)。來源只用 U05–U08 主題與情境功能，對話、角色、資料及練習皆重新創作；不要將附件原句搬進 App。
+狀態：2026-09-29 編輯設計稿；App 轉製依 [SDD-011](../sdd/011-little-green-book-u05-u08-app-lessons.md) 進行，發布狀態以 ENG-011 紀錄為準。依 [SDD-009](../sdd/009-little-green-book-u05-u08-editorial.md) 編寫，承接 [U01–U16 第一版藍圖](little-green-book-unit-sequence.md) 與 [U01–U04 詳稿](little-green-book-u01-u04-editorial.md)。來源只用 U05–U08 主題與情境功能，對話、角色、資料及練習皆重新創作；不要將附件原句搬進 App。
 
 ## 共通教學規格
 
@@ -30,7 +30,7 @@
 | 回合 | English | 中文 |
 |---|---|---|
 | U05-1 | A: Hello. My air conditioner isn't cooling the room. | 你好，我的冷氣沒有把房間吹涼。 |
-| U05-2 | B: I'm sorry to hear that. Is it making a strange noise? | 真可惜。有發出奇怪的聲音嗎？ |
+| U05-2 | B: I'm sorry to hear that. Is it making a strange noise? | 很抱歉聽到這個情況。有發出奇怪的聲音嗎？ |
 | U05-3 | A: No, but it is blowing warm air. | 沒有，但它吹出來的是暖風。 |
 | U05-4 | B: When did you first notice the problem? | 你第一次注意到這個問題是什麼時候？ |
 | U05-5 | A: Yesterday afternoon. | 昨天下午。 |
@@ -75,14 +75,14 @@
 |---|---|---|
 | U06-1 | A: Hi. I have a room reservation for two nights. | 你好，我訂了兩晚的房間。 |
 | U06-2 | B: Welcome. Would you like to use our parking? | 歡迎。你要使用我們的停車位嗎？ |
-| U06-3 | A: Maybe. Is parking included in the room price? | 可能會。停車費包含在房價裡嗎？ |
+| U06-3 | A: Maybe. Is the parking fee included in the room price? | 可能會。停車費包含在房價裡嗎？ |
 | U06-4 | B: No. It's an extra twelve dollars per night. | 沒有。每晚要另外付十二美元。 |
-| U06-5 | A: So parking would be twenty-four dollars for two nights? | 所以停兩晚是二十四美元嗎？ |
+| U06-5 | A: So the total parking fee for two nights is twenty-four dollars? | 所以停兩晚的停車費總額是二十四美元嗎？ |
 | U06-6 | B: That's right. It is added to the room price. | 沒錯，這筆會加在房費之外。 |
 | U06-7 | A: Do I have to decide now? | 我現在就得決定嗎？ |
 | U06-8 | B: No. We can add it after you park. | 不用。你停好車後我們可以再加。 |
 | U06-9 | A: Okay, I'll use it. Please show it separately on the bill. | 好，我會使用。請在帳單上分開列出。 |
-| U06-10 | B: Of course. You can check the total before you pay. | 沒問題。付款前你可以確認總額。 |
+| U06-10 | B: Of course. You can confirm the total before you pay. | 沒問題。付款前你可以確認總額。 |
 
 **首聽理解**
 
@@ -124,9 +124,9 @@
 | U07-4 | B: When did it start? | 什麼時候開始的？ |
 | U07-5 | A: My throat started hurting yesterday. I felt dizzy this morning. | 我昨天開始喉嚨痛，今天早上開始頭暈。 |
 | U07-6 | B: Do you know if you have any allergies? | 你知道自己有沒有過敏嗎？ |
-| U07-7 | A: I'm not sure. I've never had an allergy test. | 我不確定，我從沒做過過敏檢測。 |
-| U07-8 | B: That's okay. I'll note that it's unknown for the nurse. | 沒關係，我會註明這項資訊仍不確定，讓護士確認。 |
-| U07-9 | A: Thank you. May I tell the nurse about my symptoms? | 謝謝。我可以向護士說明症狀嗎？ |
+| U07-7 | A: I'm not sure. I haven't been tested for allergies. | 我不確定。我沒有做過過敏檢測。 |
+| U07-8 | B: That's okay. I'll note that the information is unknown for the nurse. | 沒關係。我會註明這項資訊仍不確定，讓護士確認。 |
+| U07-9 | A: Thank you. Could I give the nurse more information about my symptoms? | 謝謝。我可以再向護士補充症狀資訊嗎？ |
 | U07-10 | B: Yes. The nurse will speak with you shortly. | 可以。護士很快會和你談。 |
 
 **首聽理解**
@@ -163,13 +163,13 @@
 
 | 回合 | English | 中文 |
 |---|---|---|
-| U08-1 | A: Hello. I rented a car, and a warning light came on. | 你好，我租的車亮起警示燈。 |
+| U08-1 | A: Hello. I have a rental car, and a warning light came on. | 你好，我租的車亮起警示燈。 |
 | U08-2 | B: Are you parked somewhere safe now? | 你現在停在安全的地方嗎？ |
 | U08-3 | A: Yes. I'm in a public parking lot. | 是，我在一個公共停車場。 |
 | U08-4 | B: Can you tell me a nearby landmark? | 可以告訴我附近的地標嗎？ |
 | U08-5 | A: I'm near the east entrance of the library. | 我在圖書館東側入口附近。 |
 | U08-6 | B: Thanks. I'll contact roadside assistance. | 謝謝，我會聯絡道路救援。 |
-| U08-7 | A: Do you know the estimated wait time? | 你知道預估要等多久嗎？ |
+| U08-7 | A: Do you have an estimate of the wait time? | 你有預估等待時間嗎？ |
 | U08-8 | B: About forty minutes. I'll call if that changes. | 大約四十分鐘。如果時間有變我會打電話。 |
 | U08-9 | A: Should I stay here while I wait? | 等待期間我應該留在這裡嗎？ |
 | U08-10 | B: Please stay in a safe public area and keep your phone on. | 請留在安全的公共區域，並保持電話開機。 |
@@ -193,5 +193,5 @@
 
 - U05–U08 都有清楚但互不重複的 L2 候選學習目標；依先備差異建議保留為四個獨立課程候選，不只是把原課文加長。正式新增前仍要核對當時最新課庫並由使用者／教師審稿。
 - U05 可連到 `l3-02`，U06 可連到 `l1-04`／`l2-07`，U07 可連到 `l2-04`；銜接不等於重複，入口課練程序與核心問題，進階課再延伸協商／完整診療對話。
-- 下一工程若獲同意：先以本稿定版，另立 App 實作 SDD（正式 ID、課程計畫、問答和詞卡、語音、資料／離線相容、測試及發布），不要直接複製本文件貼入 JSON。
+- App 實作依 [SDD-011](../sdd/011-little-green-book-u05-u08-app-lessons.md) 將本稿轉為獨立課程、固定音檔與可驗證資料；不能把文件稿直接當成已發布課程。
 - 本稿未經真人教師審稿、目標學習者試教或學習成效評估；語句的可懂度與 30 分鐘完成度仍待驗證。

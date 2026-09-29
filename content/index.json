@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T06:48:39.154Z",
+  "generatedAt": "2026-09-29T11:27:43.540Z",
   "lessons": [
     {
       "id": "l1-01",
@@ -358,6 +358,62 @@
       "realAudio": false,
       "preGeneratedAudio": true,
       "source": ""
+    },
+    {
+      "id": "l2-09",
+      "title": "The AC Isn't Cooling",
+      "titleZh": "冷氣沒有把房間吹涼",
+      "summaryZh": "描述冷氣吹出暖風的現象，並和服務人員約定技師可到訪的時間。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": "原創基礎課程：小綠書 U05 情境功能改寫"
+    },
+    {
+      "id": "l2-10",
+      "title": "Is Parking Included?",
+      "titleZh": "停車費有包含在房價裡嗎？",
+      "summaryZh": "在飯店入住時確認停車是否另計、每晚價格與兩晚總額，再決定是否使用。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": "原創基礎課程：小綠書 U06 情境功能改寫"
+    },
+    {
+      "id": "l2-11",
+      "title": "Checking In at the Clinic",
+      "titleZh": "在診所櫃檯登記",
+      "summaryZh": "在看診前向診所櫃檯簡短說明症狀與開始時間；不確定的過敏資訊不猜測，交由醫療人員確認。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "daily",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": "原創基礎課程：小綠書 U07 情境功能改寫"
+    },
+    {
+      "id": "l2-12",
+      "title": "Calling Roadside Assistance",
+      "titleZh": "聯絡租車道路支援",
+      "summaryZh": "在安全停車後描述租車警示燈、提供附近地標、確認救援等待時間與聯絡方式。",
+      "level": 2,
+      "type": "dialogue",
+      "topic": "travel",
+      "count": 10,
+      "questions": 3,
+      "realAudio": false,
+      "preGeneratedAudio": true,
+      "source": "原創基礎課程：小綠書 U08 情境功能改寫"
     },
     {
       "id": "voa-all-thumbs-01",

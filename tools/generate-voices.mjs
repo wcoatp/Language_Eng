@@ -7,7 +7,7 @@
 
      node tools/generate-voices.mjs --list
      node tools/generate-voices.mjs --voice kokoro-us
-     node tools/generate-voices.mjs --voice edge-in,edge-ie --force
+     node tools/generate-voices.mjs --voice edge-in,edge-ie --lesson l2-09,l2-10 --force
 
    Engines and their setup:
      edge-tts     .venv/bin/edge-tts            (pip install edge-tts)
@@ -20,6 +20,7 @@ import { promisify } from 'node:util';
 import { readFile, writeFile, readdir, mkdir, access } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { selectLessons } from './voice-scope.mjs';
 
 const run = promisify(execFile);
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -62,7 +63,8 @@ const exists = p => access(p).then(() => true, () => false);
 if (has('list') || has('help')) {
   console.log('\nvoice sets:\n');
   for (const [id, v] of Object.entries(VOICES)) console.log(`  ${id.padEnd(16)} ${v.engine}`);
-  console.log('\n  node tools/generate-voices.mjs --voice kokoro-us,kokoro-gb\n');
+  console.log('\n  Local:  node tools/generate-voices.mjs --voice kokoro-us,kokoro-gb\n' +
+              '  Edge:   node tools/generate-voices.mjs --voice edge-us,edge-gb --lesson l2-09,l2-10\n');
   process.exit(0);
 }
 
@@ -75,19 +77,32 @@ for (const id of wanted) {
   if (!VOICES[id]) { console.error(`unknown voice "${id}"`); process.exit(1); }
 }
 const force = has('force');
+const lessonScope = flag('lesson');
+if (wanted.some(id => VOICES[id].engine === 'edge') && lessonScope == null) {
+  console.error('Edge TTS requires an explicit --lesson <id[,id...]> scope');
+  process.exit(1);
+}
 
 /* ---------- lessons ---------- */
 
 const files = (await readdir(lessonDir)).filter(f => f.endsWith('.json')).sort();
-const lessons = [];
+const availableLessons = [];
 for (const f of files) {
   const l = JSON.parse(await readFile(join(lessonDir, f), 'utf8'));
   // Real recordings keep their human voice. Device-TTS lessons deliberately
   // stay lightweight until preGeneratedAudio is explicitly switched on.
-  if (!l.realAudio && l.preGeneratedAudio !== false) lessons.push(l);
+  if (!l.realAudio && l.preGeneratedAudio !== false) availableLessons.push(l);
+}
+let lessons;
+try {
+  lessons = selectLessons(availableLessons, lessonScope);
+} catch (error) {
+  console.error(error.message);
+  process.exit(1);
 }
 console.log(`${lessons.length} synthetic lessons, ` +
-  `${lessons.reduce((n, l) => n + l.sentences.length, 0)} sentences`);
+  `${lessons.reduce((n, l) => n + l.sentences.length, 0)} sentences: ` +
+  `${lessons.map(lesson => lesson.id).join(', ')}`);
 
 /* ---------- generation ---------- */
 

@@ -1,0 +1,73 @@
+{
+  "id": "l2-10",
+  "title": "Is Parking Included?",
+  "titleZh": "停車費有包含在房價裡嗎？",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "travel",
+  "preGeneratedAudio": true,
+  "source": "原創基礎課程：小綠書 U06 情境功能改寫",
+  "summaryZh": "在飯店入住時確認停車是否另計、每晚價格與兩晚總額，再決定是否使用。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U06" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "問清住宿附加費是否包含、單晚價格與多晚總額，並明確說出自己的選擇。",
+    "prerequisite": { "id": "l1-04", "labelZh": "飯店入住登記" },
+    "next": { "id": "l2-11", "labelZh": "在診所櫃檯登記" },
+    "vocabulary": [
+      { "id": "parking-fee", "term": "parking fee", "surface": "parking fee", "sentenceIds": ["s3"], "zh": "停車費", "en": "Money paid for leaving a car in a parking area.", "example": "pay a parking fee", "exampleZh": "支付停車費" },
+      { "id": "included", "term": "included", "surface": "included", "sentenceIds": ["s3"], "zh": "已包含", "en": "Already part of a price or group.", "example": "Breakfast is included.", "exampleZh": "早餐已包含。" },
+      { "id": "extra", "term": "extra", "surface": "extra", "sentenceIds": ["s4"], "zh": "額外的、另計的", "en": "Added to the main amount or price.", "example": "an extra charge", "exampleZh": "額外費用" },
+      { "id": "per-night", "term": "per night", "surface": "per night", "sentenceIds": ["s4"], "zh": "每晚", "en": "For each night.", "example": "fifteen dollars per night", "exampleZh": "每晚十五美元" },
+      { "id": "total", "term": "total", "surface": "total", "sentenceIds": ["s5", "s10"], "zh": "總額", "en": "The complete amount after items are added together.", "example": "check the total", "exampleZh": "確認總額" },
+      { "id": "confirm", "term": "confirm", "surface": "confirm", "sentenceIds": ["s10"], "zh": "確認、核對", "en": "To make sure that information is correct.", "example": "confirm the final price", "exampleZh": "確認最後的價格" }
+    ],
+    "task": {
+      "id": "check-hotel-extra",
+      "titleZh": "換個條件：確認早餐加購費",
+      "roleZh": "你是旅客",
+      "partnerLabelZh": "飯店櫃檯說",
+      "setupZh": "你住兩晚。飯店早餐每人每晚十五美元；詢問是否包含、覆述兩晚費用，再決定是否加購。金額是假設練習，不用真實訂房資料。",
+      "steps": [
+        { "partner": "Would you like to add breakfast to your stay?", "promptZh": "詢問早餐費是否已包含在房價裡。", "keywords": "included / room price", "frame": "Is ___ included in ___?", "sample": "Is breakfast included in the room price?" },
+        { "partner": "No. It's fifteen dollars per person per night.", "promptZh": "覆述兩晚的早餐費總額，並請對方確認。", "keywords": "two nights / thirty dollars / confirm", "frame": "So for ___, the total is ___?", "sample": "So for two nights, the total is thirty dollars?" },
+        { "partner": "That's right. Would you like to add it?", "promptZh": "決定加購或婉拒，並確認最後帳單會列出這筆費用。", "keywords": "I'd like / no thanks / bill", "frame": "___ . Please show it on the bill.", "sample": "I'd like to add it. Please show it on the bill." }
+      ],
+      "success": ["我有問清楚費用是否包含。", "我有正確覆述單晚／多晚價格並請對方確認。", "我有明確說出是否加購。"]
+    },
+    "spokenPractice": {
+      "titleZh": "讓費用確認更自然",
+      "noteZh": "核心句已足以問清費用；以下替代說法是選修，不要求第一次全部記住。",
+      "alternatives": [
+        { "clear": "Is parking included in the room price?", "natural": "Does parking come with the room?", "mode": "active", "guidanceZh": "come with 在這裡是「包含在……裡」，適合詢問房價方案。" },
+        { "clear": "Is that extra?", "natural": "Is that on top of the room rate?", "mode": "recognition", "guidanceZh": "on top of 表示費用要另外加上；先聽懂即可。" },
+        { "clear": "Please show the fee separately on the bill.", "natural": "Could you itemize that on the bill?", "mode": "active", "guidanceZh": "itemize 是請對方逐項列出，語氣較正式。" }
+      ],
+      "drill": {
+        "setupZh": "聽到每晚單價後，先自己算出兩晚金額，再用英文覆述確認。",
+        "turns": [
+          { "speaker": "飯店櫃檯", "text": "It's fifteen dollars per night for two nights." },
+          { "speaker": "你", "text": "So the total is thirty dollars?" }
+        ],
+        "successZh": "正確覆述總額並以問句確認即可；不必在未提供資訊時猜稅額。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Hi. I have a room reservation for two nights.", "zh": "你好，我訂了兩晚的房間。" },
+    { "id": "s2", "speaker": "B", "text": "Welcome. Would you like to use our parking?", "zh": "歡迎。你要使用我們的停車位嗎？" },
+    { "id": "s3", "speaker": "A", "text": "Maybe. Is the parking fee included in the room price?", "zh": "可能會。停車費包含在房價裡嗎？" },
+    { "id": "s4", "speaker": "B", "text": "No. It's an extra twelve dollars per night.", "zh": "沒有。每晚要另外付十二美元。", "note": "extra 與 per night 是判斷費用是否另計及計價方式的關鍵。" },
+    { "id": "s5", "speaker": "A", "text": "So the total parking fee for two nights is twenty-four dollars?", "zh": "所以停兩晚的停車費總額是二十四美元嗎？" },
+    { "id": "s6", "speaker": "B", "text": "That's right. It will be added to your room bill.", "zh": "沒錯，這筆會加在你的房費帳單之外。" },
+    { "id": "s7", "speaker": "A", "text": "Do I have to decide now?", "zh": "我現在就得決定嗎？" },
+    { "id": "s8", "speaker": "B", "text": "No. We can add it after you park.", "zh": "不用。你停好車後我們可以再加。" },
+    { "id": "s9", "speaker": "A", "text": "Okay, I'll use it. Please show the fee separately on the bill.", "zh": "好，我會使用。請在帳單上分開列出這筆費用。" },
+    { "id": "s10", "speaker": "B", "text": "Of course. You can confirm the total before you pay.", "zh": "沒問題。付款前你可以確認總額。" }
+  ],
+  "questions": [
+    { "q": "Is parking part of the room price?", "options": ["Yes, for both nights", "No, it costs extra", "The dialogue does not say"], "answer": 1, "explanationZh": "櫃檯回答停車費每晚另計。", "sentenceIds": ["s3", "s4"] },
+    { "q": "How much is parking for two nights?", "options": ["Twelve dollars", "Twenty-four dollars", "Thirty dollars"], "answer": 1, "explanationZh": "每晚十二美元，兩晚共二十四美元，旅客並向櫃檯覆述確認。", "sentenceIds": ["s4", "s5", "s6"] },
+    { "q": "When can the guest decide to use parking?", "options": ["After parking the car", "Before making the reservation", "Only after paying"], "answer": 0, "explanationZh": "櫃檯說停好車後仍可再加。", "sentenceIds": ["s7", "s8"] }
+  ]
+}

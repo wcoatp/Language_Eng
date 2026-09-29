@@ -1,0 +1,72 @@
+{
+  "id": "l2-09",
+  "title": "The AC Isn't Cooling",
+  "titleZh": "冷氣沒有把房間吹涼",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": true,
+  "source": "原創基礎課程：小綠書 U05 情境功能改寫",
+  "summaryZh": "描述冷氣吹出暖風的現象，並和服務人員約定技師可到訪的時間。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U05" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "不自行判斷故障原因，清楚描述冷氣沒有降溫並約定一段可配合的到訪時段。",
+    "next": { "id": "l2-10", "labelZh": "確認住宿額外費用" },
+    "vocabulary": [
+      { "id": "air-conditioner", "term": "air conditioner", "surface": "air conditioner", "sentenceIds": ["s1"], "zh": "冷氣機", "en": "A machine that cools the air in a room.", "example": "turn on the air conditioner", "exampleZh": "打開冷氣" },
+      { "id": "cool", "term": "cool", "surface": "cooling", "sentenceIds": ["s1"], "zh": "使變涼、冷房", "en": "To make a place or thing less warm.", "example": "The room isn't cooling down.", "exampleZh": "房間沒有變涼。" },
+      { "id": "warm-air", "term": "warm air", "surface": "warm air", "sentenceIds": ["s3"], "zh": "暖空氣、暖風", "en": "Air that is not cool.", "example": "The fan is blowing warm air.", "exampleZh": "風扇吹出暖風。" },
+      { "id": "technician", "term": "technician", "surface": "technician", "sentenceIds": ["s6", "s10"], "zh": "技術人員、技師", "en": "A person trained to check or repair equipment.", "example": "A technician can check the unit.", "exampleZh": "技師可以檢查設備。" },
+      { "id": "appointment", "term": "appointment", "surface": "appointment", "sentenceIds": ["s7"], "zh": "預約、約定時間", "en": "An agreed time for someone to visit or meet.", "example": "make a morning appointment", "exampleZh": "預約早上的時段" },
+      { "id": "available", "term": "available", "surface": "available", "sentenceIds": ["s6"], "zh": "有空、可安排", "en": "Free or ready to be used at a particular time.", "example": "Is Friday available?", "exampleZh": "星期五有空檔嗎？" }
+    ],
+    "task": {
+      "id": "book-repair-visit",
+      "titleZh": "換個條件：洗衣機不能排水",
+      "roleZh": "你是住戶",
+      "partnerLabelZh": "服務人員說",
+      "setupZh": "你的洗衣機不能排水。只描述看到的現象，不猜零件故障；詢問最早可到訪時段，再提出你能在家的時間。",
+      "steps": [
+        { "partner": "Hello. What seems to be the problem?", "promptZh": "說明洗衣機不能排水。", "keywords": "washing machine / not draining", "frame": "My ___ isn't ___.", "sample": "My washing machine isn't draining." },
+        { "partner": "We can send a technician tomorrow afternoon.", "promptZh": "詢問有沒有更早的時段。", "keywords": "earlier / morning", "frame": "Do you have an earlier appointment?", "sample": "Do you have a morning appointment instead?" },
+        { "partner": "We have a window from nine to eleven.", "promptZh": "說明你能在家的時段，並確認技師到訪前會聯絡。", "keywords": "be home / call before", "frame": "That works. Will ___?", "sample": "That works. Will the technician call before arriving?" }
+      ],
+      "success": ["我有描述設備和一個可觀察現象。", "我有問清楚並確認到訪時間窗。", "我沒有猜測故障原因或承諾修理費。"]
+    },
+    "spokenPractice": {
+      "titleZh": "讓報修說法更自然",
+      "noteZh": "先用核心句完成任務；以下是可選加強，不要求第一次全部記住。",
+      "alternatives": [
+        { "clear": "My AC isn't cooling the room.", "natural": "My AC isn't cooling properly.", "mode": "active", "guidanceZh": "properly 可自然地表示「運作得不太正常」，先描述現象即可。" },
+        { "clear": "Can a technician come tomorrow?", "natural": "Could someone come by tomorrow?", "mode": "recognition", "guidanceZh": "come by 是口語的「過來一趟」，先聽懂即可。" },
+        { "clear": "Is there a morning time?", "natural": "Do you have a morning appointment?", "mode": "active", "guidanceZh": "appointment 用來確認可預約的時段。" }
+      ],
+      "drill": {
+        "setupZh": "聽到對方只能安排下午後，禮貌詢問早上是否有時段。",
+        "turns": [
+          { "speaker": "服務人員", "text": "The first available time is tomorrow afternoon." },
+          { "speaker": "你", "text": "Do you have a morning appointment instead?" }
+        ],
+        "successZh": "提出另一個可行時段即可；不必重複整段報修內容。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Hello. My air conditioner isn't cooling the room.", "zh": "你好，我的冷氣沒有把房間吹涼。", "note": "isn't cooling 說明觀察到的狀況，不推測設備哪裡故障。" },
+    { "id": "s2", "speaker": "B", "text": "I'm sorry to hear that. Is it making a strange noise?", "zh": "很抱歉聽到這個情況。有發出奇怪的聲音嗎？" },
+    { "id": "s3", "speaker": "A", "text": "No, but it is blowing warm air.", "zh": "沒有，但它吹出來的是暖風。" },
+    { "id": "s4", "speaker": "B", "text": "When did you first notice the problem?", "zh": "你第一次注意到這個問題是什麼時候？" },
+    { "id": "s5", "speaker": "A", "text": "Yesterday afternoon.", "zh": "昨天下午。" },
+    { "id": "s6", "speaker": "B", "text": "We have a technician available tomorrow.", "zh": "我們明天有技師可以安排。" },
+    { "id": "s7", "speaker": "A", "text": "Do you have a morning appointment?", "zh": "你們早上有時段嗎？" },
+    { "id": "s8", "speaker": "B", "text": "Yes, between nine and eleven.", "zh": "有，九點到十一點之間。" },
+    { "id": "s9", "speaker": "A", "text": "That works. Do I need to be at home?", "zh": "可以。我需要在家等嗎？" },
+    { "id": "s10", "speaker": "B", "text": "Yes. The technician will call before arriving.", "zh": "需要。技師到之前會先打電話。" }
+  ],
+  "questions": [
+    { "q": "What is the air conditioner doing?", "options": ["Blowing warm air", "Making a loud noise", "Turning itself off"], "answer": 0, "explanationZh": "A 說冷氣正在吹出暖風。", "sentenceIds": ["s1", "s3"] },
+    { "q": "When did the learner first notice the problem?", "options": ["Yesterday afternoon", "This morning", "Last week"], "answer": 0, "explanationZh": "服務人員詢問第一次注意到問題的時間，A 回答昨天下午。", "sentenceIds": ["s4", "s5"] },
+    { "q": "What time is the appointment window?", "options": ["Nine to eleven tomorrow", "One to three today", "After six tomorrow"], "answer": 0, "explanationZh": "服務人員先說明明天有技師，再確認上午九點到十一點的時段。", "sentenceIds": ["s6", "s7", "s8"] }
+  ]
+}

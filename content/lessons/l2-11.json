@@ -1,0 +1,72 @@
+{
+  "id": "l2-11",
+  "title": "Checking In at the Clinic",
+  "titleZh": "在診所櫃檯登記",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "daily",
+  "preGeneratedAudio": true,
+  "source": "原創基礎課程：小綠書 U07 情境功能改寫",
+  "summaryZh": "在看診前向診所櫃檯簡短說明症狀與開始時間；不確定的過敏資訊不猜測，交由醫療人員確認。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U07" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "在登記時說明症狀與開始時間，並對不確定的過敏資訊如實表示未知。",
+    "next": { "id": "l2-12", "labelZh": "聯絡租車道路支援" },
+    "vocabulary": [
+      { "id": "symptom", "term": "symptom", "surface": "symptoms", "sentenceIds": ["s2", "s9"], "zh": "症狀", "en": "A change in the body that a person notices.", "example": "describe your symptoms", "exampleZh": "描述你的症狀" },
+      { "id": "sore-throat", "term": "sore throat", "surface": "sore throat", "sentenceIds": ["s3"], "zh": "喉嚨痛", "en": "Pain or irritation in the throat.", "example": "I have a sore throat.", "exampleZh": "我喉嚨痛。" },
+      { "id": "dizzy", "term": "dizzy", "surface": "dizzy", "sentenceIds": ["s3", "s5"], "zh": "頭暈的", "en": "Feeling that you may lose your balance.", "example": "I feel a little dizzy.", "exampleZh": "我覺得有點頭暈。" },
+      { "id": "start", "term": "start", "surface": "start", "sentenceIds": ["s4"], "zh": "開始", "en": "To begin.", "example": "When did it start?", "exampleZh": "什麼時候開始的？" },
+      { "id": "allergy", "term": "allergy", "surface": "allergies", "sentenceIds": ["s6"], "zh": "過敏", "en": "A reaction to something that affects a person's body.", "example": "ask about food allergies", "exampleZh": "詢問食物過敏" },
+      { "id": "not-sure", "term": "not sure", "surface": "not sure", "sentenceIds": ["s7"], "zh": "不確定", "en": "Not knowing something for certain.", "example": "I'm not sure about that.", "exampleZh": "我不確定那件事。" }
+    ],
+    "task": {
+      "id": "clinic-front-desk-checkin",
+      "titleZh": "換個條件：說明咳嗽何時開始",
+      "roleZh": "你是要登記的病人",
+      "partnerLabelZh": "診所櫃檯說",
+      "setupZh": "你有咳嗽，今天早上開始；你不確定是否對藥物過敏。只說自己知道的事，並詢問能否稍後補充資料。不提供診斷或治療建議。",
+      "steps": [
+        { "partner": "What symptoms are you having?", "promptZh": "簡短說明你有咳嗽。", "keywords": "cough / symptom", "frame": "I have a ___.", "sample": "I have a cough." },
+        { "partner": "When did it start?", "promptZh": "說明咳嗽今天早上開始，並如實表示不確定藥物過敏資訊。", "keywords": "this morning / not sure / medicine", "frame": "It started ___. I'm not sure about ___.", "sample": "It started this morning. I'm not sure about medicine allergies." },
+        { "partner": "That's okay. The nurse can ask you more.", "promptZh": "確認看診時能否再補充症狀和過敏資訊。", "keywords": "tell the nurse / add more", "frame": "Can I tell the nurse more about ___?", "sample": "Can I tell the nurse more about my symptoms?" }
+      ],
+      "success": ["我有說明症狀與開始時間。", "我對不知道的過敏資訊沒有猜測。", "我有確認可由醫療人員繼續詢問。"]
+    },
+    "spokenPractice": {
+      "titleZh": "清楚說明已知與未知",
+      "noteZh": "核心句已足夠完成登記；以下替代說法是選修，不構成醫療建議。",
+      "alternatives": [
+        { "clear": "My throat started hurting yesterday.", "natural": "I've had a sore throat since yesterday.", "mode": "active", "guidanceZh": "現在完成式可簡潔表達症狀從昨天持續到現在。" },
+        { "clear": "I'm not sure about allergies.", "natural": "I'm not certain about any allergies.", "mode": "recognition", "guidanceZh": "not certain 和 not sure 意思相近；先聽懂即可。" },
+        { "clear": "May I tell the nurse more?", "natural": "Could I give the nurse a little more information?", "mode": "active", "guidanceZh": "give someone more information 是補充資料的自然說法。" }
+      ],
+      "drill": {
+        "setupZh": "把兩種症狀和不同開始時間分開說，避免讓櫃檯誤會。",
+        "turns": [
+          { "speaker": "診所櫃檯", "text": "When did the cough and headache start?" },
+          { "speaker": "你", "text": "The cough started today. The headache started yesterday." }
+        ],
+        "successZh": "讓兩個症狀各自對應正確時間即可；不用推測原因。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Hi. I'd like to check in for an appointment.", "zh": "你好，我想登記看診。" },
+    { "id": "s2", "speaker": "B", "text": "Of course. What symptoms are you having?", "zh": "好的。你有什麼症狀？" },
+    { "id": "s3", "speaker": "A", "text": "I have a sore throat, and I feel a little dizzy.", "zh": "我喉嚨痛，也有點頭暈。" },
+    { "id": "s4", "speaker": "B", "text": "When did they start?", "zh": "這些症狀什麼時候開始的？" },
+    { "id": "s5", "speaker": "A", "text": "My throat started hurting yesterday. I felt dizzy this morning.", "zh": "我昨天開始喉嚨痛，今天早上開始頭暈。" },
+    { "id": "s6", "speaker": "B", "text": "Do you know if you have any allergies?", "zh": "你知道自己有沒有過敏嗎？" },
+    { "id": "s7", "speaker": "A", "text": "I'm not sure. I haven't been tested for allergies.", "zh": "我不確定。我沒有做過過敏檢測。" },
+    { "id": "s8", "speaker": "B", "text": "That's okay. I'll note that the information is unknown for the nurse.", "zh": "沒關係。我會註明這項資訊仍不確定，讓護士確認。" },
+    { "id": "s9", "speaker": "A", "text": "Thank you. Could I give the nurse more information about my symptoms?", "zh": "謝謝。我可以再向護士補充症狀資訊嗎？" },
+    { "id": "s10", "speaker": "B", "text": "Yes. The nurse will speak with you shortly.", "zh": "可以。護士很快會和你談。" }
+  ],
+  "questions": [
+    { "q": "What two symptoms does the patient mention?", "options": ["A sore throat and dizziness", "A cough and a fever", "A headache and a rash"], "answer": 0, "explanationZh": "病人說喉嚨痛，也覺得有點頭暈。", "sentenceIds": ["s2", "s3"] },
+    { "q": "When did each symptom begin?", "options": ["Both yesterday", "The sore throat yesterday and dizziness this morning", "Both this morning"], "answer": 1, "explanationZh": "病人把喉嚨痛和頭暈的開始時間分別說明。", "sentenceIds": ["s4", "s5"] },
+    { "q": "Is the patient certain about allergies?", "options": ["Yes, all allergies are known", "No, the information is uncertain", "The receptionist gives a diagnosis"], "answer": 1, "explanationZh": "病人說不確定，櫃檯會註明並交由護士確認。", "sentenceIds": ["s6", "s7", "s8"] }
+  ]
+}

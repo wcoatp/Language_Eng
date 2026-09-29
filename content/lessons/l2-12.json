@@ -1,0 +1,71 @@
+{
+  "id": "l2-12",
+  "title": "Calling Roadside Assistance",
+  "titleZh": "聯絡租車道路支援",
+  "level": 2,
+  "type": "dialogue",
+  "topic": "travel",
+  "preGeneratedAudio": true,
+  "source": "原創基礎課程：小綠書 U08 情境功能改寫",
+  "summaryZh": "在安全停車後描述租車警示燈、提供附近地標、確認救援等待時間與聯絡方式。",
+  "curriculum": { "seriesId": "little-green-book-foundation", "unit": "U08" },
+  "learning": {
+    "version": 1,
+    "objectiveZh": "停在安全地點後描述租車問題、提供可辨認的位置，並詢問預估等待時間及下一步。",
+    "vocabulary": [
+      { "id": "rental-car", "term": "rental car", "surface": "rental car", "sentenceIds": ["s1"], "zh": "租來的車、租車", "en": "A car hired for a limited time.", "example": "return a rental car", "exampleZh": "歸還租車" },
+      { "id": "warning-light", "term": "warning light", "surface": "warning light", "sentenceIds": ["s1"], "zh": "警示燈", "en": "A light that signals a possible problem.", "example": "The warning light came on.", "exampleZh": "警示燈亮了。" },
+      { "id": "roadside-assistance", "term": "roadside assistance", "surface": "roadside assistance", "sentenceIds": ["s6"], "zh": "道路救援", "en": "Help for a vehicle problem during a trip.", "example": "call roadside assistance", "exampleZh": "聯絡道路救援" },
+      { "id": "landmark", "term": "landmark", "surface": "landmark", "sentenceIds": ["s4"], "zh": "地標", "en": "A place that is easy to notice and use to find an area.", "example": "meet near a landmark", "exampleZh": "在地標附近碰面" },
+      { "id": "estimate", "term": "estimate", "surface": "estimate", "sentenceIds": ["s7"], "zh": "預估、估計", "en": "An approximate amount or time.", "example": "an estimate of the wait time", "exampleZh": "等待時間的預估" },
+      { "id": "wait", "term": "wait", "surface": "wait", "sentenceIds": ["s7", "s9"], "zh": "等候", "en": "To stay until something happens.", "example": "wait in a safe area", "exampleZh": "在安全地點等候" }
+    ],
+    "task": {
+      "id": "request-roadside-help",
+      "titleZh": "換個條件：租車的輪胎警示燈亮起",
+      "roleZh": "你是租車的駕駛",
+      "partnerLabelZh": "道路支援人員說",
+      "setupZh": "你已把車停在服務站停車區。儀表板出現輪胎警示訊息；說明安全位置、附近地標，再詢問等待時間與接下來怎麼做。不要判斷車況或繼續危險駕駛。",
+      "steps": [
+        { "partner": "Are you parked somewhere safe now?", "promptZh": "先確認自己已停妥，再簡短描述警示訊息。", "keywords": "parked safely / tire warning", "frame": "Yes. I'm parked at ___. A ___ came on.", "sample": "Yes. I'm parked at a service area. A tire warning light came on." },
+        { "partner": "Can you tell me a nearby landmark?", "promptZh": "提供服務站附近容易辨認的地標。", "keywords": "near / entrance / service area", "frame": "I'm near ___.", "sample": "I'm near the east entrance of the service area." },
+        { "partner": "A driver may arrive in about forty minutes.", "promptZh": "確認預估等待時間，並詢問等待時下一步該怎麼做。", "keywords": "estimate / wait / next step", "frame": "What's the estimate? What should I do while I wait?", "sample": "Thanks. What's the latest estimate, and what should I do while I wait?" }
+      ],
+      "success": ["我有先表明已停在安全地點。", "我有說出問題與可辨認的位置。", "我有把等待時間當作預估，並確認下一步。"]
+    },
+    "spokenPractice": {
+      "titleZh": "確認支援安排的下一步",
+      "noteZh": "先清楚說明位置與問題；以下口語替代句是選修加強。",
+      "alternatives": [
+        { "clear": "A warning light came on.", "natural": "A warning light just came on.", "mode": "active", "guidanceZh": "just 強調事情剛發生，不代表知道警示燈的原因。" },
+        { "clear": "How long is the wait?", "natural": "What's the estimated wait?", "mode": "recognition", "guidanceZh": "estimated wait 是「預估等待時間」，不是保證抵達時間。" },
+        { "clear": "What should I do next?", "natural": "What's the next step?", "mode": "active", "guidanceZh": "用 next step 簡潔詢問接下來的安排。" }
+      ],
+      "drill": {
+        "setupZh": "聽到預估時間延後時，先確認何時會更新，再確認安全等待方式。",
+        "turns": [
+          { "speaker": "支援人員", "text": "The driver may be delayed by twenty minutes." },
+          { "speaker": "你", "text": "Thanks for letting me know. How will I get the next update?" }
+        ],
+        "successZh": "把時間視為預估，並確認如何收到更新；不用爭論責任或賠償。"
+      }
+    }
+  },
+  "sentences": [
+    { "id": "s1", "speaker": "A", "text": "Hello. I have a rental car, and a warning light came on.", "zh": "你好，我租的車亮起警示燈。" },
+    { "id": "s2", "speaker": "B", "text": "Are you parked somewhere safe now?", "zh": "你現在停在安全的地方嗎？", "note": "先確認是否安全停車，再討論車況。" },
+    { "id": "s3", "speaker": "A", "text": "Yes. I'm in a public parking lot.", "zh": "是，我在公共停車場。" },
+    { "id": "s4", "speaker": "B", "text": "Can you tell me a nearby landmark?", "zh": "可以告訴我附近的地標嗎？" },
+    { "id": "s5", "speaker": "A", "text": "I'm near the east entrance of the library.", "zh": "我在圖書館東側入口附近。" },
+    { "id": "s6", "speaker": "B", "text": "Thanks. I'll contact roadside assistance.", "zh": "謝謝，我會聯絡道路救援。" },
+    { "id": "s7", "speaker": "A", "text": "Do you have an estimate of the wait time?", "zh": "你有預估等待時間嗎？" },
+    { "id": "s8", "speaker": "B", "text": "About forty minutes. I'll call if that changes.", "zh": "大約四十分鐘。如果時間有變我會打電話。", "note": "About 和 if that changes 表示預估時間可能變動。" },
+    { "id": "s9", "speaker": "A", "text": "Should I stay here while I wait?", "zh": "等候期間我應該留在這裡嗎？" },
+    { "id": "s10", "speaker": "B", "text": "Please stay in a safe public area and keep your phone on.", "zh": "請留在安全的公共區域，並保持電話開機。" }
+  ],
+  "questions": [
+    { "q": "What happened to the rental car?", "options": ["A warning light came on", "The car ran out of gas", "A door would not open"], "answer": 0, "explanationZh": "駕駛說車上亮起警示燈，沒有自行判斷原因。", "sentenceIds": ["s1"] },
+    { "q": "Where is the caller?", "options": ["In a public parking lot near the library", "At the rental office", "On the highway"], "answer": 0, "explanationZh": "駕駛說自己在公共停車場，靠近圖書館東側入口。", "sentenceIds": ["s3", "s4", "s5"] },
+    { "q": "What is the estimated wait?", "options": ["About twenty minutes", "About forty minutes", "Over two hours"], "answer": 1, "explanationZh": "支援人員說大約四十分鐘，並表示時間改變時會打電話。", "sentenceIds": ["s7", "s8"] }
+  ]
+}
