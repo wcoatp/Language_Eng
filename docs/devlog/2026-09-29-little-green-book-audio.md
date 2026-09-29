@@ -2,7 +2,7 @@
 
 - 日期：2026-09-29
 - 對應規格：[SDD-008](../sdd/008-little-green-book-audio.md)
-- 結果：本地產音、桌面播放器及代表音檔驗收完成；較完整聽評、窄螢幕仍有待辦；依使用者要求帶限制發布
+- 結果：v2026.09.29.4 已 commit、push、部署並通過線上 smoke test；代表音檔獲使用者確認，較完整聽評與窄螢幕仍列發布後 QA
 - 預定版本：`2026.09.29.4`
 
 ## 施工節點
@@ -60,8 +60,20 @@
 | A5 真人音質／辨識度聽評 | 部分通過 | 使用者確認 `Did you say nine or nineteen?` 四種聲線；其他 A/B、`eight / eighteen`、否定及縮讀未取得人工聽評 |
 | A6 版號與響應式 UI | 部分通過 | 本地版號 `2026.09.29.4`；桌面已驗，390×844 與真機待驗 |
 | A7 工程追溯 | 通過 | SDD、devlog、know-how、測試、索引互連 |
+| A8 推送與發布 | 通過 | `e52e666` 推送至 `main`；Firebase Hosting 正式站回報 v2026.09.29.4，課程頁／更新切換／音檔端點通過 smoke test |
+
+### N6｜提交、推送與部署後 smoke test
+
+- `npm run deploy` 再次執行全部檢查：62 個 JavaScript 模組語法檢查通過、73/73 Node 測試通過、內容驗證 115 課／1,916 句／12,684 個音檔通過。
+- 建立功能提交 `e52e666`（`feat: add fixed audio for green book units`），推送 `main`：`2ab4a59..e52e666`。
+- Firebase Hosting 專案 `echo-english-20260814` 部署成功，正式站為 [Echo English](https://echo-english-20260814.web.app)。
+- 正式站 `js/version.js` 回報 `2026.09.29.4`；課程 `l1-08` 顯示 30 分鐘核心路線及 10/10 句，lesson JSON `preGeneratedAudio` 為 true。
+- 測試頁偵測到舊快取 v2026.09.29.3 與新版 v2026.09.29.4，觸發「重新載入更新」後切換成功；播放器顯示英／美式 Kokoro 與 Edge TTS 聲線選項。
+- 正式站 Edge GB `l1-08/s1.mp3` 與 Kokoro US `l1-11/s12.mp3` 均回應 HTTP 200、`audio/mpeg`。此為服務端可取得性，不代表逐段聽感驗證。
+- PDF 沒有加入 Git 提交；Firebase Hosting ignore 規則包含 `**/*.pdf`，部署仍保留使用者 PDF 僅在本機未追蹤的狀態。
+- 390×844 viewport、真機、Safari／Android，以及剩餘發音類型的人工聽評未完成，保留為發布後限制。
 
 ## 發布狀態
 
-- 本輪將依使用者「音檔 ok 繼續驗收,發布」授權進行 commit、push 及 Firebase Hosting 部署；完成後補登 commit、推送與部署 smoke test 結果。發布不代表上述部分 QA 已完成。
+- v2026.09.29.4 已部署至 [Firebase Hosting](https://echo-english-20260814.web.app)，功能 commit `e52e666` 已推送至 `main`。代表音檔取得使用者核可；發布不代表尚列出的部分人工聽評與響應式 QA 已完成。
 - 使用者 PDF 未追蹤、未送往 TTS、未列入 manifest 或部署。
