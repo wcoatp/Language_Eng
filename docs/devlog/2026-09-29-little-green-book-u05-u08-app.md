@@ -70,6 +70,15 @@
 - 桌面預覽 `l2-09` 詳情與 10 句連續播放頁可正常呈現；先前 N5/N6 390×844 檢視保持原紀錄。這輪仍未人工聽完各音檔，也未走完理解題互動或實機測試。
 - `npm run check` 通過：65 個 JS 模組語法檢查、81/81 Node 測試、內容驗證 119 課／1,956 句／11 voice sets／12,844 段音檔。此結果確認工程完整性，不代表教師審稿、音質主觀驗收或真人教學研究完成。
 
+### N9｜版本、推送、部署與正式站驗收
+
+- 將 PWA 版號從 v2026.09.29.4 升至 v2026.09.29.5；Service Worker 共享 `js/version.js` 動態版號，shell 資源清單未新增路徑。本次主要更新內容與 audio cache，不需擴大 app shell 清單。
+- 部署前 `npm run deploy` 再次通過：65 個 JS 模組、81/81 Node 測試；內容驗證 119 課／1,956 句／11 voice sets／12,844 段音檔。
+- 施工提交 `9a519d6`（`feat: add Little Green Book U05-U08 lessons`）已推送 `main`；Firebase Hosting 專案 `echo-english-20260814` 部署成功，正式網址為 https://echo-english-20260814.web.app。Hosting ignore 規則含 `**/*.pdf`；PDF 未加入 git。
+- 正式站讀取 `js/version.js` 得 v2026.09.29.5；四份 lesson JSON 均 HTTP 成功且各 10 句；四課 manifest 均列完整 edge-us／edge-gb／kokoro-us／kokoro-gb 各 10 句；代表 Edge US MP3 HEAD 回應 HTTP 200、`audio/mpeg`、26,235 bytes。
+- 正式站 U05 課程詳情呈現 10/10 核心句及六階段 30 分鐘路線；播放器列出 10 句與聲音／速度控制。更新提示正確指出目前開啟的舊分頁為 v2026.09.29.4、新版 v2026.09.29.5 已就緒；沒有代替使用者點擊重新載入。
+- 未在正式站實際播放音檔；390×844 裝置模擬以 N5/N6 的本機 QA 紀錄為證，未宣稱本次重新跑過正式站手機視窗。人工聽評、教師審稿／真人試教及 ENG-010 真人時長樣本仍未完成，均不冒充工程測試結果。
+
 ## SDD-011 驗收狀態
 
 | 條件 | 狀態 | 證據／限制 |
@@ -80,11 +89,11 @@
 | A4 四 voice sets／160 音檔 | 技術驗證通過 | 160/160 可解碼且 manifest 對齊；Edge 80 段完成，人工聽評仍待真人 |
 | A5 課程／詞卡／任務 UI | 部分通過 | 桌面及 390×844 已檢查四課詳情、U06 詞卡、U07 任務；理解題、課程庫、播放器實播與真機尚待驗 |
 | A6 索引與全套回歸 | 通過 | `npm run check`：65 模組語法、81/81 Node 測試、119／1,956、11 聲線組／12,844 段音檔 |
-| A7 正式發布與更新提示 | 未完成 | 尚未 bump release、commit、push 或 deploy |
-| A8 SDD/devlog/know-how/索引互連 | 部分 | SDD、devlog、know-how 與測試已更新；工程索引及部署節點待收尾 |
+| A7 正式發布與更新提示 | 通過 | v2026.09.29.5；commit `9a519d6` 已推送、Firebase Hosting 已部署；正式站版本、四課 JSON／manifest 與 Edge MP3 HEAD smoke test 通過 |
+| A8 SDD/devlog/know-how/索引互連 | 通過 | 文件、程式、測試與工程索引已互連；真人研究限制保留 |
 | A9 Edge 範圍保護 | 通過 | `--lesson` 範圍與拒絕路徑有自動測試；本次命令僅選 U05–U08 |
 
 ## 仍待完成
 
-- 仍需更新工程索引與 README 發布狀態、版號，然後依授權 commit、push、deploy，並做正式站更新提示、四課路由及代表音檔端點 smoke test。
+- 工程發布已完成；後續仍需真人聽評四組語音、教師審稿／目標學習者試教，以及 ENG-010 各級至少五位學習者的時間校準。這些是真人研究事項，不應在沒有樣本時標成已驗收。
 - 部署不會替代 ENG-008 人工聽評或 ENG-010 真人學習者時間校準；兩者仍需真人回填與真實試用資料。
