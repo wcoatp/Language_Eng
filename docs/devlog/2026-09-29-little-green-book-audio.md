@@ -41,6 +41,13 @@
 - 實際播放後本地伺服器記錄取得 `/content/audio/edge-gb/l1-08/s1.mp3` 與 `/content/audio/kokoro-gb/l1-08/s1.mp3`，兩者 HTTP 200。
 - 桌面課程頁與播放器驗收通過；本次尚未重做 390×844 viewport。沒有真實手機／Safari／Android 實測。
 
+### N4b｜發布後 390×844 響應式 QA（2026-09-29）
+
+- 在正式站以瀏覽器 viewport 模擬 390×844，檢查 U01–U04（`l1-08`～`l1-11`）課程頁、U01／U03 播放器及聲線選單。所有被測畫面的 `innerWidth`、`clientWidth`、`scrollWidth` 均為 390，沒有水平溢出。
+- 目視檢查 `l1-08` 課程頁、播放器、聲線選單排版；沒有發現文字與控制項重疊。此結果僅是瀏覽器尺寸模擬，不宣稱真實手機觸控／Safari／Android 已驗收。
+- 168 個正式站 manifest 音檔端點均完成 HEAD 請求：168/168 回應 200 且 `audio/mpeg`。這只確認服務端可取用，並非 168 段真人聽感測試。
+- 使用者先前確認的範圍仍僅為代表句 `Did you say nine or nineteen?` 的四種合成聲線。A/B、`eight / eighteen`、否定、縮讀等其他聽評類別仍需人工確認。
+
 ### N5｜來源與人工聽評界線
 
 - SDD 記錄 [Kokoro 模型卡](https://huggingface.co/hexgrad/Kokoro-82M) 的 Apache-2.0 權重資訊，並記錄 [edge-tts](https://github.com/rany2/edge-tts) 使用 Microsoft Edge 線上 TTS、程式主要為 LGPL-3.0。
@@ -58,7 +65,7 @@
 | A3 自動驗證 | 通過 | `npm run check`，73/73、content OK |
 | A4 播放器固定聲線 | 通過 | 桌面 selector 有四種聲音；Edge GB、Kokoro GB 檔案請求 200 |
 | A5 真人音質／辨識度聽評 | 部分通過 | 使用者確認 `Did you say nine or nineteen?` 四種聲線；其他 A/B、`eight / eighteen`、否定及縮讀未取得人工聽評 |
-| A6 版號與響應式 UI | 部分通過 | 本地版號 `2026.09.29.4`；桌面已驗，390×844 與真機待驗 |
+| A6 版號與響應式 UI | 部分通過 | 版號 `2026.09.29.4`；桌面與 390×844 瀏覽器模擬已驗，實體手機／Safari／Android 未測 |
 | A7 工程追溯 | 通過 | SDD、devlog、know-how、測試、索引互連 |
 | A8 推送與發布 | 通過 | `e52e666` 推送至 `main`；Firebase Hosting 正式站回報 v2026.09.29.4，課程頁／更新切換／音檔端點通過 smoke test |
 
@@ -71,7 +78,7 @@
 - 測試頁偵測到舊快取 v2026.09.29.3 與新版 v2026.09.29.4，觸發「重新載入更新」後切換成功；播放器顯示英／美式 Kokoro 與 Edge TTS 聲線選項。
 - 正式站 Edge GB `l1-08/s1.mp3` 與 Kokoro US `l1-11/s12.mp3` 均回應 HTTP 200、`audio/mpeg`。此為服務端可取得性，不代表逐段聽感驗證。
 - PDF 沒有加入 Git 提交；Firebase Hosting ignore 規則包含 `**/*.pdf`，部署仍保留使用者 PDF 僅在本機未追蹤的狀態。
-- 390×844 viewport、真機、Safari／Android，以及剩餘發音類型的人工聽評未完成，保留為發布後限制。
+- 瀏覽器模擬 390×844 已驗收；真機、Safari／Android，以及 A/B、`eight / eighteen`、否定與縮讀等剩餘人工聽評未完成，保留為發布後限制。
 
 ## 發布狀態
 

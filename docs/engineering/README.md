@@ -13,7 +13,9 @@
 | ENG-005 | 小綠書 U01–U04 教學審稿與口語增補：詞卡、10–12 回合雙語稿、3 題理解、三層提示及可選自然說法；未加入 App、未發布 | [SDD-005](../sdd/005-little-green-book-u01-u04-editorial.md) | [U01–U04 審稿稿件](../curriculum/little-green-book-u01-u04-editorial.md)；未變更程式 | [內容與口語增補驗收紀錄](../devlog/2026-09-28-little-green-book-u01-u04-editorial.md) | [節點紀錄](../devlog/2026-09-28-little-green-book-u01-u04-editorial.md)、[know-how](../know-how/little-green-book-editorial.md) |
 | ENG-006 | 30 分鐘核心課與分層練習：規則涵蓋 115 課；長篇保留全文但聚焦核心句，短課全文納入；v2026.09.29.3 已發布 | [SDD-006](../sdd/006-thirty-minute-core-lessons.md) | [核心計畫](../../js/learning.js)、[課程路線](../../js/views/lesson.js)、[核心／全文精聽](../../js/views/listen.js)、[路由](../../js/app.js) | [全課測試](../../test/lesson-plan.test.mjs)、[初版驗收](../devlog/2026-09-29-thirty-minute-core-lessons.md#n5自動驗證)、[發布紀錄](../devlog/2026-09-29-thirty-minute-core-lessons.md#n7整合發布) | [節點紀錄](../devlog/2026-09-29-thirty-minute-core-lessons.md)、[know-how](../know-how/thirty-minute-core-lessons.md) |
 | ENG-007 | 小綠書 U01–U04 App 實作：新增 `l1-08`～`l1-11`、42 句、20 詞、12 題、四組任務及選修口語加強；v2026.09.29.3 已發布，使用裝置語音 | [SDD-007](../sdd/007-little-green-book-u01-u04-app-lessons.md) | [四課資料](../../content/lessons/l1-08.json)、[課程與口語 UI](../../js/views/lesson.js)、[任務](../../js/views/task.js)、[metadata 驗證](../../js/learning.js) | [5 項專屬測試](../../test/little-green-book-lessons.test.mjs)、[73 項 Node 與內容驗證](../devlog/2026-09-29-little-green-book-u01-u04-app-lessons.md#n6自動驗證)、[線上驗收](../devlog/2026-09-29-little-green-book-u01-u04-app-lessons.md#n9部署後-smoke-test) | [節點紀錄](../devlog/2026-09-29-little-green-book-u01-u04-app-lessons.md)、[know-how](../know-how/little-green-book-app-lessons.md) |
-| ENG-008 | 小綠書 U01–U04 固定音檔：42 句 × Kokoro／Edge 美英四聲線，168 段；v2026.09.29.4 已發布，較完整聽評與窄螢幕仍待 QA | [SDD-008](../sdd/008-little-green-book-audio.md) | [四課資料](../../content/lessons/l1-08.json)、[產音器](../../tools/generate-voices.mjs)、[播放 UI](../../js/views/player.js)、[聲線設定](../../js/voices.js) | [課程／manifest 完整性](../../test/little-green-book-lessons.test.mjs)、[音檔驗證、試聽範圍與發布結果](../devlog/2026-09-29-little-green-book-audio.md) | [節點紀錄](../devlog/2026-09-29-little-green-book-audio.md)、[know-how](../know-how/little-green-book-audio.md) |
+| ENG-008 | 小綠書 U01–U04 固定音檔：42 句 × Kokoro／Edge 美英四聲線，168 段；v2026.09.29.4 已發布，390×844 瀏覽器模擬通過；更多聽評與真機待 QA | [SDD-008](../sdd/008-little-green-book-audio.md) | [四課資料](../../content/lessons/l1-08.json)、[產音器](../../tools/generate-voices.mjs)、[播放 UI](../../js/views/player.js)、[聲線設定](../../js/voices.js) | [課程／manifest 完整性](../../test/little-green-book-lessons.test.mjs)、[音檔驗證、試聽範圍與發布結果](../devlog/2026-09-29-little-green-book-audio.md) | [節點紀錄](../devlog/2026-09-29-little-green-book-audio.md)、[know-how](../know-how/little-green-book-audio.md) |
+| ENG-009 | 小綠書 U05–U08 教學審稿：四課各 6 詞、10 回合雙語對話、3 題聽力理解與分層換條件任務；未加入 App、待教師／使用者審稿 | [SDD-009](../sdd/009-little-green-book-u05-u08-editorial.md) | [U05–U08 詳稿](../curriculum/little-green-book-u05-u08-editorial.md)；未變更程式 | [結構／內容人工檢查及待審稿事項](../devlog/2026-09-29-little-green-book-u05-u08-editorial.md) | [節點紀錄](../devlog/2026-09-29-little-green-book-u05-u08-editorial.md)、[know-how](../know-how/little-green-book-u05-u08.md) |
+| ENG-010 | 30 分鐘核心課真人時間校準前置：計時盤點及匿名試用表已完成；L1–L5 真實樣本與時間分析未完成 | [SDD-010](../sdd/010-thirty-minute-course-time-calibration.md) | [現行計時](../../js/store.js)、[本機資料層](../../js/db.js)；未變更程式 | [試用規約與空白表](../research/30-minute-course-pilot-template.md)、[驗收與缺樣本紀錄](../devlog/2026-09-29-thirty-minute-calibration.md) | [節點紀錄](../devlog/2026-09-29-thirty-minute-calibration.md)、[know-how](../know-how/course-time-calibration.md) |
 
 ## 現有系統入口（盤點，不代表已補齊歷史 SDD）
 
@@ -27,8 +29,8 @@
 | 內容品質 | `tools/validate-content.mjs`、`test/` | `npm run check` |
 | 每日課程編輯 | [規範](../daily-curriculum.md) | 不是全專案 SDD |
 | 課程設計提案 | [2026-09-22 提案](../proposals/2026-09-22-vocabulary-and-foundation-dialogues.md) | A 由 ENG-002、B/C 由 ENG-003 實作；其他新情境依 ENG-004 設計稿另案實作 |
-| 小綠書全書設計 | [U01–U16 第一版](../curriculum/little-green-book-unit-sequence.md) | 依 PDF 順序設計；16 個對話草稿非已上線課程 |
-| 小綠書首批課程 | [U01–U04 詳稿與口語說法](../curriculum/little-green-book-u01-u04-editorial.md)、[實作 SDD](../sdd/007-little-green-book-u01-u04-app-lessons.md)、[音檔 SDD](../sdd/008-little-green-book-audio.md) | 已實作為 `l1-08`～`l1-11`；四組固定合成音檔隨 v2026.09.29.4 發布；完整版人工聽評待續 |
+| 小綠書全書設計 | [U01–U16 第一版](../curriculum/little-green-book-unit-sequence.md) | 依 PDF 順序設計；U01–U08 有審稿稿件可供後續實作；16 個設計草稿非全部已上線課程 |
+| 小綠書首批課程 | [U01–U04 詳稿與口語說法](../curriculum/little-green-book-u01-u04-editorial.md)、[實作 SDD](../sdd/007-little-green-book-u01-u04-app-lessons.md)、[音檔 SDD](../sdd/008-little-green-book-audio.md) | 已實作為 `l1-08`～`l1-11`；四組固定合成音檔隨 v2026.09.29.4 發布；390×844 瀏覽器模擬通過，其他聽評與真機待續 |
 
 ## 紀錄原則
 
@@ -39,11 +41,12 @@
 ## 後續入口
 
 - ENG-003 已補齊住宿／邀約課、全課庫預習與備份還原；`e04bd5f` 已推送並部署至 [Firebase Hosting](https://echo-english-20260814.web.app)。
-- 後續可另案做真機觸控選字、Safari／Android 語音、人工全音檔聽評；本次已完成 390×844 viewport、伺服器中斷重開與正式站升級驗收。
+- 後續可另案做真機觸控選字、Safari／Android 語音、人工全音檔聽評；ENG-008 已完成 390×844 瀏覽器模擬與伺服器中斷重開、正式站升級驗收。
 - 未進行商用整體稽核；內建詞庫覆蓋率、分級英英釋義、專有名詞及詞義編輯介面可另案規劃。
-- ENG-004 只完成小綠書 16 單元第一版設計，沒有新的課程 JSON、音檔或部署；下一輪須先審稿，再依單元順序分批立實作 SDD。
+- ENG-004 完成小綠書 16 單元第一版設計，沒有 16 課全部的課程 JSON、音檔或部署；U01–U08 已有審稿版，後續須逐批確認與立實作 SDD。
 - ENG-005 的 U01–U04 審稿已由 ENG-007 轉為四堂正式本地課程；文件仍是內容來源，App JSON 與實際驗收狀態以 ENG-007 為準。
 - ENG-006 的 30 分鐘核心規則目前涵蓋全部 115 課；仍需用真人完成時間校準 L1–L5 核心句上限。
 - ENG-006／007 已由提交 `e4019c7` 推送並部署至 [Firebase Hosting](https://echo-english-20260814.web.app)，正式站更新提示與 U01 課程頁 smoke test 通過。
-- ENG-007 的下一個內容批次是先審 U05–U08，再決定哪些沿用既有課、哪些新增。
-- ENG-008 已以 `e52e666` 推送並部署 v2026.09.29.4；使用者確認四種聲線的代表句。完整人工聽評及 390×844 窄螢幕仍待補，狀態與發布證據以施工紀錄為準。
+- ENG-009 已完成 U05–U08 初版編輯稿；下一關是使用者／教師審稿，確認後另立 App 實作 SDD，不能把此稿視為已上線課程。
+- ENG-008 已以 `e52e666` 推送並部署 v2026.09.29.4；使用者確認四種聲線的代表句。其他人工聽評與實體手機／Safari／Android 仍待補，狀態與證據以施工紀錄為準。
+- ENG-010 已完成匿名採樣表與現行計時盤點；需取得 L1–L5 各至少五筆真實有效完成試用，才能分析中位數／P75並討論時間調整。目前沒有樣本，不做改時長決策。
